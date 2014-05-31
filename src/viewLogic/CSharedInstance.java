@@ -1,15 +1,11 @@
 package viewLogic;
 
-import java.awt.List;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
-
-import com.jcraft.jsch.JSch;
-import com.jcraft.jsch.Session;
 import com.thoughtworks.xstream.XStream;
 
 public class CSharedInstance 
@@ -18,6 +14,7 @@ public class CSharedInstance
 	private String currentConfigurationID;
 	
 	private Map<String, Map<String, Object>> configurations;
+	
 	
 	private static CSharedInstance sharedInstance = new CSharedInstance( );
 		   

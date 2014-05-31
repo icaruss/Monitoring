@@ -7,6 +7,7 @@ import java.util.logging.Logger;
 import mainView.Main;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -27,9 +28,11 @@ public class CSettingsStage
 	        Scene scene = new Scene(settingsPage);
 	        stage.setScene(scene);
 	        stage.sizeToScene();
+	        stage.setTitle("Servers Configuration");
 	        stage.setResizable(false);
 	        stage.setFullScreen(false);
-	        stage.setIconified(false);
+	        stage.setIconified(true);
+	        stage.getIcons().add(new Image(getClass().getResourceAsStream("iconSettings.jpg")));
 	        stage.show();
 	    } 
 		catch (Exception ex) 

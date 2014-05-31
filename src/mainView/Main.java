@@ -6,6 +6,7 @@ import javafx.application.HostServices;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 
 import java.awt.image.BufferedImage;
@@ -28,6 +29,8 @@ public class Main extends Application
             primaryStage.setTitle("MDM Unix onitoring Tool");
             primaryStage.setResizable(false);
             primaryStage.setFullScreen(false);
+            primaryStage.setIconified(true);
+            primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("iconMain.jpg")));
             primaryStage.show();
             
             
