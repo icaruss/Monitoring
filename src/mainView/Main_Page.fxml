@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-background-color 0xc4c0e4c9?>
+
+<AnchorPane blendMode="SRC_OVER" cache="true" cacheHint="DEFAULT" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="318.98046875" prefWidth="447.0" snapToPixel="true" styleClass="" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="mainView.CMainPageController">
+  <children>
+  <VBox alignment="CENTER" disable="true" layoutX="0.0" layoutY="0.0" prefHeight="350" prefWidth="500.0">
+      <children>
+        <ImageView id="background.jpg" fx:id="imgView" fitHeight="350" fitWidth="500.0">
+          <image>
+            <Image url="@../../images/background.jpg" preserveRatio="true" smooth="true" />
+          </image>
+        </ImageView>
+      </children>
+    </VBox>
+    <Text boundsType="VISUAL" disable="false" fill="linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, 0xff0000ff 0.0%, 0x0000ffff 30.0%, 0x000000ff 100.0%)" focusTraversable="true" fontSmoothingType="LCD" layoutX="151.0" layoutY="47.0" scaleX="3.0660032914595474" scaleY="7.244633536794935" strikethrough="false" strokeType="OUTSIDE" strokeWidth="0.0" text="MDM Unix Monitoring Tool" textAlignment="CENTER" textOrigin="CENTER" underline="true">
+      <effect>
+        <Glow />
+      </effect>
+      <font>
+        <Font name="Arial" size="12.0" />
+      </font>
+    </Text>
+    <Text focusTraversable="true" fontSmoothingType="LCD" layoutX="47.0" layoutY="292.0" scaleX="1.9800607972865212" scaleY="1.4404764928387228" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Left :" textAlignment="LEFT" textOrigin="CENTER" wrappingWidth="0.0" />
+    <Separator blendMode="EXCLUSION" layoutX="5.0" layoutY="263.0" opacity="1.0" prefHeight="12.0" prefWidth="447.0">
+      <effect>
+        <Shadow blurType="TWO_PASS_BOX" color="#5539b2ae" height="39.84672619047619" radius="19.771205357142854" width="41.238095238095234" />
+      </effect>
+    </Separator>
+    <Button fx:id="btnVMStat" contentDisplay="TEXT_ONLY" graphicTextGap="6.0" layoutX="28.0" layoutY="105.0" mnemonicParsing="false" prefHeight="63.9609375" prefWidth="118.58966064453125" text="VMSTAT Settings" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true">
+      <effect>
+        <DropShadow>
+          <color>
+            <Color blue="0.600" green="0.886" red="1.000" fx:id="x3" />
+          </color>
+        </DropShadow>
+      </effect>
+      <font>
+        <Font name="Arial Black" size="12.0" fx:id="x1" />
+      </font>
+    </Button>
+    <Button fx:id="btnSettings" contentDisplay="TEXT_ONLY" font="$x1" graphicTextGap="6.0" layoutX="315.0" layoutY="105.0" mnemonicParsing="false" prefHeight="63.9609375" prefWidth="118.58966064453125" text="Server Settings" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true">
+      <effect>
+        <DropShadow color="$x3" />
+      </effect>
+    </Button>
+    <Button id="btnVMStat" fx:id="btnShowVMSTATView" contentDisplay="TEXT_ONLY" font="$x1" graphicTextGap="6.0" layoutX="28.0" layoutY="186.0" mnemonicParsing="false" prefHeight="63.9609375" prefWidth="118.58966064453125" text="Show VMSTAT View" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true">
+      <effect>
+        <DropShadow color="$x3" />
+      </effect>
+    </Button>
+    <Button id="btnVMStat" fx:id="btnShowMonitoringResults" contentDisplay="TEXT_ONLY" font="$x1" graphicTextGap="6.0" layoutX="315.0" layoutY="186.0" mnemonicParsing="false" prefHeight="63.9609375" prefWidth="118.58966064453125" text="Server Monitoring Resilts" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true">
+      <effect>
+        <DropShadow color="$x3" />
+      </effect>
+    </Button>
+    <ProgressBar layoutX="147.0" layoutY="281.0" prefHeight="24.0" prefWidth="241.0" progress="0.0" />
+    <ProgressIndicator layoutX="400.0" layoutY="275.0" prefWidth="34.0" progress="0.0" />
+  </children>
+</AnchorPane>
