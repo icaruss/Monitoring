@@ -88,12 +88,12 @@
     </ComboBox>
     <AnchorPane fx:id="paneTimeFrame" focusTraversable="true" layoutX="252.0" layoutY="565.0" minWidth="214.4141845703125" prefHeight="121.0" prefWidth="215.0" visible="false">
       <children>
-        <Text font="$x1" fontSmoothingType="LCD" layoutX="73.0" layoutY="29.0" scaleX="2.446508725684463" scaleY="2.057615907667514" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Frame" textAlignment="CENTER" />
+        <Text font="$x1" fontSmoothingType="LCD" layoutX="73.0" layoutY="29.0" scaleX="2.446508725684463" scaleY="2.057615907667514" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Frame" textAlignment="CENTER" visible="true" />
         <Line endX="100.0" layoutX="108.0" layoutY="38.0" startX="-76.0" startY="1.0" />
         <Text font="$x1" fontSmoothingType="LCD" layoutX="25.0" layoutY="70.0" scaleX="1.5358835538563118" scaleY="2.057615907667514" strokeType="OUTSIDE" strokeWidth="0.0" text="From :" textAlignment="CENTER" />
         <Text font="$x1" fontSmoothingType="LCD" layoutX="21.0" layoutY="103.0" scaleX="1.254841351752584" scaleY="2.057615907667514" strokeType="OUTSIDE" strokeWidth="0.0" text="To :" textAlignment="CENTER" />
-        <TextField fx:id="txtFieldTimeFrameFrom" layoutX="83.0" layoutY="54.0" prefHeight="25.0" prefWidth="106.0791015625" />
-        <TextField fx:id="txtFieldTimeFrameTo" layoutX="83.0" layoutY="87.0" prefHeight="25.0" prefWidth="106.0791015625" />
+        <TextField fx:id="txtFieldTimeFrameFrom" layoutX="83.0" layoutY="54.0" prefHeight="25.0" prefWidth="106.9998779296875" promptText="hh-mm-ss" />
+        <TextField fx:id="txtFieldTimeFrameTo" layoutX="83.0" layoutY="87.0" prefHeight="25.0" prefWidth="106.0791015625" promptText="hh-mm-ss" />
       </children>
     </AnchorPane>
     <Button fx:id="btnConnect" alignment="CENTER" contentDisplay="CENTER" defaultButton="true" layoutX="116.0" layoutY="737.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="118.0" text="Connect" textAlignment="CENTER" textFill="BLACK" textOverrun="WORD_ELLIPSIS">

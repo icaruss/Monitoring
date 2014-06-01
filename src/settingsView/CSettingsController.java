@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.ResourceBundle;
 import java.util.Set;
+
 import unix.ExecuteUnixOperations;
 import viewLogic.CSharedInstance;
 import javafx.beans.value.ChangeListener;
@@ -365,9 +366,8 @@ public class CSettingsController implements Initializable
 
         		if (s1.length() > 0)
         		{
-        			char c = s1.charAt(s1.length() - 1);
-
-        			if (!isDigit(c))
+        			
+        			if (!checkIfInputTimeFrameAcceptable(txtFieldTimeFrameFrom.getText(),s1.length() - 1))
         			{
         				ignore = true;
         				txtFieldTimeFrameFrom.setText(s);
@@ -393,9 +393,7 @@ public class CSettingsController implements Initializable
 
         		if (s1.length() > 0)
         		{
-        			char c = s1.charAt(s1.length() - 1);
-
-        			if (!isDigit(c))
+        			if (!checkIfInputTimeFrameAcceptable(txtFieldTimeFrameTo.getText(),s1.length() - 1))
         			{
         				ignore = true;
         				txtFieldTimeFrameTo.setText(s);
@@ -404,6 +402,7 @@ public class CSettingsController implements Initializable
 
         		}
         	}
+
 
         });
         
@@ -445,9 +444,6 @@ public class CSettingsController implements Initializable
     }
     
     
-
-
-
 	///////////////////////   Events Sections ///////////////////////////
     
     
@@ -522,8 +518,19 @@ public class CSettingsController implements Initializable
     	else	
     	{
     		paneTimeFrame.setVisible(false);
-    		txtFieldTimeFrameFrom.setText("");
-    		txtFieldTimeFrameTo.setText("");
+    		
+    		if (cmbID.getSelectionModel().getSelectedIndex() > 0)
+    		{
+    			Map<String, Object> map = CSharedInstance.getInstance().getChosenConfiguration(cmbID.getSelectionModel().getSelectedItem());
+    			
+    			txtFieldTimeFrameFrom.setText((String)map.get(CViewConstants.START_FROM_TIME));
+    			txtFieldTimeFrameTo.setText((String)map.get(CViewConstants.START_TO_TIME));
+    		}
+    		else
+    		{
+    			txtFieldTimeFrameFrom.setText("");
+    			txtFieldTimeFrameTo.setText("");
+    		}
     	}
     }
     
@@ -800,6 +807,23 @@ public class CSettingsController implements Initializable
 
 			return false;
 		}
+		// In Case Time Frame Was Selected
+		else if (cmbStartSelection.getSelectionModel().isSelected(1))
+		{
+			if (!checkIfInputTimeFrameAcceptableAsWhole(txtFieldTimeFrameFrom.getText()))
+			{
+				lblResponseToUser.setText("Time Frame From Should Be : hh-mm-ss");
+
+				return false;
+			}
+			else if (!checkIfInputTimeFrameAcceptableAsWhole(txtFieldTimeFrameTo.getText()))
+			{
+				lblResponseToUser.setText("Time Frame To Should Be : hh-mm-ss");
+
+				return false;
+			}
+		}
+				
 		
 		lblResponseToUser.setText("");
 		
@@ -882,6 +906,72 @@ public class CSettingsController implements Initializable
 		
 		return map;
 	}
+    
+    
+    private boolean checkIfInputTimeFrameAcceptableAsWhole(String text) 
+	{
+		if (text.length() != 8 || text.isEmpty())
+			return false;
+		
+		if ((text.charAt(2) != '-') && (text.charAt(5) != '-'))
+		{
+			return false;
+		}
+		
+		if (!isDigit(text.charAt(0)) || !isDigit(text.charAt(1)) ||
+				!isDigit(text.charAt(3)) || !isDigit(text.charAt(4)) || 
+				!isDigit(text.charAt(6)) || !isDigit(text.charAt(7)))
+		{
+			return false;
+		}
+		
+		return true;
+		
+	}
+    
+    private boolean checkIfInputTimeFrameAcceptable(String text, int index) 
+   	{
+    	char c = text.charAt(index);
+    	
+    	if (index >= 8)
+    		return false;
+    	
+   		if ((index == 2 || index == 5) && (c == '-'))
+   		{
+   			return true;
+   		}
+   		else if (index != 2 && index != 5 && isDigit(c))
+   		{
+   			if ((index == 0 && c >= '0' && c <= '2'))
+   			{
+   				return true;
+   			}
+   			else if (index == 1)
+   			{
+   				if (text.charAt(0) == '2' && c >= '0' && c <= '3')
+   				{
+   					return true;
+   				}
+   				else if (text.charAt(0) < '2' && c >= '0' && c <= '9')
+   				{
+   					return true;
+   				}
+   			}
+   			else if ((index == 3 || index == 6) && c >= '0' && c <= '5')
+   			{
+   	   			return true;
+   			}
+   			else if ((index == 4 || index == 7) && c >= '0' && c <= '9')
+   			{
+   				return true;
+   			}
+   			
+   		}
+   		
+   		return false;
+   		
+   	}
+    
     
     
 }
