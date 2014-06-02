@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+#!
 #!/usr/local/bin/bash
 =======
 #!/usr/bin/bash

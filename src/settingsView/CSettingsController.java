@@ -24,6 +24,7 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 import viewLogic.CViewConstants;
 
 
@@ -153,8 +154,22 @@ public class CSettingsController implements Initializable
         			
         			Map<String, Object> currentSettings = getCurrentSettingsOnView();
         			
-        			ExecuteUnixOperations executeUnixOperations = new ExecuteUnixOperations(currentSettings);
-        			executeUnixOperations.start();	
+        			CSharedInstance.getInstance().updateWaitingTimeForResults(
+        					(String)currentSettings.get(CViewConstants.START_FROM_TIME), (String)currentSettings.get(CViewConstants.START_TO_TIME));
+        			
+        			try
+        			{
+        				ExecuteUnixOperations executeUnixOperations = new ExecuteUnixOperations(currentSettings);
+            			executeUnixOperations.start();
+        			}
+        			catch (Exception e)
+        			{}
+        			finally
+        			{
+            			Stage stage = (Stage)btnConnect.getScene().getWindow();
+            			stage.close();
+        			}
+        			
         		}
         		
         	}
@@ -444,6 +459,7 @@ public class CSettingsController implements Initializable
     }
     
     
+	
 	///////////////////////   Events Sections ///////////////////////////
     
     
@@ -789,7 +805,7 @@ public class CSettingsController implements Initializable
 
 			return false;
 		}
-		else if (!chkboxMdisr.isSelected() && !chkboxMdsr.isSelected() && !chkboxMdssr.isSelected())
+		else if (!chkboxMdisr.isSelected() && !chkboxMdsr.isSelected() && !chkboxMdssr.isSelected() && !chkboxClix.isSelected())
 		{
 			lblResponseToUser.setText("Choose at least 1 Monitor Process");
 
@@ -891,17 +907,24 @@ public class CSettingsController implements Initializable
 		int selectedIndex = cmbStartSelection.getSelectionModel().getSelectedIndex();
 		if (selectedIndex != -1)
 		{
-			map.put(CViewConstants.START, (selectedIndex == 0) ? CViewConstants.START_IMMEDIATELY : CViewConstants.START_FRAME_TIME);
-		}
-		
-		if (!txtFieldTimeFrameFrom.getText().isEmpty())
-		{
-			map.put(CViewConstants.START_FROM_TIME, txtFieldTimeFrameFrom.getText());
-		}
-		
-		if (!txtFieldTimeFrameTo.getText().isEmpty())
-		{
-			map.put(CViewConstants.START_TO_TIME, txtFieldTimeFrameTo.getText());
+			if (selectedIndex == 0)
+			{
+				map.put(CViewConstants.START, CViewConstants.START_IMMEDIATELY);
+			}
+			else
+			{
+				map.put(CViewConstants.START, CViewConstants.START_FRAME_TIME);
+				
+				if (!txtFieldTimeFrameFrom.getText().isEmpty())
+				{
+					map.put(CViewConstants.START_FROM_TIME, txtFieldTimeFrameFrom.getText());
+				}
+				
+				if (!txtFieldTimeFrameTo.getText().isEmpty())
+				{
+					map.put(CViewConstants.START_TO_TIME, txtFieldTimeFrameTo.getText());
+				}
+			}
 		}
 		
 		return map;
@@ -910,7 +933,7 @@ public class CSettingsController implements Initializable
     
     private boolean checkIfInputTimeFrameAcceptableAsWhole(String text) 
 	{
-		if (text.length() != 8 || text.isEmpty())
+		if (text.isEmpty() || text.length() != 8)
 			return false;
 		
 		if ((text.charAt(2) != '-') && (text.charAt(5) != '-'))
@@ -971,7 +994,6 @@ public class CSettingsController implements Initializable
    		return false;
    		
    	}
-    
     
     
 }

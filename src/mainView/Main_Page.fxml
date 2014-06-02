@@ -10,11 +10,11 @@
 <?import javafx.scene.text.*?>
 <?scenebuilder-background-color 0xc4c0e4c9?>
 
-<AnchorPane blendMode="SRC_OVER" cache="true" cacheHint="DEFAULT" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="318.98046875" prefWidth="447.0" snapToPixel="true" styleClass="" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="mainView.CMainPageController">
+<AnchorPane blendMode="SRC_OVER" cache="true" cacheHint="DEFAULT" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="318.98046875" prefWidth="447.0" snapToPixel="true" styleClass="null" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="mainView.CMainPageController">
   <children>
-  <VBox alignment="CENTER" disable="true" layoutX="0.0" layoutY="0.0" prefHeight="350" prefWidth="500.0">
+    <VBox alignment="CENTER" disable="true" layoutX="0.0" layoutY="0.0" prefHeight="350.0" prefWidth="500.0">
       <children>
-        <ImageView id="background.jpg" fx:id="imgView" fitHeight="350" fitWidth="500.0">
+        <ImageView id="background.jpg" fx:id="imgView" fitHeight="350.0" fitWidth="500.0">
           <image>
             <Image url="@../../images/background.jpg" preserveRatio="true" smooth="true" />
           </image>
@@ -32,7 +32,7 @@
     <Text focusTraversable="true" fontSmoothingType="LCD" layoutX="47.0" layoutY="292.0" scaleX="1.9800607972865212" scaleY="1.4404764928387228" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Left :" textAlignment="LEFT" textOrigin="CENTER" wrappingWidth="0.0" />
     <Separator blendMode="EXCLUSION" layoutX="5.0" layoutY="263.0" opacity="1.0" prefHeight="12.0" prefWidth="447.0">
       <effect>
-        <Shadow blurType="TWO_PASS_BOX" color="#5539b2ae" height="39.84672619047619" radius="19.771205357142854" width="41.238095238095234" />
+        <Shadow blurType="TWO_PASS_BOX" color="#5539b2ae" height="41.06417410714285" radius="20.07556733630952" width="41.238095238095234" />
       </effect>
     </Separator>
     <Button fx:id="btnVMStat" contentDisplay="TEXT_ONLY" graphicTextGap="6.0" layoutX="28.0" layoutY="105.0" mnemonicParsing="false" prefHeight="63.9609375" prefWidth="118.58966064453125" text="VMSTAT Settings" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true">
@@ -52,17 +52,21 @@
         <DropShadow color="$x3" />
       </effect>
     </Button>
-    <Button id="btnVMStat" fx:id="btnShowVMSTATView" contentDisplay="TEXT_ONLY" font="$x1" graphicTextGap="6.0" layoutX="28.0" layoutY="186.0" mnemonicParsing="false" prefHeight="63.9609375" prefWidth="118.58966064453125" text="Show VMSTAT View" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true">
+    <Button id="btnVMStat" fx:id="btnShowVMSTATView" contentDisplay="TEXT_ONLY" disable="true" font="$x1" graphicTextGap="6.0" layoutX="28.0" layoutY="186.0" mnemonicParsing="false" prefHeight="63.9609375" prefWidth="118.58966064453125" text="Show VMSTAT View" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true">
       <effect>
         <DropShadow color="$x3" />
       </effect>
     </Button>
-    <Button id="btnVMStat" fx:id="btnShowMonitoringResults" contentDisplay="TEXT_ONLY" font="$x1" graphicTextGap="6.0" layoutX="315.0" layoutY="186.0" mnemonicParsing="false" prefHeight="63.9609375" prefWidth="118.58966064453125" text="Server Monitoring Resilts" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true">
+    <Button id="btnVMStat" fx:id="btnShowMonitoringResults" contentDisplay="TEXT_ONLY" disable="true" font="$x1" graphicTextGap="6.0" layoutX="315.0" layoutY="186.0" mnemonicParsing="false" prefHeight="63.9609375" prefWidth="118.58966064453125" text="Server Monitoring Resilts" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true">
       <effect>
         <DropShadow color="$x3" />
       </effect>
     </Button>
-    <ProgressBar layoutX="147.0" layoutY="281.0" prefHeight="24.0" prefWidth="241.0" progress="0.0" />
-    <ProgressIndicator layoutX="400.0" layoutY="275.0" prefWidth="34.0" progress="0.0" />
+    <ProgressBar fx:id="pBar" layoutX="147.0" layoutY="281.0" prefHeight="24.0" prefWidth="241.0" progress="0.0">
+      <tooltip>
+        <Tooltip autoHide="true" text="Time left until results are ready" fx:id="toolTipPbar" />
+      </tooltip>
+    </ProgressBar>
+    <ProgressIndicator fx:id="pBarPercentage" layoutX="400.0" layoutY="275.0" prefWidth="34.0" progress="0.0" />
   </children>
 </AnchorPane>

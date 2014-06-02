@@ -3,13 +3,24 @@ package viewLogic;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
+import java.util.logging.Level;
+
+import log.MonLogger;
+
 import com.thoughtworks.xstream.XStream;
 
 public class CSharedInstance 
 {
+	
+	public int totalSecondsCountdown;
+	public int secondsElapsed;
 	
 	private String currentConfigurationID;
 	
@@ -25,6 +36,8 @@ public class CSharedInstance
 	{ 
 		configurations = new HashMap<String, Map<String, Object>>();
 		currentConfigurationID = null;
+		totalSecondsCountdown = -1;
+		secondsElapsed = 0;
 		
 		deSeriallize();
 		
@@ -202,5 +215,85 @@ public class CSharedInstance
 		
 	}
 	
+
+    
+    public void updateWaitingTimeForResults(String fromTime, String toTime) 
+	{
+    	int seconds = 0;
+    	
+    	try
+    	{
+	    	String strFrom = fromTime.substring(6);
+	    	String strTo = toTime.substring(6);
+	    	
+	    	int secondsFrom = Integer.parseInt(strFrom);
+	    	int secondsTo = Integer.parseInt(strTo);
+	    	
+	    	if (secondsFrom != secondsTo)
+	    		seconds += (60 - secondsFrom + secondsTo);
+	    	
+	    	strFrom = fromTime.substring(3, 5);
+	    	strTo = toTime.substring(3, 5);
+	    	
+	    	int minutesFrom = Integer.parseInt(strFrom); // because of seconds addition
+	    	int minutesTo = Integer.parseInt(strTo);
+	    	
+	    	if (minutesFrom != minutesTo)
+	    		seconds += (60 - minutesFrom + minutesTo - 1) * 60;
+	    	
+	    	strFrom = fromTime.substring(0, 2);
+	    	strTo = toTime.substring(0, 2);
+	    	
+	    	int hoursFrom = Integer.parseInt(strFrom); // because of minutes addition
+	    	int hoursTo = Integer.parseInt(strTo);
+	    	
+	    	if (hoursFrom > hoursTo)
+	    	{
+	    		seconds += (24 - hoursFrom + hoursTo - 1) * 60 * 60;
+	    	}
+	    	else if (hoursFrom < hoursTo)
+	    	{
+	    		seconds += (hoursTo - hoursFrom - 1) * 60 * 60;
+	    	}
+	    	
+	    	totalSecondsCountdown = seconds;
+	    	
+    	}
+    	catch (Exception e)
+    	{
+    		MonLogger.myLogger.log(Level.WARNING, e.getMessage());
+    	}
+    	finally
+    	{
+    		// in case parsing was unsuccessful , setting to immediate
+    		if (seconds == 0)
+    		{
+    			totalSecondsCountdown = 0;
+    		}
+    	}
+	}
+    
+    public String timeLeft()
+    {
+    	int secondsLeft = totalSecondsCountdown - secondsElapsed;
+    	int hours = secondsLeft / 3600;
+    	secondsLeft = secondsLeft % 3600;
+    	
+    	int minutes = secondsLeft / 60;
+    	secondsLeft = secondsLeft % 60;
+    	
+    	int seconds = secondsLeft;
+    	
+    	return String.format("Time Left : %dh-%dm-%ds", hours,minutes,seconds);
+    }
+	
+    
+    public boolean isReadyToLaunch()
+    {
+    	Calendar calendar = Calendar.getInstance();
+    	
+    	return true;
+    	
+    }
 		
 }
