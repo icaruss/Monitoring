@@ -2,6 +2,10 @@
 package mainView;
 
 import java.net.URL;
+import java.sql.Time;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.ResourceBundle;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -106,6 +110,7 @@ public class CMainPageController implements Initializable
         });
         
         
+        
         final Timer timer = new Timer();
 
         timer.schedule(new TimerTask() 
@@ -116,21 +121,24 @@ public class CMainPageController implements Initializable
                  {
                     public void run() 
                     {
-                    	if (CSharedInstance.getInstance().totalSecondsCountdown != -1)
+                    	if (CSharedInstance.getInstance().isReadyToLaunch())
                     	{
-                    		double progress = (double)(1.0 / (double)CSharedInstance.getInstance().totalSecondsCountdown);
-                    		
-                    		pBar.setProgress(progress + pBar.getProgress());
-                    		pBarPercentage.setProgress(pBar.getProgress());
-                    		
-                    		CSharedInstance.getInstance().secondsElapsed++;
-                    		
-                    		toolTipPbar.setText(CSharedInstance.getInstance().timeLeft());
-                    	}
-                    	
-                    	if (CSharedInstance.getInstance().secondsElapsed == 0 && CSharedInstance.getInstance().totalSecondsCountdown != -1)
-                    	{
-                    		timer.cancel();
+	                    	if (CSharedInstance.getInstance().totalSecondsCountdown != -1)
+	                    	{
+	                    		double progress = (double)(1.0 / (double)CSharedInstance.getInstance().totalSecondsCountdown);
+	                    		
+	                    		pBar.setProgress(progress + pBar.getProgress());
+	                    		pBarPercentage.setProgress(pBar.getProgress());
+	                    		
+	                    		CSharedInstance.getInstance().secondsElapsed++;
+	                    		
+	                    		toolTipPbar.setText(CSharedInstance.getInstance().timeLeft());
+	                    	}
+	                    	
+	                    	if (CSharedInstance.getInstance().secondsElapsed == 0 && CSharedInstance.getInstance().totalSecondsCountdown != -1)
+	                    	{
+	                    		timer.cancel();
+	                    	}
                     	}
                     }
                 });

@@ -154,6 +154,9 @@ public class CSettingsController implements Initializable
         			
         			Map<String, Object> currentSettings = getCurrentSettingsOnView();
         			
+        			// save configuration
+        			CSharedInstance.getInstance().saveConfigurations(currentSettings);
+        			
         			CSharedInstance.getInstance().updateWaitingTimeForResults(
         					(String)currentSettings.get(CViewConstants.START_FROM_TIME), (String)currentSettings.get(CViewConstants.START_TO_TIME));
         			

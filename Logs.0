@@ -670,3 +670,171 @@ INFO: clix monitoring enabled - Run clix!
 WARNING: session is down
 ??? 03, 2014 1:52:51 AM unix.ExecuteUnixOperations start
 WARNING: [Ljava.lang.StackTraceElement;@4a7b933
+??? 04, 2014 11:01:40 PM unix.ExecuteUnixOperations start
+INFO: Program started immediatly
+??? 04, 2014 11:01:40 PM unix.ExecuteUnixOperations start
+INFO: Gui Parameter Check started:
+??? 04, 2014 11:01:40 PM unix.GuiParameterCheck mainGuiCheck
+INFO: Connection Test was NOT successful
+??? 04, 2014 11:01:40 PM unix.GuiParameterCheck mainGuiCheck
+INFO: Instance exist
+??? 04, 2014 11:01:40 PM unix.GuiParameterCheck mainGuiCheck
+INFO: MDS is NOT started!
+??? 04, 2014 11:01:40 PM unix.GuiParameterCheck mainGuiCheck
+INFO: Start before proceeding or uncheck the 'mds-r' radiobutton!
+??? 04, 2014 11:01:40 PM unix.GuiParameterCheck mainGuiCheck
+INFO: MDIS is NOT started!
+??? 04, 2014 11:01:40 PM unix.GuiParameterCheck mainGuiCheck
+INFO: Start before proceeding or uncheck the 'mdis-r' radiobutton!
+??? 04, 2014 11:01:40 PM unix.GuiParameterCheck mainGuiCheck
+INFO: MDSS is NOT started!
+??? 04, 2014 11:01:40 PM unix.GuiParameterCheck mainGuiCheck
+INFO: Start before proceeding or uncheck the 'mdss-r' radiobutton!
+??? 04, 2014 11:01:40 PM unix.ExecuteUnixOperations start
+INFO: Gui parameters check FAILED! return to GUI..
+??? 04, 2014 11:01:40 PM unix.ExecuteUnixOperations start
+INFO: Gui parameters check Success!
+??? 04, 2014 11:01:40 PM unix.ExecuteUnixOperations start
+INFO: Kill vmstat and AV_monitoring processes if running
+??? 04, 2014 11:01:40 PM unix.ExecuteUnixOperations start
+INFO: Remove old monitoring files from OS
+??? 04, 2014 11:01:40 PM unix.ExecuteUnixOperations start
+INFO: Locate bash installation folder on OS
+??? 04, 2014 11:01:40 PM unix.ExecuteUnixOperations start
+INFO: Copy AV_Monitoring script to OS
+??? 04, 2014 11:01:40 PM unix.ExecuteUnixOperations start
+INFO: Execute Monitoring file on OS
+??? 04, 2014 11:01:40 PM unix.ExecuteUnixOperations start
+INFO: Check if clix monitoring enabled
+??? 04, 2014 11:01:40 PM unix.ExecuteUnixOperations start
+INFO: clix monitoring enabled - Run clix!
+??? 04, 2014 11:01:40 PM unix.ExecuteUnixOperations start
+WARNING: session is down
+??? 04, 2014 11:01:40 PM unix.ExecuteUnixOperations start
+WARNING: [Ljava.lang.StackTraceElement;@8b7458e
+??? 04, 2014 11:03:07 PM unix.ExecuteUnixOperations start
+INFO: Program started immediatly
+??? 04, 2014 11:03:07 PM unix.ExecuteUnixOperations start
+INFO: Gui Parameter Check started:
+??? 04, 2014 11:03:07 PM unix.GuiParameterCheck mainGuiCheck
+INFO: Connection Test was NOT successful
+??? 04, 2014 11:03:07 PM unix.GuiParameterCheck mainGuiCheck
+INFO: Instance exist
+??? 04, 2014 11:03:07 PM unix.GuiParameterCheck mainGuiCheck
+INFO: MDS is NOT started!
+??? 04, 2014 11:03:07 PM unix.GuiParameterCheck mainGuiCheck
+INFO: Start before proceeding or uncheck the 'mds-r' radiobutton!
+??? 04, 2014 11:03:07 PM unix.GuiParameterCheck mainGuiCheck
+INFO: MDIS is NOT started!
+??? 04, 2014 11:03:07 PM unix.GuiParameterCheck mainGuiCheck
+INFO: Start before proceeding or uncheck the 'mdis-r' radiobutton!
+??? 04, 2014 11:03:07 PM unix.GuiParameterCheck mainGuiCheck
+INFO: MDSS is NOT started!
+??? 04, 2014 11:03:07 PM unix.GuiParameterCheck mainGuiCheck
+INFO: Start before proceeding or uncheck the 'mdss-r' radiobutton!
+??? 04, 2014 11:03:07 PM unix.ExecuteUnixOperations start
+INFO: Gui parameters check FAILED! return to GUI..
+??? 04, 2014 11:03:07 PM unix.ExecuteUnixOperations start
+INFO: Gui parameters check Success!
+??? 04, 2014 11:03:07 PM unix.ExecuteUnixOperations start
+INFO: Kill vmstat and AV_monitoring processes if running
+??? 04, 2014 11:03:07 PM unix.ExecuteUnixOperations start
+INFO: Remove old monitoring files from OS
+??? 04, 2014 11:03:07 PM unix.ExecuteUnixOperations start
+INFO: Locate bash installation folder on OS
+??? 04, 2014 11:03:07 PM unix.ExecuteUnixOperations start
+INFO: Copy AV_Monitoring script to OS
+??? 04, 2014 11:03:07 PM unix.ExecuteUnixOperations start
+INFO: Execute Monitoring file on OS
+??? 04, 2014 11:03:07 PM unix.ExecuteUnixOperations start
+INFO: Check if clix monitoring enabled
+??? 04, 2014 11:03:07 PM unix.ExecuteUnixOperations start
+INFO: clix monitoring enabled - Run clix!
+??? 04, 2014 11:03:07 PM unix.ExecuteUnixOperations start
+WARNING: session is down
+??? 04, 2014 11:03:07 PM unix.ExecuteUnixOperations start
+WARNING: [Ljava.lang.StackTraceElement;@1855590e
+??? 04, 2014 11:06:07 PM unix.ExecuteUnixOperations start
+INFO: Program started immediatly
+??? 04, 2014 11:06:07 PM unix.ExecuteUnixOperations start
+INFO: Gui Parameter Check started:
+??? 04, 2014 11:06:07 PM unix.GuiParameterCheck mainGuiCheck
+INFO: Connection Test was NOT successful
+??? 04, 2014 11:06:07 PM unix.GuiParameterCheck mainGuiCheck
+INFO: Instance exist
+??? 04, 2014 11:06:07 PM unix.GuiParameterCheck mainGuiCheck
+INFO: MDS is NOT started!
+??? 04, 2014 11:06:07 PM unix.GuiParameterCheck mainGuiCheck
+INFO: Start before proceeding or uncheck the 'mds-r' radiobutton!
+??? 04, 2014 11:06:07 PM unix.GuiParameterCheck mainGuiCheck
+INFO: MDIS is NOT started!
+??? 04, 2014 11:06:07 PM unix.GuiParameterCheck mainGuiCheck
+INFO: Start before proceeding or uncheck the 'mdis-r' radiobutton!
+??? 04, 2014 11:06:07 PM unix.GuiParameterCheck mainGuiCheck
+INFO: MDSS is NOT started!
+??? 04, 2014 11:06:07 PM unix.GuiParameterCheck mainGuiCheck
+INFO: Start before proceeding or uncheck the 'mdss-r' radiobutton!
+??? 04, 2014 11:06:07 PM unix.ExecuteUnixOperations start
+INFO: Gui parameters check FAILED! return to GUI..
+??? 04, 2014 11:06:07 PM unix.ExecuteUnixOperations start
+INFO: Gui parameters check Success!
+??? 04, 2014 11:06:07 PM unix.ExecuteUnixOperations start
+INFO: Kill vmstat and AV_monitoring processes if running
+??? 04, 2014 11:06:07 PM unix.ExecuteUnixOperations start
+INFO: Remove old monitoring files from OS
+??? 04, 2014 11:06:07 PM unix.ExecuteUnixOperations start
+INFO: Locate bash installation folder on OS
+??? 04, 2014 11:06:07 PM unix.ExecuteUnixOperations start
+INFO: Copy AV_Monitoring script to OS
+??? 04, 2014 11:06:07 PM unix.ExecuteUnixOperations start
+INFO: Execute Monitoring file on OS
+??? 04, 2014 11:06:07 PM unix.ExecuteUnixOperations start
+INFO: Check if clix monitoring enabled
+??? 04, 2014 11:06:07 PM unix.ExecuteUnixOperations start
+INFO: clix monitoring enabled - Run clix!
+??? 04, 2014 11:06:07 PM unix.ExecuteUnixOperations start
+WARNING: session is down
+??? 04, 2014 11:06:07 PM unix.ExecuteUnixOperations start
+WARNING: [Ljava.lang.StackTraceElement;@36212ecc
+??? 04, 2014 11:09:26 PM unix.ExecuteUnixOperations start
+INFO: Program started immediatly
+??? 04, 2014 11:09:26 PM unix.ExecuteUnixOperations start
+INFO: Gui Parameter Check started:
+??? 04, 2014 11:09:26 PM unix.GuiParameterCheck mainGuiCheck
+INFO: Connection Test was NOT successful
+??? 04, 2014 11:09:26 PM unix.GuiParameterCheck mainGuiCheck
+INFO: Instance exist
+??? 04, 2014 11:09:26 PM unix.GuiParameterCheck mainGuiCheck
+INFO: MDS is NOT started!
+??? 04, 2014 11:09:26 PM unix.GuiParameterCheck mainGuiCheck
+INFO: Start before proceeding or uncheck the 'mds-r' radiobutton!
+??? 04, 2014 11:09:26 PM unix.GuiParameterCheck mainGuiCheck
+INFO: MDIS is NOT started!
+??? 04, 2014 11:09:26 PM unix.GuiParameterCheck mainGuiCheck
+INFO: Start before proceeding or uncheck the 'mdis-r' radiobutton!
+??? 04, 2014 11:09:26 PM unix.GuiParameterCheck mainGuiCheck
+INFO: MDSS is NOT started!
+??? 04, 2014 11:09:26 PM unix.GuiParameterCheck mainGuiCheck
+INFO: Start before proceeding or uncheck the 'mdss-r' radiobutton!
+??? 04, 2014 11:09:26 PM unix.ExecuteUnixOperations start
+INFO: Gui parameters check FAILED! return to GUI..
+??? 04, 2014 11:09:26 PM unix.ExecuteUnixOperations start
+INFO: Gui parameters check Success!
+??? 04, 2014 11:09:26 PM unix.ExecuteUnixOperations start
+INFO: Kill vmstat and AV_monitoring processes if running
+??? 04, 2014 11:09:26 PM unix.ExecuteUnixOperations start
+INFO: Remove old monitoring files from OS
+??? 04, 2014 11:09:26 PM unix.ExecuteUnixOperations start
+INFO: Locate bash installation folder on OS
+??? 04, 2014 11:09:26 PM unix.ExecuteUnixOperations start
+INFO: Copy AV_Monitoring script to OS
+??? 04, 2014 11:09:26 PM unix.ExecuteUnixOperations start
+INFO: Execute Monitoring file on OS
+??? 04, 2014 11:09:26 PM unix.ExecuteUnixOperations start
+INFO: Check if clix monitoring enabled
+??? 04, 2014 11:09:26 PM unix.ExecuteUnixOperations start
+INFO: clix monitoring enabled - Run clix!
+??? 04, 2014 11:09:26 PM unix.ExecuteUnixOperations start
+WARNING: session is down
+??? 04, 2014 11:09:26 PM unix.ExecuteUnixOperations start
+WARNING: [Ljava.lang.StackTraceElement;@54843caf

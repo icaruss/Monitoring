@@ -3,6 +3,7 @@ package viewLogic;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.sql.Time;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -11,6 +12,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 import java.util.logging.Level;
+
+import javax.management.monitor.MonitorNotification;
+import javax.management.monitor.MonitorSettingException;
+import javax.print.attribute.standard.DateTimeAtCompleted;
 
 import log.MonLogger;
 
@@ -21,6 +26,9 @@ public class CSharedInstance
 	
 	public int totalSecondsCountdown;
 	public int secondsElapsed;
+	
+	private boolean isMonitoringStarted;
+	private Time monitoringStartTime;
 	
 	private String currentConfigurationID;
 	
@@ -38,6 +46,8 @@ public class CSharedInstance
 		currentConfigurationID = null;
 		totalSecondsCountdown = -1;
 		secondsElapsed = 0;
+		isMonitoringStarted = false;
+		monitoringStartTime = null;
 		
 		deSeriallize();
 		
@@ -290,10 +300,54 @@ public class CSharedInstance
     
     public boolean isReadyToLaunch()
     {
+    	
+    	if (isMonitoringStarted)
+    		return true;
+    	
     	Calendar calendar = Calendar.getInstance();
     	
-    	return true;
+    	try
+    	{
+	    	monitoringStart();
+	    	
+	    	if (monitoringStartTime != null)
+	    	{
+	    		if (monitoringStartTime.compareTo(calendar.getTime()) <= 0)
+	    		{
+	    			isMonitoringStarted = true;
+	    			
+	    			return true;
+	    		}
+	    		
+	    		return false;
+	    	}
+	    	
+    	}
+    	catch (Exception e)
+    	{
+    		MonLogger.myLogger.log(Level.WARNING, e.getMessage());
+    	}
     	
+    	return false;
+    	
+    }
+    
+	public void monitoringStart()
+    {
+    	if (monitoringStartTime == null)
+    	{
+    		Map<String, Object> map = getCurrentConfiguration();
+    		String fromTime = (String) map.get(CViewConstants.START_FROM_TIME);
+    		
+    		if (fromTime != null)
+    		{
+    			//int hours = Integer.parseInt(fromTime.substring(0, 2));
+    			//int minutes = Integer.parseInt(fromTime.substring(3, 5));
+    			//int seconds = Integer.parseInt(fromTime.substring(6));
+    			
+    			monitoringStartTime = Time.valueOf(fromTime.replace('-', ':'));
+    		}
+    	}
     }
 		
 }
