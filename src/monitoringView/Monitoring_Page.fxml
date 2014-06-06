@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="833.0" prefWidth="608.0000999999975" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <!-- TODO Add Nodes -->
+  <children>
+    <SplitPane dividerPositions="0.5018050541516246" focusTraversable="true" layoutX="0.0" layoutY="0.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="833.0" prefWidth="609.0">
+      <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="554.0" prefWidth="607.0">
+          <children>
+            <Slider layoutX="14.0" layoutY="384.0" prefHeight="21.0" prefWidth="580.0" />
+            <LineChart id="LineChartNxN" fx:id="lineChart" layoutX="84.0" layoutY="49.0" legendSide="BOTTOM" opacity="1.0" prefHeight="319.0" prefWidth="433.0" title="Title">
+              <xAxis>
+                <NumberAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+              <effect>
+                <DropShadow color="#fffdcc" />
+              </effect>
+            </LineChart>
+            <Label alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="156.0" layoutY="2.0" prefHeight="35.0" prefWidth="295.0" text="Monitoring Results" textAlignment="CENTER" textFill="BLACK" textOverrun="WORD_ELLIPSIS" underline="true" wrapText="true">
+              <effect>
+                <DropShadow color="#bfbfbf" />
+              </effect>
+              <font>
+                <Font name="MS Outlook" size="24.0" />
+              </font>
+            </Label>
+          </children>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="395.0" prefWidth="607.0">
+          <children>
+            <TableView fx:id="tbView" layoutX="0.0" layoutY="1.0" prefHeight="412.0" prefWidth="607.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="Column X" />
+                <TableColumn prefWidth="75.0" text="Column X" />
+              </columns>
+            </TableView>
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+  </children>
+</AnchorPane>

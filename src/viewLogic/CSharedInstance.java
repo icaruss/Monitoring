@@ -27,6 +27,8 @@ public class CSharedInstance
 	public int totalSecondsCountdown;
 	public int secondsElapsed;
 	
+	public CViewConstants.MonitorType currentMonitoring;
+	
 	private boolean isMonitoringStarted;
 	private Time monitoringStartTime;
 	
@@ -48,6 +50,8 @@ public class CSharedInstance
 		secondsElapsed = 0;
 		isMonitoringStarted = false;
 		monitoringStartTime = null;
+		
+		currentMonitoring = CViewConstants.MonitorType.MonitorTypeElse;
 		
 		deSeriallize();
 		
@@ -337,16 +341,26 @@ public class CSharedInstance
     	if (monitoringStartTime == null)
     	{
     		Map<String, Object> map = getCurrentConfiguration();
-    		String fromTime = (String) map.get(CViewConstants.START_FROM_TIME);
     		
-    		if (fromTime != null)
+    		if (map != null)
     		{
-    			//int hours = Integer.parseInt(fromTime.substring(0, 2));
-    			//int minutes = Integer.parseInt(fromTime.substring(3, 5));
-    			//int seconds = Integer.parseInt(fromTime.substring(6));
-    			
-    			monitoringStartTime = Time.valueOf(fromTime.replace('-', ':'));
+    			String fromTime = (String) map.get(CViewConstants.START_FROM_TIME);
+        		
+        		if (fromTime != null)
+        		{
+        			//int hours = Integer.parseInt(fromTime.substring(0, 2));
+        			//int minutes = Integer.parseInt(fromTime.substring(3, 5));
+        			//int seconds = Integer.parseInt(fromTime.substring(6));
+        			
+        			monitoringStartTime = Time.valueOf(fromTime.replace('-', ':'));
+        		}
+        		else // start immediately
+        		{
+        			monitoringStartTime = Time.valueOf(Calendar.getInstance().get(Calendar.HOUR_OF_DAY) + ":" 
+        									+ Calendar.getInstance().get(Calendar.MINUTE) + ":00");
+        		}
     		}
+    		
     	}
     }
 		

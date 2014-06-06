@@ -14,6 +14,7 @@ import java.util.logging.Logger;
 
 import settingsView.CSettingsStage;
 import viewLogic.CSharedInstance;
+import viewLogic.CViewConstants;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -39,7 +40,7 @@ public class CMainPageController implements Initializable
     private Button btnSettings; // Value injected by FXMLLoader
 
     @FXML // fx:id="btnVMStat"
-    private Button btnVMStat; // Value injected by FXMLLoader
+    private Button btnStopMonitoring; // Value injected by FXMLLoader
     
     @FXML // fx:id="btnShowVMSTATView"
     private Button btnShowVMSTATView; // Value injected by FXMLLoader
@@ -58,7 +59,7 @@ public class CMainPageController implements Initializable
 	public void initialize(URL fxmlFileLocation, ResourceBundle resources)
     {
         assert btnSettings != null : "fx:id=\"btnSettings\" was not injected: check your FXML file 'Main_Page.fxml'.";
-        assert btnVMStat != null : "fx:id=\"btnVMStat\" was not injected: check your FXML file 'Main_Page.fxml'.";
+        assert btnStopMonitoring != null : "fx:id=\"btnStopMonitoring\" was not injected: check your FXML file 'Main_Page.fxml'.";
         assert btnShowVMSTATView != null : "fx:id=\"btnShowVMSTATView\" was not injected: check your FXML file 'Main_Page.fxml'.";
         assert btnShowMonitoringResults != null : "fx:id=\"btnShowMonitoringResults\" was not injected: check your FXML file 'Main_Page.fxml'.";
         assert pBar != null : "fx:id=\"pBar\" was not injected: check your FXML file 'Main_Page.fxml'.";
@@ -77,13 +78,15 @@ public class CMainPageController implements Initializable
             }
         });
         
-        btnVMStat.setOnAction(new EventHandler<ActionEvent>() 
+        btnStopMonitoring.setOnAction(new EventHandler<ActionEvent>() 
         {
 
         	@Override
         	public void handle(ActionEvent event)
         	{
-        		System.out.println("btnVMStat Event On Occured");
+        		System.out.println("btnStopMonitoring Event On Occured");
+        		
+        		StopMonitoring(CSharedInstance.getInstance().currentMonitoring);
         	}
         });
         
@@ -123,6 +126,16 @@ public class CMainPageController implements Initializable
                     {
                     	if (CSharedInstance.getInstance().isReadyToLaunch())
                     	{
+                    		if (!btnSettings.isDisabled())
+                    		{
+                    			btnSettings.setDisable(true);
+                    		}
+                    		
+                    		if (!btnStopMonitoring.isVisible())
+                    		{
+                    			btnStopMonitoring.setVisible(true);
+                    		}
+                    		
 	                    	if (CSharedInstance.getInstance().totalSecondsCountdown != -1)
 	                    	{
 	                    		double progress = (double)(1.0 / (double)CSharedInstance.getInstance().totalSecondsCountdown);
@@ -138,6 +151,8 @@ public class CMainPageController implements Initializable
 	                    	if (CSharedInstance.getInstance().secondsElapsed == 0 && CSharedInstance.getInstance().totalSecondsCountdown != -1)
 	                    	{
 	                    		timer.cancel();
+	                    		
+	                    		StopMonitoring(CSharedInstance.getInstance().currentMonitoring);
 	                    	}
                     	}
                     }
@@ -146,6 +161,34 @@ public class CMainPageController implements Initializable
         }, 0, 1000);
         
     }
+	
+	
+	public void StopMonitoring(CViewConstants.MonitorType monitorType)
+	{
+		toolTipPbar.setText("Monitoring Finished");
+		
+		if (btnSettings.isDisabled())
+		{
+			btnSettings.setDisable(false);
+		}
+		
+		btnStopMonitoring.setVisible(false);
+		
+		switch (monitorType)
+		{
+			case MonitorTypeVMSTAT :
+			{
+				// ALINA CALL YOUR STOP METHOD FROM HERE
+			}
+			break;
+				
+			case MonitorTypeElse :
+			{
+				// ALINA CALL YOUR STOP METHOD FROM HERE (FOR MDSR'S)
+			}
+			break;
+		}
+	}
 
 }
 
