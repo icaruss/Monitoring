@@ -6,17 +6,17 @@
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="833.0" prefWidth="608.0000999999975" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+<AnchorPane blendMode="SRC_OVER" prefHeight="833.0" prefWidth="608.0000999999975" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
   <!-- TODO Add Nodes -->
   <children>
-    <SplitPane dividerPositions="0.5018050541516246" focusTraversable="true" layoutX="0.0" layoutY="0.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="833.0" prefWidth="609.0">
+    <SplitPane fx:id="spltPane" disable="false" dividerPositions="0.5078947368421053" focusTraversable="true" layoutX="-1.0" layoutY="0.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" pickOnBounds="false" prefHeight="762.0" prefWidth="609.0">
       <items>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="554.0" prefWidth="607.0">
           <children>
-            <Slider layoutX="14.0" layoutY="384.0" prefHeight="21.0" prefWidth="580.0" />
-            <LineChart id="LineChartNxN" fx:id="lineChart" layoutX="84.0" layoutY="49.0" legendSide="BOTTOM" opacity="1.0" prefHeight="319.0" prefWidth="433.0" title="Title">
+            <LineChart fx:id="lineChart" alternativeColumnFillVisible="false" alternativeRowFillVisible="false" horizontalGridLinesVisible="true" layoutX="23.0" layoutY="41.0" legendSide="BOTTOM" legendVisible="false" opacity="1.0" prefHeight="326.0" prefWidth="540.0" title="">
               <xAxis>
                 <NumberAxis side="BOTTOM" />
               </xAxis>
@@ -27,7 +27,7 @@
                 <DropShadow color="#fffdcc" />
               </effect>
             </LineChart>
-            <Label alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="156.0" layoutY="2.0" prefHeight="35.0" prefWidth="295.0" text="Monitoring Results" textAlignment="CENTER" textFill="BLACK" textOverrun="WORD_ELLIPSIS" underline="true" wrapText="true">
+            <Label alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="3.0" layoutY="2.0" prefHeight="35.0" prefWidth="212.0" text="Monitoring Results" textAlignment="CENTER" textFill="BLACK" textOverrun="WORD_ELLIPSIS" underline="true" wrapText="true">
               <effect>
                 <DropShadow color="#bfbfbf" />
               </effect>
@@ -35,19 +35,44 @@
                 <Font name="MS Outlook" size="24.0" />
               </font>
             </Label>
+            <Label fx:id="lblResultID" alignment="BASELINE_CENTER" blendMode="DARKEN" cache="true" cacheHint="SPEED" contentDisplay="CENTER" layoutX="448.0" layoutY="6.0" prefHeight="35.0" prefWidth="154.0" text="Current" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+              <font>
+                <Font name="Arial" size="18.0" />
+              </font>
+              <textFill>
+                <Color blue="0.200" green="0.000" red="0.160" fx:id="x1" />
+              </textFill>
+            </Label>
           </children>
         </AnchorPane>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="395.0" prefWidth="607.0">
           <children>
-            <TableView fx:id="tbView" layoutX="0.0" layoutY="1.0" prefHeight="412.0" prefWidth="607.0">
-              <columns>
-                <TableColumn prefWidth="75.0" text="Column X" />
-                <TableColumn prefWidth="75.0" text="Column X" />
-              </columns>
-            </TableView>
+            <TableView fx:id="tbView" layoutX="0.0" layoutY="1.0" prefHeight="412.0" prefWidth="607.0" />
           </children>
         </AnchorPane>
       </items>
     </SplitPane>
+    <Button fx:id="btnNextResult" alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="167.0" layoutY="776.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="128.0" text="Next Result" textAlignment="CENTER" textFill="$x1" textOverrun="WORD_ELLIPSIS" wrapText="true">
+      <effect>
+        <DropShadow>
+          <color>
+            <Color blue="0.200" green="0.000" red="0.064" fx:id="x2" />
+          </color>
+        </DropShadow>
+      </effect>
+      <font>
+        <Font name="Arial Bold" size="14.0" fx:id="x3" />
+      </font>
+    </Button>
+    <Button fx:id="btnPreviousResult" alignment="BASELINE_CENTER" contentDisplay="CENTER" font="$x3" layoutX="8.0" layoutY="776.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="135.0" text="Previous Result" textAlignment="CENTER" textFill="$x1" wrapText="true">
+      <effect>
+        <DropShadow color="$x2" />
+      </effect>
+    </Button>
+    <Button id="btnNextResult" fx:id="btnShowInFile" alignment="BASELINE_CENTER" contentDisplay="CENTER" font="$x3" layoutX="467.0" layoutY="775.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="127.0" text="Show In File" textAlignment="CENTER" textFill="#290033" textOverrun="WORD_ELLIPSIS" wrapText="true">
+      <effect>
+        <DropShadow color="#100033" />
+      </effect>
+    </Button>
   </children>
 </AnchorPane>
