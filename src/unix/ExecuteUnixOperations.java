@@ -13,11 +13,10 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
-
-
 import java.util.Map;
 
 import log.MonLogger;
+
 
 
 
@@ -73,11 +72,11 @@ public class ExecuteUnixOperations extends CommandExecuter
 
     // PARAMETERS TO GET FROM GUI  -  START   TODO
     /////////////////////////////////////////
-    String port="59950";
-    String[] paramsForSH = {"MQM"};
-    Boolean clixOn = true;
-    String SID = "MQM";     // 
-    int interval = 5 ;
+    String port;
+    String[] paramsForSH = {"MA3"};
+    Boolean clixOn;
+    String SID;     // 
+    int interval;
     /////////////////////////////////////////
     // PARAMETERS TO GET FROM GUI  -  END
 
@@ -96,6 +95,10 @@ public class ExecuteUnixOperations extends CommandExecuter
     	
     	String m_interval = (String)(currentConfiguration.get("interval"));
     	interval = (null != m_interval) ? Integer.parseInt(m_interval) : 5;
+    	
+    	SID = (String)(currentConfiguration.get("instance"));
+    	
+    	clixOn = (Boolean)(currentConfiguration.get("clix"));
     	
     }
 
