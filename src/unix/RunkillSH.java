@@ -1,17 +1,12 @@
 package unix;
 
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
-import com.jcraft.jsch.Channel;
-import com.jcraft.jsch.ChannelExec;
-import com.jcraft.jsch.ChannelSftp;
 import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.Session;
-import com.jcraft.jsch.SftpException;
 
 public class RunkillSH extends CommandExecuter
 {
@@ -91,7 +86,7 @@ public class RunkillSH extends CommandExecuter
 			 //System.out.println("fileNamesString: " + fileNamesString);
 			 String delim = "\n";						 //insert here all delimitators
 			 StringTokenizer st = new StringTokenizer(fileNamesString,delim);
-			 for (int i = 0 ; st.hasMoreTokens() ; i++) 
+			 while(st.hasMoreTokens()) 
 			 {
 				 fileNames.add(st.nextToken());		     
 			 }

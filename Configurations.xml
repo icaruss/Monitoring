@@ -4,11 +4,19 @@
     <map>
       <entry>
         <string>port</string>
-        <string>59950</string>
+        <string>50350</string>
       </entry>
       <entry>
         <string>interval</string>
         <string>5</string>
+      </entry>
+      <entry>
+        <string>start</string>
+        <string>Immediately</string>
+      </entry>
+      <entry>
+        <string>mdsr</string>
+        <boolean>true</boolean>
       </entry>
       <entry>
         <string>clix</string>
@@ -16,43 +24,27 @@
       </entry>
       <entry>
         <string>mdisr</string>
-        <boolean>false</boolean>
+        <boolean>true</boolean>
       </entry>
       <entry>
-        <string>startToTime</string>
-        <string>23-13-00</string>
+        <string>userName</string>
+        <string>hp1adm</string>
+      </entry>
+      <entry>
+        <string>hostName</string>
+        <string>iltlvh325</string>
+      </entry>
+      <entry>
+        <string>instance</string>
+        <string>HP1</string>
+      </entry>
+      <entry>
+        <string>mdssr</string>
+        <boolean>true</boolean>
       </entry>
       <entry>
         <string>password</string>
         <string>a2i2000!</string>
-      </entry>
-      <entry>
-        <string>startFromTime</string>
-        <string>23-11-00</string>
-      </entry>
-      <entry>
-        <string>start</string>
-        <string>FrameTime</string>
-      </entry>
-      <entry>
-        <string>mdsr</string>
-        <boolean>true</boolean>
-      </entry>
-      <entry>
-        <string>hostName</string>
-        <string>ilsun45</string>
-      </entry>
-      <entry>
-        <string>userName</string>
-        <string>mqmadm</string>
-      </entry>
-      <entry>
-        <string>instance</string>
-        <string>default</string>
-      </entry>
-      <entry>
-        <string>mdssr</string>
-        <boolean>false</boolean>
       </entry>
     </map>
   </entry>
@@ -94,6 +86,59 @@
       <entry>
         <string>configurationID</string>
         <string>Default</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>iltlvh325</string>
+    <map>
+      <entry>
+        <string>port</string>
+        <string>50350</string>
+      </entry>
+      <entry>
+        <string>interval</string>
+        <string>5</string>
+      </entry>
+      <entry>
+        <string>start</string>
+        <string>Immediately</string>
+      </entry>
+      <entry>
+        <string>mdsr</string>
+        <boolean>true</boolean>
+      </entry>
+      <entry>
+        <string>clix</string>
+        <boolean>true</boolean>
+      </entry>
+      <entry>
+        <string>mdisr</string>
+        <boolean>true</boolean>
+      </entry>
+      <entry>
+        <string>userName</string>
+        <string>hp1adm</string>
+      </entry>
+      <entry>
+        <string>hostName</string>
+        <string>iltlvh325</string>
+      </entry>
+      <entry>
+        <string>instance</string>
+        <string>HP1</string>
+      </entry>
+      <entry>
+        <string>mdssr</string>
+        <boolean>true</boolean>
+      </entry>
+      <entry>
+        <string>password</string>
+        <string>a2i2000!</string>
+      </entry>
+      <entry>
+        <string>configurationID</string>
+        <string>iltlvh325</string>
       </entry>
     </map>
   </entry>

@@ -22,6 +22,13 @@ import log.MonLogger;
 
 
 
+
+
+
+
+
+
+
 import org.jfree.ui.RefineryUtilities;
 
 import Charts.ChartGeneration;
@@ -73,10 +80,14 @@ public class ExecuteUnixOperations extends CommandExecuter
     // PARAMETERS TO GET FROM GUI  -  START   TODO
     /////////////////////////////////////////
     String port;
-    String[] paramsForSH = {"MA3"};
+    String[] paramsForSH;
     Boolean clixOn;
-    String SID;     // 
+    String SID;     
     int interval;
+    String startDate;
+    String endDate;
+
+    
     /////////////////////////////////////////
     // PARAMETERS TO GET FROM GUI  -  END
 
@@ -91,28 +102,24 @@ public class ExecuteUnixOperations extends CommandExecuter
     			0);
     	
     	String m_port = (String)(currentConfiguration.get("port"));
-    	port = (null != m_port) ? m_port : "59950";
-    	
+    	port = (null != m_port) ? m_port : "59950";    	
     	String m_interval = (String)(currentConfiguration.get("interval"));
-    	interval = (null != m_interval) ? Integer.parseInt(m_interval) : 5;
+    	interval = (null != m_interval) ? Integer.parseInt(m_interval) : 5;    	
+    	SID = (String)(currentConfiguration.get("instance"));   	
+    	clixOn = (Boolean)(currentConfiguration.get("clix"));    	
+    	paramsForSH = createParamsForSH(currentConfiguration);    	
+    	startDate = (String) currentConfiguration.get("startFromTime");  	
+    	endDate = (String) currentConfiguration.get("startToTime");
     	
-    	SID = (String)(currentConfiguration.get("instance"));
-    	
-    	clixOn = (Boolean)(currentConfiguration.get("clix"));
-    	
+
     }
 
 
-
-
 	private RunkillSH runkillSH = new RunkillSH();
- //   private MDMRelatedOperations mdmRelatedOperations = new MDMRelatedOperations();
+
     private FileManagmentOperations fileManagmentOperations = new FileManagmentOperations();
     private DateOperations dateOperations = new DateOperations();
     String mon_file = "AV_monitoring.sh";
-
-    String startDate;
-  
     private ExcelManagement excelManagement = null;
     clix clixCommand = null;
     private winUnixOperations winUnixOperations = new winUnixOperations();
@@ -138,6 +145,24 @@ public class ExecuteUnixOperations extends CommandExecuter
 	//-----------------------------------------------------------------------------
 	//-----------------------------------------------------------------------------
  
+	
+	private String[] createParamsForSH(Map<String, Object> currentConfiguration)
+	{
+		List<String> params = new ArrayList<String>();	
+	
+		params.add((String) currentConfiguration.get("instance"));
+		if (currentConfiguration.get("mdsr") != null)	
+			params.add("mds");
+		if (currentConfiguration.get("mdisr") != null)	
+			params.add("mdis");
+		if (currentConfiguration.get("mdssr") != null)	
+			params.add("mdss");
+
+		return params.toArray(new String[params.size()]);
+		
+	}
+	
+	
     
     // Will be executed when the "Start Monitoring" button will be pressed
     public void start()
@@ -145,8 +170,6 @@ public class ExecuteUnixOperations extends CommandExecuter
     	try
     	{
     		
-
-			MonLogger.myLogger.log(Level.INFO, "Program started immediatly");
 			MonLogger.myLogger.log(Level.INFO, "Gui Parameter Check started:");
     		GuiParameterCheck guiParameterCheck =  new GuiParameterCheck(SID, hostName, userName,password);
     		if(!guiParameterCheck.mainGuiCheck())
@@ -212,44 +235,33 @@ public class ExecuteUnixOperations extends CommandExecuter
         	SimpleDateFormat currentTime = new SimpleDateFormat("dd-mm-yyyy HH:mm:ss");
         	//Object currentTime;
 			String comparison = dateOperations.compareTwoDates(currentTime.toString(), startDate);
+			
+			// The start time monitoring time is smaller then current time
 			while (comparison.equals("date1Smaller"))
 			{
 				Thread.sleep(DateOperations.getDateDiff(startDate, currentTime.toString()));
 				comparison = dateOperations.compareTwoDates(currentTime.toString(), startDate);
 			}
+			
+			// Start Monitoring
 			if (comparison.equals("date1Bigger") || comparison.equals("date1Equals"))
 			{
 				MonLogger.myLogger.log(Level.INFO, "Program started on time");
-				MonLogger.myLogger.log(Level.INFO, "Kill vmstat and AV_monitoring processes if running");
-	    		runkillSH.killProcesses(mon_file);
-	    		
-
-	    		MonLogger.myLogger.log(Level.INFO, "Remove old monitoring files from OS");
-	    		
-	    		runkillSH.removeFilesFromUnix();
-	    		fileManagmentOperations.removeFirstLine(mon_file);
-	    		MonLogger.myLogger.log(Level.INFO, "Locate bash installation folder on OS");
-	    		
-	    		String bash = "#!" + runkillSH.locateBash(getOS());
-	    		fileManagmentOperations.insertTextToFile(0, bash, mon_file);  	
-	    		
-	    		MonLogger.myLogger.log(Level.INFO, "Copy AV_Monitoring script to OS");
-	    		winUnixOperations.copyToUnix(mon_file);
-	    		
-	    		MonLogger.myLogger.log(Level.INFO, "Execute Monitoring file on OS");
-	    		runkillSH.ExecuteSh(paramsForSH, mon_file);
-	   
-	    		MonLogger.myLogger.log(Level.INFO, "Check if clix monitoring enabled");
-	    		if (clixOn)
-	    		{
-	    			MonLogger.myLogger.log(Level.INFO, "clix monitoring enabled - Run clix!");
-	    			 clixCommand = new clix(String.valueOf(interval), port, hostName, password);
-	    			 clixCommand.runClix();
-	    			 
-
-	    		}
-	    			
+				start();	    			
 			}
+			
+			comparison = dateOperations.compareTwoDates(currentTime.toString(), endDate);
+			while (comparison.equals("date1Smaller"))
+			{
+				Thread.sleep(DateOperations.getDateDiff(endDate, currentTime.toString()));
+				comparison = dateOperations.compareTwoDates(currentTime.toString(), endDate);
+			}
+			
+			if (comparison.equals("date1Bigger") || comparison.equals("date1Equals"))
+			{
+				MonLogger.myLogger.log(Level.INFO, "Program finished on time");
+				finish();	    			
+			}			
     	}
     	catch (Exception e)
     	{

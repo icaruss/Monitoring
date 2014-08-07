@@ -163,7 +163,15 @@ public class CMonitoringViewController implements Initializable
         			try
         			{
         				ExecuteUnixOperations executeUnixOperations = new ExecuteUnixOperations(currentSettings);
-            			executeUnixOperations.start();
+        				if ( currentSettings.get("START").equals("START_FRAME_TIME"))
+        				{
+        					executeUnixOperations.startOnTime();
+        				}
+        				else if ( currentSettings.get("START").equals("START_IMMEDIATELY"))
+        				{
+        					executeUnixOperations.start();
+        				}
+
         			}
         			catch (Exception e)
         			{}

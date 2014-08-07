@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.ResourceBundle;
 import java.util.Set;
+import java.util.logging.Level;
 
 import unix.ExecuteUnixOperations;
 import viewLogic.CSharedInstance;
@@ -25,6 +26,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import log.MonLogger;
 import viewLogic.CViewConstants;
 
 
@@ -162,11 +164,27 @@ public class CSettingsController implements Initializable
         			
         			try
         			{
+        				//TODO: Test the functionality
         				ExecuteUnixOperations executeUnixOperations = new ExecuteUnixOperations(currentSettings);
-            			executeUnixOperations.start();
+        				if ((String)currentSettings.get(CViewConstants.START) == CViewConstants.START_IMMEDIATELY)
+        				{
+        					MonLogger.myLogger.log(Level.INFO, "S T A R T");
+        					MonLogger.myLogger.log(Level.INFO, "Program started immedtiatly");
+        					executeUnixOperations.start();
+        				}
+        				else if ((String)currentSettings.get(CViewConstants.START) != CViewConstants.START_FRAME_TIME)
+        				{
+        					MonLogger.myLogger.log(Level.INFO, "S T A R T");
+        					MonLogger.myLogger.log(Level.INFO, "Program started on time");
+        					executeUnixOperations.startOnTime();
+        					
+        				}
+        					
         			}
         			catch (Exception e)
-        			{}
+        			{
+        				e.printStackTrace();
+        			}
         			finally
         			{
             			Stage stage = (Stage)btnConnect.getScene().getWindow();

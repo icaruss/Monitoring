@@ -1,8 +1,4 @@
-#!
 #!/usr/local/bin/bash
-=======
-#!/usr/bin/bash
->>>>>>> refs/remotes/origin/master
 
 #SCRIPT: AV_monitoring.sh
 #
@@ -437,11 +433,11 @@ if ( [ $# -ge 0 ] ) ; then
 						else
 							## 2 parameters  - With instance
 							#################################
-							if [ ${#@} -eq 2 -a $2 != "mds" -a $2 != "mdis" -a $2 != "mdss" ];then
-							process1=$1
-							instance=$2
+							if [ ${#@} -eq 2 -a $1 != "mds" -a $1 != "mdis" -a $1 != "mdss" ];then
+							process1=$2
+							instance=$1
 							numOfParam=1
-							processName1=$1
+							processName1=$2
 							##processName2=$2
 							processMon1WithInstance "$process1" "$instance" "$numOfParam"
 							mdRunningProcess1=${process1}
@@ -473,14 +469,14 @@ if ( [ $# -ge 0 ] ) ; then
 									
 											## 3 parameters  - With instance
 											#################################
-											if [ ${#@} -eq 3 -a $3 != "mds" -a $3 != "mdis" -a $3 != "mdss" ]; then
-												process1=$1
-												process2=$2
+											if [ ${#@} -eq 3 -a $1 != "mds" -a $1 != "mdis" -a $1 != "mdss" ]; then
+												process1=$2
+												process2=$3
 												##process3=$3
-												instance=$3
+												instance=$1
 												numOfParam=2
-												processName1=$1
-												processName2=$2
+												processName1=$2
+												processName2=$3
 												processMon1WithInstance "$process1" "$process2" "$instance" "$numOfParam"
 												mdRunningProcess1=${process1}
 												mdRunningProcess2=${process2}	
@@ -515,14 +511,14 @@ if ( [ $# -ge 0 ] ) ; then
 														#################################
 														if ( [ ${#@} -eq 4 ] );then
 
-															process1=$1
-															process2=$2
-															process3=$3
-															instance=$4
+															process1=$2
+															process2=$3
+															process3=$4
+															instance=$1
 															numOfParam=3
-															processName1=$1
-															processName2=$2
-															processName3=$3
+															processName1=$2
+															processName2=$3
+															processName3=$4
 															processMon1WithInstance "$process1" "$process2" "$process3" "$instance" "$numOfParam"
 															mdRunningProcess1=${process1}
 															mdRunningProcess2=${process2}	
