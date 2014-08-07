@@ -251,6 +251,44 @@ public abstract class FilesManagment
 		}
 	}
 	
+	public void replaceStringInfile(String forReplace, String fileName) throws IOException
+	{
+		BufferedReader reader = null;
+		BufferedWriter writer = null;
+		ArrayList<String> list = new ArrayList<String>();
+		int index = 0 ;
+
+		try {
+			reader = new BufferedReader(new FileReader(fileName));
+			String tmp;
+			while ((tmp = reader.readLine()) != null)
+			{
+				list.add(tmp);
+				if(tmp.startsWith("secs="))
+				{
+					index=list.indexOf(tmp);
+				}
+			}
+		
+			reader.close();
+
+			list.remove(index);
+			list.add(index, forReplace);
+			// list.add(0, "Start Text");
+			// list.add("End Text");
+
+			writer = new BufferedWriter(new FileWriter(fileName));
+			for (int i = 0; i < list.size(); i++)
+				writer.write(list.get(i) + "\r\n");
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			reader.close();
+			writer.close();
+		}
+	}
+	
+	
 	public void deleteFile(String FileName, String FilePath)
 	{
 		File file = new File(FilePath + "\\\\" + FilePath);

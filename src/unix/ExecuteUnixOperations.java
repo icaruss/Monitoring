@@ -191,7 +191,7 @@ public class ExecuteUnixOperations extends CommandExecuter
     		
     		String bash = "#!" + runkillSH.locateBash(getOS());
     		fileManagmentOperations.insertTextToFile(0, bash, mon_file);  	
-    		
+    		fileManagmentOperations.replaceStringInfile("secs=" + interval, mon_file);
     		MonLogger.myLogger.log(Level.INFO, "Copy AV_Monitoring script to OS");
     		winUnixOperations.copyToUnix(mon_file);
     		

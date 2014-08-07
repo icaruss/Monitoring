@@ -38,7 +38,7 @@ mdRunningProcess3=""
 Process3FileName=""
 #
 numOfParam=""
-secs=5
+secs=3
 #
 instance=""				#mdm instance name
 #
@@ -638,7 +638,7 @@ chmod 775 ${vmstatFileName}
 #printf "\n\n$(date) - Start collecting vmstat logs:\n" >> ${vmstatFileName}
 
 #printf "\n" >> ${vmstatFileName}
-(vmstat 5 >> ${vmstatFileName}) &
+(vmstat ${secs} >> ${vmstatFileName}) &
 #${secs}
 ##while (( RC==0 )) # Loop until the return code is not zero
 ##do
