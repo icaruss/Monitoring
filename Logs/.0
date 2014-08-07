@@ -636,3 +636,35 @@ INFO: Add mds/mdis/mdss monitoring output to test folder2014_04_03 17_13_26_HP-U
 INFO: Add vmstat monitoring output to test folder2014_04_03 17_13_26_HP-UX
 03/04/2014 17:13:46 unix.ExecuteUnixOperations finish
 INFO: Charts generation and analysis
+Aug 07, 2014 11:38:16 AM settingsView.CSettingsController$1 handle
+INFO: S T A R T
+Aug 07, 2014 11:38:16 AM settingsView.CSettingsController$1 handle
+INFO: Program started immedtiatly
+Aug 07, 2014 11:38:16 AM unix.ExecuteUnixOperations start
+INFO: Gui Parameter Check started:
+Aug 07, 2014 11:38:16 AM unix.GuiParameterCheck mainGuiCheck
+INFO: Connection Test was successful
+Aug 07, 2014 11:38:17 AM unix.GuiParameterCheck mainGuiCheck
+INFO: Instance exist
+Aug 07, 2014 11:38:18 AM unix.GuiParameterCheck mainGuiCheck
+INFO: MDS is started!
+Aug 07, 2014 11:38:19 AM unix.GuiParameterCheck mainGuiCheck
+INFO: MDIS is started!
+Aug 07, 2014 11:38:21 AM unix.GuiParameterCheck mainGuiCheck
+INFO: MDSS is started!
+Aug 07, 2014 11:38:21 AM unix.ExecuteUnixOperations start
+INFO: Gui parameters check Success!
+Aug 07, 2014 11:38:21 AM unix.ExecuteUnixOperations start
+INFO: Kill vmstat and AV_monitoring processes if running
+Aug 07, 2014 11:38:25 AM unix.ExecuteUnixOperations start
+INFO: Remove old monitoring files from OS
+Aug 07, 2014 11:38:26 AM unix.ExecuteUnixOperations start
+INFO: Locate bash installation folder on OS
+Aug 07, 2014 11:38:34 AM unix.ExecuteUnixOperations start
+INFO: Copy AV_Monitoring script to OS
+Aug 07, 2014 11:38:38 AM unix.ExecuteUnixOperations start
+INFO: Execute Monitoring file on OS
+Aug 07, 2014 11:38:41 AM unix.ExecuteUnixOperations start
+INFO: Check if clix monitoring enabled
+Aug 07, 2014 11:38:41 AM unix.ExecuteUnixOperations start
+INFO: clix monitoring enabled - Run clix!

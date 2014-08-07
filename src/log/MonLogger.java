@@ -36,7 +36,7 @@ public class MonLogger
 	{  
 		try 
 		{
-			String dir = System.getProperty("user.dir") + "\\Logs\\";
+			String dir = System.getProperty("user.dir") + "\\Logs";
 
 			File saveDir = new File(dir);
 			{

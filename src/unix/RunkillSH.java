@@ -48,7 +48,7 @@ public class RunkillSH extends CommandExecuter
 		 {
 			 //"HP1", "mdss", "mds", "mdis" - the params order
 			 //The parameters for SH has to be entered in the correct order
-			 String allParams = null;
+			 String allParams = new String();
 			 this.execute("chmod 755 " + SHFileName);
 
 			if (paramsForSH == null)
@@ -60,7 +60,7 @@ public class RunkillSH extends CommandExecuter
 				
 				 for (int i = 0 ; i < paramsForSH.length ; i++)
 				 {
-					allParams = paramsForSH[i] + " ";					
+					allParams += paramsForSH[i] + " ";					
 				}
 				 
 				 this.execute("nohup ./" + SHFileName + " " + allParams + " > /dev/null 2>&1 &");
