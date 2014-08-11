@@ -1,9 +1,11 @@
 
 package mainView;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Time;
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.ResourceBundle;
@@ -13,8 +15,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import settingsView.CSettingsStage;
+import unix.ExecuteUnixOperations;
 import viewLogic.CSharedInstance;
 import viewLogic.CViewConstants;
+import viewLogic.CViewConstants.MonitorType;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -30,6 +34,7 @@ import javafx.scene.control.Tooltip;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import log.MonLogger;
 
 
 public class CMainPageController implements Initializable 
@@ -126,15 +131,7 @@ public class CMainPageController implements Initializable
                     {
                     	if (CSharedInstance.getInstance().isReadyToLaunch())
                     	{
-                    		if (!btnSettings.isDisabled())
-                    		{
-                    			btnSettings.setDisable(true);
-                    		}
-                    		
-                    		if (!btnStopMonitoring.isVisible())
-                    		{
-                    			btnStopMonitoring.setVisible(true);
-                    		}
+                    		setButtonsDisableState(true);
                     		
 	                    	if (CSharedInstance.getInstance().totalSecondsCountdown != -1)
 	                    	{
@@ -163,30 +160,66 @@ public class CMainPageController implements Initializable
     }
 	
 	
-	public void StopMonitoring(CViewConstants.MonitorType monitorType)
+	public void StopMonitoring(MonitorType monitorType)
 	{
-		toolTipPbar.setText("Monitoring Finished");
-		
-		if (btnSettings.isDisabled())
+
+		if (CSharedInstance.getInstance().executeUnixOperations != null)
 		{
-			btnSettings.setDisable(false);
+			toolTipPbar.setText("Monitoring Finished");
+			
+			if (btnSettings.isDisabled())
+			{
+				btnSettings.setDisable(false);
+			}
+			
+			btnStopMonitoring.setVisible(false);
+			
+			ExecuteUnixOperations exUnixOp = CSharedInstance.getInstance().executeUnixOperations;
+			
+			try 
+			{
+				exUnixOp.finish();
+			} 
+			catch (IOException e)
+			{
+				e.printStackTrace();
+			} 
+			catch (ParseException e)
+			{
+				e.printStackTrace();
+			}
+			finally
+			{
+				setButtonsDisableState(false);
+			}
 		}
 		
-		btnStopMonitoring.setVisible(false);
-		
-		switch (monitorType)
+	}
+	
+	public void setButtonsDisableState(Boolean isRunning)
+	{
+		if (isRunning)
 		{
-			case MonitorTypeVMSTAT :
+			btnSettings.setDisable(true);
+			btnStopMonitoring.setDisable(false);
+			btnShowMonitoringResults.setDisable(true);
+			btnShowVMSTATView.setDisable(true);
+		}
+		else
+		{
+			btnSettings.setDisable(false);
+			btnStopMonitoring.setDisable(true);
+			
+			if (CSharedInstance.getInstance().currentMonitoring == MonitorType.MonitorTypeVMSTAT)
 			{
-				// ALINA CALL YOUR STOP METHOD FROM HERE
+				btnShowMonitoringResults.setDisable(true);
+				btnShowVMSTATView.setDisable(false);
 			}
-			break;
-				
-			case MonitorTypeElse :
+			else
 			{
-				// ALINA CALL YOUR STOP METHOD FROM HERE (FOR MDSR'S)
+				btnShowMonitoringResults.setDisable(false);
+				btnShowVMSTATView.setDisable(true);
 			}
-			break;
 		}
 	}
 

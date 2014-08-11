@@ -19,6 +19,7 @@ import javax.management.monitor.MonitorNotification;
 import javax.management.monitor.MonitorSettingException;
 import javax.print.attribute.standard.DateTimeAtCompleted;
 
+import unix.ExecuteUnixOperations;
 import log.MonLogger;
 
 import com.thoughtworks.xstream.XStream;
@@ -42,6 +43,8 @@ public class CSharedInstance
 	
 	private Map<String, Vector<String>> dataFiles;
 	
+	public ExecuteUnixOperations executeUnixOperations;
+	
 	
 	private static CSharedInstance sharedInstance = new CSharedInstance( );
 		   
@@ -56,6 +59,7 @@ public class CSharedInstance
 		secondsElapsed = 0;
 		isMonitoringStarted = false;
 		monitoringStartTime = null;
+		executeUnixOperations = null;
 		
 		currentMonitoring = CViewConstants.MonitorType.MonitorTypeElse;
 		
@@ -454,6 +458,16 @@ public class CSharedInstance
 		
 		// To Do : Depends on Directories
 		
+	}
+	
+	public void setNewExecuteUnixOp(Map<String, Object> currentSettings)
+	{
+		if (executeUnixOperations != null)
+		{
+			this.executeUnixOperations = null; // new Instance To be Run
+		}
+		
+		this.executeUnixOperations = new ExecuteUnixOperations(currentSettings);
 	}
 		
 }

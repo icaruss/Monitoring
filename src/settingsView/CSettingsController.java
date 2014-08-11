@@ -10,6 +10,7 @@ import java.util.Set;
 import java.util.logging.Level;
 
 import unix.ExecuteUnixOperations;
+import unix.GuiParameterCheck;
 import viewLogic.CSharedInstance;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -51,7 +52,10 @@ public class CSettingsController implements Initializable
 
     @FXML // fx:id="chkboxMdssr"
     private RadioButton chkboxMdssr; // Value injected by FXMLLoader
-
+    
+    @FXML // fx:id="chkboxVMSTAT"
+    private RadioButton chkboxVMSTAT; // Value injected by FXMLLoader
+    
     @FXML // fx:id="cmbStartSelection"
     private ComboBox<String> cmbStartSelection; // Value injected by FXMLLoader
     
@@ -131,6 +135,8 @@ public class CSettingsController implements Initializable
         assert txtFieldConfigurationID != null : "fx:id=\"txtFieldConfigurationID \" was not injected: check your FXML file 'Setting_Page.fxml'.";
         assert lblResponseToUser != null : "fx:id=\"lblResponseToUser \" was not injected: check your FXML file 'Setting_Page.fxml'.";
         assert pnlSettings != null : "fx:id=\"pnlSettings \" was not injected: check your FXML file 'Setting_Page.fxml'.";
+        assert chkboxVMSTAT != null : "fx:id=\"chkboxVMSTAT \" was not injected: check your FXML file 'Setting_Page.fxml'.";
+        
         
         // Initialize your logic here: all @FXML variables will have been injected
         
@@ -165,21 +171,30 @@ public class CSettingsController implements Initializable
         			try
         			{
         				//TODO: Test the functionality
-        				ExecuteUnixOperations executeUnixOperations = new ExecuteUnixOperations(currentSettings);
-        				if ((String)currentSettings.get(CViewConstants.START) == CViewConstants.START_IMMEDIATELY)
+        				ExecuteUnixOperations exUnixOp = null;
+        				
+        				if (CSharedInstance.getInstance().executeUnixOperations != null)
         				{
-        					MonLogger.myLogger.log(Level.INFO, "S T A R T");
-        					MonLogger.myLogger.log(Level.INFO, "Program started immediately");
-        					executeUnixOperations.start();
-        				}
-        				else if ((String)currentSettings.get(CViewConstants.START) != CViewConstants.START_FRAME_TIME)
-        				{
-        					MonLogger.myLogger.log(Level.INFO, "S T A R T");
-        					MonLogger.myLogger.log(Level.INFO, "Program started on time");
-        					executeUnixOperations.startOnTime();
+        					CSharedInstance.getInstance().setNewExecuteUnixOp(currentSettings);
+        					
+        					exUnixOp = CSharedInstance.getInstance().executeUnixOperations;
+        					
+        					if ((String)currentSettings.get(CViewConstants.START) == CViewConstants.START_IMMEDIATELY)
+            				{
+            					MonLogger.myLogger.log(Level.INFO, "S T A R T");
+            					MonLogger.myLogger.log(Level.INFO, "Program started immediately");
+            					exUnixOp.start();
+            				}
+            				else if ((String)currentSettings.get(CViewConstants.START) != CViewConstants.START_FRAME_TIME)
+            				{
+            					MonLogger.myLogger.log(Level.INFO, "S T A R T");
+            					MonLogger.myLogger.log(Level.INFO, "Program started on time");
+            					exUnixOp.startOnTime();
+            					
+            				}
         					
         				}
-        					
+        				
         			}
         			catch (Exception e)
         			{
@@ -545,7 +560,23 @@ public class CSettingsController implements Initializable
     	}
     }
     
-    public void cmbSelectionOnAction()
+    public void chkBoxVMSTATOnMousePressed()
+    {
+    	if (chkboxVMSTAT.isSelected())
+    	{
+    		chkboxVMSTAT.setSelected(true);
+    		setIrellevantControlsVisibleOnVMSTAT(false);
+    	}
+    	else
+    	{
+    		chkboxVMSTAT.setSelected(false);
+    		setIrellevantControlsVisibleOnVMSTAT(true);
+    	}
+    }
+    
+    
+
+	public void cmbSelectionOnAction()
     {
     	int selectedIndex = cmbStartSelection.getSelectionModel().getSelectedIndex();
     	
@@ -800,6 +831,16 @@ public class CSettingsController implements Initializable
 		
 	}
     
+
+    private void setIrellevantControlsVisibleOnVMSTAT(boolean b)
+    {
+    	chkboxClix.setVisible(b);
+    	txtFieldPort.setVisible(b);
+    	chkboxMdsr.setVisible(b);
+    	chkboxMdisr.setVisible(b);
+    	chkboxMdssr.setVisible(b);
+	}
+    
     
     private boolean updateLblIfInputNotOK()
     {
@@ -827,7 +868,7 @@ public class CSettingsController implements Initializable
 
 			return false;
 		}
-		else if (!chkboxMdisr.isSelected() && !chkboxMdsr.isSelected() && !chkboxMdssr.isSelected() && !chkboxClix.isSelected())
+		else if (!chkboxMdisr.isSelected() && !chkboxMdsr.isSelected() && !chkboxMdssr.isSelected() && !chkboxClix.isSelected() && !chkboxVMSTAT.isSelected())
 		{
 			lblResponseToUser.setText("Choose at least 1 Monitor Process");
 
@@ -861,6 +902,15 @@ public class CSettingsController implements Initializable
 				return false;
 			}
 		}
+		
+		// Check for connection OK with current settings
+		String str = null;
+		if ((str = checkIfCanBeConnectedWithCurrentSettings()) != null)
+		{
+			lblResponseToUser.setText(str);
+			
+			return false;
+		}
 				
 		
 		lblResponseToUser.setText("");
@@ -871,7 +921,23 @@ public class CSettingsController implements Initializable
     
     
     
-    private Map<String, Object> getCurrentSettingsOnView() 
+    private String checkIfCanBeConnectedWithCurrentSettings()
+    {
+		
+    	GuiParameterCheck guiParamCheck = new GuiParameterCheck(txtFieldInstance.getText(), txtFieldHostName.getText(), 
+    																txtFieldUserName.getText(), txtFieldPassword.getText());
+    	
+    	if (guiParamCheck.mainGuiCheck())
+    	{
+    		return null;
+    	}
+    	
+    	return "Can't Connect With Current Settings";
+	}
+
+
+
+	private Map<String, Object> getCurrentSettingsOnView() 
     {
 		Map<String, Object> map = new HashMap<String, Object>();
 		

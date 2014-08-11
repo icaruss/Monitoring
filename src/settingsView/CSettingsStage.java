@@ -34,6 +34,9 @@ public class CSettingsStage
 	        stage.setIconified(true);
 	        stage.getIcons().add(new Image(getClass().getResourceAsStream("iconSettings.jpg")));
 	        stage.show();
+	        
+	        stage.requestFocus();
+	        stage.toFront();
 	    } 
 		catch (Exception ex) 
 	    {

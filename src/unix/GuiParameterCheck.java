@@ -132,6 +132,7 @@ public class GuiParameterCheck
 	}
 	
 	
+	@SuppressWarnings("finally")
 	public Boolean mainGuiCheck()
 	{
 		
@@ -191,6 +192,9 @@ public class GuiParameterCheck
     		MonLogger.myLogger.log(Level.WARNING, e.getStackTrace().toString());
 			e.printStackTrace();
 		}
-		return TF;
+		finally
+		{
+			return TF;
+		}
 	}
 }
