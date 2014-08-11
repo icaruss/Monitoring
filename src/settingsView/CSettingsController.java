@@ -12,6 +12,7 @@ import java.util.logging.Level;
 import unix.ExecuteUnixOperations;
 import unix.GuiParameterCheck;
 import viewLogic.CSharedInstance;
+import viewLogic.CViewConstants.MonitorType;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
@@ -168,30 +169,35 @@ public class CSettingsController implements Initializable
         			CSharedInstance.getInstance().updateWaitingTimeForResults(
         					(String)currentSettings.get(CViewConstants.START_FROM_TIME), (String)currentSettings.get(CViewConstants.START_TO_TIME));
         			
+        			if (chkboxVMSTAT.isSelected())
+        			{
+        				CSharedInstance.getInstance().currentMonitoring = MonitorType.MonitorTypeVMSTAT;
+        			}
+        			else
+        			{
+        				CSharedInstance.getInstance().currentMonitoring = MonitorType.MonitorTypeElse;
+        			}
+        			
+        			
         			try
         			{
         				//TODO: Test the functionality
-        				ExecuteUnixOperations exUnixOp = null;
         				
-        				if (CSharedInstance.getInstance().executeUnixOperations != null)
+        				CSharedInstance.getInstance().setNewExecuteUnixOp(currentSettings);
+        					
+        				ExecuteUnixOperations exUnixOp = CSharedInstance.getInstance().executeUnixOperations;
+    					
+    					if ((String)currentSettings.get(CViewConstants.START) == CViewConstants.START_IMMEDIATELY)
         				{
-        					CSharedInstance.getInstance().setNewExecuteUnixOp(currentSettings);
-        					
-        					exUnixOp = CSharedInstance.getInstance().executeUnixOperations;
-        					
-        					if ((String)currentSettings.get(CViewConstants.START) == CViewConstants.START_IMMEDIATELY)
-            				{
-            					MonLogger.myLogger.log(Level.INFO, "S T A R T");
-            					MonLogger.myLogger.log(Level.INFO, "Program started immediately");
-            					exUnixOp.start();
-            				}
-            				else if ((String)currentSettings.get(CViewConstants.START) != CViewConstants.START_FRAME_TIME)
-            				{
-            					MonLogger.myLogger.log(Level.INFO, "S T A R T");
-            					MonLogger.myLogger.log(Level.INFO, "Program started on time");
-            					exUnixOp.startOnTime();
-            					
-            				}
+        					MonLogger.myLogger.log(Level.INFO, "S T A R T");
+        					MonLogger.myLogger.log(Level.INFO, "Program started immediately");
+        					exUnixOp.start();
+        				}
+        				else if ((String)currentSettings.get(CViewConstants.START) != CViewConstants.START_FRAME_TIME)
+        				{
+        					MonLogger.myLogger.log(Level.INFO, "S T A R T");
+        					MonLogger.myLogger.log(Level.INFO, "Program started on time");
+        					exUnixOp.startOnTime();
         					
         				}
         				
