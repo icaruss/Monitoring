@@ -9,8 +9,10 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Vector;
 import java.util.logging.Level;
 
 import javax.management.monitor.MonitorNotification;
@@ -36,6 +38,10 @@ public class CSharedInstance
 	
 	private Map<String, Map<String, Object>> configurations;
 	
+	public String currentDataFilesID;
+	
+	private Map<String, Vector<String>> dataFiles;
+	
 	
 	private static CSharedInstance sharedInstance = new CSharedInstance( );
 		   
@@ -52,6 +58,10 @@ public class CSharedInstance
 		monitoringStartTime = null;
 		
 		currentMonitoring = CViewConstants.MonitorType.MonitorTypeElse;
+		
+		currentDataFilesID = null;
+		
+		dataFiles = new HashMap<String, Vector<String>>();
 		
 		deSeriallize();
 		
@@ -363,5 +373,87 @@ public class CSharedInstance
     		
     	}
     }
+	
+	
+	
+	public void addNewDataFiles(String key, Vector<String> values)
+	{
+		if (dataFiles != null)
+		{
+			if (dataFiles.containsKey(key))
+			{
+				if (!values.isEmpty())
+				{
+					List<String> lst = dataFiles.get(key);
+					
+					if (lst == null)
+					{
+						lst = new Vector<String>();
+						
+						lst.addAll(values);
+					}
+					else
+					{
+						for (String str : values)
+						{
+							if (!lst.contains(str))
+							{
+								lst.add(str);
+							}
+						}
+						
+					}
+					
+				}
+			}
+			else if (key != null && !values.isEmpty())
+			{
+				dataFiles.put(key, values);
+			}
+		}
+	}
+	
+	
+	
+	public Vector<String> getChosenDataFiles(String key)
+	{
+		if (dataFiles.containsKey(key))
+		{
+			return dataFiles.get(key);
+		}
+		
+		return null;
+	}
+	
+	public Set<String> getAllDataFilesKeys()
+	{
+		return dataFiles.keySet();
+	}
+	
+	
+	public Vector<String> getCurrentDataFilesSet()
+	{
+		if (currentDataFilesID != null)
+		{
+			return getChosenDataFiles(currentDataFilesID);
+		}
+		
+		return null;
+	}
+	
+	
+	public void loadDataFilesToLocalCache()
+	{
+		
+		// To Do : Depends on Directories
+		
+	}
+	
+	public void saveDataFilesToExternalFile()
+	{
+		
+		// To Do : Depends on Directories
+		
+	}
 		
 }

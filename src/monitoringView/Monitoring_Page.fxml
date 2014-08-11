@@ -27,15 +27,7 @@
                 <DropShadow color="#fffdcc" />
               </effect>
             </LineChart>
-            <Label alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="3.0" layoutY="2.0" prefHeight="35.0" prefWidth="212.0" text="Monitoring Results" textAlignment="CENTER" textFill="BLACK" textOverrun="WORD_ELLIPSIS" underline="true" wrapText="true">
-              <effect>
-                <DropShadow color="#bfbfbf" />
-              </effect>
-              <font>
-                <Font name="MS Outlook" size="24.0" />
-              </font>
-            </Label>
-            <Label fx:id="lblResultID" alignment="BASELINE_CENTER" blendMode="DARKEN" cache="true" cacheHint="SPEED" contentDisplay="CENTER" layoutX="448.0" layoutY="6.0" prefHeight="35.0" prefWidth="154.0" text="Current" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+            <Label fx:id="lblResultID" alignment="BASELINE_CENTER" blendMode="DARKEN" cache="true" cacheHint="SPEED" contentDisplay="CENTER" layoutX="227.0" layoutY="6.0" prefHeight="35.0" prefWidth="154.0" text="Current" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" wrapText="true">
               <font>
                 <Font name="Arial" size="18.0" />
               </font>
@@ -69,7 +61,7 @@
         <DropShadow color="$x2" />
       </effect>
     </Button>
-    <Button id="btnNextResult" fx:id="btnShowInFile" alignment="BASELINE_CENTER" contentDisplay="CENTER" font="$x3" layoutX="467.0" layoutY="775.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="127.0" text="Show In File" textAlignment="CENTER" textFill="#290033" textOverrun="WORD_ELLIPSIS" wrapText="true">
+    <Button id="btnNextResult" fx:id="btnShowInFile" alignment="BASELINE_CENTER" contentDisplay="CENTER" font="$x3" layoutX="467.0" layoutY="775.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="127.0" text="Show Data In Files" textAlignment="CENTER" textFill="#290033" textOverrun="WORD_ELLIPSIS" wrapText="true">
       <effect>
         <DropShadow color="#100033" />
       </effect>

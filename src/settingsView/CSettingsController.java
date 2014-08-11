@@ -169,7 +169,7 @@ public class CSettingsController implements Initializable
         				if ((String)currentSettings.get(CViewConstants.START) == CViewConstants.START_IMMEDIATELY)
         				{
         					MonLogger.myLogger.log(Level.INFO, "S T A R T");
-        					MonLogger.myLogger.log(Level.INFO, "Program started immedtiatly");
+        					MonLogger.myLogger.log(Level.INFO, "Program started immediately");
         					executeUnixOperations.start();
         				}
         				else if ((String)currentSettings.get(CViewConstants.START) != CViewConstants.START_FRAME_TIME)
@@ -196,6 +196,7 @@ public class CSettingsController implements Initializable
         	}
 
         });
+        
         
         
         btnSaveConfiguration.setOnAction(new EventHandler<ActionEvent>() 

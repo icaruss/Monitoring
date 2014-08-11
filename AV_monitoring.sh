@@ -38,7 +38,7 @@ mdRunningProcess3=""
 Process3FileName=""
 #
 numOfParam=""
-secs=3
+secs=5
 #
 instance=""				#mdm instance name
 #

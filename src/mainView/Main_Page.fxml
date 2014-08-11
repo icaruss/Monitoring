@@ -32,7 +32,7 @@
     <Text focusTraversable="true" fontSmoothingType="LCD" layoutX="47.0" layoutY="292.0" scaleX="1.9800607972865212" scaleY="1.4404764928387228" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Left :" textAlignment="LEFT" textOrigin="CENTER" wrappingWidth="0.0" />
     <Separator blendMode="EXCLUSION" layoutX="5.0" layoutY="263.0" opacity="1.0" prefHeight="12.0" prefWidth="447.0">
       <effect>
-        <Shadow blurType="TWO_PASS_BOX" color="#5539b2ae" height="41.19461495535714" radius="20.108177548363095" width="41.238095238095234" />
+        <Shadow blurType="TWO_PASS_BOX" color="#5539b2ae" height="41.21635509672619" radius="20.113612583705354" width="41.238095238095234" />
       </effect>
     </Separator>
     <Button fx:id="btnSettings" contentDisplay="TEXT_ONLY" graphicTextGap="6.0" layoutX="294.0" layoutY="106.0" mnemonicParsing="false" prefHeight="63.9609375" prefWidth="118.58966064453125" text="Server Settings" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true">
@@ -63,7 +63,7 @@
       </tooltip>
     </ProgressBar>
     <ProgressIndicator fx:id="pBarPercentage" layoutX="400.0" layoutY="275.0" prefWidth="34.0" progress="0.0" />
-    <Button id="btnSettings" fx:id="btnStopMonitoring" blendMode="DIFFERENCE" cache="true" cacheHint="SPEED" contentDisplay="TEXT_ONLY" depthTest="ENABLE" font="$x1" graphicTextGap="6.0" layoutX="294.0" layoutY="186.0" mnemonicParsing="false" pickOnBounds="true" prefHeight="63.9609375" prefWidth="118.58966064453125" text="Stop Monitoring" textAlignment="CENTER" textFill="#005a66" textOverrun="WORD_ELLIPSIS" visible="false" wrapText="true">
+    <Button id="btnSettings" fx:id="btnStopMonitoring" blendMode="DIFFERENCE" cache="true" cacheHint="SPEED" contentDisplay="TEXT_ONLY" depthTest="ENABLE" disable="false" font="$x1" graphicTextGap="6.0" layoutX="294.0" layoutY="186.0" mnemonicParsing="false" pickOnBounds="true" prefHeight="63.9609375" prefWidth="118.58966064453125" text="Stop Monitoring" textAlignment="CENTER" textFill="#005a66" textOverrun="WORD_ELLIPSIS" visible="false" wrapText="true">
       <effect>
         <DropShadow color="#ffe299" />
       </effect>
