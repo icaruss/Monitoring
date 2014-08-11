@@ -897,13 +897,13 @@ public class CSettingsController implements Initializable
 		{
 			if (!checkIfInputTimeFrameAcceptableAsWhole(txtFieldTimeFrameFrom.getText()))
 			{
-				lblResponseToUser.setText("Time Frame From Should Be : hh-mm-ss");
+				lblResponseToUser.setText("Time Frame From Should Be : dd-mm-yyyy HH:mm:ss");
 
 				return false;
 			}
 			else if (!checkIfInputTimeFrameAcceptableAsWhole(txtFieldTimeFrameTo.getText()))
 			{
-				lblResponseToUser.setText("Time Frame To Should Be : hh-mm-ss");
+				lblResponseToUser.setText("Time Frame To Should Be : dd-mm-yyyy HH:mm:ss");
 
 				return false;
 			}
@@ -1027,17 +1027,21 @@ public class CSettingsController implements Initializable
     
     private boolean checkIfInputTimeFrameAcceptableAsWhole(String text) 
 	{
-		if (text.isEmpty() || text.length() != 8)
+		if (text.isEmpty() || text.length() != 19)
 			return false;
 		
-		if ((text.charAt(2) != '-') && (text.charAt(5) != '-'))
+		if ((text.charAt(13) != ':') && (text.charAt(16) != ':') && (text.charAt(10) != ' ') && (text.charAt(2) != '-') && (text.charAt(5) != '-'))
 		{
 			return false;
 		}
 		
 		if (!isDigit(text.charAt(0)) || !isDigit(text.charAt(1)) ||
 				!isDigit(text.charAt(3)) || !isDigit(text.charAt(4)) || 
-				!isDigit(text.charAt(6)) || !isDigit(text.charAt(7)))
+				!isDigit(text.charAt(6)) || !isDigit(text.charAt(7)) ||
+				!isDigit(text.charAt(8)) || !isDigit(text.charAt(9)) ||
+				!isDigit(text.charAt(11)) || !isDigit(text.charAt(12)) ||
+				!isDigit(text.charAt(14)) || !isDigit(text.charAt(15)) ||
+				!isDigit(text.charAt(17)) || !isDigit(text.charAt(18)) )
 		{
 			return false;
 		}
@@ -1050,44 +1054,94 @@ public class CSettingsController implements Initializable
    	{
     	char c = text.charAt(index);
     	
-    	if (index >= 8)
-    		return false;
-    	
-   		if ((index == 2 || index == 5) && (c == '-'))
+   		switch (index)
    		{
-   			return true;
-   		}
-   		else if (index != 2 && index != 5 && isDigit(c))
-   		{
-   			if ((index == 0 && c >= '0' && c <= '2'))
-   			{
-   				return true;
-   			}
-   			else if (index == 1)
-   			{
-   				if (text.charAt(0) == '2' && c >= '0' && c <= '3')
-   				{
-   					return true;
-   				}
-   				else if (text.charAt(0) < '2' && c >= '0' && c <= '9')
-   				{
-   					return true;
-   				}
-   			}
-   			else if ((index == 3 || index == 6) && c >= '0' && c <= '5')
-   			{
-   	   			return true;
-   			}
-   			else if ((index == 4 || index == 7) && c >= '0' && c <= '9')
-   			{
-   				return true;
-   			}
-   			
+	   		case 0 : 	// day 01 - 31
+	   		{
+	   			return (c >= '0' && c <= '3'); 
+	   		}
+	   		case 1 :
+	   		{
+	   			return ( isDigit(c) && 
+	   					( (text.charAt(0) == '3' && (c == '0' || c == '1')) || 
+	   					 ( (text.charAt(0) != '3' && c >= '0' && c <= '9') ) ) ); // day 01 - 31
+	   		}
+	   		case 2 :
+	   		{
+	   			return (c == '-');
+	   		}
+	   		case 3 :   // month 01-12
+	   		{
+	   			return (c == '0' || c == '1');
+	   		}
+	   		case 4 :
+	   		{
+	   			return ( (text.charAt(3) == '0' && c >= '0' && c <= '9') ||
+	   					  (text.charAt(3) == '1' && c >= '0' && c <= '2') );
+	   		}
+	   		case 5 :
+	   		{
+	   			return (c == '-');
+	   		}
+	   		case 6 :  // years 2014 >
+	   		{
+	   			return (c == '2');
+	   		}
+	   		case 7 :
+	   		{
+	   			return (c == '0');
+	   		}
+	   		case 8 :
+	   		{
+	   			return (c == '1' || c == '2');
+	   		}
+	   		case 9 :
+	   		{
+	   			return ( (text.charAt(8) == '1' && c >= '4' && c <= '9') ||
+	   					 (text.charAt(8) == '2' && c >= '0' && c <= '9') ) ;
+	   		}
+	   		case 10 :
+	   		{
+	   			return (c == ' ');
+	   		}
+	   		case 11 : 	// Hours 00 - 23
+	   		{
+	   			return (c >= '0' && c <= '2');
+	   		}
+	   		case 12 :
+	   		{
+	   			return ( (text.charAt(11) == '2' && c >= '0' && c <= '3') ||
+	   					 (text.charAt(11) < '2' && c >= '0' && c <= '9') );
+	   		}
+	   		case 13 :
+	   		{
+	   			return (c == ':');
+	   		}
+	   		case 14 :	// Min 00 - 59
+	   		{
+	   			return (c >= '0' && c <= '5');
+	   		}
+	   		case 15 :
+	   		{
+	   			return (c >= '0' && c <= '9');
+	   		}
+	   		case 16 :
+	   		{
+	   			return (c == ':');
+	   		}
+	   		case 17 : 	// Sec 00 - 59
+	   		{
+	   			return (c >= '0' && c <= '5');
+	   		}
+	   		case 18 :
+	   		{
+	   			return (c >= '0' && c <= '9');
+	   		}
+	   		
    		}
    		
    		return false;
    		
    	}
-    
     
 }

@@ -32,10 +32,10 @@
     <Text focusTraversable="true" fontSmoothingType="LCD" layoutX="47.0" layoutY="292.0" scaleX="1.9800607972865212" scaleY="1.4404764928387228" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Left :" textAlignment="LEFT" textOrigin="CENTER" wrappingWidth="0.0" />
     <Separator blendMode="EXCLUSION" layoutX="5.0" layoutY="263.0" opacity="1.0" prefHeight="12.0" prefWidth="447.0">
       <effect>
-        <Shadow blurType="TWO_PASS_BOX" color="#5539b2ae" height="41.23266020275297" radius="20.11768886021205" width="41.238095238095234" />
+        <Shadow blurType="TWO_PASS_BOX" color="#5539b2ae" height="41.2353777204241" radius="20.11836823962983" width="41.238095238095234" />
       </effect>
     </Separator>
-    <Button fx:id="btnSettings" contentDisplay="TEXT_ONLY" graphicTextGap="6.0" layoutX="294.0" layoutY="106.0" mnemonicParsing="false" prefHeight="63.9609375" prefWidth="118.58966064453125" text="Server Settings" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true">
+    <Button fx:id="btnSettings" contentDisplay="TEXT_ONLY" graphicTextGap="6.0" layoutX="294.0" layoutY="106.0" mnemonicParsing="false" prefHeight="63.9609375" prefWidth="118.58966064453125" text="Server Settings" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" visible="true" wrapText="true">
       <effect>
         <DropShadow>
           <color>

@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.Vector;
+import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 
 import javax.management.monitor.MonitorNotification;
@@ -21,13 +22,23 @@ import javax.print.attribute.standard.DateTimeAtCompleted;
 
 import unix.ExecuteUnixOperations;
 import log.MonLogger;
+import FilesManagment.DateOperations;
 
 import com.thoughtworks.xstream.XStream;
+
+import org.joda.time.DateTime;
+import org.joda.time.Duration;
+import org.joda.time.Interval;
+import org.joda.time.Months;
+import org.joda.time.Period;
+import org.joda.time.PeriodType;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
 
 public class CSharedInstance 
 {
 	
-	public int totalSecondsCountdown;
+	public long totalSecondsCountdown;
 	public int secondsElapsed;
 	
 	public CViewConstants.MonitorType currentMonitoring;
@@ -247,12 +258,12 @@ public class CSharedInstance
     
     public void updateWaitingTimeForResults(String fromTime, String toTime) 
 	{
-    	int seconds = 0;
+    	//int seconds = 0;
     	
     	try
     	{
-	    	String strFrom = fromTime.substring(6);
-	    	String strTo = toTime.substring(6);
+	    	/*String strFrom = fromTime.substring(17);
+	    	String strTo = toTime.substring(17);
 	    	
 	    	int secondsFrom = Integer.parseInt(strFrom);
 	    	int secondsTo = Integer.parseInt(strTo);
@@ -260,8 +271,8 @@ public class CSharedInstance
 	    	if (secondsFrom != secondsTo)
 	    		seconds += (60 - secondsFrom + secondsTo);
 	    	
-	    	strFrom = fromTime.substring(3, 5);
-	    	strTo = toTime.substring(3, 5);
+	    	strFrom = fromTime.substring(14, 16);
+	    	strTo = toTime.substring(14, 16);
 	    	
 	    	int minutesFrom = Integer.parseInt(strFrom); // because of seconds addition
 	    	int minutesTo = Integer.parseInt(strTo);
@@ -269,8 +280,8 @@ public class CSharedInstance
 	    	if (minutesFrom != minutesTo)
 	    		seconds += (60 - minutesFrom + minutesTo - 1) * 60;
 	    	
-	    	strFrom = fromTime.substring(0, 2);
-	    	strTo = toTime.substring(0, 2);
+	    	strFrom = fromTime.substring(11, 132);
+	    	strTo = toTime.substring(11, 13);
 	    	
 	    	int hoursFrom = Integer.parseInt(strFrom); // because of minutes addition
 	    	int hoursTo = Integer.parseInt(strTo);
@@ -284,35 +295,45 @@ public class CSharedInstance
 	    		seconds += (hoursTo - hoursFrom - 1) * 60 * 60;
 	    	}
 	    	
-	    	totalSecondsCountdown = seconds;
-	    	
+	    	totalSecondsCountdown = seconds;*/
+    		
+    		totalSecondsCountdown = DateOperations.getDateDiff(fromTime, toTime) / 1000;	    	
     	}
     	catch (Exception e)
     	{
     		MonLogger.myLogger.log(Level.WARNING, e.getMessage());
-    	}
-    	finally
-    	{
-    		// in case parsing was unsuccessful , setting to immediate
-    		if (seconds == 0)
-    		{
-    			totalSecondsCountdown = 0;
-    		}
+    		
+    		totalSecondsCountdown = 0;
     	}
 	}
     
     public String timeLeft()
     {
-    	int secondsLeft = totalSecondsCountdown - secondsElapsed;
-    	int hours = secondsLeft / 3600;
-    	secondsLeft = secondsLeft % 3600;
+    	long secs = totalSecondsCountdown - secondsElapsed;
+    	long days = secs / 86400;
     	
-    	int minutes = secondsLeft / 60;
-    	secondsLeft = secondsLeft % 60;
+    	if (days > 0)
+    	{
+    		secs = secs % 86400;
+    	}
     	
-    	int seconds = secondsLeft;
+    	int hours = (int)(secs / 3600);
     	
-    	return String.format("Time Left : %dh-%dm-%ds", hours,minutes,seconds);
+    	if (hours > 0)
+    	{
+    		secs = secs % 3600;
+    	}
+    	
+    	int  minutes = (int)(secs / 60);
+    	
+    	if (minutes > 0)
+    	{
+    		secs = secs % 60;
+    	}
+    	
+    	return "Time Left : " + days + " Days - " + hours + "h:" + minutes + "m:" + secs + "s";
+    	
+    	
     }
 	
     
