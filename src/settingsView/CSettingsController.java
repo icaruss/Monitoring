@@ -105,6 +105,9 @@ public class CSettingsController implements Initializable
     @FXML // fx:id="txtFieldTimeFrameTo"
     private Text txtConfigurationID;
     
+    @FXML // fx:id="portLbl"
+    private Text portLbl;
+    
     
     ////////  logic Variables //////
     
@@ -137,11 +140,11 @@ public class CSettingsController implements Initializable
         assert lblResponseToUser != null : "fx:id=\"lblResponseToUser \" was not injected: check your FXML file 'Setting_Page.fxml'.";
         assert pnlSettings != null : "fx:id=\"pnlSettings \" was not injected: check your FXML file 'Setting_Page.fxml'.";
         assert chkboxVMSTAT != null : "fx:id=\"chkboxVMSTAT \" was not injected: check your FXML file 'Setting_Page.fxml'.";
-        
+        assert portLbl != null : "fx:id=\"portLbl \" was not injected: check your FXML file 'Setting_Page.fxml'.";
         
         // Initialize your logic here: all @FXML variables will have been injected
         
-        setComponentsEditable(false);
+        setComponentsEditable(true);
         
         // configuration ids added here
         Set<String> configurationsKeySet = CSharedInstance.getInstance().getAllConfigurationKeys();
@@ -166,8 +169,17 @@ public class CSettingsController implements Initializable
         			// save configuration
         			CSharedInstance.getInstance().saveConfigurations(currentSettings);
         			
-        			CSharedInstance.getInstance().updateWaitingTimeForResults(
-        					(String)currentSettings.get(CViewConstants.START_FROM_TIME), (String)currentSettings.get(CViewConstants.START_TO_TIME));
+        			if (cmbStartSelection.getSelectionModel().getSelectedIndex() == 1) // TimeFrame
+        			{
+        				CSharedInstance.getInstance().updateWaitingTimeForResults(
+            					(String)currentSettings.get(CViewConstants.START_FROM_TIME), (String)currentSettings.get(CViewConstants.START_TO_TIME));
+            			
+        			}
+        			else
+        			{
+        				CSharedInstance.getInstance().totalSecondsCountdown = -1;
+        			}
+        			
         			
         			if (chkboxVMSTAT.isSelected())
         			{
@@ -200,6 +212,8 @@ public class CSettingsController implements Initializable
         					exUnixOp.startOnTime();
         					
         				}
+    					
+    					CSharedInstance.getInstance().isMonitoringDone = false;
         				
         			}
         			catch (Exception e)
@@ -841,6 +855,7 @@ public class CSettingsController implements Initializable
     private void setIrellevantControlsVisibleOnVMSTAT(boolean b)
     {
     	chkboxClix.setVisible(b);
+    	portLbl.setVisible(b);
     	txtFieldPort.setVisible(b);
     	chkboxMdsr.setVisible(b);
     	chkboxMdisr.setVisible(b);
@@ -950,6 +965,10 @@ public class CSettingsController implements Initializable
 		if (!txtFieldConfigurationID.getText().isEmpty())
 		{
 			map.put(CViewConstants.CONFIGURATION_ID, txtFieldConfigurationID.getText());
+		}
+		else if (cmbID.getSelectionModel().getSelectedIndex() >= 0)
+		{
+			map.put(CViewConstants.CONFIGURATION_ID, cmbID.getSelectionModel().getSelectedItem());
 		}
 		
 		if (!txtFieldHostName.getText().isEmpty())

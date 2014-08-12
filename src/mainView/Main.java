@@ -55,6 +55,10 @@ public class Main extends Application
 						{
 							e.printStackTrace();
 						}
+                    	finally
+                    	{
+                    		System.exit(0);
+                    	}
                     }
                 }
             });

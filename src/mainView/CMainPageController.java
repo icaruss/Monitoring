@@ -132,8 +132,10 @@ public class CMainPageController implements Initializable
                     	if (CSharedInstance.getInstance().isReadyToLaunch())
                     	{
                     		setButtonsDisableState(true);
+                    		 
+                    		int cnt = 0;
                     		
-	                    	if (CSharedInstance.getInstance().totalSecondsCountdown != -1)
+	                    	if (CSharedInstance.getInstance().totalSecondsCountdown > 0)
 	                    	{
 	                    		double progress = (double)(1.0 / (double)CSharedInstance.getInstance().totalSecondsCountdown);
 	                    		
@@ -151,6 +153,32 @@ public class CMainPageController implements Initializable
 	                    		
 	                    		StopMonitoring(CSharedInstance.getInstance().currentMonitoring);
 	                    	}
+	                    	
+	                    	else if (CSharedInstance.getInstance().totalSecondsCountdown == -1)
+	                    	{
+	                    		cnt++;
+	                    		cnt %= 3;
+	                    		
+	                    		switch (cnt)
+	                    		{
+	                    			case 0 :
+	                    			{
+	                    				toolTipPbar.setText("Running Without Time Frame.");
+	                    				break;
+	                    			}
+	                    			case 1 :
+	                    			{
+	                    				toolTipPbar.setText("Running Without Time Frame..");
+	                    				break;
+	                    			}
+	                    			case 2 :
+	                    			{
+	                    				toolTipPbar.setText("Running Without Time Frame...");
+	                    				break;
+	                    			}
+	                    		}
+	                    	}
+	                    	
                     	}
                     }
                 });
@@ -167,12 +195,12 @@ public class CMainPageController implements Initializable
 		{
 			toolTipPbar.setText("Monitoring Finished");
 			
-			if (btnSettings.isDisabled())
-			{
-				btnSettings.setDisable(false);
-			}
+			btnSettings.setDisable(false);
 			
-			btnStopMonitoring.setVisible(false);
+			btnStopMonitoring.setDisable(true);
+			
+			CSharedInstance.getInstance().isMonitoringStarted = false;
+			CSharedInstance.getInstance().isMonitoringDone = true;
 			
 			ExecuteUnixOperations exUnixOp = CSharedInstance.getInstance().executeUnixOperations;
 			
@@ -188,10 +216,6 @@ public class CMainPageController implements Initializable
 			{
 				e.printStackTrace();
 			}
-			finally
-			{
-				setButtonsDisableState(false);
-			}
 		}
 		
 	}
@@ -202,15 +226,16 @@ public class CMainPageController implements Initializable
 		{
 			btnSettings.setDisable(true);
 			btnStopMonitoring.setDisable(false);
-			btnShowMonitoringResults.setDisable(true);
-			btnShowVMSTATView.setDisable(true);
+			//btnShowMonitoringResults.setDisable(true);
+			//btnShowVMSTATView.setDisable(true);
 		}
 		else
 		{
 			btnSettings.setDisable(false);
 			btnStopMonitoring.setDisable(true);
 			
-			if (CSharedInstance.getInstance().currentMonitoring == MonitorType.MonitorTypeVMSTAT)
+			// Even if instance wasn't running before, leaving possibility to show previous runs
+			/*if (CSharedInstance.getInstance().currentMonitoring == MonitorType.MonitorTypeVMSTAT)
 			{
 				btnShowMonitoringResults.setDisable(true);
 				btnShowVMSTATView.setDisable(false);
@@ -219,7 +244,7 @@ public class CMainPageController implements Initializable
 			{
 				btnShowMonitoringResults.setDisable(false);
 				btnShowVMSTATView.setDisable(true);
-			}
+			}*/
 		}
 	}
 

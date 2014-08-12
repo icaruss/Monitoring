@@ -4,21 +4,14 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.sql.Time;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.Vector;
-import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 
-import javax.management.monitor.MonitorNotification;
-import javax.management.monitor.MonitorSettingException;
-import javax.print.attribute.standard.DateTimeAtCompleted;
 
 import unix.ExecuteUnixOperations;
 import log.MonLogger;
@@ -26,14 +19,6 @@ import FilesManagment.DateOperations;
 
 import com.thoughtworks.xstream.XStream;
 
-import org.joda.time.DateTime;
-import org.joda.time.Duration;
-import org.joda.time.Interval;
-import org.joda.time.Months;
-import org.joda.time.Period;
-import org.joda.time.PeriodType;
-import org.joda.time.format.DateTimeFormat;
-import org.joda.time.format.DateTimeFormatter;
 
 public class CSharedInstance 
 {
@@ -43,8 +28,9 @@ public class CSharedInstance
 	
 	public CViewConstants.MonitorType currentMonitoring;
 	
-	private boolean isMonitoringStarted;
-	private Time monitoringStartTime;
+	public boolean isMonitoringStarted;
+	public boolean isMonitoringDone;
+	public Time monitoringStartTime;
 	
 	private String currentConfigurationID;
 	
@@ -69,6 +55,7 @@ public class CSharedInstance
 		totalSecondsCountdown = -1;
 		secondsElapsed = 0;
 		isMonitoringStarted = false;
+		isMonitoringDone = true;
 		monitoringStartTime = null;
 		executeUnixOperations = null;
 		
@@ -250,6 +237,8 @@ public class CSharedInstance
 		String key = (String) currentSettings.get(CViewConstants.CONFIGURATION_ID);
 		configurations.put(key, currentSettings);
 		
+		currentConfigurationID = key;
+		
 		saveConfigurations();
 		
 	}
@@ -339,6 +328,10 @@ public class CSharedInstance
     
     public boolean isReadyToLaunch()
     {
+    	if (isMonitoringDone)
+    	{
+    		return false;
+    	}
     	
     	if (isMonitoringStarted)
     		return true;
@@ -354,6 +347,8 @@ public class CSharedInstance
 	    		if (monitoringStartTime.compareTo(calendar.getTime()) <= 0)
 	    		{
 	    			isMonitoringStarted = true;
+	    			
+	    			isMonitoringDone = false;
 	    			
 	    			return true;
 	    		}
