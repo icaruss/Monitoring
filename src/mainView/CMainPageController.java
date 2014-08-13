@@ -3,38 +3,22 @@ package mainView;
 
 import java.io.IOException;
 import java.net.URL;
-import java.sql.Time;
-import java.text.DateFormat;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.ResourceBundle;
 import java.util.Timer;
 import java.util.TimerTask;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-import settingsView.CSettingsStage;
 import unix.ExecuteUnixOperations;
 import viewLogic.CSharedInstance;
-import viewLogic.CViewConstants;
 import viewLogic.CViewConstants.MonitorType;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.ProgressIndicator;
 import javafx.scene.control.Tooltip;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
-import log.MonLogger;
 
 
 public class CMainPageController implements Initializable 

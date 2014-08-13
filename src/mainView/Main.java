@@ -2,6 +2,7 @@ package mainView;
 	
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
@@ -14,6 +15,7 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 
 
 import viewLogic.CSharedInstance;
@@ -57,8 +59,12 @@ public class Main extends Application
 						}
                     	finally
                     	{
-                    		System.exit(0);
+                    		Platform.exit();
                     	}
+                    }
+                    else
+                    {
+                    	Platform.exit();
                     }
                 }
             });
