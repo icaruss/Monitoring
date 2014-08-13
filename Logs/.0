@@ -668,3 +668,502 @@ Aug 07, 2014 11:38:41 AM unix.ExecuteUnixOperations start
 INFO: Check if clix monitoring enabled
 Aug 07, 2014 11:38:41 AM unix.ExecuteUnixOperations start
 INFO: clix monitoring enabled - Run clix!
+Aug 13, 2014 11:35:53 AM settingsView.CSettingsController$1 handle
+INFO: S T A R T
+Aug 13, 2014 11:35:53 AM settingsView.CSettingsController$1 handle
+INFO: Program started immediately
+Aug 13, 2014 11:35:53 AM unix.ExecuteUnixOperations start
+INFO: Gui Parameter Check started:
+Aug 13, 2014 11:35:53 AM unix.GuiParameterCheck mainGuiCheck
+INFO: Connection Test was successful
+Aug 13, 2014 11:35:54 AM unix.GuiParameterCheck mainGuiCheck
+INFO: Instance exist
+Aug 13, 2014 11:35:55 AM unix.GuiParameterCheck mainGuiCheck
+INFO: MDS is started!
+Aug 13, 2014 11:35:56 AM unix.GuiParameterCheck mainGuiCheck
+INFO: MDIS is started!
+Aug 13, 2014 11:35:57 AM unix.GuiParameterCheck mainGuiCheck
+INFO: MDSS is started!
+Aug 13, 2014 11:35:57 AM unix.ExecuteUnixOperations start
+INFO: Gui parameters check Success!
+Aug 13, 2014 11:35:57 AM unix.ExecuteUnixOperations start
+INFO: Kill vmstat and AV_monitoring processes if running
+Aug 13, 2014 11:36:02 AM unix.ExecuteUnixOperations start
+INFO: Remove old monitoring files from OS
+Aug 13, 2014 11:36:03 AM unix.ExecuteUnixOperations start
+INFO: Locate bash installation folder on OS
+Aug 13, 2014 11:36:10 AM unix.ExecuteUnixOperations start
+INFO: Copy AV_Monitoring script to OS
+Aug 13, 2014 11:36:15 AM unix.ExecuteUnixOperations start
+INFO: Execute Monitoring file on OS
+Aug 13, 2014 11:36:17 AM unix.ExecuteUnixOperations start
+INFO: Check if clix monitoring enabled
+Aug 13, 2014 11:36:17 AM unix.ExecuteUnixOperations start
+INFO: clix monitoring enabled - Run clix!
+Aug 13, 2014 11:36:29 AM unix.ExecuteUnixOperations finish
+INFO: Check tests folder's size
+Aug 13, 2014 11:36:38 AM unix.ExecuteUnixOperations finish
+INFO: Stop clix monitoring
+Aug 13, 2014 11:36:42 AM unix.ExecuteUnixOperations finish
+INFO: Add clix monitoring output to test folder2014_08_13 11_35_51HP-UXHP-UX
+Aug 13, 2014 11:36:43 AM unix.ExecuteUnixOperations finish
+INFO: Charts generation and analysis
+Aug 13, 2014 11:36:44 AM unix.ExecuteUnixOperations finish
+INFO: Add CPU chart image to test folder2014_08_13 11_35_51HP-UX
+Aug 13, 2014 11:36:45 AM unix.ExecuteUnixOperations finish
+INFO: Add memory chart image to test folder2014_08_13 11_35_51HP-UX
+Aug 13, 2014 11:36:45 AM unix.ExecuteUnixOperations finish
+INFO: Add mds/mdis/mdss monitoring output to test folder2014_08_13 11_35_51HP-UX
+Aug 13, 2014 11:36:46 AM unix.ExecuteUnixOperations finish
+INFO: Charts generation and analysis
+Aug 13, 2014 11:36:46 AM unix.ExecuteUnixOperations finish
+INFO: Add CPU chart image to test folder2014_08_13 11_35_51HP-UX
+Aug 13, 2014 11:36:46 AM unix.ExecuteUnixOperations finish
+INFO: Add memory chart image to test folder2014_08_13 11_35_51HP-UX
+Aug 13, 2014 11:36:46 AM unix.ExecuteUnixOperations finish
+INFO: Add mds/mdis/mdss monitoring output to test folder2014_08_13 11_35_51HP-UX
+Aug 13, 2014 11:36:49 AM unix.ExecuteUnixOperations finish
+INFO: Charts generation and analysis
+Aug 13, 2014 11:36:49 AM unix.ExecuteUnixOperations finish
+INFO: Add CPU chart image to test folder2014_08_13 11_35_51HP-UX
+Aug 13, 2014 11:36:49 AM unix.ExecuteUnixOperations finish
+INFO: Add memory chart image to test folder2014_08_13 11_35_51HP-UX
+Aug 13, 2014 11:36:49 AM unix.ExecuteUnixOperations finish
+INFO: Add mds/mdis/mdss monitoring output to test folder2014_08_13 11_35_51HP-UX
+Aug 13, 2014 11:36:49 AM unix.ExecuteUnixOperations finish
+INFO: Add vmstat monitoring output to test folder2014_08_13 11_35_51HP-UX
+Aug 13, 2014 11:36:50 AM unix.ExecuteUnixOperations finish
+INFO: Charts generation and analysis
+Aug 13, 2014 12:11:09 PM settingsView.CSettingsController$1 handle
+INFO: S T A R T
+Aug 13, 2014 12:11:09 PM settingsView.CSettingsController$1 handle
+INFO: Program started immediately
+Aug 13, 2014 12:11:09 PM unix.ExecuteUnixOperations start
+INFO: Gui Parameter Check started:
+Aug 13, 2014 12:11:09 PM unix.GuiParameterCheck mainGuiCheck
+INFO: Connection Test was successful
+Aug 13, 2014 12:11:10 PM unix.GuiParameterCheck mainGuiCheck
+INFO: Instance exist
+Aug 13, 2014 12:11:11 PM unix.GuiParameterCheck mainGuiCheck
+INFO: MDS is started!
+Aug 13, 2014 12:11:12 PM unix.GuiParameterCheck mainGuiCheck
+INFO: MDIS is started!
+Aug 13, 2014 12:11:13 PM unix.GuiParameterCheck mainGuiCheck
+INFO: MDSS is started!
+Aug 13, 2014 12:11:13 PM unix.ExecuteUnixOperations start
+INFO: Gui parameters check Success!
+Aug 13, 2014 12:11:13 PM unix.ExecuteUnixOperations start
+INFO: Kill vmstat and AV_monitoring processes if running
+Aug 13, 2014 12:11:18 PM unix.ExecuteUnixOperations start
+INFO: Remove old monitoring files from OS
+Aug 13, 2014 12:11:19 PM unix.ExecuteUnixOperations start
+INFO: Locate bash installation folder on OS
+Aug 13, 2014 12:11:27 PM unix.ExecuteUnixOperations start
+INFO: Copy AV_Monitoring script to OS
+Aug 13, 2014 12:11:31 PM unix.ExecuteUnixOperations start
+INFO: Execute Monitoring file on OS
+Aug 13, 2014 12:11:33 PM unix.ExecuteUnixOperations start
+INFO: Check if clix monitoring enabled
+Aug 13, 2014 12:11:33 PM unix.ExecuteUnixOperations start
+INFO: clix monitoring enabled - Run clix!
+Aug 13, 2014 12:12:09 PM unix.ExecuteUnixOperations finish
+INFO: Check tests folder's size
+Aug 13, 2014 12:12:17 PM unix.ExecuteUnixOperations finish
+INFO: Stop clix monitoring
+Aug 13, 2014 12:12:21 PM unix.ExecuteUnixOperations finish
+INFO: Add clix monitoring output to test folder2014_08_13 12_11_08HP-UXHP-UX
+Aug 13, 2014 12:12:22 PM unix.ExecuteUnixOperations finish
+INFO: Charts generation and analysis
+Aug 13, 2014 12:12:23 PM unix.ExecuteUnixOperations finish
+INFO: Add CPU chart image to test folder2014_08_13 12_11_08HP-UX
+Aug 13, 2014 12:12:23 PM unix.ExecuteUnixOperations finish
+INFO: Add memory chart image to test folder2014_08_13 12_11_08HP-UX
+Aug 13, 2014 12:12:23 PM unix.ExecuteUnixOperations finish
+INFO: Add mds/mdis/mdss monitoring output to test folder2014_08_13 12_11_08HP-UX
+Aug 13, 2014 12:12:24 PM unix.ExecuteUnixOperations finish
+INFO: Charts generation and analysis
+Aug 13, 2014 12:12:24 PM unix.ExecuteUnixOperations finish
+INFO: Add CPU chart image to test folder2014_08_13 12_11_08HP-UX
+Aug 13, 2014 12:12:25 PM unix.ExecuteUnixOperations finish
+INFO: Add memory chart image to test folder2014_08_13 12_11_08HP-UX
+Aug 13, 2014 12:12:25 PM unix.ExecuteUnixOperations finish
+INFO: Add mds/mdis/mdss monitoring output to test folder2014_08_13 12_11_08HP-UX
+Aug 13, 2014 12:12:26 PM unix.ExecuteUnixOperations finish
+INFO: Charts generation and analysis
+Aug 13, 2014 12:12:26 PM unix.ExecuteUnixOperations finish
+INFO: Add CPU chart image to test folder2014_08_13 12_11_08HP-UX
+Aug 13, 2014 12:12:26 PM unix.ExecuteUnixOperations finish
+INFO: Add memory chart image to test folder2014_08_13 12_11_08HP-UX
+Aug 13, 2014 12:12:26 PM unix.ExecuteUnixOperations finish
+INFO: Add mds/mdis/mdss monitoring output to test folder2014_08_13 12_11_08HP-UX
+Aug 13, 2014 12:12:26 PM unix.ExecuteUnixOperations finish
+INFO: Add vmstat monitoring output to test folder2014_08_13 12_11_08HP-UX
+Aug 13, 2014 12:12:27 PM unix.ExecuteUnixOperations finish
+INFO: Charts generation and analysis
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2014-08-13T12:29:59</date>
+  <millis>1407922199181</millis>
+  <sequence>5</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>settingsView.CSettingsController$1</class>
+  <method>handle</method>
+  <thread>12</thread>
+  <message>S T A R T</message>
+</record>
+<record>
+  <date>2014-08-13T12:29:59</date>
+  <millis>1407922199181</millis>
+  <sequence>6</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>settingsView.CSettingsController$1</class>
+  <method>handle</method>
+  <thread>12</thread>
+  <message>Program started immediately</message>
+</record>
+<record>
+  <date>2014-08-13T12:29:59</date>
+  <millis>1407922199181</millis>
+  <sequence>7</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>start</method>
+  <thread>12</thread>
+  <message>Gui Parameter Check started:</message>
+</record>
+<record>
+  <date>2014-08-13T12:29:59</date>
+  <millis>1407922199254</millis>
+  <sequence>8</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.GuiParameterCheck</class>
+  <method>mainGuiCheck</method>
+  <thread>12</thread>
+  <message>Connection Test was successful</message>
+</record>
+<record>
+  <date>2014-08-13T12:30:00</date>
+  <millis>1407922200348</millis>
+  <sequence>9</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.GuiParameterCheck</class>
+  <method>mainGuiCheck</method>
+  <thread>12</thread>
+  <message>Instance exist</message>
+</record>
+<record>
+  <date>2014-08-13T12:30:01</date>
+  <millis>1407922201458</millis>
+  <sequence>10</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.GuiParameterCheck</class>
+  <method>mainGuiCheck</method>
+  <thread>12</thread>
+  <message>MDS is started!</message>
+</record>
+<record>
+  <date>2014-08-13T12:30:02</date>
+  <millis>1407922202568</millis>
+  <sequence>11</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.GuiParameterCheck</class>
+  <method>mainGuiCheck</method>
+  <thread>12</thread>
+  <message>MDIS is started!</message>
+</record>
+<record>
+  <date>2014-08-13T12:30:03</date>
+  <millis>1407922203675</millis>
+  <sequence>12</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.GuiParameterCheck</class>
+  <method>mainGuiCheck</method>
+  <thread>12</thread>
+  <message>MDSS is started!</message>
+</record>
+<record>
+  <date>2014-08-13T12:30:03</date>
+  <millis>1407922203676</millis>
+  <sequence>13</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>start</method>
+  <thread>12</thread>
+  <message>Gui parameters check Success!</message>
+</record>
+<record>
+  <date>2014-08-13T12:30:03</date>
+  <millis>1407922203676</millis>
+  <sequence>14</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>start</method>
+  <thread>12</thread>
+  <message>Kill vmstat and AV_monitoring processes if running</message>
+</record>
+<record>
+  <date>2014-08-13T12:30:08</date>
+  <millis>1407922208091</millis>
+  <sequence>15</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>start</method>
+  <thread>12</thread>
+  <message>Remove old monitoring files from OS</message>
+</record>
+<record>
+  <date>2014-08-13T12:30:09</date>
+  <millis>1407922209204</millis>
+  <sequence>16</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>start</method>
+  <thread>12</thread>
+  <message>Locate bash installation folder on OS</message>
+</record>
+<record>
+  <date>2014-08-13T12:30:16</date>
+  <millis>1407922216960</millis>
+  <sequence>17</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>start</method>
+  <thread>12</thread>
+  <message>Copy AV_Monitoring script to OS</message>
+</record>
+<record>
+  <date>2014-08-13T12:30:21</date>
+  <millis>1407922221528</millis>
+  <sequence>18</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>start</method>
+  <thread>12</thread>
+  <message>Execute Monitoring file on OS</message>
+</record>
+<record>
+  <date>2014-08-13T12:30:23</date>
+  <millis>1407922223729</millis>
+  <sequence>19</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>start</method>
+  <thread>12</thread>
+  <message>Check if clix monitoring enabled</message>
+</record>
+<record>
+  <date>2014-08-13T12:30:23</date>
+  <millis>1407922223729</millis>
+  <sequence>20</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>start</method>
+  <thread>12</thread>
+  <message>clix monitoring enabled - Run clix!</message>
+</record>
+<record>
+  <date>2014-08-13T12:30:38</date>
+  <millis>1407922238626</millis>
+  <sequence>21</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Check tests folder's size</message>
+</record>
+<record>
+  <date>2014-08-13T12:30:46</date>
+  <millis>1407922246729</millis>
+  <sequence>22</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Stop clix monitoring</message>
+</record>
+<record>
+  <date>2014-08-13T12:30:50</date>
+  <millis>1407922250344</millis>
+  <sequence>23</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Add clix monitoring output to test folder2014_08_13 12_29_58_HP-UXHP-UX</message>
+</record>
+<record>
+  <date>2014-08-13T12:30:51</date>
+  <millis>1407922251492</millis>
+  <sequence>24</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Charts generation and analysis</message>
+</record>
+<record>
+  <date>2014-08-13T12:30:51</date>
+  <millis>1407922251875</millis>
+  <sequence>25</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Add CPU chart image to test folder2014_08_13 12_29_58_HP-UX</message>
+</record>
+<record>
+  <date>2014-08-13T12:30:52</date>
+  <millis>1407922252035</millis>
+  <sequence>26</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Add memory chart image to test folder2014_08_13 12_29_58_HP-UX</message>
+</record>
+<record>
+  <date>2014-08-13T12:30:52</date>
+  <millis>1407922252048</millis>
+  <sequence>27</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Add mds/mdis/mdss monitoring output to test folder2014_08_13 12_29_58_HP-UX</message>
+</record>
+<record>
+  <date>2014-08-13T12:30:53</date>
+  <millis>1407922253204</millis>
+  <sequence>28</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Charts generation and analysis</message>
+</record>
+<record>
+  <date>2014-08-13T12:30:53</date>
+  <millis>1407922253296</millis>
+  <sequence>29</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Add CPU chart image to test folder2014_08_13 12_29_58_HP-UX</message>
+</record>
+<record>
+  <date>2014-08-13T12:30:53</date>
+  <millis>1407922253433</millis>
+  <sequence>30</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Add memory chart image to test folder2014_08_13 12_29_58_HP-UX</message>
+</record>
+<record>
+  <date>2014-08-13T12:30:53</date>
+  <millis>1407922253443</millis>
+  <sequence>31</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Add mds/mdis/mdss monitoring output to test folder2014_08_13 12_29_58_HP-UX</message>
+</record>
+<record>
+  <date>2014-08-13T12:30:54</date>
+  <millis>1407922254689</millis>
+  <sequence>32</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Charts generation and analysis</message>
+</record>
+<record>
+  <date>2014-08-13T12:30:54</date>
+  <millis>1407922254767</millis>
+  <sequence>33</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Add CPU chart image to test folder2014_08_13 12_29_58_HP-UX</message>
+</record>
+<record>
+  <date>2014-08-13T12:30:54</date>
+  <millis>1407922254913</millis>
+  <sequence>34</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Add memory chart image to test folder2014_08_13 12_29_58_HP-UX</message>
+</record>
+<record>
+  <date>2014-08-13T12:30:54</date>
+  <millis>1407922254922</millis>
+  <sequence>35</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Add mds/mdis/mdss monitoring output to test folder2014_08_13 12_29_58_HP-UX</message>
+</record>
+<record>
+  <date>2014-08-13T12:30:54</date>
+  <millis>1407922254975</millis>
+  <sequence>36</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Add vmstat monitoring output to test folder2014_08_13 12_29_58_HP-UX</message>
+</record>
+<record>
+  <date>2014-08-13T12:30:56</date>
+  <millis>1407922256065</millis>
+  <sequence>37</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Charts generation and analysis</message>
+</record>
+</log>
