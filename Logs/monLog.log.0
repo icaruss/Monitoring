@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2014-08-13T15:13:52</date>
+  <millis>1407932032377</millis>
+  <sequence>5</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>settingsView.CSettingsController$1</class>
+  <method>handle</method>
+  <thread>12</thread>
+  <message>S T A R T</message>
+</record>
+<record>
+  <date>2014-08-13T15:13:52</date>
+  <millis>1407932032377</millis>
+  <sequence>6</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>settingsView.CSettingsController$1</class>
+  <method>handle</method>
+  <thread>12</thread>
+  <message>Program started immediately</message>
+</record>
+<record>
+  <date>2014-08-13T15:13:52</date>
+  <millis>1407932032377</millis>
+  <sequence>7</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>start</method>
+  <thread>12</thread>
+  <message>Gui Parameter Check started:</message>
+</record>
+<record>
+  <date>2014-08-13T15:13:52</date>
+  <millis>1407932032460</millis>
+  <sequence>8</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.GuiParameterCheck</class>
+  <method>mainGuiCheck</method>
+  <thread>12</thread>
+  <message>Connection Test was successful</message>
+</record>
+<record>
+  <date>2014-08-13T15:13:53</date>
+  <millis>1407932033552</millis>
+  <sequence>9</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.GuiParameterCheck</class>
+  <method>mainGuiCheck</method>
+  <thread>12</thread>
+  <message>Instance exist</message>
+</record>
+<record>
+  <date>2014-08-13T15:13:54</date>
+  <millis>1407932034640</millis>
+  <sequence>10</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.GuiParameterCheck</class>
+  <method>mainGuiCheck</method>
+  <thread>12</thread>
+  <message>MDS is started!</message>
+</record>
+<record>
+  <date>2014-08-13T15:13:55</date>
+  <millis>1407932035755</millis>
+  <sequence>11</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.GuiParameterCheck</class>
+  <method>mainGuiCheck</method>
+  <thread>12</thread>
+  <message>MDIS is started!</message>
+</record>
+<record>
+  <date>2014-08-13T15:13:56</date>
+  <millis>1407932036860</millis>
+  <sequence>12</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.GuiParameterCheck</class>
+  <method>mainGuiCheck</method>
+  <thread>12</thread>
+  <message>MDSS is started!</message>
+</record>
+<record>
+  <date>2014-08-13T15:13:56</date>
+  <millis>1407932036860</millis>
+  <sequence>13</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>start</method>
+  <thread>12</thread>
+  <message>Gui parameters check Success!</message>
+</record>
+<record>
+  <date>2014-08-13T15:13:56</date>
+  <millis>1407932036861</millis>
+  <sequence>14</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>start</method>
+  <thread>12</thread>
+  <message>Kill vmstat and AV_monitoring processes if running</message>
+</record>
+<record>
+  <date>2014-08-13T15:14:01</date>
+  <millis>1407932041300</millis>
+  <sequence>15</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>start</method>
+  <thread>12</thread>
+  <message>Remove old monitoring files from OS</message>
+</record>
+<record>
+  <date>2014-08-13T15:14:02</date>
+  <millis>1407932042403</millis>
+  <sequence>16</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>start</method>
+  <thread>12</thread>
+  <message>Locate bash installation folder on OS</message>
+</record>
+<record>
+  <date>2014-08-13T15:14:10</date>
+  <millis>1407932050221</millis>
+  <sequence>17</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>start</method>
+  <thread>12</thread>
+  <message>Copy AV_Monitoring script to OS</message>
+</record>
+<record>
+  <date>2014-08-13T15:14:14</date>
+  <millis>1407932054812</millis>
+  <sequence>18</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>start</method>
+  <thread>12</thread>
+  <message>Execute Monitoring file on OS</message>
+</record>
+<record>
+  <date>2014-08-13T15:14:17</date>
+  <millis>1407932057020</millis>
+  <sequence>19</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>start</method>
+  <thread>12</thread>
+  <message>Check if clix monitoring enabled</message>
+</record>
+<record>
+  <date>2014-08-13T15:14:17</date>
+  <millis>1407932057020</millis>
+  <sequence>20</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>start</method>
+  <thread>12</thread>
+  <message>clix monitoring enabled - Run clix!</message>
+</record>
+<record>
+  <date>2014-08-13T15:14:39</date>
+  <millis>1407932079565</millis>
+  <sequence>21</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Check tests folder's size</message>
+</record>
+<record>
+  <date>2014-08-13T15:14:47</date>
+  <millis>1407932087774</millis>
+  <sequence>22</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Stop clix monitoring</message>
+</record>
+<record>
+  <date>2014-08-13T15:14:51</date>
+  <millis>1407932091571</millis>
+  <sequence>23</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Add clix monitoring output to test folder2014_08_13 15_13_51_HP-UXHP-UX</message>
+</record>
+<record>
+  <date>2014-08-13T15:14:52</date>
+  <millis>1407932092768</millis>
+  <sequence>24</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Charts generation and analysis</message>
+</record>
+<record>
+  <date>2014-08-13T15:14:53</date>
+  <millis>1407932093355</millis>
+  <sequence>25</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Add CPU chart image to test folder2014_08_13 15_13_51_HP-UX</message>
+</record>
+<record>
+  <date>2014-08-13T15:14:53</date>
+  <millis>1407932093642</millis>
+  <sequence>26</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Add memory chart image to test folder2014_08_13 15_13_51_HP-UX</message>
+</record>
+<record>
+  <date>2014-08-13T15:14:53</date>
+  <millis>1407932093654</millis>
+  <sequence>27</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Add mds/mdis/mdss monitoring output to test folder2014_08_13 15_13_51_HP-UX</message>
+</record>
+<record>
+  <date>2014-08-13T15:14:54</date>
+  <millis>1407932094833</millis>
+  <sequence>28</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Charts generation and analysis</message>
+</record>
+<record>
+  <date>2014-08-13T15:14:54</date>
+  <millis>1407932094973</millis>
+  <sequence>29</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Add CPU chart image to test folder2014_08_13 15_13_51_HP-UX</message>
+</record>
+<record>
+  <date>2014-08-13T15:14:55</date>
+  <millis>1407932095229</millis>
+  <sequence>30</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Add memory chart image to test folder2014_08_13 15_13_51_HP-UX</message>
+</record>
+<record>
+  <date>2014-08-13T15:14:55</date>
+  <millis>1407932095242</millis>
+  <sequence>31</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Add mds/mdis/mdss monitoring output to test folder2014_08_13 15_13_51_HP-UX</message>
+</record>
+<record>
+  <date>2014-08-13T15:14:56</date>
+  <millis>1407932096502</millis>
+  <sequence>32</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Charts generation and analysis</message>
+</record>
+<record>
+  <date>2014-08-13T15:14:56</date>
+  <millis>1407932096614</millis>
+  <sequence>33</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Add CPU chart image to test folder2014_08_13 15_13_51_HP-UX</message>
+</record>
+<record>
+  <date>2014-08-13T15:14:56</date>
+  <millis>1407932096795</millis>
+  <sequence>34</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Add memory chart image to test folder2014_08_13 15_13_51_HP-UX</message>
+</record>
+<record>
+  <date>2014-08-13T15:14:56</date>
+  <millis>1407932096821</millis>
+  <sequence>35</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Add mds/mdis/mdss monitoring output to test folder2014_08_13 15_13_51_HP-UX</message>
+</record>
+<record>
+  <date>2014-08-13T15:14:56</date>
+  <millis>1407932096901</millis>
+  <sequence>36</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Add vmstat monitoring output to test folder2014_08_13 15_13_51_HP-UX</message>
+</record>
+<record>
+  <date>2014-08-13T15:14:57</date>
+  <millis>1407932097995</millis>
+  <sequence>37</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Charts generation and analysis</message>
+</record>
+</log>

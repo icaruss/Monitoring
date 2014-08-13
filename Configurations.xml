@@ -23,28 +23,28 @@
         <boolean>true</boolean>
       </entry>
       <entry>
-        <string>mdisr</string>
-        <boolean>false</boolean>
+        <string>hostName</string>
+        <string>ilsun45</string>
       </entry>
       <entry>
         <string>userName</string>
         <string>mqmadm</string>
       </entry>
       <entry>
-        <string>hostName</string>
-        <string>ilsun45</string>
+        <string>mdisr</string>
+        <boolean>false</boolean>
       </entry>
       <entry>
         <string>instance</string>
         <string>default</string>
       </entry>
       <entry>
-        <string>mdssr</string>
-        <boolean>false</boolean>
-      </entry>
-      <entry>
         <string>password</string>
         <string>a2i2000!</string>
+      </entry>
+      <entry>
+        <string>mdssr</string>
+        <boolean>false</boolean>
       </entry>
       <entry>
         <string>configurationID</string>
@@ -76,28 +76,28 @@
         <boolean>true</boolean>
       </entry>
       <entry>
-        <string>hostName</string>
-        <string>iltlvh325</string>
+        <string>mdisr</string>
+        <boolean>true</boolean>
       </entry>
       <entry>
         <string>userName</string>
         <string>hp1adm</string>
       </entry>
       <entry>
-        <string>mdisr</string>
-        <boolean>true</boolean>
+        <string>hostName</string>
+        <string>iltlvh325</string>
       </entry>
       <entry>
         <string>instance</string>
         <string>HP1</string>
       </entry>
       <entry>
-        <string>password</string>
-        <string>a2i2000!</string>
-      </entry>
-      <entry>
         <string>mdssr</string>
         <boolean>true</boolean>
+      </entry>
+      <entry>
+        <string>password</string>
+        <string>a2i2000!</string>
       </entry>
       <entry>
         <string>configurationID</string>

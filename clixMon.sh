@@ -1,1 +1,1 @@
-clix mdsMonitor localhost Admin:  -W -C -T 5  >> clix_mon.out 2>&1
+clix mdsMonitor localhost Admin:  -W -C -T 5 -# 50350 >> clix_mon.out 2>&1
