@@ -36,7 +36,7 @@ public class MonLogger
 	{  
 		try 
 		{
-			String dir = System.getProperty("user.dir") + "\\Logs";
+			String dir = System.getProperty("user.dir") + "\\Logs\\monLog.log";
 
 			File saveDir = new File(dir);
 			{
@@ -44,8 +44,7 @@ public class MonLogger
 					if(!saveDir.exists())
 					  saveDir.mkdirs();
 			}
-			FileHandler myFileHandler = new FileHandler(dir, 102400, 10, true);  
-			myFileHandler.setFormatter(new SimpleFormatter()); 
+			FileHandler myFileHandler = new FileHandler(dir, 102400, 10, true); 
 			myLogger .addHandler(myFileHandler);  
 			myLogger .setUseParentHandlers(false);  
 			myLogger .setLevel(Level.FINEST);

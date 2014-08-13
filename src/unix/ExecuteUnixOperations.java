@@ -16,19 +16,6 @@ import java.util.List;
 import java.util.Map;
 
 import log.MonLogger;
-
-
-
-
-
-
-
-
-
-
-
-
-
 import org.jfree.ui.RefineryUtilities;
 
 import Charts.ChartGeneration;
@@ -135,7 +122,7 @@ public class ExecuteUnixOperations extends CommandExecuter
 	DateFormat dateFormat = new SimpleDateFormat("yyyy_MM_dd HH_mm_ss");
 	   //get current date time with Date()
 	Date date = new Date();
-	String TestFolderName = dateFormat.format(date) + getOS();
+	String TestFolderName = dateFormat.format(date) + "_" + getOS();
 	
 	Folder TestFolder;
 	
@@ -283,13 +270,13 @@ public class ExecuteUnixOperations extends CommandExecuter
 	    			
 	    		 	MonLogger.myLogger.log(Level.INFO, "Check tests folder's size");
 	    		 	mainFolder.checkFolderSize();
-	    			TestFolder = new Folder( mainFolder + "\\" + TestFolderName + getOS());
+	    			TestFolder = new Folder( mainFolder + "\\" + TestFolderName);
 	    			
 	    		}
 	    		else
 	    		{
 	    			MonLogger.myLogger.log(Level.INFO, "Create tests folder");
-	    			TestFolder = new Folder(System.getProperty("user.dir")  + "\\Monitoring Tests\\" + TestFolderName + getOS());
+	    			TestFolder = new Folder(System.getProperty("user.dir")  + "\\Monitoring Tests\\" + TestFolderName);
 	    		}		
 		
 	    	
