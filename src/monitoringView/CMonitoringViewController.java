@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 
 
 package monitoringView;
@@ -20,30 +23,41 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableView;
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class CMonitoringViewController.
+ */
 public class CMonitoringViewController implements Initializable
 {
 
+	/** The lbl result id. */
 	@FXML // fx:id="lblResultID"
     private Label lblResultID; // Value injected by FXMLLoader
 	
+	/** The line chart. */
 	@FXML // fx:id="lineChart"
     private LineChart lineChart; // Value injected by FXMLLoader
     
+	/** The tb view. */
 	@FXML // fx:id="tbView"
     private TableView tbView; // Value injected by FXMLLoader
 	
+	/** The btn previous result. */
 	@FXML // fx:id="btnPreviousResult"
     private Button btnPreviousResult; // Value injected by FXMLLoader
 	
+	/** The btn next result. */
 	@FXML // fx:id="btnNextResult"
     private Button btnNextResult; // Value injected by FXMLLoader
 	
+	/** The btn show in file. */
 	@FXML // fx:id="btnShowInFile"
     private Button btnShowInFile; // Value injected by FXMLLoader
 	
     
     ////////  logic Variables //////
     
+    /** The files. */
     private Map<String, String[]> files;
 
     
@@ -51,6 +65,9 @@ public class CMonitoringViewController implements Initializable
     //////// end logic Variables ///
     
    
+    /* (non-Javadoc)
+     * @see javafx.fxml.Initializable#initialize(java.net.URL, java.util.ResourceBundle)
+     */
     public void initialize(URL fxmlFileLocation, ResourceBundle resources)
     {
     	assert lblResultID != null : "fx:id=\"lblResultID\" was not injected: check your FXML file 'Monitoring_Page.fxml'.";
@@ -135,6 +152,9 @@ public class CMonitoringViewController implements Initializable
 
 
 
+	/**
+	 * Load data file to view.
+	 */
 	private void loadDataFileToView()
 	{
 		// Load Chart/s

@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package Clix;
 
 
@@ -8,11 +11,22 @@ import log.MonLogger;
 
 import FilesManagment.Converter;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class ParseClix.
+ */
 public class ParseClix extends Converter
 {
 	
 	
 	
+	/**
+	 * Parses the clix out.
+	 * 
+	 * @param fileName
+	 *            the file name
+	 * @return the string
+	 */
 	public String parseClixOut(String fileName) 
 	{
 		String xls = null;

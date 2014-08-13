@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package unix;
 
 import java.io.FileNotFoundException;
@@ -8,9 +11,21 @@ import com.jcraft.jsch.ChannelSftp;
 import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.SftpException;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class winUnixOperations.
+ */
 public class winUnixOperations extends CommandExecuter
 {
 	/////
+	/**
+	 * Copy to unix.
+	 * 
+	 * @param mon_file
+	 *            the mon_file
+	 * @throws FileNotFoundException
+	 *             the file not found exception
+	 */
 	public void copyToUnix(String mon_file) throws FileNotFoundException
 	{
 
@@ -47,6 +62,12 @@ public class winUnixOperations extends CommandExecuter
 		}
 	}
 	
+	/**
+	 * Copy from unix.
+	 * 
+	 * @param mon_file
+	 *            the mon_file
+	 */
 	public void copyFromUnix(String mon_file)
 	{	
 		

@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package log;
 
 import java.io.File;
@@ -7,9 +10,17 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class MonLogger.
+ */
 public class MonLogger
 {
+	
+	/** The Constant myLogger. */
 	public final static Logger myLogger = Logger.getLogger("Logger:");  
+	
+	/** The self. */
 	private static MonLogger self = null;
 	
 /*	//empty private constructor
@@ -19,7 +30,12 @@ public class MonLogger
 	}*/
 	
 	//synchronized getInstance
-	public static synchronized MonLogger getInstance(){
+	/**
+ * Gets the single instance of MonLogger.
+ * 
+ * @return single instance of MonLogger
+ */
+public static synchronized MonLogger getInstance(){
 		if (self == null)
 		{
 			self = new MonLogger();
@@ -32,6 +48,9 @@ public class MonLogger
 	
 
 	
+	/**
+	 * Prepare logger.
+	 */
 	private static void prepareLogger() 
 	{  
 		try 
@@ -60,20 +79,41 @@ public class MonLogger
 	}  
 	
 	//prevent cloning
+	/* (non-Javadoc)
+	 * @see java.lang.Object#clone()
+	 */
 	public Object clone() throws CloneNotSupportedException {
 		throw new CloneNotSupportedException(); 
 	}
 	
 	//synchronized logging
+	/**
+	 * Debug.
+	 * 
+	 * @param msg
+	 *            the msg
+	 */
 	public synchronized void debug(String msg){
 	
 	}
 	
+	/**
+	 * Info.
+	 * 
+	 * @param msg
+	 *            the msg
+	 */
 	public synchronized void info(String msg)
 	{
 	
 	}
 	
+	/**
+	 * Fatal.
+	 * 
+	 * @param msg
+	 *            the msg
+	 */
 	public synchronized void fatal(String msg)
 	{
 	

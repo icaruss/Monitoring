@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package unix;
 
 import java.io.FileNotFoundException;
@@ -10,10 +13,32 @@ import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.Session;
 import com.jcraft.jsch.SftpException;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class UnixConnection.
+ */
 public class UnixConnection extends UnixContext 
 {
+	
+	/** The instance. */
 	private static UnixConnection instance = null;
 
+	/**
+	 * Instantiates a new unix connection.
+	 * 
+	 * @param hostName
+	 *            the host name
+	 * @param userName
+	 *            the user name
+	 * @param password
+	 *            the password
+	 * @param jschSSHChannel
+	 *            the jsch ssh channel
+	 * @param sesConnection
+	 *            the ses connection
+	 * @param intTimeOut
+	 *            the int time out
+	 */
 	public UnixConnection(String hostName, String userName, String password,
 			JSch jschSSHChannel, Session sesConnection, int intTimeOut) 
 	{
@@ -21,6 +46,11 @@ public class UnixConnection extends UnixContext
 	}	
 	
 	
+	/**
+	 * Gets the single instance of UnixConnection.
+	 * 
+	 * @return single instance of UnixConnection
+	 */
 	public static UnixConnection getInstance() 
 	{
         if (instance == null) 
@@ -39,7 +69,14 @@ public class UnixConnection extends UnixContext
 	
 	
 	
-	 protected static String connectToUnix() throws JSchException
+	 /**
+	 * Connect to unix.
+	 * 
+	 * @return the string
+	 * @throws JSchException
+	 *             the j sch exception
+	 */
+ 	protected static String connectToUnix() throws JSchException
 	 {	
 		 String errorMessage = null;
 
@@ -63,7 +100,13 @@ public class UnixConnection extends UnixContext
 
 	 }
 	 
-	 protected static void disconnectFromUnix() throws JSchException 
+	 /**
+	 * Disconnect from unix.
+	 * 
+	 * @throws JSchException
+	 *             the j sch exception
+	 */
+ 	protected static void disconnectFromUnix() throws JSchException 
 	 {
 		 
 		 jschSSHChannel.getSession(hostName).disconnect();

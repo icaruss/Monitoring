@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package monitoringView;
 
 import java.net.URL;
@@ -11,11 +14,19 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class CMonitoringStage.
+ */
 public class CMonitoringStage 
 {
 	
+	/** The stage. */
 	private Stage stage;
 	
+	/**
+	 * Instantiates a new c monitoring stage.
+	 */
 	public CMonitoringStage()
 	{
 		try 
@@ -42,6 +53,9 @@ public class CMonitoringStage
 	}
 	
 	
+	/**
+	 * Close stage.
+	 */
 	public void closeStage()
 	{
 		stage.close();

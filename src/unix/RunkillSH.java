@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package unix;
 
 import java.util.ArrayList;
@@ -8,11 +11,32 @@ import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.Session;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class RunkillSH.
+ */
 public class RunkillSH extends CommandExecuter
 {
 
+	/** The file names. */
 	private List<String> fileNames = new ArrayList<String>();
 	
+	/**
+	 * Instantiates a new runkill sh.
+	 * 
+	 * @param hostName
+	 *            the host name
+	 * @param userName
+	 *            the user name
+	 * @param password
+	 *            the password
+	 * @param jschSSHChannel
+	 *            the jsch ssh channel
+	 * @param sesConnection
+	 *            the ses connection
+	 * @param intTimeOut
+	 *            the int time out
+	 */
 	public RunkillSH(String hostName, String userName, String password,
 			JSch jschSSHChannel, Session sesConnection, int intTimeOut) {
 		super(hostName, userName, password, jschSSHChannel, sesConnection, intTimeOut);
@@ -28,6 +52,9 @@ public class RunkillSH extends CommandExecuter
 
 	}
 	
+	/**
+	 * Instantiates a new runkill sh.
+	 */
 	public RunkillSH() {
 		super(hostName, userName, password, jschSSHChannel, sesConnection, intTimeOut);
 /*		try 
@@ -44,7 +71,19 @@ public class RunkillSH extends CommandExecuter
 	
 
 		 /////
-		 public void ExecuteSh(String[] paramsForSH, String SHFileName) throws InterruptedException, JSchException
+		 /**
+		 * Execute sh.
+		 * 
+		 * @param paramsForSH
+		 *            the params for sh
+		 * @param SHFileName
+		 *            the SH file name
+		 * @throws InterruptedException
+		 *             the interrupted exception
+		 * @throws JSchException
+		 *             the j sch exception
+		 */
+ 		public void ExecuteSh(String[] paramsForSH, String SHFileName) throws InterruptedException, JSchException
 		 {
 			 //"HP1", "mdss", "mds", "mdis" - the params order
 			 //The parameters for SH has to be entered in the correct order
@@ -71,7 +110,15 @@ public class RunkillSH extends CommandExecuter
 		 
 		 ///////
 		 // get file names if sh script has generated files
-		 public void createFileNames(String lsCommandToFindFilesNames) throws JSchException
+		 /**
+		 * Creates the file names.
+		 * 
+		 * @param lsCommandToFindFilesNames
+		 *            the ls command to find files names
+		 * @throws JSchException
+		 *             the j sch exception
+		 */
+ 		public void createFileNames(String lsCommandToFindFilesNames) throws JSchException
 		 {
 			 
 			 //the command should be ls | grep _mon_  --> lsCommandToFindFilesNames = ls | grep _mon_
@@ -93,12 +140,25 @@ public class RunkillSH extends CommandExecuter
 		 }
 
 		 
-		 public List<String> getFileNames() {
+		 /**
+		 * Gets the file names.
+		 * 
+		 * @return the file names
+		 */
+ 		public List<String> getFileNames() {
 			return fileNames;
 		}
 
 		///  TODO: CHECK AND OPTIMIZE
-		 public void killProcesses(String SHFileName) throws JSchException
+		 /**
+		 * Kill processes.
+		 * 
+		 * @param SHFileName
+		 *            the SH file name
+		 * @throws JSchException
+		 *             the j sch exception
+		 */
+		public void killProcesses(String SHFileName) throws JSchException
 		 {
 			 if (this.execute("ls | grep " + SHFileName) == SHFileName + "\n");
 			 {
@@ -116,7 +176,13 @@ public class RunkillSH extends CommandExecuter
 		 }
 		 
 		 
-		 public void copyFilesToWin() throws JSchException
+		 /**
+		 * Copy files to win.
+		 * 
+		 * @throws JSchException
+		 *             the j sch exception
+		 */
+ 		public void copyFilesToWin() throws JSchException
 		 {
 			 winUnixOperations winUnixOperations =  new winUnixOperations();
 			 for (int i = 0; i < fileNames.size() ; i++)
@@ -127,7 +193,13 @@ public class RunkillSH extends CommandExecuter
 		 }
 		 
 		 
-		 public void removeFilesFromUnix() throws JSchException
+		 /**
+		 * Removes the files from unix.
+		 * 
+		 * @throws JSchException
+		 *             the j sch exception
+		 */
+ 		public void removeFilesFromUnix() throws JSchException
 		 {
 
 			 this.execute("rm *_mon_*.txt");
@@ -137,7 +209,16 @@ public class RunkillSH extends CommandExecuter
 		 ////
 
 			
-			public String locateBash(String OS) throws JSchException
+			/**
+		 * Locate bash.
+		 * 
+		 * @param OS
+		 *            the os
+		 * @return the string
+		 * @throws JSchException
+		 *             the j sch exception
+		 */
+ 		public String locateBash(String OS) throws JSchException
 			{
 				String bash = null;
 				if(OS.startsWith("Linux"))

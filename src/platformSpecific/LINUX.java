@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package platformSpecific;
 
 import java.io.BufferedReader;
@@ -5,22 +8,37 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class LINUX.
+ */
 public class LINUX implements OSType 
 {
+	
+	/** The OS type. */
 	final String OSType = "Linux";
 
+	/* (non-Javadoc)
+	 * @see platformSpecific.OSType#getCSVStartline()
+	 */
 	@Override
 	public int getCSVStartline() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
+	/* (non-Javadoc)
+	 * @see platformSpecific.OSType#getCSVEndLine()
+	 */
 	@Override
 	public int getCSVEndLine() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
+	/* (non-Javadoc)
+	 * @see platformSpecific.OSType#getLineToRemoveStartIndex()
+	 */
 	@Override
 	public int getLineToRemoveStartIndex() {
 		String line = null;
@@ -50,6 +68,9 @@ public class LINUX implements OSType
 			return startIndex;
 	}
 
+	/* (non-Javadoc)
+	 * @see platformSpecific.OSType#getLineToRemoveEndIndex()
+	 */
 	@Override
 	public int getLineToRemoveEndIndex() {
 		String line = null;
@@ -79,6 +100,9 @@ public class LINUX implements OSType
 			return endIndex;
 	}
 
+	/* (non-Javadoc)
+	 * @see platformSpecific.OSType#firstLineCSVIndex()
+	 */
 	@Override
 	public int firstLineCSVIndex() {
 		// TODO Auto-generated method stub

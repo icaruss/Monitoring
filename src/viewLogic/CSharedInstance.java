@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package viewLogic;
 
 import java.io.BufferedReader;
@@ -20,33 +23,55 @@ import FilesManagment.DateOperations;
 import com.thoughtworks.xstream.XStream;
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class CSharedInstance.
+ */
 public class CSharedInstance 
 {
 	
+	/** The total seconds countdown. */
 	public long totalSecondsCountdown;
+	
+	/** The seconds elapsed. */
 	public int secondsElapsed;
 	
+	/** The current monitoring. */
 	public CViewConstants.MonitorType currentMonitoring;
 	
+	/** The is monitoring started. */
 	public boolean isMonitoringStarted;
+	
+	/** The is monitoring done. */
 	public boolean isMonitoringDone;
+	
+	/** The monitoring start time. */
 	public Time monitoringStartTime;
 	
+	/** The current configuration id. */
 	private String currentConfigurationID;
 	
+	/** The configurations. */
 	private Map<String, Map<String, Object>> configurations;
 	
+	/** The current data files id. */
 	public String currentDataFilesID;
 	
+	/** The data files. */
 	private Map<String, Vector<String>> dataFiles;
 	
+	/** The execute unix operations. */
 	public ExecuteUnixOperations executeUnixOperations;
 	
 	
+	/** The shared instance. */
 	private static CSharedInstance sharedInstance = new CSharedInstance( );
 		   
 	/* A private Constructor prevents any other 
 	 * class from instantiating.
+	 */
+	/**
+	 * Instantiates a new c shared instance.
 	 */
 	private CSharedInstance()
 	{ 
@@ -72,12 +97,25 @@ public class CSharedInstance
 
 
 	/* Static 'instance' method */
+	/**
+	 * Gets the single instance of CSharedInstance.
+	 * 
+	 * @return single instance of CSharedInstance
+	 */
 	public static CSharedInstance getInstance( ) 
 	{
 		return sharedInstance;
 	}
 	
 
+	/**
+	 * Adds the new configuration.
+	 * 
+	 * @param key
+	 *            the key
+	 * @param values
+	 *            the values
+	 */
 	public void addNewConfiguration(String key, Map<String, Object> values)
 	{
 		if (configurations.containsKey(key))
@@ -106,6 +144,13 @@ public class CSharedInstance
 	
 	
 	
+	/**
+	 * Gets the chosen configuration.
+	 * 
+	 * @param key
+	 *            the key
+	 * @return the chosen configuration
+	 */
 	public Map<String, Object> getChosenConfiguration(String key)
 	{
 		if (configurations.containsKey(key))
@@ -116,12 +161,22 @@ public class CSharedInstance
 		return null;
 	}
 	
+	/**
+	 * Gets the all configuration keys.
+	 * 
+	 * @return the all configuration keys
+	 */
 	public Set<String> getAllConfigurationKeys()
 	{
 		return configurations.keySet();
 	}
 	
 	
+	/**
+	 * Gets the current configuration.
+	 * 
+	 * @return the current configuration
+	 */
 	public  Map<String, Object> getCurrentConfiguration()
 	{
 		if (currentConfigurationID != null)
@@ -134,6 +189,9 @@ public class CSharedInstance
 	
 	
 
+	/**
+	 * Sets the default configuration.
+	 */
 	private void setDefaultConfiguration() 
 	{
 		if (!configurations.isEmpty())
@@ -167,6 +225,9 @@ public class CSharedInstance
 	}
 	
 	
+	/**
+	 * Save configurations.
+	 */
 	public void saveConfigurations()
 	{
 		
@@ -189,6 +250,11 @@ public class CSharedInstance
 		
 	}
 	
+	/**
+	 * Seriallize data.
+	 * 
+	 * @return the string
+	 */
 	private String seriallizeData()
 	{
 		XStream xStream = new XStream();
@@ -197,6 +263,14 @@ public class CSharedInstance
 	}
 	
 	
+	/**
+	 * String to dom.
+	 * 
+	 * @param xmlSource
+	 *            the xml source
+	 * @throws IOException
+	 *             Signals that an I/O exception has occurred.
+	 */
 	private static void stringToDom(String xmlSource) throws IOException 
 	{
 	    java.io.FileWriter fw = new java.io.FileWriter("Configurations.xml");
@@ -205,6 +279,9 @@ public class CSharedInstance
 	}
 	
 	
+	/**
+	 * De seriallize.
+	 */
 	@SuppressWarnings("unchecked")
 	private void deSeriallize()
 	{
@@ -232,6 +309,12 @@ public class CSharedInstance
 	}
 	
 
+	/**
+	 * Save configurations.
+	 * 
+	 * @param currentSettings
+	 *            the current settings
+	 */
 	public void saveConfigurations(Map<String, Object> currentSettings)
 	{
 		String key = (String) currentSettings.get(CViewConstants.CONFIGURATION_ID);
@@ -245,6 +328,14 @@ public class CSharedInstance
 	
 
     
+    /**
+	 * Update waiting time for results.
+	 * 
+	 * @param fromTime
+	 *            the from time
+	 * @param toTime
+	 *            the to time
+	 */
     public void updateWaitingTimeForResults(String fromTime, String toTime) 
 	{
     	//int seconds = 0;
@@ -296,6 +387,11 @@ public class CSharedInstance
     	}
 	}
     
+    /**
+	 * Time left.
+	 * 
+	 * @return the string
+	 */
     public String timeLeft()
     {
     	long secs = totalSecondsCountdown - secondsElapsed;
@@ -326,6 +422,11 @@ public class CSharedInstance
     }
 	
     
+    /**
+	 * Checks if is ready to launch.
+	 * 
+	 * @return true, if is ready to launch
+	 */
     public boolean isReadyToLaunch()
     {
     	if (isMonitoringDone)
@@ -366,6 +467,9 @@ public class CSharedInstance
     	
     }
     
+	/**
+	 * Monitoring start.
+	 */
 	public void monitoringStart()
     {
     	if (monitoringStartTime == null)
@@ -396,6 +500,14 @@ public class CSharedInstance
 	
 	
 	
+	/**
+	 * Adds the new data files.
+	 * 
+	 * @param key
+	 *            the key
+	 * @param values
+	 *            the values
+	 */
 	public void addNewDataFiles(String key, Vector<String> values)
 	{
 		if (dataFiles != null)
@@ -435,6 +547,13 @@ public class CSharedInstance
 	
 	
 	
+	/**
+	 * Gets the chosen data files.
+	 * 
+	 * @param key
+	 *            the key
+	 * @return the chosen data files
+	 */
 	public Vector<String> getChosenDataFiles(String key)
 	{
 		if (dataFiles.containsKey(key))
@@ -445,12 +564,22 @@ public class CSharedInstance
 		return null;
 	}
 	
+	/**
+	 * Gets the all data files keys.
+	 * 
+	 * @return the all data files keys
+	 */
 	public Set<String> getAllDataFilesKeys()
 	{
 		return dataFiles.keySet();
 	}
 	
 	
+	/**
+	 * Gets the current data files set.
+	 * 
+	 * @return the current data files set
+	 */
 	public Vector<String> getCurrentDataFilesSet()
 	{
 		if (currentDataFilesID != null)
@@ -462,6 +591,9 @@ public class CSharedInstance
 	}
 	
 	
+	/**
+	 * Load data files to local cache.
+	 */
 	public void loadDataFilesToLocalCache()
 	{
 		
@@ -469,6 +601,9 @@ public class CSharedInstance
 		
 	}
 	
+	/**
+	 * Save data files to external file.
+	 */
 	public void saveDataFilesToExternalFile()
 	{
 		
@@ -476,6 +611,12 @@ public class CSharedInstance
 		
 	}
 	
+	/**
+	 * Sets the new execute unix op.
+	 * 
+	 * @param currentSettings
+	 *            the current settings
+	 */
 	public void setNewExecuteUnixOp(Map<String, Object> currentSettings)
 	{
 		if (executeUnixOperations != null)

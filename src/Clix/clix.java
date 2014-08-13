@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package Clix;
 
 import java.io.BufferedReader;
@@ -20,16 +23,30 @@ import com.jcraft.jsch.JSchException;
 import unix.CommandExecuter;
 import unix.winUnixOperations;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class clix.
+ */
 public class clix extends winUnixOperations
 {
 	// SP06 and above - START
 	//---------------------------------------------------------------------
 	// default port: "clix mdsMonitor localhost Admin: -W -C -T 1 >> clix_mon.out 2>&1"
+	/** The interval. */
 	String interval;
+	
+	/** The clix cmd. */
 	String clixCmd ;
+	
+	/** The port. */
 	String port;
+	
+	/** The clix file name. */
 	final String clixFileName = "clix_mon.out";
 	
+	/**
+	 * Instantiates a new clix.
+	 */
 	public clix()
 	{
 
@@ -37,6 +54,18 @@ public class clix extends winUnixOperations
 	
 	// not default port: "clix mdsMonitor localhost Admin: -W -C -T 1 -# <50650> >> clix_mon.out 2>&1"
 
+	/**
+	 * Instantiates a new clix.
+	 * 
+	 * @param _interval
+	 *            the _interval
+	 * @param _port
+	 *            the _port
+	 * @param _hostName
+	 *            the _host name
+	 * @param _password
+	 *            the _password
+	 */
 	public clix(String _interval, String _port, String _hostName, String _password) {
 		super();
 		
@@ -56,10 +85,23 @@ public class clix extends winUnixOperations
 			
 	}
 
+	/**
+	 * Gets the clix cmd.
+	 * 
+	 * @return the clix cmd
+	 */
 	public String getClixCmd() {
 		return clixCmd;
 	}
 
+	/**
+	 * Run clix.
+	 * 
+	 * @throws IOException
+	 *             Signals that an I/O exception has occurred.
+	 * @throws JSchException
+	 *             the j sch exception
+	 */
 	public void runClix() throws IOException, JSchException
 	{
 		 FileWriter writer = new FileWriter("clixMon.sh");	
@@ -72,6 +114,9 @@ public class clix extends winUnixOperations
 		
 	}
 	
+	/**
+	 * Stop clix.
+	 */
 	public void stopClix()
 	{
 		try
@@ -91,7 +136,10 @@ public class clix extends winUnixOperations
 	
 	
 
-	 public void killProcesses()
+	 /**
+	 * Kill processes.
+	 */
+ 	public void killProcesses()
 	 {
 
 			 

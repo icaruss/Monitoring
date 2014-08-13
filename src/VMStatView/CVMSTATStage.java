@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package VMStatView;
 
 import java.net.URL;
@@ -11,11 +14,19 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class CVMSTATStage.
+ */
 public class CVMSTATStage 
 {
 	
+	/** The stage. */
 	private Stage stage;
 	
+	/**
+	 * Instantiates a new CVMSTAT stage.
+	 */
 	public CVMSTATStage()
 	{
 		try 
@@ -42,6 +53,9 @@ public class CVMSTATStage
 	}
 	
 	
+	/**
+	 * Close stage.
+	 */
 	public void closeStage()
 	{
 		stage.close();

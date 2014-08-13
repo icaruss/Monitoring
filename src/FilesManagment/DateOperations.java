@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package FilesManagment;
 
 import java.text.DateFormat;
@@ -13,14 +16,33 @@ import java.util.logging.Level;
 
 import log.MonLogger;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class DateOperations.
+ */
 public class DateOperations extends FilesManagment
 {
+	
+	/**
+	 * Instantiates a new date operations.
+	 */
 	public DateOperations() {
 		super(fileName);
 		// TODO Auto-generated constructor stub
 	}
 
 
+	/**
+	 * Promote time with interval.
+	 * 
+	 * @param date
+	 *            the date
+	 * @param interval
+	 *            the interval
+	 * @param fileLineNum
+	 *            the file line num
+	 * @return the date[]
+	 */
 	public Date[] promoteTimeWithInterval(Date date, int interval, int fileLineNum )
 	{
 		//String[] DateArrayStr = new String[fileLineNum];
@@ -45,6 +67,15 @@ public class DateOperations extends FilesManagment
 	}
 
 	
+	/**
+	 * Convert date arr to strin arr.
+	 * 
+	 * @param dateArr
+	 *            the date arr
+	 * @return the string[]
+	 * @throws ParseException
+	 *             the parse exception
+	 */
 	public String[] convertDateArrToStrinArr(Date[] dateArr) throws ParseException
 	{
 		String[] dateArrStr = new String[dateArr.length];
@@ -60,6 +91,12 @@ public class DateOperations extends FilesManagment
 	    return dateArrStr;	
 	}
 	
+	/**
+	 * Split date to time arrays.
+	 * 
+	 * @param dateArr
+	 *            the date arr
+	 */
 	public void splitDateToTimeArrays(Date[] dateArr)
 	{
 		int arrLenght = dateArr.length;
@@ -83,6 +120,17 @@ public class DateOperations extends FilesManagment
 	
 	
 	// interval is taken from the user
+	/**
+	 * Find all dates in interval.
+	 * 
+	 * @param date1
+	 *            the date1
+	 * @param interval
+	 *            the interval
+	 * @param clixDateArr
+	 *            the clix date arr
+	 * @return the list
+	 */
 	public List<Integer> findAllDatesInInterval(Date date1, int interval, Date[] clixDateArr)
 	{
 		Date date2 = new Date();
@@ -109,6 +157,15 @@ public class DateOperations extends FilesManagment
 	}
 	
 	
+	/**
+	 * Compare two dates.
+	 * 
+	 * @param strDate1
+	 *            the str date1
+	 * @param strDate2
+	 *            the str date2
+	 * @return the string
+	 */
 	public String compareTwoDates(String strDate1, String strDate2)
 	{
 		String result = null;
@@ -153,6 +210,17 @@ public class DateOperations extends FilesManagment
 		return result;
 	}
 	
+	/**
+	 * Gets the date diff.
+	 * 
+	 * @param strDate1
+	 *            the str date1
+	 * @param strDate2
+	 *            the str date2
+	 * @return the date diff
+	 * @throws ParseException
+	 *             the parse exception
+	 */
 	public static long getDateDiff(String strDate1, String strDate2) throws ParseException 
 	{
 			TimeUnit timeUnit = TimeUnit.MILLISECONDS;
@@ -165,6 +233,15 @@ public class DateOperations extends FilesManagment
 	}
 	
 	//parses the date from the file name
+	/**
+	 * Gets the date from file.
+	 * 
+	 * @param FileName
+	 *            the file name
+	 * @param hasInstance
+	 *            the has instance
+	 * @return the date from file
+	 */
 	public Date getDateFromFile(String FileName, Boolean hasInstance)
 	{
 		//Month monthPrefix; 
@@ -235,6 +312,13 @@ public class DateOperations extends FilesManagment
 
 	}
 	
+	/**
+	 * Convert string to date.
+	 * 
+	 * @param dateStr
+	 *            the date str
+	 * @return the date
+	 */
 	public Date convertStringToDate(String dateStr)
 	{
 		 Date date = new Date(); 
@@ -258,6 +342,13 @@ public class DateOperations extends FilesManagment
 	
 	
 
+	/**
+	 * Generate second array.
+	 * 
+	 * @param dateArr
+	 *            the date arr
+	 * @return the int[]
+	 */
 	public int[] generateSecondArray(Date[] dateArr)   // dateArr is generated from promoteTimeWithInterval() method
 	{
 		int[] SecondArr =  new int[dateArr.length];
@@ -272,6 +363,13 @@ public class DateOperations extends FilesManagment
 		
 	}
 	
+	/**
+	 * Generate minute array.
+	 * 
+	 * @param dateArr
+	 *            the date arr
+	 * @return the int[]
+	 */
 	public int[] generateMinuteArray(Date[] dateArr)
 	{
 		int[] MinuteArr =  new int[dateArr.length];
@@ -285,6 +383,13 @@ public class DateOperations extends FilesManagment
 		return MinuteArr;
 	}
 	
+	/**
+	 * Generate hour array.
+	 * 
+	 * @param dateArr
+	 *            the date arr
+	 * @return the int[]
+	 */
 	public int[] generateHourArray(Date[] dateArr)
 	{
 	
@@ -299,6 +404,13 @@ public class DateOperations extends FilesManagment
 		return HourArr;
 	}
 	
+	/**
+	 * Generate day array.
+	 * 
+	 * @param dateArr
+	 *            the date arr
+	 * @return the int[]
+	 */
 	public int[] generateDayArray(Date[] dateArr)
 	{
 		int[] DayArr =  new int[dateArr.length];
@@ -312,6 +424,13 @@ public class DateOperations extends FilesManagment
 		return DayArr;
 	}
 	
+	/**
+	 * Generate month array.
+	 * 
+	 * @param dateArr
+	 *            the date arr
+	 * @return the int[]
+	 */
 	public int[] generateMonthArray(Date[] dateArr)
 	{
 		int[] MonthArr =  new int[dateArr.length];
@@ -325,6 +444,13 @@ public class DateOperations extends FilesManagment
 		return MonthArr;
 	}
 	
+	/**
+	 * Generate year array.
+	 * 
+	 * @param dateArr
+	 *            the date arr
+	 * @return the int[]
+	 */
 	public int[] generateYearArray(Date[] dateArr)
 	{
 		

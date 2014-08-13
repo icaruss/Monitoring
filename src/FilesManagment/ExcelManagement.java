@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package FilesManagment;
 
 import java.io.File;
@@ -37,6 +40,7 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+// TODO: Auto-generated Javadoc
 // -------------- AIX/LINUX/SOLARIS OUTPUT -----
 // column number 1 = time
 // column number 4 = %CPU
@@ -49,9 +53,21 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 //column number 4 = %CPU
 //column number 5 = VSZ
 //--------------------------------------------- 
+/**
+ * The Class ExcelManagement.
+ */
 public class ExcelManagement extends FilesManagment
 {
+	
+	/** The file path. */
 	String filePath;
+	
+	/**
+	 * Instantiates a new excel management.
+	 * 
+	 * @param filePath
+	 *            the file path
+	 */
 	public ExcelManagement(String filePath) {
 		super(filePath);
 		this.filePath = filePath;
@@ -59,7 +75,18 @@ public class ExcelManagement extends FilesManagment
 		// TODO Auto-generated constructor stub
 	}
 
-	/************************************************************************************/
+	/**
+	 * *************************************************************************
+	 * ********.
+	 * 
+	 * @param ExcelFilePath
+	 *            the excel file path
+	 * @param columnNum
+	 *            the column num
+	 * @return the diff2 cells
+	 * @throws IOException
+	 *             Signals that an I/O exception has occurred.
+	 */
 	/* AIX Output: FIRSTROW=2 , LASTROW=sheet.getLastRowNum()-4 ;  VSZ COL=4 ; CPU COL=2 ; RSS COL=5 ; %MEM COL=3
 	 * 
 	 */
@@ -121,6 +148,15 @@ public class ExcelManagement extends FilesManagment
 	
 	// Check if diff >= parameter
 	
+	/**
+	 * Find diff greater.
+	 * 
+	 * @param diffArr
+	 *            the diff arr
+	 * @param diff
+	 *            the diff
+	 * @return the int[][]
+	 */
 	public int[][] findDiffGreater(int[][] diffArr,int  diff)
 	{
 		int count = 0;
@@ -167,6 +203,15 @@ public class ExcelManagement extends FilesManagment
 		
 	}
 	
+	/**
+	 * Gets the date string from row.
+	 * 
+	 * @param rowNum
+	 *            the row num
+	 * @param fileName
+	 *            the file name
+	 * @return the date string from row
+	 */
 	public String getDateStringFromRow(int rowNum, String fileName)
 	{
 		HSSFCell cell = null;
@@ -193,6 +238,15 @@ public class ExcelManagement extends FilesManagment
 		return cell.getStringCellValue();
 	}
 	
+	/**
+	 * Gets the last col.
+	 * 
+	 * @param rowNum
+	 *            the row num
+	 * @param ExcelFilePath
+	 *            the excel file path
+	 * @return the last col
+	 */
 	public int getLastCol(int rowNum, String ExcelFilePath)
 	{
 		int i = 0;	
@@ -224,6 +278,14 @@ public class ExcelManagement extends FilesManagment
 	}
 	
 	//The parameter "diffArr" should be taken from method "findDiffGreater"
+	/**
+	 * Sets the diff to file.
+	 * 
+	 * @param diffArr
+	 *            the diff arr
+	 * @param ExcelFilePath
+	 *            the excel file path
+	 */
 	public void setDiffToFile(int[][] diffArr, String ExcelFilePath)
 	{ 		    
 		int lastCol = getLastCol(1, filePath); 		 //the row num could be any row
@@ -238,6 +300,18 @@ public class ExcelManagement extends FilesManagment
 	/* This method will add anew column with the memory diff
 	 *  values and will paint in yellow the relevant 
 	*/
+	/**
+	 * Main excel flow.
+	 * 
+	 * @param RSSVSZColNum
+	 *            the RSSVSZ col num
+	 * @param maxDiff
+	 *            the max diff
+	 * @param interval
+	 *            the interval
+	 * @param testFolder
+	 *            the test folder
+	 */
 	public void mainExcelFlow(int RSSVSZColNum, int maxDiff, int interval, Folder testFolder)
 	{
 		try
@@ -317,6 +391,18 @@ public class ExcelManagement extends FilesManagment
 	
 	
 	// Set cell value
+	/**
+	 * Sets the diff to row.
+	 * 
+	 * @param rowNum
+	 *            the row num
+	 * @param lastCol
+	 *            the last col
+	 * @param diff
+	 *            the diff
+	 * @param ExcelFilePath
+	 *            the excel file path
+	 */
 	public void setDiffToRow(int rowNum, int lastCol, int diff, String ExcelFilePath)
 	{
 		try
@@ -348,6 +434,16 @@ public class ExcelManagement extends FilesManagment
 	
 	
 	// HSSFColor.YELLOW.index = short object
+	/**
+	 * Sets the color to row.
+	 * 
+	 * @param rowNum
+	 *            the row num
+	 * @param ExcelFilePath
+	 *            the excel file path
+	 * @param color
+	 *            the color
+	 */
 	public void setColorToRow(int rowNum, String ExcelFilePath, short color)
 	{
 		try
@@ -395,6 +491,17 @@ public class ExcelManagement extends FilesManagment
 	}
 	
 	// Returns array of VSZ and/or RSS
+	/**
+	 * Gets the memory.
+	 * 
+	 * @param VSZ_OR_RSS
+	 *            the vsz or rss
+	 * @param ExcelFilePath
+	 *            the excel file path
+	 * @param OS
+	 *            the os
+	 * @return the memory
+	 */
 	public Double[] getMemory(String VSZ_OR_RSS, String ExcelFilePath, String OS)
 	{
 		FileInputStream file = null;
@@ -467,6 +574,13 @@ public class ExcelManagement extends FilesManagment
 	
 	
 	// Get maximal memory pick
+	/**
+	 * Max value.
+	 * 
+	 * @param array
+	 *            the array
+	 * @return the double
+	 */
 	public Double MaxValue(Double[] array)
 	{
 		return Collections.max(Arrays.asList(array));
@@ -474,6 +588,13 @@ public class ExcelManagement extends FilesManagment
 	}
 	
 	// Get minimal memory pick
+	/**
+	 * Min value.
+	 * 
+	 * @param array
+	 *            the array
+	 * @return the double
+	 */
 	public Double MinValue(Double[] array)
 	{
 		return Collections.min(Arrays.asList(array));
@@ -481,6 +602,11 @@ public class ExcelManagement extends FilesManagment
 	}
 	
 	
+	/**
+	 * Gets the time of max value.
+	 * 
+	 * @return the time of max value
+	 */
 	public String getTimeOfMaxValue()
 	{
 		
@@ -490,6 +616,15 @@ public class ExcelManagement extends FilesManagment
 		
 	}
 	
+	/**
+	 * Gets the cpu.
+	 * 
+	 * @param ExcelFilePath
+	 *            the excel file path
+	 * @param OS
+	 *            the os
+	 * @return the cpu
+	 */
 	public Double[] getCPU(String ExcelFilePath, String OS)
 	{
 		
@@ -532,6 +667,16 @@ public class ExcelManagement extends FilesManagment
 	}
 	
 	// Set cell value
+	/**
+	 * Adds the header.
+	 * 
+	 * @param lastCol
+	 *            the last col
+	 * @param VSZRSS
+	 *            the vszrss
+	 * @param ExcelFilePath
+	 *            the excel file path
+	 */
 	public void addHeader(int lastCol, String VSZRSS, String ExcelFilePath)
 	{
 		try

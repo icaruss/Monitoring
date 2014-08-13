@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 
 package mainView;
 
@@ -21,30 +24,44 @@ import javafx.scene.control.ProgressIndicator;
 import javafx.scene.control.Tooltip;
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class CMainPageController.
+ */
 public class CMainPageController implements Initializable 
 {
 
  
+    /** The btn settings. */
     @FXML // fx:id="btnSettings"
     private Button btnSettings; // Value injected by FXMLLoader
 
+    /** The btn stop monitoring. */
     @FXML // fx:id="btnVMStat"
     private Button btnStopMonitoring; // Value injected by FXMLLoader
     
+    /** The btn show vmstat view. */
     @FXML // fx:id="btnShowVMSTATView"
     private Button btnShowVMSTATView; // Value injected by FXMLLoader
     
+    /** The btn show monitoring results. */
     @FXML // fx:id="btnShowMonitoringResults"
     private Button btnShowMonitoringResults; // Value injected by FXMLLoader
     
+    /** The p bar. */
     public ProgressBar pBar;
     
+    /** The p bar percentage. */
     public ProgressIndicator pBarPercentage;
     
+    /** The tool tip pbar. */
     public Tooltip toolTipPbar;
     
 
 
+	/* (non-Javadoc)
+	 * @see javafx.fxml.Initializable#initialize(java.net.URL, java.util.ResourceBundle)
+	 */
 	public void initialize(URL fxmlFileLocation, ResourceBundle resources)
     {
         assert btnSettings != null : "fx:id=\"btnSettings\" was not injected: check your FXML file 'Main_Page.fxml'.";
@@ -172,6 +189,12 @@ public class CMainPageController implements Initializable
     }
 	
 	
+	/**
+	 * Stop monitoring.
+	 * 
+	 * @param monitorType
+	 *            the monitor type
+	 */
 	public void StopMonitoring(MonitorType monitorType)
 	{
 
@@ -204,6 +227,12 @@ public class CMainPageController implements Initializable
 		
 	}
 	
+	/**
+	 * Sets the buttons disable state.
+	 * 
+	 * @param isRunning
+	 *            the new buttons disable state
+	 */
 	public void setButtonsDisableState(Boolean isRunning)
 	{
 		if (isRunning)

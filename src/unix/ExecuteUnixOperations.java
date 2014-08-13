@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package unix;
 
 import Clix.ParseClix;
@@ -32,8 +35,18 @@ import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.Session;
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class ExecuteUnixOperations.
+ */
 public class ExecuteUnixOperations extends CommandExecuter
 {
+	
+	/**
+	 * Gets the os.
+	 * 
+	 * @return the os
+	 */
 	public String getOS()
 	{
 		String tmpOS = null;
@@ -47,6 +60,22 @@ public class ExecuteUnixOperations extends CommandExecuter
 	}
 	
 	
+    /**
+	 * Instantiates a new execute unix operations.
+	 * 
+	 * @param hostName
+	 *            the host name
+	 * @param userName
+	 *            the user name
+	 * @param password
+	 *            the password
+	 * @param jschSSHChannel
+	 *            the jsch ssh channel
+	 * @param sesConnection
+	 *            the ses connection
+	 * @param intTimeOut
+	 *            the int time out
+	 */
     public ExecuteUnixOperations(String hostName, String userName,
 			String password, JSch jschSSHChannel, Session sesConnection,
 			int intTimeOut) 
@@ -56,6 +85,9 @@ public class ExecuteUnixOperations extends CommandExecuter
 
 	}
     
+    /**
+	 * Instantiates a new execute unix operations.
+	 */
     public ExecuteUnixOperations() 
     {
 		super(hostName, userName, password, jschSSHChannel, sesConnection, intTimeOut);
@@ -66,12 +98,25 @@ public class ExecuteUnixOperations extends CommandExecuter
 
     // PARAMETERS TO GET FROM GUI  -  START   TODO
     /////////////////////////////////////////
+    /** The port. */
     String port;
+    
+    /** The params for sh. */
     String[] paramsForSH;
+    
+    /** The clix on. */
     Boolean clixOn;
+    
+    /** The sid. */
     String SID;     
+    
+    /** The interval. */
     int interval;
+    
+    /** The start date. */
     String startDate;
+    
+    /** The end date. */
     String endDate;
 
     
@@ -79,6 +124,12 @@ public class ExecuteUnixOperations extends CommandExecuter
     // PARAMETERS TO GET FROM GUI  -  END
 
 	
+    /**
+	 * Instantiates a new execute unix operations.
+	 * 
+	 * @param currentConfiguration
+	 *            the current configuration
+	 */
     public ExecuteUnixOperations(Map<String, Object> currentConfiguration) 
     {
     	super( (String)(currentConfiguration.get("hostName")) , 
@@ -102,13 +153,25 @@ public class ExecuteUnixOperations extends CommandExecuter
     }
 
 
+	/** The runkill sh. */
 	private RunkillSH runkillSH = new RunkillSH();
 
+    /** The file managment operations. */
     private FileManagmentOperations fileManagmentOperations = new FileManagmentOperations();
+    
+    /** The date operations. */
     private DateOperations dateOperations = new DateOperations();
+    
+    /** The mon_file. */
     String mon_file = "AV_monitoring.sh";
+    
+    /** The excel management. */
     private ExcelManagement excelManagement = null;
+    
+    /** The clix command. */
     clix clixCommand = null;
+    
+    /** The win unix operations. */
     private winUnixOperations winUnixOperations = new winUnixOperations();
     
 	//------------------------------ Place files in Folder ------------------------
@@ -119,20 +182,35 @@ public class ExecuteUnixOperations extends CommandExecuter
 	 * 
 	 */
 	
+	/** The date format. */
 	DateFormat dateFormat = new SimpleDateFormat("yyyy_MM_dd HH_mm_ss");
 	   //get current date time with Date()
-	Date date = new Date();
+	/** The date. */
+   	Date date = new Date();
+	
+	/** The Test folder name. */
 	String TestFolderName = dateFormat.format(date) + "_" + getOS();
 	
+	/** The Test folder. */
 	Folder TestFolder;
 	
+	/** The main folder. */
 	Folder mainFolder = new Folder(System.getProperty("user.dir") + "\\Monitoring Tests");
+	
+	/** The mon logger. */
 	MonLogger monLogger = MonLogger.getInstance();
 	
 	//-----------------------------------------------------------------------------
 	//-----------------------------------------------------------------------------
  
 	
+	/**
+	 * Creates the params for sh.
+	 * 
+	 * @param currentConfiguration
+	 *            the current configuration
+	 * @return the string[]
+	 */
 	private String[] createParamsForSH(Map<String, Object> currentConfiguration)
 	{
 		List<String> params = new ArrayList<String>();	
@@ -152,6 +230,9 @@ public class ExecuteUnixOperations extends CommandExecuter
 	
     
     // Will be executed when the "Start Monitoring" button will be pressed
+    /**
+	 * Start.
+	 */
     public void start()
     {
     	try
@@ -204,6 +285,9 @@ public class ExecuteUnixOperations extends CommandExecuter
     }
     
     
+    /**
+	 * Start on time.
+	 */
     public void startOnTime()
     {
     	try
@@ -259,6 +343,14 @@ public class ExecuteUnixOperations extends CommandExecuter
     }
     
     // Will be executed when the "Stop Monitoring" button will be pressed
+    /**
+	 * Finish.
+	 * 
+	 * @throws IOException
+	 *             Signals that an I/O exception has occurred.
+	 * @throws ParseException
+	 *             the parse exception
+	 */
     public void finish() throws IOException, ParseException
     {
     	try
@@ -436,6 +528,16 @@ public class ExecuteUnixOperations extends CommandExecuter
 		}
 		    	
     }
+    
+    /**
+	 * Check time.
+	 * 
+	 * @return true, if successful
+	 * @throws InterruptedException
+	 *             the interrupted exception
+	 * @throws ParseException
+	 *             the parse exception
+	 */
     private boolean checkTime() throws InterruptedException, ParseException
     {
 		MonLogger.myLogger.log(Level.INFO, "Check Time invoked");
@@ -463,6 +565,16 @@ public class ExecuteUnixOperations extends CommandExecuter
 
     
     
+    /**
+	 * Finish on time.
+	 * 
+	 * @throws InterruptedException
+	 *             the interrupted exception
+	 * @throws ParseException
+	 *             the parse exception
+	 * @throws IOException
+	 *             Signals that an I/O exception has occurred.
+	 */
     public void finishOnTime() throws InterruptedException, ParseException, IOException
     {
     	if (checkTime())

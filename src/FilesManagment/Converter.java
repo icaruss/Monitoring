@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package FilesManagment;
 
 import java.io.BufferedReader;
@@ -19,16 +22,30 @@ import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Converter.
+ */
 public class Converter extends FilesManagment
 {
 	
 
+	/**
+	 * Instantiates a new converter.
+	 */
 	public Converter() {
 		super(fileName);
 		// TODO Auto-generated constructor stub
 	}
 
 
+	/**
+	 * Convert text to csv.
+	 * 
+	 * @param inputFileName
+	 *            the input file name
+	 * @return the string
+	 */
 	public String convertTextToCsv(String inputFileName) {
 		String line = null;
 		File inputFile = new File(inputFileName);
@@ -90,6 +107,15 @@ public class Converter extends FilesManagment
 		return newFileName;
 	}
 	
+    /**
+	 * Convert csv to excel.
+	 * 
+	 * @param fname
+	 *            the fname
+	 * @return the string
+	 * @throws IOException
+	 *             Signals that an I/O exception has occurred.
+	 */
     public static String convertCSVToExcel(String fname) throws IOException
     { 
     

@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package unix;
 
 import java.io.BufferedReader;
@@ -12,11 +15,33 @@ import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.Session;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class CommandExecuter.
+ */
 public class CommandExecuter extends UnixConnection
 {
+	
+	/** The instance. */
 	protected static CommandExecuter instance = null;
 	
 
+	/**
+	 * Instantiates a new command executer.
+	 * 
+	 * @param hostName
+	 *            the host name
+	 * @param userName
+	 *            the user name
+	 * @param password
+	 *            the password
+	 * @param jschSSHChannel
+	 *            the jsch ssh channel
+	 * @param sesConnection
+	 *            the ses connection
+	 * @param intTimeOut
+	 *            the int time out
+	 */
 	protected CommandExecuter(String hostName, String userName, String password,
 			JSch jschSSHChannel, Session sesConnection, int intTimeOut) 
 	{
@@ -30,6 +55,9 @@ public class CommandExecuter extends UnixConnection
 		}*/
 	}
 	
+	/**
+	 * Instantiates a new command executer.
+	 */
 	protected CommandExecuter() 
 	{
 		super(hostName, userName, password, jschSSHChannel, sesConnection,
@@ -38,6 +66,11 @@ public class CommandExecuter extends UnixConnection
 	}
 	
 
+	/**
+	 * Gets the single instance of CommandExecuter.
+	 * 
+	 * @return single instance of CommandExecuter
+	 */
 	public static CommandExecuter getInstance() 
 	{
         if (instance == null) 
@@ -55,6 +88,16 @@ public class CommandExecuter extends UnixConnection
 	}
 	
 	
+	/**
+	 * Execute shell.
+	 * 
+	 * @param command
+	 *            the command
+	 * @throws JSchException
+	 *             the j sch exception
+	 * @throws IOException
+	 *             Signals that an I/O exception has occurred.
+	 */
 	protected void executeShell(String command) throws JSchException, IOException 
 	{
 		UnixConnection.connectToUnix();
@@ -85,6 +128,15 @@ public class CommandExecuter extends UnixConnection
 	
 	
 	
+	/**
+	 * Execute.
+	 * 
+	 * @param command
+	 *            the command
+	 * @return the string
+	 * @throws JSchException
+	 *             the j sch exception
+	 */
 	protected String execute(String command) throws JSchException 
 	{
 		   

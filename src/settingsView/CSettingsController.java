@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 
 
 package settingsView;
@@ -32,79 +35,107 @@ import log.MonLogger;
 import viewLogic.CViewConstants;
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class CSettingsController.
+ */
 public class CSettingsController implements Initializable
 {
 
 
+    /** The btn connect. */
     @FXML // fx:id="btnConnect"
     private Button btnConnect; // Value injected by FXMLLoader
 
+    /** The btn save configuration. */
     @FXML // fx:id="btnSaveConfiguration"
     private Button btnSaveConfiguration; // Value injected by FXMLLoader
 
+    /** The chkbox clix. */
     @FXML // fx:id="chkboxClix"
     private RadioButton chkboxClix; // Value injected by FXMLLoader
 
+    /** The chkbox mdisr. */
     @FXML // fx:id="chkboxMdisr"
     private RadioButton chkboxMdisr; // Value injected by FXMLLoader
 
+    /** The chkbox mdsr. */
     @FXML // fx:id="chkboxMdsr"
     private RadioButton chkboxMdsr; // Value injected by FXMLLoader
 
+    /** The chkbox mdssr. */
     @FXML // fx:id="chkboxMdssr"
     private RadioButton chkboxMdssr; // Value injected by FXMLLoader
     
+    /** The chkbox vmstat. */
     @FXML // fx:id="chkboxVMSTAT"
     private RadioButton chkboxVMSTAT; // Value injected by FXMLLoader
     
+    /** The cmb start selection. */
     @FXML // fx:id="cmbStartSelection"
     private ComboBox<String> cmbStartSelection; // Value injected by FXMLLoader
     
+    /** The cmb id. */
     @FXML // fx:id="cmbID"
     private ComboBox<String> cmbID;
 
+    /** The pane time frame. */
     @FXML // fx:id="paneTimeFrame"
     private AnchorPane paneTimeFrame; // Value injected by FXMLLoader
 
+    /** The txt field host name. */
     @FXML // fx:id="txtFieldHostName"
     private TextField txtFieldHostName; // Value injected by FXMLLoader
 
+    /** The txt field instance. */
     @FXML // fx:id="txtFieldInstance"
     private TextField txtFieldInstance; // Value injected by FXMLLoader
 
+    /** The txt field instance time. */
     @FXML // fx:id="txtFieldInstanceTime"
     private TextField txtFieldInstanceTime; // Value injected by FXMLLoader
 
+    /** The txt field password. */
     @FXML // fx:id="txtFieldPassword"
     private PasswordField txtFieldPassword; // Value injected by FXMLLoader
 
+    /** The txt field time frame from. */
     @FXML // fx:id="txtFieldTimeFrameFrom"
     private TextField txtFieldTimeFrameFrom; // Value injected by FXMLLoader
 
+    /** The txt field time frame to. */
     @FXML // fx:id="txtFieldTimeFrameTo"
     private TextField txtFieldTimeFrameTo; // Value injected by FXMLLoader
 
+    /** The txt field user name. */
     @FXML // fx:id="txtFieldUserName"
     private TextField txtFieldUserName; // Value injected by FXMLLoader
     
+    /** The txt field memory pop. */
     @FXML // fx:id="txtFieldMemoryPop"
     private TextField txtFieldMemoryPop; // Value injected by FXMLLoader
     
+    /** The txt field port. */
     @FXML // fx:id="txtFieldPort"
     private TextField txtFieldPort; // Value injected by FXMLLoader
     
+    /** The txt field configuration id. */
     @FXML // fx:id="txtFieldConfigurationID"
     private TextField txtFieldConfigurationID; // Value injected by FXMLLoader
     
+    /** The lbl response to user. */
     @FXML // fx:id="lblResponseToUser"
     private Label lblResponseToUser; // Value injected by FXMLLoader
     
+    /** The pnl settings. */
     @FXML // fx:id="pnlSettings"
     private AnchorPane pnlSettings; // Value injected by FXMLLoader
 
+    /** The txt configuration id. */
     @FXML // fx:id="txtFieldTimeFrameTo"
     private Text txtConfigurationID;
     
+    /** The port lbl. */
     @FXML // fx:id="portLbl"
     private Text portLbl;
     
@@ -117,6 +148,9 @@ public class CSettingsController implements Initializable
     //////// end logic Variables ///
     
    
+    /* (non-Javadoc)
+     * @see javafx.fxml.Initializable#initialize(java.net.URL, java.util.ResourceBundle)
+     */
     public void initialize(URL fxmlFileLocation, ResourceBundle resources)
     {
     	assert btnConnect != null : "fx:id=\"btnConnect\" was not injected: check your FXML file 'Setting_Page.fxml'.";
@@ -520,6 +554,9 @@ public class CSettingsController implements Initializable
 	///////////////////////   Events Sections ///////////////////////////
     
     
+	/**
+	 * Chkbox mdsr on mouse clicked.
+	 */
 	public void chkboxMdsrOnMouseClicked()
     {
     	if (chkboxMdsr.isSelected())
@@ -536,6 +573,9 @@ public class CSettingsController implements Initializable
     }
     
 
+	/**
+	 * Chkbox mdisr on mouse clicked.
+	 */
 	public void chkboxMdisrOnMouseClicked()
     {
     	if (chkboxMdisr.isSelected())
@@ -551,6 +591,9 @@ public class CSettingsController implements Initializable
     	
     }
 
+    /**
+	 * Chkbox mdssr on mouse clicked.
+	 */
     public void chkboxMdssrOnMouseClicked()
     {
     	if (chkboxMdssr.isSelected())
@@ -566,6 +609,9 @@ public class CSettingsController implements Initializable
     	
     }
     
+    /**
+	 * Chk box clix on mouse pressed.
+	 */
     public void chkBoxClixOnMousePressed()
     {
     	if (chkboxClix.isSelected())
@@ -580,6 +626,9 @@ public class CSettingsController implements Initializable
     	}
     }
     
+    /**
+	 * Chk box vmstat on mouse pressed.
+	 */
     public void chkBoxVMSTATOnMousePressed()
     {
     	if (chkboxVMSTAT.isSelected())
@@ -596,6 +645,9 @@ public class CSettingsController implements Initializable
     
     
 
+	/**
+	 * Cmb selection on action.
+	 */
 	public void cmbSelectionOnAction()
     {
     	int selectedIndex = cmbStartSelection.getSelectionModel().getSelectedIndex();
@@ -624,6 +676,9 @@ public class CSettingsController implements Initializable
     }
     
     
+    /**
+	 * Cmb select id on action.
+	 */
     public void cmbSelectIDOnAction()
     {
     	int selectedIndex = cmbID.getSelectionModel().getSelectedIndex();
@@ -648,6 +703,9 @@ public class CSettingsController implements Initializable
     	
     }
     
+    /**
+	 * Clear setting page.
+	 */
     private void clearSettingPage()
     {
     	txtFieldHostName.clear();
@@ -667,6 +725,12 @@ public class CSettingsController implements Initializable
     	txtFieldTimeFrameTo.clear();
     }
     
+    /**
+	 * Sets the components editable.
+	 * 
+	 * @param isEditable
+	 *            the new components editable
+	 */
     private void setComponentsEditable(boolean isEditable)
     {
     	txtFieldHostName.setEditable(isEditable);
@@ -690,6 +754,12 @@ public class CSettingsController implements Initializable
     
     
     
+    /**
+	 * Sets the fields on view by configuration id.
+	 * 
+	 * @param selectedItem
+	 *            the new fields on view by configuration id
+	 */
     private void setFieldsOnViewByConfigurationID(String selectedItem)
     {
     	Map<String, Object> map = CSharedInstance.getInstance().getChosenConfiguration(selectedItem);
@@ -805,21 +875,45 @@ public class CSettingsController implements Initializable
 
 	/////////////////   LOGIC //////////////////////////
     
-    public static boolean isLatinLetter(char c) 
+    /**
+	 * Checks if is latin letter.
+	 * 
+	 * @param c
+	 *            the c
+	 * @return true, if is latin letter
+	 */
+	public static boolean isLatinLetter(char c) 
     {
         return (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z');
     }
     
+    /**
+	 * Checks if is digit.
+	 * 
+	 * @param c
+	 *            the c
+	 * @return true, if is digit
+	 */
     public static boolean isDigit(char c) 
     {
     	return (c >= '0' && c <= '9');
     }
     
+    /**
+	 * Max length in text.
+	 * 
+	 * @return the int
+	 */
     public static int maxLengthInText()
     {
     	return 30;
     }
     
+    /**
+	 * Max allowed instance interval.
+	 * 
+	 * @return the int
+	 */
     public static int maxAllowedInstanceInterval()
     {
     	return 1000000;
@@ -829,6 +923,9 @@ public class CSettingsController implements Initializable
     
     
    
+    /**
+	 * Update memory pop.
+	 */
     private void updateMemoryPop() 
     {
     	boolean isSelected = chkboxMdssr.isSelected() || chkboxMdisr.isSelected() || chkboxMdsr.isSelected();
@@ -840,6 +937,9 @@ public class CSettingsController implements Initializable
 		
 	}
     
+    /**
+	 * Update port.
+	 */
     private void updatePort() 
     {
     	boolean isSelected = chkboxClix.isSelected();
@@ -852,6 +952,12 @@ public class CSettingsController implements Initializable
 	}
     
 
+    /**
+	 * Sets the irellevant controls visible on vmstat.
+	 * 
+	 * @param b
+	 *            the new irellevant controls visible on vmstat
+	 */
     private void setIrellevantControlsVisibleOnVMSTAT(boolean b)
     {
     	chkboxClix.setVisible(b);
@@ -863,6 +969,11 @@ public class CSettingsController implements Initializable
 	}
     
     
+    /**
+	 * Update lbl if input not ok.
+	 * 
+	 * @return true, if successful
+	 */
     private boolean updateLblIfInputNotOK()
     {
 		if (txtFieldHostName.getText().isEmpty())
@@ -942,6 +1053,11 @@ public class CSettingsController implements Initializable
     
     
     
+    /**
+	 * Check if can be connected with current settings.
+	 * 
+	 * @return the string
+	 */
     private String checkIfCanBeConnectedWithCurrentSettings()
     {
 		
@@ -958,6 +1074,11 @@ public class CSettingsController implements Initializable
 
 
 
+	/**
+	 * Gets the current settings on view.
+	 * 
+	 * @return the current settings on view
+	 */
 	private Map<String, Object> getCurrentSettingsOnView() 
     {
 		Map<String, Object> map = new HashMap<String, Object>();
@@ -1044,6 +1165,13 @@ public class CSettingsController implements Initializable
 	}
     
     
+    /**
+	 * Check if input time frame acceptable as whole.
+	 * 
+	 * @param text
+	 *            the text
+	 * @return true, if successful
+	 */
     private boolean checkIfInputTimeFrameAcceptableAsWhole(String text) 
 	{
 		if (text.isEmpty() || text.length() != 19)
@@ -1069,6 +1197,15 @@ public class CSettingsController implements Initializable
 		
 	}
     
+    /**
+	 * Check if input time frame acceptable.
+	 * 
+	 * @param text
+	 *            the text
+	 * @param index
+	 *            the index
+	 * @return true, if successful
+	 */
     private boolean checkIfInputTimeFrameAcceptable(String text, int index) 
    	{
     	char c = text.charAt(index);

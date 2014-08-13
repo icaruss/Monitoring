@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package Charts;
 
 import java.awt.*;
@@ -21,31 +24,85 @@ import org.jfree.data.time.Second;
 
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class ChartGeneration.
+ */
 public class ChartGeneration extends ApplicationFrame
 {
-		/**
-	 * 
-	 */
+		
+		/** The Constant serialVersionUID. */
 	private static final long serialVersionUID = 1L;
+		
+		/** The Seconds. */
 		int[] Seconds;
+		
+		/** The Minutes. */
 		int[] Minutes;
+		
+		/** The Hours. */
 		int[] Hours;
+		
+		/** The Days. */
 		int[] Days;
+		
+		/** The Months. */
 		int[] Months;
+		
+		/** The Years. */
 		int[] Years;
+		
+		/** The RSS mem arr. */
 		Double[] RSSMemArr;
+		
+		/** The VSZ mem arr. */
 		Double[] VSZMemArr;
+		
+		/** The cpu. */
 		Double[] CPU;
+		
+		/** The os. */
 		String OS;
+		
+		/** The Image name. */
 		String ImageName;
 		
 		
 		
 		
+        /**
+		 * Gets the image name.
+		 * 
+		 * @return the image name
+		 */
         public String getImageName() {
 			return ImageName;
 		}
 
+		/**
+		 * Instantiates a new chart generation.
+		 * 
+		 * @param name
+		 *            the name
+		 * @param _Seconds
+		 *            the _ seconds
+		 * @param _Minutes
+		 *            the _ minutes
+		 * @param _Hours
+		 *            the _ hours
+		 * @param _Days
+		 *            the _ days
+		 * @param _Months
+		 *            the _ months
+		 * @param _Years
+		 *            the _ years
+		 * @param _CPU
+		 *            the cpu
+		 * @param chartName
+		 *            the chart name
+		 * @throws IOException
+		 *             Signals that an I/O exception has occurred.
+		 */
 		public ChartGeneration(String name, int _Seconds[], int[] _Minutes, int[] _Hours, int[] _Days, int[] _Months, int[] _Years, Double[] _CPU, String chartName) throws IOException
         {
                 super(name);
@@ -67,8 +124,14 @@ public class ChartGeneration extends ApplicationFrame
         }
 
 		/**
+		 * Creates the image from chart.
+		 * 
 		 * @param jfreechart
+		 *            the jfreechart
+		 * @param imageName
+		 *            the image name
 		 * @throws IOException
+		 *             Signals that an I/O exception has occurred.
 		 */
 		private void createImageFromChart(JFreeChart jfreechart, String imageName)
 				throws IOException 
@@ -81,6 +144,32 @@ public class ChartGeneration extends ApplicationFrame
 		}
 
 		
+        /**
+		 * Instantiates a new chart generation.
+		 * 
+		 * @param name
+		 *            the name
+		 * @param _Seconds
+		 *            the _ seconds
+		 * @param _Minutes
+		 *            the _ minutes
+		 * @param _Hours
+		 *            the _ hours
+		 * @param _Days
+		 *            the _ days
+		 * @param _Months
+		 *            the _ months
+		 * @param _Years
+		 *            the _ years
+		 * @param _VSZ
+		 *            the vsz
+		 * @param _RSS
+		 *            the rss
+		 * @param chartName
+		 *            the chart name
+		 * @throws IOException
+		 *             Signals that an I/O exception has occurred.
+		 */
         public ChartGeneration(String name, int _Seconds[], int[] _Minutes, int[] _Hours, int[] _Days, int[] _Months, int[] _Years, Double[] _VSZ, Double[] _RSS, String chartName) throws IOException
         {
                 super(name);
@@ -106,6 +195,15 @@ public class ChartGeneration extends ApplicationFrame
         }
         
 
+        /**
+		 * Creates the chart.
+		 * 
+		 * @param xydataset
+		 *            the xydataset
+		 * @param CPU_MEM
+		 *            the cpu mem
+		 * @return the j free chart
+		 */
         private JFreeChart createChart(XYDataset xydataset, String CPU_MEM)
         {
                 JFreeChart jfreechart = ChartFactory.createTimeSeriesChart("Monitoring Results", "DateTime", CPU_MEM, xydataset, true, true, false);
@@ -139,6 +237,11 @@ public class ChartGeneration extends ApplicationFrame
         
         // TODO: To pass the array size of the file - number of lines in the file
 
+        /**
+		 * Creates the dataset mem.
+		 * 
+		 * @return the XY dataset
+		 */
         private XYDataset createDatasetMem()
         {
         	TimeSeriesCollection timeseriescollection;
@@ -177,6 +280,11 @@ public class ChartGeneration extends ApplicationFrame
                 return timeseriescollection;	
         }
 
+        /**
+		 * Creates the dataset cpu.
+		 * 
+		 * @return the XY dataset
+		 */
         private XYDataset createDatasetCPU()
         {
                 TimeSeries timeseries = new TimeSeries("%CPU");
