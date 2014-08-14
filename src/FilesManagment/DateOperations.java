@@ -173,8 +173,8 @@ public class DateOperations extends FilesManagment
 		{
 			
 			SimpleDateFormat sdf = new SimpleDateFormat("dd-mm-yyyy HH:mm:ss");
-	    	Date date1 = sdf.parse("strDate1");
-	    	Date date2 = sdf.parse("strDate2");
+	    	Date date1 = sdf.parse(strDate1);
+	    	Date date2 = sdf.parse(strDate2);
 	
 	    	System.out.println(sdf.format(date1));
 	    	System.out.println(sdf.format(date2));
@@ -225,8 +225,8 @@ public class DateOperations extends FilesManagment
 	{
 			TimeUnit timeUnit = TimeUnit.MILLISECONDS;
 			SimpleDateFormat sdf = new SimpleDateFormat("dd-mm-yyyy HH:mm:ss");
-	    	Date date1 = sdf.parse("strDate1");
-	    	Date date2 = sdf.parse("strDate2");
+	    	Date date1 = sdf.parse(strDate1);
+	    	Date date2 = sdf.parse(strDate2);
 		    long diffInMillies = date2.getTime() - date1.getTime();
 		    return timeUnit.convert(diffInMillies,TimeUnit.MILLISECONDS);
 

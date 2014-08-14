@@ -239,7 +239,7 @@ public class CSettingsController implements Initializable
         					MonLogger.myLogger.log(Level.INFO, "Program started immediately");
         					exUnixOp.start();
         				}
-        				else if ((String)currentSettings.get(CViewConstants.START) != CViewConstants.START_FRAME_TIME)
+        				else if ((String)currentSettings.get(CViewConstants.START) == CViewConstants.START_FRAME_TIME)
         				{
         					MonLogger.myLogger.log(Level.INFO, "S T A R T");
         					MonLogger.myLogger.log(Level.INFO, "Program started on time");

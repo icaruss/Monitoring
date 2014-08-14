@@ -98,7 +98,7 @@ CommandExecuter commandExecuter;
 		
 		CommandExecuter command =  new CommandExecuter();
 		msg = command.execute("ps -ef|grep mds-r | grep " + instance);
-		if (!msg.endsWith("exe/mds-r"))
+		if (!msg.contains("exe/mds-r"))
 		{
 			TF= false;
 			//TODO: Redirect the output string to the GUI
@@ -124,7 +124,7 @@ CommandExecuter commandExecuter;
 		
 		CommandExecuter command =  new CommandExecuter();
 		msg = command.execute("ps -ef|grep mdis-r | grep " + instance);
-		if (!msg.endsWith("exe/mdis-r"))
+		if (!msg.contains("exe/mdis-r"))
 		{
 			TF= false;
 			//TODO: Redirect the output string to the GUI
@@ -150,7 +150,7 @@ CommandExecuter commandExecuter;
 		
 		CommandExecuter command =  new CommandExecuter();
 		msg = command.execute("ps -ef|grep mdss-r  | grep " + instance);
-		if (!msg.endsWith("exe/mds-r"))
+		if (!msg.contains("exe/mdss-r"))
 		{
 			TF= false;
 			//TODO: Redirect the output string to the GUI
