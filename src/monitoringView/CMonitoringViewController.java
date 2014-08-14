@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 
 
 package monitoringView;
@@ -6,62 +9,55 @@ import java.awt.Desktop;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.ResourceBundle;
-import java.util.Set;
 import java.util.Vector;
-
-import unix.ExecuteUnixOperations;
 import viewLogic.CSharedInstance;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.LineChart;
 import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.text.Text;
-import javafx.stage.Stage;
-import viewLogic.CViewConstants;
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class CMonitoringViewController.
+ */
 public class CMonitoringViewController implements Initializable
 {
 
+	/** The lbl result id. */
 	@FXML // fx:id="lblResultID"
     private Label lblResultID; // Value injected by FXMLLoader
 	
+	/** The line chart. */
 	@FXML // fx:id="lineChart"
     private LineChart lineChart; // Value injected by FXMLLoader
     
+	/** The tb view. */
 	@FXML // fx:id="tbView"
     private TableView tbView; // Value injected by FXMLLoader
 	
+	/** The btn previous result. */
 	@FXML // fx:id="btnPreviousResult"
     private Button btnPreviousResult; // Value injected by FXMLLoader
 	
+	/** The btn next result. */
 	@FXML // fx:id="btnNextResult"
     private Button btnNextResult; // Value injected by FXMLLoader
 	
+	/** The btn show in file. */
 	@FXML // fx:id="btnShowInFile"
     private Button btnShowInFile; // Value injected by FXMLLoader
 	
     
     ////////  logic Variables //////
     
+    /** The files. */
     private Map<String, String[]> files;
 
     
@@ -69,6 +65,9 @@ public class CMonitoringViewController implements Initializable
     //////// end logic Variables ///
     
    
+    /* (non-Javadoc)
+     * @see javafx.fxml.Initializable#initialize(java.net.URL, java.util.ResourceBundle)
+     */
     public void initialize(URL fxmlFileLocation, ResourceBundle resources)
     {
     	assert lblResultID != null : "fx:id=\"lblResultID\" was not injected: check your FXML file 'Monitoring_Page.fxml'.";
@@ -153,6 +152,9 @@ public class CMonitoringViewController implements Initializable
 
 
 
+	/**
+	 * Load data file to view.
+	 */
 	private void loadDataFileToView()
 	{
 		// Load Chart/s

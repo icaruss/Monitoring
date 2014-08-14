@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package settingsView;
 
 import java.net.URL;
@@ -11,11 +14,19 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class CSettingsStage.
+ */
 public class CSettingsStage 
 {
 	
+	/** The stage. */
 	private Stage stage;
 	
+	/**
+	 * Instantiates a new c settings stage.
+	 */
 	public CSettingsStage()
 	{
 		try 
@@ -45,6 +56,9 @@ public class CSettingsStage
 	}
 	
 	
+	/**
+	 * Close stage.
+	 */
 	public void closeStage()
 	{
 		stage.close();

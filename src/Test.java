@@ -1,24 +1,32 @@
+/*
+ * 
+ */
 
 
 import java.io.IOException;
-import java.text.DateFormat;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.SimpleTimeZone;
-import java.util.TimeZone;
-
 import unix.ExecuteUnixOperations;
-import unix.GuiParameterCheck;
-import unix.UnixConnection;
-
-import Charts.ChartGeneration;
-
 import com.jcraft.jsch.JSchException;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Test.
+ */
 public class Test 
 {
+	
+	/**
+	 * The main method.
+	 * 
+	 * @param args
+	 *            the arguments
+	 * @throws IOException
+	 *             Signals that an I/O exception has occurred.
+	 * @throws JSchException
+	 *             the j sch exception
+	 * @throws ParseException
+	 *             the parse exception
+	 */
 	public static void main(String[] args) throws IOException, JSchException, ParseException
 	{
 		//UnixContext unixContext = new UnixContext();

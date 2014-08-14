@@ -1,66 +1,67 @@
+/*
+ * 
+ */
 
 package mainView;
 
 import java.io.IOException;
 import java.net.URL;
-import java.sql.Time;
-import java.text.DateFormat;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.ResourceBundle;
 import java.util.Timer;
 import java.util.TimerTask;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-import settingsView.CSettingsStage;
 import unix.ExecuteUnixOperations;
 import viewLogic.CSharedInstance;
-import viewLogic.CViewConstants;
 import viewLogic.CViewConstants.MonitorType;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.ProgressIndicator;
 import javafx.scene.control.Tooltip;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
-import log.MonLogger;
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class CMainPageController.
+ */
 public class CMainPageController implements Initializable 
 {
 
  
+    /** The btn settings. */
     @FXML // fx:id="btnSettings"
     private Button btnSettings; // Value injected by FXMLLoader
 
+    /** The btn stop monitoring. */
     @FXML // fx:id="btnVMStat"
     private Button btnStopMonitoring; // Value injected by FXMLLoader
     
+    /** The btn show vmstat view. */
     @FXML // fx:id="btnShowVMSTATView"
     private Button btnShowVMSTATView; // Value injected by FXMLLoader
     
+    /** The btn show monitoring results. */
     @FXML // fx:id="btnShowMonitoringResults"
     private Button btnShowMonitoringResults; // Value injected by FXMLLoader
     
+    /** The p bar. */
     public ProgressBar pBar;
     
+    /** The p bar percentage. */
     public ProgressIndicator pBarPercentage;
     
+    /** The tool tip pbar. */
     public Tooltip toolTipPbar;
     
 
 
+	/* (non-Javadoc)
+	 * @see javafx.fxml.Initializable#initialize(java.net.URL, java.util.ResourceBundle)
+	 */
 	public void initialize(URL fxmlFileLocation, ResourceBundle resources)
     {
         assert btnSettings != null : "fx:id=\"btnSettings\" was not injected: check your FXML file 'Main_Page.fxml'.";
@@ -188,6 +189,12 @@ public class CMainPageController implements Initializable
     }
 	
 	
+	/**
+	 * Stop monitoring.
+	 * 
+	 * @param monitorType
+	 *            the monitor type
+	 */
 	public void StopMonitoring(MonitorType monitorType)
 	{
 
@@ -220,6 +227,12 @@ public class CMainPageController implements Initializable
 		
 	}
 	
+	/**
+	 * Sets the buttons disable state.
+	 * 
+	 * @param isRunning
+	 *            the new buttons disable state
+	 */
 	public void setButtonsDisableState(Boolean isRunning)
 	{
 		if (isRunning)

@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package platformSpecific;
 
 import java.io.BufferedReader;
@@ -5,28 +8,45 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class SOLARIS.
+ */
 public class SOLARIS implements OSType 
 {
 	
+	/** The OS type. */
 	final String OSType = "SunOS";
 	
+	/* (non-Javadoc)
+	 * @see platformSpecific.OSType#getCSVStartline()
+	 */
 	@Override
 	public int getCSVStartline() {
 		return 0;
 	}
 
+	/* (non-Javadoc)
+	 * @see platformSpecific.OSType#getCSVEndLine()
+	 */
 	@Override
 	public int getCSVEndLine() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
+	/* (non-Javadoc)
+	 * @see platformSpecific.OSType#getLineToRemoveStartIndex()
+	 */
 	@Override
 	public int getLineToRemoveStartIndex() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
+	/* (non-Javadoc)
+	 * @see platformSpecific.OSType#getLineToRemoveEndIndex()
+	 */
 	@Override
 	public int getLineToRemoveEndIndex() {
 		// TODO Auto-generated method stub
@@ -57,6 +77,9 @@ public class SOLARIS implements OSType
 			return endIndex;
 	}
 
+	/* (non-Javadoc)
+	 * @see platformSpecific.OSType#firstLineCSVIndex()
+	 */
 	@Override
 	public int firstLineCSVIndex() {
 		// TODO Auto-generated method stub

@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package platformSpecific;
 
 import java.io.BufferedReader;
@@ -6,10 +9,19 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class AIX.
+ */
 public class AIX implements OSType 
 {
+	
+	/** The OS type. */
 	final String OSType = "AIX";
 
+	/* (non-Javadoc)
+	 * @see platformSpecific.OSType#firstLineCSVIndex()
+	 */
 	@Override
 	public int firstLineCSVIndex()
 	{
@@ -39,22 +51,36 @@ public class AIX implements OSType
 			return startIndex;
 	}
 		
+	/**
+	 * Gets the numberof chars to remove.
+	 * 
+	 * @return the numberof chars to remove
+	 */
 	public int getNumberofCharsToRemove()
 	{
 		return 5;
 	}
 	
+	/* (non-Javadoc)
+	 * @see platformSpecific.OSType#getCSVStartline()
+	 */
 	public int getCSVStartline() {
 
 		return 0;
 	}
 
+	/* (non-Javadoc)
+	 * @see platformSpecific.OSType#getCSVEndLine()
+	 */
 	@Override
 	public int getCSVEndLine() {
 		// TODO Auto-generated method stub
 		return 2;
 	}
 
+	/* (non-Javadoc)
+	 * @see platformSpecific.OSType#getLineToRemoveStartIndex()
+	 */
 	@Override
 	public int getLineToRemoveStartIndex() {
 		String line = null;
@@ -84,6 +110,9 @@ public class AIX implements OSType
 			return startIndex;
 	}
 
+	/* (non-Javadoc)
+	 * @see platformSpecific.OSType#getLineToRemoveEndIndex()
+	 */
 	@Override
 	public int getLineToRemoveEndIndex() {
 		// TODO Auto-generated method stub

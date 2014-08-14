@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package unix;
 
 import java.util.logging.Level;
@@ -6,15 +9,40 @@ import log.MonLogger;
 
 import com.jcraft.jsch.JSchException;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class GuiParameterCheck.
+ */
 public class GuiParameterCheck 
 {
+	
+	/** The instance. */
 	String instance;
+	
+	/** The host name. */
 	String hostName;
+	
+	/** The user name. */
 	String userName;
+	
+	/** The password. */
 	String password;
 //	UnixConnection unixConnection;
-	CommandExecuter commandExecuter;
+	/** The command executer. */
+CommandExecuter commandExecuter;
 	
+	/**
+	 * Instantiates a new gui parameter check.
+	 * 
+	 * @param instance
+	 *            the instance
+	 * @param hostName
+	 *            the host name
+	 * @param userName
+	 *            the user name
+	 * @param password
+	 *            the password
+	 */
 	public GuiParameterCheck(String instance, String hostName, String userName,
 			String password) {
 		super();
@@ -30,6 +58,13 @@ public class GuiParameterCheck
 
 
 	
+	/**
+	 * Instace exist.
+	 * 
+	 * @return true, if successful
+	 * @throws JSchException
+	 *             the j sch exception
+	 */
 	public boolean instaceExist() throws JSchException
 	{
 		Boolean TF = true;
@@ -48,6 +83,13 @@ public class GuiParameterCheck
 		
 	}
 	
+	/**
+	 * Mds started.
+	 * 
+	 * @return true, if successful
+	 * @throws JSchException
+	 *             the j sch exception
+	 */
 	public boolean mdsStarted() throws JSchException
 	{
 		Boolean TF = true;
@@ -67,6 +109,13 @@ public class GuiParameterCheck
 		
 	}
 	
+	/**
+	 * Mdis started.
+	 * 
+	 * @return true, if successful
+	 * @throws JSchException
+	 *             the j sch exception
+	 */
 	public boolean mdisStarted() throws JSchException
 	{
 		Boolean TF = true;
@@ -86,6 +135,13 @@ public class GuiParameterCheck
 		
 	}
 	
+	/**
+	 * Mdss started.
+	 * 
+	 * @return true, if successful
+	 * @throws JSchException
+	 *             the j sch exception
+	 */
 	public boolean mdssStarted() throws JSchException
 	{
 		Boolean TF = true;
@@ -106,6 +162,11 @@ public class GuiParameterCheck
 	
 	
 	// If connection successful the return string will be null
+	/**
+	 * Connection test success.
+	 * 
+	 * @return true, if successful
+	 */
 	public boolean connectionTestSuccess()
 	{
 		String msg = null;
@@ -132,6 +193,11 @@ public class GuiParameterCheck
 	}
 	
 	
+	/**
+	 * Main gui check.
+	 * 
+	 * @return the boolean
+	 */
 	@SuppressWarnings("finally")
 	public Boolean mainGuiCheck()
 	{

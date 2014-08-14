@@ -18,11 +18,13 @@ missions to complete :
 1. change Time frame to accomodate Date = DONE
 
 @Main View
-1. On Close - close all windows - kill process
+1. On Close - close all windows - kill process = DONE
 
 
 @ALL
 1. Remove all warnings
-2. Generate JavaDoc - and document all functions
+2. Generate JavaDoc - and document all functions 
+2.1 added auto comments = DONE
+2.1.1 needs to be completed 
 
 
