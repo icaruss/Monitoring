@@ -142,11 +142,13 @@ public class GuiParameterCheck
 			if (connectionTestSuccess() == true)
 			{
 				MonLogger.myLogger.log(Level.INFO,  "Connection Test was successful");
+				
 			}
 			else
 			{
 				MonLogger.myLogger.log(Level.INFO,  "Connection Test was NOT successful");
 				TF = false;
+				return TF;
 			}
 			
 			if (instaceExist() == true)
@@ -157,16 +159,19 @@ public class GuiParameterCheck
 			{
 				MonLogger.myLogger.log(Level.INFO,  "Instance does NOT exist!");
 				TF = false;
+				return TF;
 			}
 			if (mdsStarted() == true)
 			{
 				MonLogger.myLogger.log(Level.INFO,  "MDS is started!");
+				
 			}
 			else 
 			{
 				MonLogger.myLogger.log(Level.INFO,  "MDS is NOT started!");
 				MonLogger.myLogger.log(Level.INFO,  "Start before proceeding or uncheck the 'mds-r' radiobutton!");
 				TF = false;
+				return TF;
 			}
 			if (mdisStarted() == true)
 			{
@@ -177,6 +182,7 @@ public class GuiParameterCheck
 				MonLogger.myLogger.log(Level.INFO,  "MDIS is NOT started!");
 				MonLogger.myLogger.log(Level.INFO, "Start before proceeding or uncheck the 'mdis-r' radiobutton!");
 				TF = false;
+				return TF;
 			}
 			if (mdssStarted() == true)
 				MonLogger.myLogger.log(Level.INFO,  "MDSS is started!");
@@ -184,6 +190,7 @@ public class GuiParameterCheck
 				MonLogger.myLogger.log(Level.INFO,"MDSS is NOT started!");
 				MonLogger.myLogger.log(Level.INFO,"Start before proceeding or uncheck the 'mdss-r' radiobutton!");
 				TF = false;
+				return TF;
 			}
 		} 
 		catch (JSchException e) 
