@@ -75,7 +75,7 @@ public class CViewConstants
 	{
 		
 		/** The Monitor type vmstat. */
-		MonitorTypeVMSTAT,
+		MonitorTypeVMSTAT,                   // Deprecated
 		
 		/** The Monitor type else. */
 		MonitorTypeElse

@@ -10,6 +10,7 @@ import java.text.ParseException;
 import java.util.ResourceBundle;
 import java.util.Timer;
 import java.util.TimerTask;
+
 import unix.ExecuteUnixOperations;
 import viewLogic.CSharedInstance;
 import viewLogic.CViewConstants.MonitorType;
@@ -19,6 +20,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.ProgressIndicator;
 import javafx.scene.control.Tooltip;
@@ -57,6 +59,9 @@ public class CMainPageController implements Initializable
     /** The tool tip pbar. */
     public Tooltip toolTipPbar;
     
+    /** Label showing current information */
+    public Label lblInfo;
+    
 
 
 	/* (non-Javadoc)
@@ -71,6 +76,7 @@ public class CMainPageController implements Initializable
         assert pBar != null : "fx:id=\"pBar\" was not injected: check your FXML file 'Main_Page.fxml'.";
         assert pBarPercentage != null : "fx:id=\"pBarPercentage\" was not injected: check your FXML file 'Main_Page.fxml'.";
         assert toolTipPbar != null : "fx:id=\"toolTipPbar\" was not injected: check your FXML file 'Main_Page.fxml'.";
+        assert lblInfo != null : "fx:id=\"lblInfo\" was not injected: check your FXML file 'Main_Page.fxml'.";
 
         // Initialize your logic here: all @FXML variables will have been injected
         
@@ -145,7 +151,9 @@ public class CMainPageController implements Initializable
 	                    		
 	                    		CSharedInstance.getInstance().secondsElapsed++;
 	                    		
-	                    		toolTipPbar.setText(CSharedInstance.getInstance().timeLeft());
+	                    		//toolTipPbar.setText(CSharedInstance.getInstance().timeLeft());
+	                    		
+	                    		lblInfo.setText(CSharedInstance.getInstance().timeLeft());
 	                    	}
 	                    	
 	                    	if (CSharedInstance.getInstance().secondsElapsed == 0 && CSharedInstance.getInstance().totalSecondsCountdown != -1)
@@ -164,17 +172,20 @@ public class CMainPageController implements Initializable
 	                    		{
 	                    			case 0 :
 	                    			{
-	                    				toolTipPbar.setText("Running Without Time Frame.");
+	                    				//toolTipPbar.setText("Running Without Time Frame.");
+	                    				lblInfo.setText("Running Without Time Frame.");
 	                    				break;
 	                    			}
 	                    			case 1 :
 	                    			{
-	                    				toolTipPbar.setText("Running Without Time Frame..");
+	                    				//toolTipPbar.setText("Running Without Time Frame..");
+	                    				lblInfo.setText("Running Without Time Frame..");
 	                    				break;
 	                    			}
 	                    			case 2 :
 	                    			{
-	                    				toolTipPbar.setText("Running Without Time Frame...");
+	                    				//toolTipPbar.setText("Running Without Time Frame...");
+	                    				lblInfo.setText("Running Without Time Frame...");
 	                    				break;
 	                    			}
 	                    		}
@@ -200,7 +211,8 @@ public class CMainPageController implements Initializable
 
 		if (CSharedInstance.getInstance().executeUnixOperations != null)
 		{
-			toolTipPbar.setText("Monitoring Finished");
+			//toolTipPbar.setText("Monitoring Finished");
+			lblInfo.setText("Monitoring Finished");
 			
 			btnSettings.setDisable(false);
 			

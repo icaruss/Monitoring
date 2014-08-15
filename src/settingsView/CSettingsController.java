@@ -920,24 +920,6 @@ public class CSettingsController implements Initializable
 		
 	}
     
-
-    /**
-	 * Sets the irellevant controls visible on vmstat.
-	 * 
-	 * @param b
-	 *            the new irellevant controls visible on vmstat
-	 */
-    private void setIrellevantControlsVisibleOnVMSTAT(boolean b)
-    {
-    	chkboxClix.setVisible(b);
-    	portLbl.setVisible(b);
-    	txtFieldPort.setVisible(b);
-    	chkboxMdsr.setVisible(b);
-    	chkboxMdisr.setVisible(b);
-    	chkboxMdssr.setVisible(b);
-	}
-    
-    
     /**
 	 * Update lbl if input not ok.
 	 * 

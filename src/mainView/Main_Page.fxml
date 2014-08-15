@@ -32,7 +32,7 @@
     <Text focusTraversable="true" fontSmoothingType="LCD" layoutX="47.0" layoutY="292.0" scaleX="1.9800607972865212" scaleY="1.4404764928387228" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Left :" textAlignment="LEFT" textOrigin="CENTER" wrappingWidth="0.0" />
     <Separator blendMode="EXCLUSION" layoutX="5.0" layoutY="263.0" opacity="1.0" prefHeight="12.0" prefWidth="447.0">
       <effect>
-        <Shadow blurType="TWO_PASS_BOX" color="#5539b2ae" height="41.23741585867745" radius="20.118877774193173" width="41.238095238095234" />
+        <Shadow blurType="TWO_PASS_BOX" color="#5539b2ae" height="41.237755548386346" radius="20.118962696620393" width="41.238095238095234" />
       </effect>
     </Separator>
     <Button fx:id="btnSettings" contentDisplay="TEXT_ONLY" graphicTextGap="6.0" layoutX="294.0" layoutY="106.0" mnemonicParsing="false" prefHeight="63.9609375" prefWidth="118.58966064453125" text="Server Settings" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" visible="true" wrapText="true">
@@ -63,7 +63,7 @@
         <DropShadow color="#ffe299" />
       </effect>
     </Button>
-    <Label alignment="BASELINE_CENTER" contentDisplay="CENTER" disable="true" layoutX="169.0" layoutY="199.0" prefHeight="64.0" prefWidth="264.0" text="Select Server Settings For Connection" textAlignment="CENTER" textFill="#990000" textOverrun="CENTER_WORD_ELLIPSIS" wrapText="true">
+    <Label fx:id="lblInfo" alignment="BASELINE_CENTER" contentDisplay="CENTER" disable="true" layoutX="169.0" layoutY="199.0" prefHeight="64.0" prefWidth="264.0" text="Select Server Settings For Connection" textAlignment="CENTER" textFill="#990000" textOverrun="CENTER_WORD_ELLIPSIS" wrapText="true">
       <font>
         <Font name="System Bold" size="16.0" />
       </font>
