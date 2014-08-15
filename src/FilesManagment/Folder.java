@@ -212,7 +212,7 @@ public class Folder extends File
 	 *            the new max files
 	 */
 	public void setMaxFiles(int maxFiles) {
-		this.maxFiles = maxFiles;
+		Folder.maxFiles = maxFiles;
 	}
 	
 	

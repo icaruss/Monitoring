@@ -6,7 +6,6 @@ package platformSpecific;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
-import java.io.FileWriter;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -46,9 +45,8 @@ public class LINUX implements OSType
 		int startIndex = 0;
 
 		try {
+			@SuppressWarnings("resource")
 			BufferedReader reader = new BufferedReader(new FileReader(inputFile));
-			FileWriter fstream = new FileWriter("", true);
-			int count = 0;
 
 			// repeat until all lines is read
 			while ((line = reader.readLine()) != null)
@@ -58,7 +56,6 @@ public class LINUX implements OSType
 					startIndex = line.toString().indexOf("TTY") - 1;
 					break;
 				}
-				count++;	
 			}
 		}
 			catch (Exception e)
@@ -78,9 +75,8 @@ public class LINUX implements OSType
 		int endIndex = 0;
 
 		try {
+			@SuppressWarnings("resource")
 			BufferedReader reader = new BufferedReader(new FileReader(inputFile));
-			FileWriter fstream = new FileWriter("", true);
-			int count = 0;
 
 			// repeat until all lines is read
 			while ((line = reader.readLine()) != null)
@@ -90,7 +86,6 @@ public class LINUX implements OSType
 					endIndex = line.toString().indexOf("STAT") + 4;
 					break;
 				}
-				count++;	
 			}
 		}
 			catch (Exception e)

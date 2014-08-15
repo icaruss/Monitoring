@@ -11,7 +11,7 @@ public class MDMProccessFilesOperations extends FileManagmentOperations
 {
 
 	/** The first indexfor date isertion. */
-	private final int firstIndexforDateIsertion = 2;
+//	private final int firstIndexforDateIsertion = 2;
 
 	/**
 	 * Instantiates a new MDM proccess files operations.

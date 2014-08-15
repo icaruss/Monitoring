@@ -6,7 +6,6 @@ package platformSpecific;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
-import java.io.FileWriter;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -55,9 +54,8 @@ public class SOLARIS implements OSType
 		int endIndex = 0;
 
 		try {
+			@SuppressWarnings("resource")
 			BufferedReader reader = new BufferedReader(new FileReader(inputFile));
-			FileWriter fstream = new FileWriter("", true);
-			int count = 0;
 
 			// repeat until all lines is read
 			while ((line = reader.readLine()) != null)
@@ -67,7 +65,6 @@ public class SOLARIS implements OSType
 					endIndex = line.toString().indexOf("ST") + 2;
 					break;
 				}
-				count++;	
 			}
 		}
 			catch (Exception e)

@@ -123,8 +123,8 @@ public class MDMRelatedOperations extends CommandExecuter
 	public String[] findMDMInstances() throws JSchException 
 	{
 			String MDMInstances = new String(this.execute("ls /usr/sap | grep '[A-Z]'"));
-			String MDMInstancesNumStr = new String(this.execute("ls /usr/sap | grep -c '[A-Z]'"));
-			int MDMInstancesNum = Integer.parseInt( MDMInstancesNumStr.substring(0, 1));
+		/*	String MDMInstancesNumStr = new String(this.execute("ls /usr/sap | grep -c '[A-Z]'"));
+			int MDMInstancesNum = Integer.parseInt( MDMInstancesNumStr.substring(0, 1));*/
 			MDMInstancesFinal = MDMInstances.split("\\n");
 			//System.out.println(java.util.Arrays.toString(MDMInstancesFinal));
 			return MDMInstancesFinal;

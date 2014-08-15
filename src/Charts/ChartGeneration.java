@@ -11,7 +11,6 @@ import java.text.SimpleDateFormat;
 import java.util.TimeZone;
 
 import javax.imageio.ImageIO;
-import javax.swing.JPanel;
 import org.jfree.chart.*;
 import org.jfree.chart.axis.PeriodAxis;
 import org.jfree.chart.axis.PeriodAxisLabelInfo;

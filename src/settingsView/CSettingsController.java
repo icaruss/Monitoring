@@ -1064,7 +1064,7 @@ public class CSettingsController implements Initializable
     	GuiParameterCheck guiParamCheck = new GuiParameterCheck(txtFieldInstance.getText(), txtFieldHostName.getText(), 
     																txtFieldUserName.getText(), txtFieldPassword.getText());
     	
-    	if (guiParamCheck.mainGuiCheck())
+    	if (guiParamCheck.mainGuiCheck(txtFieldTimeFrameFrom.getText(), txtFieldTimeFrameTo.getText()))
     	{
     		return null;
     	}

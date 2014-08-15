@@ -3,24 +3,11 @@
  */
 package Clix;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
-import java.io.OutputStream;
 import java.util.logging.Level;
-
 import log.MonLogger;
-
 import com.jcraft.jsch.JSchException;
-
-
-
-import unix.CommandExecuter;
 import unix.winUnixOperations;
 
 // TODO: Auto-generated Javadoc

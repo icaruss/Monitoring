@@ -176,9 +176,6 @@ public class DateOperations extends FilesManagment
 	    	Date date1 = sdf.parse(strDate1);
 	    	Date date2 = sdf.parse(strDate2);
 	
-	    	System.out.println(sdf.format(date1));
-	    	System.out.println(sdf.format(date2));
-	
 	    	Calendar cal1 = Calendar.getInstance();
 	    	Calendar cal2 = Calendar.getInstance();
 	    	cal1.setTime(date1);

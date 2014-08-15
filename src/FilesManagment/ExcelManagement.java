@@ -15,7 +15,6 @@ import java.util.Date;
 import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Arrays;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.logging.Level;
@@ -24,21 +23,11 @@ import log.MonLogger;
 
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
-import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.hssf.util.HSSFColor;
-import org.apache.poi.ss.formula.functions.Column;
 import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellStyle;
-import org.apache.poi.ss.usermodel.FormulaEvaluator;
 import org.apache.poi.ss.usermodel.Row;
-
-	
-
-
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 // TODO: Auto-generated Javadoc
 // -------------- AIX/LINUX/SOLARIS OUTPUT -----
@@ -324,7 +313,6 @@ public class ExcelManagement extends FilesManagment
 			int[][] diffArr = findDiffGreater(fullDiffArr, maxDiff);
 			String[] dateStrArr = new String[diffArr.length];
 			Hashtable<String, List<Integer>> rowNumsforDate = new Hashtable<String, List<Integer>>();    // dateString + list of row numbers in the date interavl, in each cell
-			int lastIt = 0;
 			
 			setDiffToFile(diffArr,filePath);	
 			

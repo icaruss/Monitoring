@@ -7,7 +7,6 @@ import Clix.ParseClix;
 import Clix.clix;
 
 import java.util.logging.Level;
-import java.util.logging.Logger;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -239,14 +238,14 @@ public class ExecuteUnixOperations extends CommandExecuter
     	{
     		
 			MonLogger.myLogger.log(Level.INFO, "Gui Parameter Check started:");
-    		GuiParameterCheck guiParameterCheck =  new GuiParameterCheck(SID, hostName, userName,password);
-    		if(!guiParameterCheck.mainGuiCheck())
+/*    		GuiParameterCheck guiParameterCheck =  new GuiParameterCheck(SID, hostName, userName,password);
+    		if(!guiParameterCheck.mainGuiCheck(endDate))
     		{
     			//TODO: Return to GUI   - ZOHAR
     			MonLogger.myLogger.log(Level.INFO, "Gui parameters check FAILED! return to GUI..");
     		}
     		
-    		MonLogger.myLogger.log(Level.INFO, "Gui parameters check Success!");
+    		MonLogger.myLogger.log(Level.INFO, "Gui parameters check Success!");*/
     		MonLogger.myLogger.log(Level.INFO, "Kill vmstat and AV_monitoring processes if running");
     		
     		runkillSH.killProcesses(mon_file);
@@ -292,26 +291,27 @@ public class ExecuteUnixOperations extends CommandExecuter
     {
     	try
     	{
-    		GuiParameterCheck guiParameterCheck =  new GuiParameterCheck(SID, hostName, userName,password);
-    		if(!guiParameterCheck.mainGuiCheck())
+/*    		GuiParameterCheck guiParameterCheck =  new GuiParameterCheck(SID, hostName, userName,password);
+    		if(!guiParameterCheck.mainGuiCheck(endDate))
     		{
     			//TODO: Return to GUI   - ZOHAR
     			MonLogger.myLogger.log(Level.INFO, "Gui parameters check FAILED! return to GUI..");
     		}
-    		MonLogger.myLogger.log(Level.INFO, "Gui parameters check Success!");
-    		
+    		MonLogger.myLogger.log(Level.INFO, "Gui parameters check Success!");*/
     		
     		Calendar cal = Calendar.getInstance();
-        	cal.getTime();
+        	Date date  = cal.getTime();
         	SimpleDateFormat currentTime = new SimpleDateFormat("dd-mm-yyyy HH:mm:ss");
+
         	//Object currentTime;
-			String comparison = dateOperations.compareTwoDates(currentTime.toString(), startDate);
+			String comparison = dateOperations.compareTwoDates(currentTime.format(date), startDate);
+			
 			
 			// The start time monitoring time is smaller then current time
 			while (comparison.equals("date1Smaller"))
 			{
-				Thread.sleep(DateOperations.getDateDiff(startDate, currentTime.toString()));
-				comparison = dateOperations.compareTwoDates(currentTime.toString(), startDate);
+				Thread.sleep(DateOperations.getDateDiff(currentTime.format(date), startDate));
+				comparison = dateOperations.compareTwoDates(currentTime.format(date), startDate);
 			}
 			
 			// Start Monitoring
@@ -321,17 +321,17 @@ public class ExecuteUnixOperations extends CommandExecuter
 				start();	    			
 			}
 			
-			comparison = dateOperations.compareTwoDates(currentTime.toString(), endDate);
+			comparison = dateOperations.compareTwoDates(currentTime.format(date), endDate);
 			while (comparison.equals("date1Smaller"))
 			{
-				Thread.sleep(DateOperations.getDateDiff(endDate, currentTime.toString()));
-				comparison = dateOperations.compareTwoDates(currentTime.toString(), endDate);
+				Thread.sleep(DateOperations.getDateDiff(endDate, currentTime.format(date)));
+				comparison = dateOperations.compareTwoDates(currentTime.format(date), endDate);
 			}
 			
 			if (comparison.equals("date1Bigger") || comparison.equals("date1Equals"))
 			{
 				MonLogger.myLogger.log(Level.INFO, "Program finished on time");
-				finish();	    			
+				finishOnTime();	    			
 			}			
     	}
     	catch (Exception e)
@@ -512,13 +512,7 @@ public class ExecuteUnixOperations extends CommandExecuter
 					//RefineryUtilities.centerFrameOnScreen(RSSVSZchartGeneration);
 					//RSSVSZchartGeneration.setVisible(true);
 				}
-				
-				
-				
-
-			}
-			
-	    
+			}	    
 		}
     	catch (Exception e)
 		{
@@ -543,14 +537,14 @@ public class ExecuteUnixOperations extends CommandExecuter
 		MonLogger.myLogger.log(Level.INFO, "Check Time invoked");
     	boolean TF = false;
 		Calendar cal = Calendar.getInstance();
-    	cal.getTime();
+    	Date date = cal.getTime();
     	SimpleDateFormat currentTime = new SimpleDateFormat("dd-mm-yyyy HH:mm:ss");
     	//Object currentTime;
-		String comparison = dateOperations.compareTwoDates(currentTime.toString(), startDate);
+		String comparison = dateOperations.compareTwoDates(currentTime.format(date), startDate);
 		while (comparison.equals("date1Smaller"))
 		{
-			Thread.sleep(DateOperations.getDateDiff(startDate, currentTime.toString()));
-			comparison = dateOperations.compareTwoDates(currentTime.toString(), startDate);
+			Thread.sleep(DateOperations.getDateDiff(startDate, currentTime.format(date)));
+			comparison = dateOperations.compareTwoDates(currentTime.format(date), startDate);
 		}
 		if (comparison.equals("date1Bigger") || comparison.equals("date1Equals"))
 		{

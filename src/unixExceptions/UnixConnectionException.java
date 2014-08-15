@@ -11,6 +11,11 @@ public class UnixConnectionException extends UnixException
 {
 
 	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/**
 	 * Instantiates a new unix connection exception.
 	 */
 	public UnixConnectionException() {

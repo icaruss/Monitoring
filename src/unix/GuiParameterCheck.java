@@ -3,9 +3,13 @@
  */
 package unix;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.logging.Level;
 
 import log.MonLogger;
+import FilesManagment.DateOperations;
 
 import com.jcraft.jsch.JSchException;
 
@@ -195,11 +199,12 @@ CommandExecuter commandExecuter;
 	
 	/**
 	 * Main gui check.
+	 * @param endDate 
 	 * 
 	 * @return the boolean
 	 */
 	@SuppressWarnings("finally")
-	public Boolean mainGuiCheck()
+	public Boolean mainGuiCheck(String startDate, String endDate)
 	{
 		
 		Boolean TF = true;
@@ -258,6 +263,38 @@ CommandExecuter commandExecuter;
 				TF = false;
 				return TF;
 			}
+			
+			
+			// Times check
+			
+			DateOperations dateOperations = new DateOperations();			
+			Calendar cal = Calendar.getInstance();
+        	Date date  = cal.getTime();
+        	SimpleDateFormat currentTime = new SimpleDateFormat("dd-mm-yyyy HH:mm:ss");
+
+        	//Object currentTime;	
+			String comparison = dateOperations.compareTwoDates(currentTime.format(date), endDate);	
+			String comparison2 = dateOperations.compareTwoDates(startDate, endDate);	
+			
+			// end Date-time is smaller than current date-time
+			if (comparison.equals("date1Bigger") || comparison.equals("date1Equals"))
+			{ 
+				//TODO: Print output to GUI
+				MonLogger.myLogger.log(Level.WARNING, "End date is smaller than current date, please enter valid end date");
+				TF = false;
+				return TF;
+			}
+			
+			// start date-time is bigger than end date-time
+			if (comparison2.equals("date1Bigger") || comparison2.equals("date1Equals"))
+			{ 
+				//TODO: Print output to GUI
+				MonLogger.myLogger.log(Level.WARNING, "Start date is bigger than end date, please enter valid dates");
+				TF = false;
+				return TF;
+			}
+			
+			
 		} 
 		catch (JSchException e) 
 		{

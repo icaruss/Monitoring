@@ -13,7 +13,6 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
@@ -116,23 +115,22 @@ public class Converter extends FilesManagment
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
 	 */
-    public static String convertCSVToExcel(String fname) throws IOException
+    @SuppressWarnings("deprecation")
+	public static String convertCSVToExcel(String fname) throws IOException
     { 
     
 	    String[] FileNameAndSuffix= fname.split("\\.");
 	    String fileName = FileNameAndSuffix[0];
-	    ArrayList arList=null;
-	    ArrayList al=null;
+	    ArrayList<ArrayList<String>> arList=null;
+	    ArrayList<String> al=null;
 	    String inputName = fileName + ".csv";
 	    String thisLine; 
-	    int count=0; 
 	     FileInputStream fis = new FileInputStream(inputName);
 	     DataInputStream myInput = new DataInputStream(fis);
-	    int i=0;
-	    arList = new ArrayList();
+	    arList = new ArrayList<ArrayList<String>>();
 	    while ((thisLine = myInput.readLine()) != null)
 	    {
-		     al = new ArrayList();
+		     al = new ArrayList<String>();
 		     String strar[] = thisLine.split(",");
 		     for(int j=0;j<strar.length;j++)
 		     {
@@ -140,7 +138,6 @@ public class Converter extends FilesManagment
 		     }
 		     arList.add(al);
 	     //System.out.println();
-	     i++;
     } 
 
     try
@@ -152,7 +149,7 @@ public class Converter extends FilesManagment
 	     
 	      for(int k=0;k<arList.size();k++)
 	      {
-	       ArrayList ardata = (ArrayList)arList.get(k);
+	       ArrayList<?> ardata = (ArrayList<?>)arList.get(k);
 	       HSSFRow row = sheet.createRow((short) 0+k);
 	       
 	       for(int p=0;p<ardata.size();p++)
