@@ -239,25 +239,12 @@ public class CMainPageController implements Initializable
 		{
 			btnSettings.setDisable(true);
 			btnStopMonitoring.setDisable(false);
-			//btnShowMonitoringResults.setDisable(true);
-			//btnShowVMSTATView.setDisable(true);
 		}
 		else
 		{
 			btnSettings.setDisable(false);
 			btnStopMonitoring.setDisable(true);
-			
-			// Even if instance wasn't running before, leaving possibility to show previous runs
-			/*if (CSharedInstance.getInstance().currentMonitoring == MonitorType.MonitorTypeVMSTAT)
-			{
-				btnShowMonitoringResults.setDisable(true);
-				btnShowVMSTATView.setDisable(false);
-			}
-			else
-			{
-				btnShowMonitoringResults.setDisable(false);
-				btnShowVMSTATView.setDisable(true);
-			}*/
+
 		}
 	}
 

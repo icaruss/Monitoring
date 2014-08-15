@@ -67,10 +67,6 @@ public class CSettingsController implements Initializable
     @FXML // fx:id="chkboxMdssr"
     private RadioButton chkboxMdssr; // Value injected by FXMLLoader
     
-    /** The chkbox vmstat. */
-    @FXML // fx:id="chkboxVMSTAT"
-    private RadioButton chkboxVMSTAT; // Value injected by FXMLLoader
-    
     /** The cmb start selection. */
     @FXML // fx:id="cmbStartSelection"
     private ComboBox<String> cmbStartSelection; // Value injected by FXMLLoader
@@ -173,7 +169,6 @@ public class CSettingsController implements Initializable
         assert txtFieldConfigurationID != null : "fx:id=\"txtFieldConfigurationID \" was not injected: check your FXML file 'Setting_Page.fxml'.";
         assert lblResponseToUser != null : "fx:id=\"lblResponseToUser \" was not injected: check your FXML file 'Setting_Page.fxml'.";
         assert pnlSettings != null : "fx:id=\"pnlSettings \" was not injected: check your FXML file 'Setting_Page.fxml'.";
-        assert chkboxVMSTAT != null : "fx:id=\"chkboxVMSTAT \" was not injected: check your FXML file 'Setting_Page.fxml'.";
         assert portLbl != null : "fx:id=\"portLbl \" was not injected: check your FXML file 'Setting_Page.fxml'.";
         
         // Initialize your logic here: all @FXML variables will have been injected
@@ -215,14 +210,7 @@ public class CSettingsController implements Initializable
         			}
         			
         			
-        			if (chkboxVMSTAT.isSelected())
-        			{
-        				CSharedInstance.getInstance().currentMonitoring = MonitorType.MonitorTypeVMSTAT;
-        			}
-        			else
-        			{
-        				CSharedInstance.getInstance().currentMonitoring = MonitorType.MonitorTypeElse;
-        			}
+        			CSharedInstance.getInstance().currentMonitoring = MonitorType.MonitorTypeElse;
         			
         			
         			try
@@ -626,25 +614,6 @@ public class CSettingsController implements Initializable
     	}
     }
     
-    /**
-	 * Chk box vmstat on mouse pressed.
-	 */
-    public void chkBoxVMSTATOnMousePressed()
-    {
-    	if (chkboxVMSTAT.isSelected())
-    	{
-    		chkboxVMSTAT.setSelected(true);
-    		setIrellevantControlsVisibleOnVMSTAT(false);
-    	}
-    	else
-    	{
-    		chkboxVMSTAT.setSelected(false);
-    		setIrellevantControlsVisibleOnVMSTAT(true);
-    	}
-    }
-    
-    
-
 	/**
 	 * Cmb selection on action.
 	 */
@@ -1000,7 +969,7 @@ public class CSettingsController implements Initializable
 
 			return false;
 		}
-		else if (!chkboxMdisr.isSelected() && !chkboxMdsr.isSelected() && !chkboxMdssr.isSelected() && !chkboxClix.isSelected() && !chkboxVMSTAT.isSelected())
+		else if (!chkboxMdisr.isSelected() && !chkboxMdsr.isSelected() && !chkboxMdssr.isSelected() && !chkboxClix.isSelected())
 		{
 			lblResponseToUser.setText("Choose at least 1 Monitor Process");
 

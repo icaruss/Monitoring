@@ -33,11 +33,7 @@ public class CMonitoringViewController implements Initializable
 	/** The lbl result id. */
 	@FXML // fx:id="lblResultID"
     private Label lblResultID; // Value injected by FXMLLoader
-	
-	/** The line chart. */
-	@FXML // fx:id="lineChart"
-    private LineChart lineChart; // Value injected by FXMLLoader
-    
+	 
 	/** The tb view. */
 	@FXML // fx:id="tbView"
     private TableView tbView; // Value injected by FXMLLoader
@@ -71,7 +67,6 @@ public class CMonitoringViewController implements Initializable
     public void initialize(URL fxmlFileLocation, ResourceBundle resources)
     {
     	assert lblResultID != null : "fx:id=\"lblResultID\" was not injected: check your FXML file 'Monitoring_Page.fxml'.";
-        assert lineChart != null : "fx:id=\"lineChart\" was not injected: check your FXML file 'Monitoring_Page.fxml'.";
         assert tbView != null : "fx:id=\"tbView\" was not injected: check your FXML file 'Monitoring_Page.fxml'.";
         assert btnPreviousResult != null : "fx:id=\"btnPreviousResult\" was not injected: check your FXML file 'Monitoring_Page.fxml'.";
         assert btnNextResult != null : "fx:id=\"btnNextResult\" was not injected: check your FXML file 'Monitoring_Page.fxml'.";

@@ -64,7 +64,7 @@
     </FlowPane>
     <Text font="$x1" fontSmoothingType="LCD" layoutX="346.0" layoutY="401.0" scaleX="2.550941435628833" scaleY="2.0575831430829967" strokeType="OUTSIDE" strokeWidth="0.0" text="Additional Outputs" textAlignment="CENTER" />
     <Line endX="86.0" endY="0.0" layoutX="406.0" layoutY="408.0" startX="-127.0" startY="-1.0" />
-    <FlowPane blendMode="SRC_OVER" hgap="0.0" layoutX="283.0" layoutY="454.0" minWidth="92.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="107.0">
+    <FlowPane blendMode="SRC_OVER" hgap="0.0" layoutX="283.0" layoutY="422.0" minWidth="92.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="107.0">
       <children>
         <RadioButton fx:id="chkboxClix" alignment="CENTER_LEFT" contentDisplay="LEFT" font="$x2" mnemonicParsing="false" onMouseClicked="#chkBoxClixOnMousePressed" prefHeight="25.0" prefWidth="85.0" selected="false" text="clix" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true">
           <FlowPane.margin>
@@ -109,8 +109,8 @@
         <DropShadow />
       </effect>
     </Button>
-    <Text fx:id="portLbl" font="$x1" fontSmoothingType="LCD" layoutX="291.0" layoutY="507.0" scaleX="1.4666861170686858" scaleY="1.2749407175162204" strokeType="OUTSIDE" strokeWidth="0.0" text="Port :" textAlignment="CENTER" visible="true" />
-    <TextField fx:id="txtFieldPort" editable="true" layoutX="332.0" layoutY="496.0" prefHeight="14.633514404296875" prefWidth="94.0" promptText="59950" />
+    <Text fx:id="portLbl" font="$x1" fontSmoothingType="LCD" layoutX="291.0" layoutY="475.0" scaleX="1.4666861170686858" scaleY="1.2749407175162204" strokeType="OUTSIDE" strokeWidth="0.0" text="Port :" textAlignment="CENTER" visible="true" />
+    <TextField fx:id="txtFieldPort" editable="true" layoutX="332.0" layoutY="464.0" prefHeight="14.633514404296875" prefWidth="94.0" promptText="59950" />
     <Text font="$x1" fontSmoothingType="LCD" layoutX="79.0" layoutY="594.0" scaleX="2.446508725684463" scaleY="2.057615907667514" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Select" textAlignment="CENTER" />
     <Line endX="58.0" endY="0.0" layoutX="138.0" layoutY="604.0" startX="-100.0" />
     <Text id="memoryPopLbl" font="$x1" fontSmoothingType="LCD" layoutX="50.0" layoutY="541.0" scaleX="1.4666861170686858" scaleY="1.2749407175162204" strokeType="OUTSIDE" strokeWidth="0.0" text="Memory Pop (kb) :" textAlignment="CENTER" visible="true" />
@@ -142,7 +142,6 @@
         </FXCollections>
       </items>
     </ComboBox>
-    <RadioButton id="chkboxClix" fx:id="chkboxVMSTAT" alignment="CENTER_LEFT" contentDisplay="LEFT" font="$x2" layoutX="283.0" layoutY="427.0" mnemonicParsing="false" onMouseClicked="#chkBoxVMSTATOnMousePressed" prefHeight="25.0" prefWidth="85.0" selected="false" text="VMSTAT" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true" />
   </children>
   <effect>
     <Lighting>
