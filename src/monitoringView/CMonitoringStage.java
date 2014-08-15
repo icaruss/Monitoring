@@ -43,7 +43,7 @@ public class CMonitoringStage
 	        stage.setResizable(false);
 	        stage.setFullScreen(false);
 	        stage.setIconified(true);
-	        stage.getIcons().add(new Image(getClass().getResourceAsStream("monitorIcon.jpeg")));
+	        stage.getIcons().add(new Image(getClass().getResourceAsStream("monitorIcon.jpg")));
 	        stage.show();
 	    } 
 		catch (Exception ex) 

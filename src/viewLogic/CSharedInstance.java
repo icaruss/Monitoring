@@ -4,6 +4,7 @@
 package viewLogic;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.sql.Time;
@@ -14,6 +15,9 @@ import java.util.Map;
 import java.util.Set;
 import java.util.Vector;
 import java.util.logging.Level;
+
+
+
 
 
 import unix.ExecuteUnixOperations;
@@ -86,13 +90,23 @@ public class CSharedInstance
 		
 		currentMonitoring = CViewConstants.MonitorType.MonitorTypeElse;
 		
-		currentDataFilesID = null;
-		
 		dataFiles = new HashMap<String, Vector<String>>();
 		
 		deSeriallize();
 		
 		setDefaultConfiguration();
+		
+		loadDataFilesToLocalCache();
+		
+		if (dataFiles.isEmpty())
+		{
+			currentDataFilesID = null;
+		}
+		else
+		{
+			currentDataFilesID = (String) dataFiles.keySet().toArray()[0];
+		}
+		
 	}
 
 
@@ -516,21 +530,21 @@ public class CSharedInstance
 			{
 				if (!values.isEmpty())
 				{
-					List<String> lst = dataFiles.get(key);
+					Vector<String> vec = dataFiles.get(key);
 					
-					if (lst == null)
+					if (vec == null)
 					{
-						lst = new Vector<String>();
+						vec = new Vector<String>();
 						
-						lst.addAll(values);
+						vec.addAll(values);
 					}
 					else
 					{
 						for (String str : values)
 						{
-							if (!lst.contains(str))
+							if (!vec.contains(str))
 							{
-								lst.add(str);
+								vec.add(str);
 							}
 						}
 						
@@ -596,20 +610,98 @@ public class CSharedInstance
 	 */
 	public void loadDataFilesToLocalCache()
 	{
+		String dirName = System.getProperty("user.dir") + "//" + CViewConstants.MONITORING_TESTS;
 		
-		// To Do : Depends on Directories
+		File directory = new File(dirName);
+		
+	    File[] fList = directory.listFiles();
+	    
+	    for (File file : fList)
+	    {
+	        if (file.isDirectory())
+	        {
+	        	String directoryNameAsKey = file.getAbsolutePath();
+	        	
+	        	dataFiles.put(directoryNameAsKey, getAllFilesInDirectory(directoryNameAsKey));
+	        	
+	        }
+	    }
+
+		
 		
 	}
 	
 	/**
-	 * Save data files to external file.
+	 * Gets the all files in directory.
+	 * 
+	 * @param directoryName
+	 *            the directory name
+	 * @return the all files in directory
 	 */
-	public void saveDataFilesToExternalFile()
+	public Vector<String> getAllFilesInDirectory(String directoryName)
+	{
+    	Vector<String> vecOfFilesInDirectory = new Vector<String>();
+		
+    	File directory = new File(directoryName);
+
+	    // get all the files from a directory
+	    File[] fList = directory.listFiles();
+	    for (File file : fList) 
+	    {
+	        if (file.isFile()) 
+	        {
+	        	vecOfFilesInDirectory.add(file.getAbsolutePath());
+	        }
+	    }
+	    
+	    return vecOfFilesInDirectory;
+	}
+	
+	/**
+	 * Gets the all files in map with current file type ending in directory.
+	 * 
+	 * @param fileType
+	 *            the file type
+	 * @param directoryName
+	 *            the directory name
+	 * @return the all files in map with current file type ending in directory
+	 */
+	public Vector<String> getAllFilesInMapWithCurrentFileTypeEndingInDirectory(CViewConstants.FileType fileType , String directoryName)
 	{
 		
-		// To Do : Depends on Directories
+		Vector<String> vec = dataFiles.get(directoryName);
 		
+		if (vec == null || vec.isEmpty())
+		{
+			return null;
+		}
+		
+		Vector<String> vecOfDataFilesByEnding = new Vector<String>();
+		
+		if (CViewConstants.FileType.FileTypeExcel == fileType)
+		{
+			for (String str : vec)
+			{
+				if (str.endsWith(".csv") || str.endsWith(".xls"))
+				{
+					vecOfDataFilesByEnding.add(str);
+				}
+			}
+		}
+		else if (CViewConstants.FileType.FileTypeImg == fileType)
+		{
+			for (String str : vec)
+			{
+				if (str.endsWith(".png") || str.endsWith(".jpg") || str.endsWith(".jpeg"))
+				{
+					vecOfDataFilesByEnding.add(str);
+				}
+			}
+		}
+		
+		return vecOfDataFilesByEnding;
 	}
+	
 	
 	/**
 	 * Sets the new execute unix op.

@@ -49,13 +49,26 @@ public class CMonitoringViewController implements Initializable
 	@FXML // fx:id="btnShowInFile"
     private Button btnShowInFile; // Value injected by FXMLLoader
 	
+	/** The btn next img. */
+	@FXML // fx:id="btnShowInFile"
+    private Button btnNextImg; // Value injected by FXMLLoader
+	
+	/** The btn prev img. */
+	@FXML // fx:id="btnShowInFile"
+    private Button btnPrevImg; // Value injected by FXMLLoader
+	
+	/** The btn next table. */
+	@FXML // fx:id="btnShowInFile"
+    private Button btnNextTable; // Value injected by FXMLLoader
+	
+	/** The btn prev table. */
+	@FXML // fx:id="btnShowInFile"
+    private Button btnPrevTable; // Value injected by FXMLLoader
+	
     
     ////////  logic Variables //////
     
-    /** The files. */
-    private Map<String, String[]> files;
 
-    
     
     //////// end logic Variables ///
     
@@ -70,12 +83,18 @@ public class CMonitoringViewController implements Initializable
         assert btnPreviousResult != null : "fx:id=\"btnPreviousResult\" was not injected: check your FXML file 'Monitoring_Page.fxml'.";
         assert btnNextResult != null : "fx:id=\"btnNextResult\" was not injected: check your FXML file 'Monitoring_Page.fxml'.";
         assert btnShowInFile != null : "fx:id=\"btnShowInFile\" was not injected: check your FXML file 'Monitoring_Page.fxml'.";
+        assert btnNextImg != null : "fx:id=\"btnNextImg\" was not injected: check your FXML file 'Monitoring_Page.fxml'.";
+        assert btnPrevImg != null : "fx:id=\"btnPrevImg\" was not injected: check your FXML file 'Monitoring_Page.fxml'.";
+        assert btnNextTable != null : "fx:id=\"btnNextTable\" was not injected: check your FXML file 'Monitoring_Page.fxml'.";
+        assert btnPrevTable != null : "fx:id=\"btnPrevTable\" was not injected: check your FXML file 'Monitoring_Page.fxml'.";
         
         
         // Initialize your logic here: all @FXML variables will have been injected       
         if (CSharedInstance.getInstance().currentDataFilesID != null)
         {
-        	lblResultID.setText("Current : " + CSharedInstance.getInstance().currentDataFilesID);
+        	String[] strs = CSharedInstance.getInstance().currentDataFilesID.split("//");
+        	
+        	lblResultID.setText("Current : " + strs[strs.length - 1] );
         }
         
         loadDataFileToView();

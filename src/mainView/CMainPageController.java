@@ -59,7 +59,7 @@ public class CMainPageController implements Initializable
     /** The tool tip pbar. */
     public Tooltip toolTipPbar;
     
-    /** Label showing current information */
+    /** Label showing current information. */
     public Label lblInfo;
     
 
@@ -79,6 +79,7 @@ public class CMainPageController implements Initializable
         assert lblInfo != null : "fx:id=\"lblInfo\" was not injected: check your FXML file 'Main_Page.fxml'.";
 
         // Initialize your logic here: all @FXML variables will have been injected
+        btnStopMonitoring.setDisable(true);
         
         btnSettings.setOnAction(new EventHandler<ActionEvent>() 
         {
@@ -108,7 +109,7 @@ public class CMainPageController implements Initializable
         	@Override
         	public void handle(ActionEvent event)
         	{
-        		System.out.println("btnShowMonitoringResults Event On Occured");
+        		new monitoringView.CMonitoringStage();
         	}
         });
         

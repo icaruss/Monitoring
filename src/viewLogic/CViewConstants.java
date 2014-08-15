@@ -63,7 +63,8 @@ public class CViewConstants
 	public static final String START_TO_TIME = "startToTime";
 	
 	
-	
+	/** The Constant MONITORING_TESTS. */
+	public static final String MONITORING_TESTS = "Monitoring Tests";
 	
 	/**
 	 * *************************************************************************
@@ -82,7 +83,25 @@ public class CViewConstants
 	};
 	
 	
+	/**
+	 * The Enum FileType.
+	 */
+	public enum FileType
+	{
+		
+		/** The File type img. */
+		FileTypeImg,
+		
+		/** The File type excel. */
+		FileTypeExcel
+	};
+	
 	
 	/****************************************************************************/
+	
+
+	
+	
+	
 	
 }

@@ -199,8 +199,11 @@ CommandExecuter commandExecuter;
 	
 	/**
 	 * Main gui check.
-	 * @param endDate 
 	 * 
+	 * @param startDate
+	 *            the start date
+	 * @param endDate
+	 *            the end date
 	 * @return the boolean
 	 */
 	@SuppressWarnings("finally")
