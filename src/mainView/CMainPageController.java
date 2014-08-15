@@ -102,18 +102,6 @@ public class CMainPageController implements Initializable
         	}
         });
         
-        btnShowVMSTATView.setOnAction(new EventHandler<ActionEvent>() 
-        {
-
-        	@Override
-        	public void handle(ActionEvent event)
-        	{
-        		System.out.println("btnShowVMSTATView Event On Occured");
-        	}
-        });
-        
-
-
         btnShowMonitoringResults.setOnAction(new EventHandler<ActionEvent>() 
         {
 
