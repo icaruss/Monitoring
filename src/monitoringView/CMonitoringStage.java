@@ -18,48 +18,44 @@ import javafx.stage.Stage;
 /**
  * The Class CMonitoringStage.
  */
-public class CMonitoringStage 
-{
-	
+public class CMonitoringStage {
+
 	/** The stage. */
 	private Stage stage;
-	
+
 	/**
 	 * Instantiates a new c monitoring stage.
 	 */
-	public CMonitoringStage()
-	{
-		try 
-		{
+	public CMonitoringStage() {
+		try {
 			stage = new Stage();
-			
-			URL location = CMonitoringStage.class.getResource("Monitoring_Page.fxml");
-			
-	        AnchorPane settingsPage = (AnchorPane) FXMLLoader.load(location);
-	        Scene scene = new Scene(settingsPage);
-	        stage.setScene(scene);
-	        stage.sizeToScene();
-	        stage.setTitle("Monitoring Results");
-	        stage.setResizable(false);
-	        stage.setFullScreen(false);
-	        stage.setIconified(true);
-	        stage.getIcons().add(new Image(getClass().getResourceAsStream("monitorIcon.jpg")));
-	        stage.show();
-	    } 
-		catch (Exception ex) 
-	    {
-	        Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
-	    }
+
+			URL location = CMonitoringStage.class
+					.getResource("Monitoring_Page.fxml");
+
+			AnchorPane settingsPage = (AnchorPane) FXMLLoader.load(location);
+			Scene scene = new Scene(settingsPage);
+			stage.setScene(scene);
+			stage.sizeToScene();
+			stage.setTitle("Monitoring Results");
+			stage.setResizable(false);
+			stage.setFullScreen(false);
+			stage.setIconified(true);
+			stage.getIcons()
+					.add(new Image(getClass().getResourceAsStream(
+							"monitorIcon.jpg")));
+			stage.show();
+		} catch (Exception ex) {
+			Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+		}
 	}
-	
-	
+
 	/**
 	 * Close stage.
 	 */
-	public void closeStage()
-	{
+	public void closeStage() {
 		stage.close();
 		stage = null;
 	}
-	
+
 }

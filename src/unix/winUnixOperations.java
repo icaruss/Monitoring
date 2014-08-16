@@ -15,9 +15,8 @@ import com.jcraft.jsch.SftpException;
 /**
  * The Class winUnixOperations.
  */
-public class winUnixOperations extends CommandExecuter
-{
-	/////
+public class winUnixOperations extends CommandExecuter {
+	// ///
 	/**
 	 * Copy to unix.
 	 * 
@@ -26,78 +25,64 @@ public class winUnixOperations extends CommandExecuter
 	 * @throws FileNotFoundException
 	 *             the file not found exception
 	 */
-	public void copyToUnix(String mon_file) throws FileNotFoundException
-	{
+	public void copyToUnix(String mon_file) throws FileNotFoundException {
 
-		try 
-		{
+		try {
 			UnixConnection.connectToUnix();
-		    Channel channel = sesConnection.openChannel("sftp");
-		    channel.connect();
-		    ChannelSftp sftpChannel = (ChannelSftp) channel;
-		  //  ChannelExec channelExe = (ChannelExec)sesConnection.openChannel("exec");
-	
-			sftpChannel.put(mon_file,mon_file);
-			
+			Channel channel = sesConnection.openChannel("sftp");
+			channel.connect();
+			ChannelSftp sftpChannel = (ChannelSftp) channel;
+			// ChannelExec channelExe =
+			// (ChannelExec)sesConnection.openChannel("exec");
 
-			//works!!
+			sftpChannel.put(mon_file, mon_file);
+
+			// works!!
 			this.execute("tr -d '\015' <" + mon_file + ">temp.sh");
 			this.execute("rm " + mon_file);
 			this.execute("mv temp.sh " + mon_file);
 			this.execute("chmod 0775 " + mon_file);
 
-
 			sftpChannel.exit();
 			sftpChannel.disconnect();
 			channel.disconnect();
 			UnixConnection.disconnectFromUnix();
-		} 
-		catch (JSchException e) 
-		{
+		} catch (JSchException e) {
 			e.printStackTrace();
-		} 
-		catch (SftpException e)
-		{
+		} catch (SftpException e) {
 			e.printStackTrace();
 		}
 	}
-	
+
 	/**
 	 * Copy from unix.
 	 * 
 	 * @param mon_file
 	 *            the mon_file
 	 */
-	public void copyFromUnix(String mon_file)
-	{	
-		
-	    try
-	    {
-	    	UnixConnection.connectToUnix();
-	        Channel channel = sesConnection.openChannel("sftp");
-	        channel.connect();
-	        ChannelSftp sftpChannel = (ChannelSftp) channel;
-	        ChannelExec channelExe = (ChannelExec)sesConnection.openChannel("exec");
-	        
+	public void copyFromUnix(String mon_file) {
 
-	        sftpChannel.get(mon_file, mon_file);
-	        sftpChannel.exit();
-	        //sesConnection.disconnect();
-	        channelExe.disconnect();
-	        channel.disconnect();
-	        UnixConnection.disconnectFromUnix();
-	        
-	    } 
-	    catch (JSchException e) 
-	    {
-	        e.printStackTrace(); 
-	    } 
-	    catch (SftpException e) {
-	        e.printStackTrace();
-	    }
-		
+		try {
+			UnixConnection.connectToUnix();
+			Channel channel = sesConnection.openChannel("sftp");
+			channel.connect();
+			ChannelSftp sftpChannel = (ChannelSftp) channel;
+			ChannelExec channelExe = (ChannelExec) sesConnection
+					.openChannel("exec");
+
+			sftpChannel.get(mon_file, mon_file);
+			sftpChannel.exit();
+			// sesConnection.disconnect();
+			channelExe.disconnect();
+			channel.disconnect();
+			UnixConnection.disconnectFromUnix();
+
+		} catch (JSchException e) {
+			e.printStackTrace();
+		} catch (SftpException e) {
+			e.printStackTrace();
+		}
+
 	}
-
-
 
 }

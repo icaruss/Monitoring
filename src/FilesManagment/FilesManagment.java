@@ -18,43 +18,34 @@ import java.util.List;
 /**
  * The Class FilesManagment.
  */
-public abstract class FilesManagment 
-{
-	
+public abstract class FilesManagment {
+
 	/** The file name. */
 	protected static String fileName;
-	
+
 	/** The file path. */
 	protected static String filePath;
-	
+
 	/** The file names. */
 	protected static List<String> fileNames = new ArrayList<String>();
-	
+
 	/**
 	 * Instantiates a new files managment.
 	 * 
 	 * @param _fileName
 	 *            the _file name
 	 */
-	public FilesManagment(String _fileName) 
-	{
+	public FilesManagment(String _fileName) {
 		super();
 		FilesManagment.fileName = _fileName;
 	}
 
-
-
-
 	/**
 	 * Instantiates a new files managment.
 	 */
-	public FilesManagment() 
-	{
-		
+	public FilesManagment() {
+
 	}
-
-
-
 
 	/**
 	 * Gets the file name.
@@ -64,8 +55,6 @@ public abstract class FilesManagment
 	public String getFileName() {
 		return fileName;
 	}
-
-
 
 	/**
 	 * Gets the file path.
@@ -85,8 +74,6 @@ public abstract class FilesManagment
 		return fileNames;
 	}
 
-
-
 	/**
 	 * Gets the total lines num.
 	 * 
@@ -94,13 +81,11 @@ public abstract class FilesManagment
 	 *            the input file name
 	 * @return the total lines num
 	 */
-	public int getTotalLinesNum(String inputFileName) 
-	{
+	public int getTotalLinesNum(String inputFileName) {
 		File inputFile = new File(inputFileName);
 		int linesNum = 0;
 		BufferedReader reader = null;
-		try 
-		{
+		try {
 			reader = new BufferedReader(new FileReader(inputFile));
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -109,8 +94,7 @@ public abstract class FilesManagment
 		try {
 			while (reader.readLine() != null)
 				linesNum++;
-		} 
-		catch (IOException e) {
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		try {
@@ -121,7 +105,7 @@ public abstract class FilesManagment
 
 		return linesNum;
 	}
-	
+
 	/**
 	 * Rename file.
 	 * 
@@ -132,22 +116,22 @@ public abstract class FilesManagment
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
 	 */
-	public void renameFile(String oldFileName, String newFileName) throws IOException
-	{
+	public void renameFile(String oldFileName, String newFileName)
+			throws IOException {
 		File file = new File(oldFileName);
-	
-	    // File (or directory) with new name
-	    File file2 = new File(newFileName);
-	    if(file2.exists()) throw new java.io.IOException("file exists");
-	
-	    // Rename file (or directory)
-	    boolean success = file.renameTo(file2);
-	    if (!success) {
-	    }
-	        // File was not successfully renamed
-    }
-	
-	
+
+		// File (or directory) with new name
+		File file2 = new File(newFileName);
+		if (file2.exists())
+			throw new java.io.IOException("file exists");
+
+		// Rename file (or directory)
+		boolean success = file.renameTo(file2);
+		if (!success) {
+		}
+		// File was not successfully renamed
+	}
+
 	// Insert at the beggining of the line
 	/**
 	 * Insert string to line.
@@ -159,48 +143,38 @@ public abstract class FilesManagment
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
 	 */
-	public void insertStringToLine(String[] dates, String fileName) throws IOException
-	{
+	public void insertStringToLine(String[] dates, String fileName)
+			throws IOException {
 		BufferedReader reader = null;
 		BufferedWriter writer = null;
 		ArrayList<String> list = new ArrayList<String>();
 
 		try {
-				reader = new BufferedReader(new FileReader(fileName));
-				String tmp;
-				while ((tmp = reader.readLine()) != null)
-					list.add(tmp);
-				reader.close();
+			reader = new BufferedReader(new FileReader(fileName));
+			String tmp;
+			while ((tmp = reader.readLine()) != null)
+				list.add(tmp);
+			reader.close();
 
-			for (int i = 0; i < dates.length + 1 ; i++) 
-			{
+			for (int i = 0; i < dates.length + 1; i++) {
 				String tmp2 = null;
-				if (i == 0)
-				{
-					if (fileName.startsWith("vmstat"))
-					{
-						tmp2 =list.get(i);
+				if (i == 0) {
+					if (fileName.startsWith("vmstat")) {
+						tmp2 = list.get(i);
 						list.remove(i);
 						list.add(i, tmp2);
-						
-					}
-					else
-					{
+
+					} else {
 						tmp2 = "," + list.get(i);
 						list.remove(i);
 						list.add(i, tmp2);
 					}
-				}
-				else
-				{
-					if (fileName.startsWith("vmstat"))
-					{
+				} else {
+					if (fileName.startsWith("vmstat")) {
 						tmp2 = dates[i - 1] + list.get(i);
 						list.remove(i);
 						list.add(i, tmp2);
-					}
-					else
-					{
+					} else {
 						tmp2 = dates[i - 1] + "," + list.get(i);
 						list.remove(i);
 						list.add(i, tmp2);
@@ -212,18 +186,14 @@ public abstract class FilesManagment
 			writer = new BufferedWriter(new FileWriter(fileName));
 			for (int i = 0; i < list.size(); i++)
 				writer.write(list.get(i) + "\r\n");
-		} 
-		catch (Exception e) 
-		{
+		} catch (Exception e) {
 			e.printStackTrace();
-		} 
-		finally 
-		{
+		} finally {
 			reader.close();
 			writer.close();
 		}
 	}
-	
+
 	/**
 	 * Removes the first line.
 	 * 
@@ -232,28 +202,27 @@ public abstract class FilesManagment
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
 	 */
-	public void removeFirstLine(String fileName) throws IOException 
-	{  
-	    RandomAccessFile raf = new RandomAccessFile(fileName, "rw");          
-	     //Initial write position                                             
-	    long writePosition = raf.getFilePointer();                            
-	    raf.readLine();                                                       
-	    // Shift the next lines upwards.                                      
-	    long readPosition = raf.getFilePointer();                             
+	public void removeFirstLine(String fileName) throws IOException {
+		RandomAccessFile raf = new RandomAccessFile(fileName, "rw");
+		// Initial write position
+		long writePosition = raf.getFilePointer();
+		raf.readLine();
+		// Shift the next lines upwards.
+		long readPosition = raf.getFilePointer();
 
-	    byte[] buff = new byte[1024];                                         
-	    int n;                                                                
-	    while (-1 != (n = raf.read(buff))) {                                  
-	        raf.seek(writePosition);                                          
-	        raf.write(buff, 0, n);                                            
-	        readPosition += n;                                                
-	        writePosition += n;                                               
-	        raf.seek(readPosition);                                           
-	    }                                                                     
-	    raf.setLength(writePosition);                                         
-	    raf.close();                                                          
-	}      
-	
+		byte[] buff = new byte[1024];
+		int n;
+		while (-1 != (n = raf.read(buff))) {
+			raf.seek(writePosition);
+			raf.write(buff, 0, n);
+			readPosition += n;
+			writePosition += n;
+			raf.seek(readPosition);
+		}
+		raf.setLength(writePosition);
+		raf.close();
+	}
+
 	/**
 	 * Extract file name from path.
 	 * 
@@ -261,14 +230,13 @@ public abstract class FilesManagment
 	 *            the full file name
 	 * @return the string
 	 */
-	public String extractFileNameFromPath(String FullFileName) 
-	{
+	public String extractFileNameFromPath(String FullFileName) {
 		String[] stringArr = FullFileName.split("\\\\");
 		String fileName = stringArr[stringArr.length - 1];
 		return fileName;
-		
+
 	}
-	
+
 	/**
 	 * Removes the line from file.
 	 * 
@@ -279,8 +247,8 @@ public abstract class FilesManagment
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
 	 */
-	public void removeLineFromFile(String file, String lineToRemove) throws IOException
-	{
+	public void removeLineFromFile(String file, String lineToRemove)
+			throws IOException {
 
 		File inputFile = new File(file);
 		File tempFile = new File(file + ".tmp");
@@ -290,8 +258,7 @@ public abstract class FilesManagment
 
 		String currentLine;
 
-		while ((currentLine = reader.readLine()) != null) 
-		{
+		while ((currentLine = reader.readLine()) != null) {
 			// trim newline when comparing with lineToRemove
 			String trimmedLine = currentLine.trim();
 			if (trimmedLine.equals(lineToRemove))
@@ -309,8 +276,7 @@ public abstract class FilesManagment
 		else
 			System.out.println(lineToRemove + " has NOT been removed");
 	}
-	
-	
+
 	/**
 	 * Insert text to file.
 	 * 
@@ -351,7 +317,7 @@ public abstract class FilesManagment
 			writer.close();
 		}
 	}
-	
+
 	/**
 	 * Replace string infile.
 	 * 
@@ -362,25 +328,23 @@ public abstract class FilesManagment
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
 	 */
-	public void replaceStringInfile(String forReplace, String fileName) throws IOException
-	{
+	public void replaceStringInfile(String forReplace, String fileName)
+			throws IOException {
 		BufferedReader reader = null;
 		BufferedWriter writer = null;
 		ArrayList<String> list = new ArrayList<String>();
-		int index = 0 ;
+		int index = 0;
 
 		try {
 			reader = new BufferedReader(new FileReader(fileName));
 			String tmp;
-			while ((tmp = reader.readLine()) != null)
-			{
+			while ((tmp = reader.readLine()) != null) {
 				list.add(tmp);
-				if(tmp.startsWith("secs="))
-				{
-					index=list.indexOf(tmp);
+				if (tmp.startsWith("secs=")) {
+					index = list.indexOf(tmp);
 				}
 			}
-		
+
 			reader.close();
 
 			list.remove(index);
@@ -398,8 +362,7 @@ public abstract class FilesManagment
 			writer.close();
 		}
 	}
-	
-	
+
 	/**
 	 * Delete file.
 	 * 
@@ -408,24 +371,21 @@ public abstract class FilesManagment
 	 * @param FilePath
 	 *            the file path
 	 */
-	public void deleteFile(String FileName, String FilePath)
-	{
+	public void deleteFile(String FileName, String FilePath) {
 		File file = new File(FilePath + "\\\\" + FilePath);
 		file.delete();
 
 	}
-	
+
 	/**
 	 * Creates the file.
 	 * 
 	 * @param FileName
 	 *            the file name
 	 */
-	public void createFile(String FileName)
-	{
+	public void createFile(String FileName) {
 		File file = new File(FileName);
 		file.delete();
 
 	}
 }
-

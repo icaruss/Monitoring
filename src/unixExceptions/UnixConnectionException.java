@@ -7,8 +7,7 @@ package unixExceptions;
 /**
  * The Class UnixConnectionException.
  */
-public class UnixConnectionException extends UnixException 
-{
+public class UnixConnectionException extends UnixException {
 
 	/** The Constant serialVersionUID. */
 	private static final long serialVersionUID = 1L;

@@ -11,13 +11,14 @@ import java.io.FileReader;
 /**
  * The Class SOLARIS.
  */
-public class SOLARIS implements OSType 
-{
-	
+public class SOLARIS implements OSType {
+
 	/** The OS type. */
 	final String OSType = "SunOS";
-	
-	/* (non-Javadoc)
+
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see platformSpecific.OSType#getCSVStartline()
 	 */
 	@Override
@@ -25,7 +26,9 @@ public class SOLARIS implements OSType
 		return 0;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see platformSpecific.OSType#getCSVEndLine()
 	 */
 	@Override
@@ -34,7 +37,9 @@ public class SOLARIS implements OSType
 		return 0;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see platformSpecific.OSType#getLineToRemoveStartIndex()
 	 */
 	@Override
@@ -43,7 +48,9 @@ public class SOLARIS implements OSType
 		return 0;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see platformSpecific.OSType#getLineToRemoveEndIndex()
 	 */
 	@Override
@@ -55,26 +62,25 @@ public class SOLARIS implements OSType
 
 		try {
 			@SuppressWarnings("resource")
-			BufferedReader reader = new BufferedReader(new FileReader(inputFile));
+			BufferedReader reader = new BufferedReader(
+					new FileReader(inputFile));
 
 			// repeat until all lines is read
-			while ((line = reader.readLine()) != null)
-			{
-				if (line.toString().contains("USER"))
-				{
+			while ((line = reader.readLine()) != null) {
+				if (line.toString().contains("USER")) {
 					endIndex = line.toString().indexOf("ST") + 2;
 					break;
 				}
 			}
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
-			catch (Exception e)
-			{
-				e.printStackTrace();
-			}
-			return endIndex;
+		return endIndex;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see platformSpecific.OSType#firstLineCSVIndex()
 	 */
 	@Override

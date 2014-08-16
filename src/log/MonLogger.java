@@ -13,30 +13,28 @@ import java.util.logging.Logger;
 /**
  * The Class MonLogger.
  */
-public class MonLogger
-{
-	
+public class MonLogger {
+
 	/** The Constant myLogger. */
-	public final static Logger myLogger = Logger.getLogger("Logger:");  
-	
+	public final static Logger myLogger = Logger.getLogger("Logger:");
+
 	/** The self. */
 	private static MonLogger self = null;
-	
-/*	//empty private constructor
-	private MonLogger()
-	{
-	
-	}*/
-	
-	//synchronized getInstance
+
+	/*
+	 * //empty private constructor private MonLogger() {
+	 * 
+	 * }
+	 */
+
+	// synchronized getInstance
 	/**
- * Gets the single instance of MonLogger.
- * 
- * @return single instance of MonLogger
- */
-public static synchronized MonLogger getInstance(){
-		if (self == null)
-		{
+	 * Gets the single instance of MonLogger.
+	 * 
+	 * @return single instance of MonLogger
+	 */
+	public static synchronized MonLogger getInstance() {
+		if (self == null) {
 			self = new MonLogger();
 			prepareLogger();
 
@@ -44,28 +42,24 @@ public static synchronized MonLogger getInstance(){
 
 		return self;
 	}
-	
 
-	
 	/**
 	 * Prepare logger.
 	 */
-	private static void prepareLogger() 
-	{  
-		try 
-		{
+	private static void prepareLogger() {
+		try {
 			String dir = System.getProperty("user.dir") + "\\Logs\\monLog.log";
 
 			File saveDir = new File(dir);
 			{
-					//Here comes the existence check
-					if(!saveDir.exists())
-					  saveDir.mkdirs();
+				// Here comes the existence check
+				if (!saveDir.exists())
+					saveDir.mkdirs();
 			}
-			FileHandler myFileHandler = new FileHandler(dir, 102400, 10, true); 
-			myLogger .addHandler(myFileHandler);  
-			myLogger .setUseParentHandlers(false);  
-			myLogger .setLevel(Level.FINEST);
+			FileHandler myFileHandler = new FileHandler(dir, 102400, 10, true);
+			myLogger.addHandler(myFileHandler);
+			myLogger.setUseParentHandlers(false);
+			myLogger.setLevel(Level.FINEST);
 		} catch (SecurityException e) {
 			myLogger.log(Level.WARNING, e.getMessage());
 			myLogger.log(Level.WARNING, e.getStackTrace().toString());
@@ -74,48 +68,48 @@ public static synchronized MonLogger getInstance(){
 			myLogger.log(Level.WARNING, e.getMessage());
 			myLogger.log(Level.WARNING, e.getStackTrace().toString());
 			e.printStackTrace();
-		}  
-	}  
-	
-	//prevent cloning
-	/* (non-Javadoc)
+		}
+	}
+
+	// prevent cloning
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#clone()
 	 */
 	public Object clone() throws CloneNotSupportedException {
-		throw new CloneNotSupportedException(); 
+		throw new CloneNotSupportedException();
 	}
-	
-	//synchronized logging
+
+	// synchronized logging
 	/**
 	 * Debug.
 	 * 
 	 * @param msg
 	 *            the msg
 	 */
-	public synchronized void debug(String msg){
-	
+	public synchronized void debug(String msg) {
+
 	}
-	
+
 	/**
 	 * Info.
 	 * 
 	 * @param msg
 	 *            the msg
 	 */
-	public synchronized void info(String msg)
-	{
-	
+	public synchronized void info(String msg) {
+
 	}
-	
+
 	/**
 	 * Fatal.
 	 * 
 	 * @param msg
 	 *            the msg
 	 */
-	public synchronized void fatal(String msg)
-	{
-	
+	public synchronized void fatal(String msg) {
+
 	}
 
 }

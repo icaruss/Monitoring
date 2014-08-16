@@ -7,16 +7,13 @@ package unixExceptions;
 /**
  * The Class UnixException.
  */
-public abstract class UnixException extends Exception
-{
+public abstract class UnixException extends Exception {
 
 	/** The Constant serialVersionUID. */
 	private static final long serialVersionUID = -2355038524612357614L;
-	
-	
+
 	/** The _error code. */
 	protected String _errorCode;
-
 
 	/**
 	 * Instantiates a new unix exception.
@@ -25,7 +22,6 @@ public abstract class UnixException extends Exception
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
 
 	/**
 	 * Instantiates a new unix exception.
@@ -45,7 +41,6 @@ public abstract class UnixException extends Exception
 		// TODO Auto-generated constructor stub
 	}
 
-
 	/**
 	 * Instantiates a new unix exception.
 	 * 
@@ -59,7 +54,6 @@ public abstract class UnixException extends Exception
 		// TODO Auto-generated constructor stub
 	}
 
-
 	/**
 	 * Instantiates a new unix exception.
 	 * 
@@ -71,7 +65,6 @@ public abstract class UnixException extends Exception
 		// TODO Auto-generated constructor stub
 	}
 
-
 	/**
 	 * Instantiates a new unix exception.
 	 * 
@@ -82,10 +75,10 @@ public abstract class UnixException extends Exception
 		super(cause);
 		// TODO Auto-generated constructor stub
 	}
-	
 
 	/**
-	 * @param message already formated message string
+	 * @param message
+	 *            already formated message string
 	 * */
 
 }

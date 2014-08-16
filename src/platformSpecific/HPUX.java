@@ -11,13 +11,14 @@ import java.io.FileReader;
 /**
  * The Class HPUX.
  */
-public class HPUX implements OSType 
-{
-	
+public class HPUX implements OSType {
+
 	/** The OS type. */
 	final String OSType = "HP-UX";
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see platformSpecific.OSType#getCSVStartline()
 	 */
 	@Override
@@ -26,7 +27,9 @@ public class HPUX implements OSType
 		return 0;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see platformSpecific.OSType#getCSVEndLine()
 	 */
 	@Override
@@ -35,7 +38,9 @@ public class HPUX implements OSType
 		return 0;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see platformSpecific.OSType#getLineToRemoveStartIndex()
 	 */
 	@Override
@@ -46,26 +51,25 @@ public class HPUX implements OSType
 
 		try {
 			@SuppressWarnings("resource")
-			BufferedReader reader = new BufferedReader(new FileReader(inputFile));
+			BufferedReader reader = new BufferedReader(
+					new FileReader(inputFile));
 
 			// repeat until all lines is read
-			while ((line = reader.readLine()) != null)
-			{
-				if (line.toString().contains("USER"))
-				{
+			while ((line = reader.readLine()) != null) {
+				if (line.toString().contains("USER")) {
 					startIndex = line.toString().indexOf("TT") - 2;
 					break;
 				}
 			}
+		} catch (Exception e) {
+
 		}
-			catch (Exception e)
-			{
-				
-			}
-			return startIndex;
+		return startIndex;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see platformSpecific.OSType#getLineToRemoveEndIndex()
 	 */
 	@Override
@@ -76,26 +80,25 @@ public class HPUX implements OSType
 
 		try {
 			@SuppressWarnings("resource")
-			BufferedReader reader = new BufferedReader(new FileReader(inputFile));
+			BufferedReader reader = new BufferedReader(
+					new FileReader(inputFile));
 
 			// repeat until all lines is read
-			while ((line = reader.readLine()) != null)
-			{
-				if (line.toString().contains("USER"))
-				{
+			while ((line = reader.readLine()) != null) {
+				if (line.toString().contains("USER")) {
 					endIndex = line.toString().indexOf(" S ") + 3;
 					break;
 				}
 			}
+		} catch (Exception e) {
+
 		}
-			catch (Exception e)
-			{
-				
-			}
-			return endIndex;
+		return endIndex;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see platformSpecific.OSType#firstLineCSVIndex()
 	 */
 	@Override

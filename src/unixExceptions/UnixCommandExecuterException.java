@@ -3,14 +3,11 @@
  */
 package unixExceptions;
 
-
-
 // TODO: Auto-generated Javadoc
 /**
  * The Class UnixCommandExecuterException.
  */
-public class UnixCommandExecuterException extends UnixException
-{
+public class UnixCommandExecuterException extends UnixException {
 
 	/**
 	 * Instantiates a new unix command executer exception.
@@ -75,6 +72,5 @@ public class UnixCommandExecuterException extends UnixException
 
 	/** The Constant serialVersionUID. */
 	private static final long serialVersionUID = 1L;
-
 
 }

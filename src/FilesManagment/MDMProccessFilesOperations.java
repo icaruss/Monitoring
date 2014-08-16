@@ -7,11 +7,10 @@ package FilesManagment;
 /**
  * The Class MDMProccessFilesOperations.
  */
-public class MDMProccessFilesOperations extends FileManagmentOperations
-{
+public class MDMProccessFilesOperations extends FileManagmentOperations {
 
 	/** The first indexfor date isertion. */
-//	private final int firstIndexforDateIsertion = 2;
+	// private final int firstIndexforDateIsertion = 2;
 
 	/**
 	 * Instantiates a new MDM proccess files operations.
@@ -20,7 +19,7 @@ public class MDMProccessFilesOperations extends FileManagmentOperations
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
+
 	/**
 	 * Gets the datalines number.
 	 * 
@@ -28,11 +27,9 @@ public class MDMProccessFilesOperations extends FileManagmentOperations
 	 *            the input file name
 	 * @return the datalines number
 	 */
-	public int getDatalinesNumber(String inputFileName)
-	{
-		int datalinesNum = this.getTotalLinesNum(inputFileName) - 2;	
-		return datalinesNum;		
+	public int getDatalinesNumber(String inputFileName) {
+		int datalinesNum = this.getTotalLinesNum(inputFileName) - 2;
+		return datalinesNum;
 	}
 
-	
 }

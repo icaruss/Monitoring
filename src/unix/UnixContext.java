@@ -12,29 +12,26 @@ import com.jcraft.jsch.Session;
  * 
  * @author I064852
  */
-public class UnixContext 
-{
-	
+public class UnixContext {
+
 	/** The host name. */
 	protected static String hostName;
-	
+
 	/** The user name. */
 	protected static String userName;
-	
+
 	/** The password. */
 	protected static String password;
-	
+
 	/** The jsch ssh channel. */
 	protected static JSch jschSSHChannel;
-	
+
 	/** The ses connection. */
 	protected static Session sesConnection;
-	
+
 	/** The int time out. */
 	protected static int intTimeOut;
-	
-	
-	
+
 	/**
 	 * Instantiates a new unix context.
 	 * 
@@ -52,8 +49,7 @@ public class UnixContext
 	 *            the int time out
 	 */
 	public UnixContext(String hostName, String userName, String password,
-			JSch jschSSHChannel, Session sesConnection, int intTimeOut) 
-	{
+			JSch jschSSHChannel, Session sesConnection, int intTimeOut) {
 		super();
 		UnixContext.hostName = hostName;
 		UnixContext.userName = userName;
@@ -62,131 +58,118 @@ public class UnixContext
 		UnixContext.sesConnection = sesConnection;
 		UnixContext.intTimeOut = intTimeOut;
 	}
-	
-	
+
 	/**
 	 * Gets the host name.
 	 * 
 	 * @return the host name
 	 */
-	public String getHostName() 
-	{
+	public String getHostName() {
 		return hostName;
 	}
-	
+
 	/**
 	 * Sets the host name.
 	 * 
 	 * @param hostName
 	 *            the new host name
 	 */
-	public void setHostName(String hostName) 
-	{
+	public void setHostName(String hostName) {
 		UnixContext.hostName = hostName;
 	}
-	
+
 	/**
 	 * Gets the user name.
 	 * 
 	 * @return the user name
 	 */
-	public String getUserName() 
-	{
+	public String getUserName() {
 		return userName;
 	}
-	
+
 	/**
 	 * Sets the user name.
 	 * 
 	 * @param userName
 	 *            the new user name
 	 */
-	public void setUserName(String userName) 
-	{
+	public void setUserName(String userName) {
 		UnixContext.userName = userName;
 	}
-	
+
 	/**
 	 * Gets the password.
 	 * 
 	 * @return the password
 	 */
-	public String getPassword() 
-	{
+	public String getPassword() {
 		return password;
 	}
-	
+
 	/**
 	 * Sets the password.
 	 * 
 	 * @param password
 	 *            the new password
 	 */
-	public void setPassword(String password) 
-	{
+	public void setPassword(String password) {
 		UnixContext.password = password;
 	}
-	
+
 	/**
 	 * Gets the jsch ssh channel.
 	 * 
 	 * @return the jsch ssh channel
 	 */
-	public JSch getJschSSHChannel() 
-	{
+	public JSch getJschSSHChannel() {
 		return jschSSHChannel;
 	}
-	
+
 	/**
 	 * Sets the jsch ssh channel.
 	 * 
 	 * @param jschSSHChannel
 	 *            the new jsch ssh channel
 	 */
-	public void setJschSSHChannel(JSch jschSSHChannel) 
-	{
+	public void setJschSSHChannel(JSch jschSSHChannel) {
 		UnixContext.jschSSHChannel = jschSSHChannel;
 	}
-	
+
 	/**
 	 * Gets the ses connection.
 	 * 
 	 * @return the ses connection
 	 */
-	public Session getSesConnection() 
-	{
+	public Session getSesConnection() {
 		return sesConnection;
 	}
-	
+
 	/**
 	 * Sets the ses connection.
 	 * 
 	 * @param sesConnection
 	 *            the new ses connection
 	 */
-	public void setSesConnection(Session sesConnection) 
-	{
+	public void setSesConnection(Session sesConnection) {
 		UnixContext.sesConnection = sesConnection;
 	}
-	
+
 	/**
 	 * Gets the int time out.
 	 * 
 	 * @return the int time out
 	 */
-	public int getIntTimeOut() 
-	{
+	public int getIntTimeOut() {
 		return intTimeOut;
 	}
-	
+
 	/**
 	 * Sets the int time out.
 	 * 
 	 * @param intTimeOut
 	 *            the new int time out
 	 */
-	public void setIntTimeOut(int intTimeOut) 
-	{
+	public void setIntTimeOut(int intTimeOut) {
 		UnixContext.intTimeOut = intTimeOut;
 	}
 

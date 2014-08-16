@@ -19,12 +19,10 @@ import com.jcraft.jsch.Session;
 /**
  * The Class CommandExecuter.
  */
-public class CommandExecuter extends UnixConnection
-{
-	
+public class CommandExecuter extends UnixConnection {
+
 	/** The instance. */
 	protected static CommandExecuter instance = null;
-	
 
 	/**
 	 * Instantiates a new command executer.
@@ -42,52 +40,43 @@ public class CommandExecuter extends UnixConnection
 	 * @param intTimeOut
 	 *            the int time out
 	 */
-	protected CommandExecuter(String hostName, String userName, String password,
-			JSch jschSSHChannel, Session sesConnection, int intTimeOut) 
-	{
+	protected CommandExecuter(String hostName, String userName,
+			String password, JSch jschSSHChannel, Session sesConnection,
+			int intTimeOut) {
 		super(hostName, userName, password, jschSSHChannel, sesConnection,
 				intTimeOut);
-/*		try {
-			this.connectToUnix();
-		} catch (JSchException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}*/
+		/*
+		 * try { this.connectToUnix(); } catch (JSchException e) { // TODO
+		 * Auto-generated catch block e.printStackTrace(); }
+		 */
 	}
-	
+
 	/**
 	 * Instantiates a new command executer.
 	 */
-	protected CommandExecuter() 
-	{
+	protected CommandExecuter() {
 		super(hostName, userName, password, jschSSHChannel, sesConnection,
 				intTimeOut);
 
 	}
-	
 
 	/**
 	 * Gets the single instance of CommandExecuter.
 	 * 
 	 * @return single instance of CommandExecuter
 	 */
-	public static CommandExecuter getInstance() 
-	{
-        if (instance == null) 
-        {
-                synchronized (CommandExecuter .class)
-                {
-                        if (instance == null) 
-                        {
-                                instance = new CommandExecuter (hostName, userName, password, jschSSHChannel, sesConnection,
-                        				intTimeOut);
-                        }
-              }
-        }
-        return instance;
+	public static CommandExecuter getInstance() {
+		if (instance == null) {
+			synchronized (CommandExecuter.class) {
+				if (instance == null) {
+					instance = new CommandExecuter(hostName, userName,
+							password, jschSSHChannel, sesConnection, intTimeOut);
+				}
+			}
+		}
+		return instance;
 	}
-	
-	
+
 	/**
 	 * Execute shell.
 	 * 
@@ -98,36 +87,33 @@ public class CommandExecuter extends UnixConnection
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
 	 */
-	protected void executeShell(String command) throws JSchException, IOException 
-	{
+	protected void executeShell(String command) throws JSchException,
+			IOException {
 		UnixConnection.connectToUnix();
 		Channel channel = sesConnection.openChannel("shell");
 
-		OutputStream inputstream_for_the_channel = (OutputStream) channel.getOutputStream();
-		PrintStream commander = new PrintStream(inputstream_for_the_channel, true);
+		OutputStream inputstream_for_the_channel = (OutputStream) channel
+				.getOutputStream();
+		PrintStream commander = new PrintStream(inputstream_for_the_channel,
+				true);
 
 		channel.setOutputStream(System.out, true);
 
 		channel.connect();
 
-		commander.println(command);    
+		commander.println(command);
 
 		commander.close();
 
-	/*	do {
-		    Thread.sleep(1000);
-		} while(!channel.isEOF());
-*/
-/*		sesConnection.disconnect();
-		UnixConnection.disconnectFromUnix();*/
+		/*
+		 * do { Thread.sleep(1000); } while(!channel.isEOF());
+		 */
+		/*
+		 * sesConnection.disconnect(); UnixConnection.disconnectFromUnix();
+		 */
 
 	}
 
-
-
-	
-	
-	
 	/**
 	 * Execute.
 	 * 
@@ -137,102 +123,81 @@ public class CommandExecuter extends UnixConnection
 	 * @throws JSchException
 	 *             the j sch exception
 	 */
-	protected String execute(String command) throws JSchException 
-	{
-		   
-		  InputStream in = null;
-		    InputStream err = null;
-		    BufferedReader inReader = null;
-		    BufferedReader errReader = null;
-		    
-		    StringBuilder sb = new StringBuilder();  
-		    try 
-		    {
-		    	UnixConnection.connectToUnix();
-		    	Channel channel = sesConnection.openChannel("exec");
-		      ((ChannelExec) channel).setCommand(command);
-		      channel.setInputStream(null);
-		      ((ChannelExec)channel).setErrStream(null);
+	protected String execute(String command) throws JSchException {
 
-		      in = channel.getInputStream();
-		      err = ((ChannelExec)channel).getErrStream();
+		InputStream in = null;
+		InputStream err = null;
+		BufferedReader inReader = null;
+		BufferedReader errReader = null;
 
-		      channel.connect();
+		StringBuilder sb = new StringBuilder();
+		try {
+			UnixConnection.connectToUnix();
+			Channel channel = sesConnection.openChannel("exec");
+			((ChannelExec) channel).setCommand(command);
+			channel.setInputStream(null);
+			((ChannelExec) channel).setErrStream(null);
 
-		      int exitCode = 0;
-		      while(true) 
-		      {
-		    	  if(channel.isClosed()){
-		    	  exitCode = channel.getExitStatus();
-		          break;
-		        }   
-		        try 
-		        {
-		          Thread.sleep(1000);
-		        } 
-		        catch (InterruptedException ie) 
-		        {
-		        	
-		        }   
-		      }   
+			in = channel.getInputStream();
+			err = ((ChannelExec) channel).getErrStream();
 
-		      inReader = new BufferedReader(new InputStreamReader(in));
-		      errReader = new BufferedReader(new InputStreamReader(err));
+			channel.connect();
 
-		      String s;
-		    if (exitCode != 0) 
-		    {
-		      while ((s = errReader.readLine()) != null) 
-		      {
-		        sb.append(s).append("\n");
-			      if (sb.toString() != "\n")
-			      {
-			    	  System.out.println("error: " + sb.toString());
-			      }
-		      }   
-		      //status.setData(sb.toString());
+			int exitCode = 0;
+			while (true) {
+				if (channel.isClosed()) {
+					exitCode = channel.getExitStatus();
+					break;
+				}
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException ie) {
 
-		    	  
-		    } 
-		    else 
-		    {
-		      while ((s = inReader.readLine()) != null) 
-		      {
-		    	
-		        sb.append(s).append("\n");
-			      if (s != "\n")
-			      {
-			    	  System.out.println(s);
-			      }  
-
-		      }   
-
-
-		      channel.disconnect();
-
-		      
-		    }
-		  //  throw new UnixCommandExecuterException("Exception on execute method");
-		    
-		    }
-		    catch (IOException e) {
-				e.printStackTrace();
-			} catch (JSchException e) {
-				e.printStackTrace();
+				}
 			}
-		    CommandExecuter.disconnectFromUnix();
 
-		    int tmp = sb.toString().length();
-		    if (tmp > 0)
-		    {
-		    	  tmp = sb.toString().length() - 1;
-		    }
-		 
+			inReader = new BufferedReader(new InputStreamReader(in));
+			errReader = new BufferedReader(new InputStreamReader(err));
 
-		    return sb.toString().substring(0,tmp);
+			String s;
+			if (exitCode != 0) {
+				while ((s = errReader.readLine()) != null) {
+					sb.append(s).append("\n");
+					if (sb.toString() != "\n") {
+						System.out.println("error: " + sb.toString());
+					}
+				}
+				// status.setData(sb.toString());
+
+			} else {
+				while ((s = inReader.readLine()) != null) {
+
+					sb.append(s).append("\n");
+					if (s != "\n") {
+						System.out.println(s);
+					}
+
+				}
+
+				channel.disconnect();
+
+			}
+			// throw new
+			// UnixCommandExecuterException("Exception on execute method");
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (JSchException e) {
+			e.printStackTrace();
+		}
+		CommandExecuter.disconnectFromUnix();
+
+		int tmp = sb.toString().length();
+		if (tmp > 0) {
+			tmp = sb.toString().length() - 1;
+		}
+
+		return sb.toString().substring(0, tmp);
 
 	}
 }
-
-
-

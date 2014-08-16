@@ -14,32 +14,32 @@ import unix.winUnixOperations;
 /**
  * The Class clix.
  */
-public class clix extends winUnixOperations
-{
+public class clix extends winUnixOperations {
 	// SP06 and above - START
-	//---------------------------------------------------------------------
-	// default port: "clix mdsMonitor localhost Admin: -W -C -T 1 >> clix_mon.out 2>&1"
+	// ---------------------------------------------------------------------
+	// default port:
+	// "clix mdsMonitor localhost Admin: -W -C -T 1 >> clix_mon.out 2>&1"
 	/** The interval. */
 	String interval;
-	
+
 	/** The clix cmd. */
-	String clixCmd ;
-	
+	String clixCmd;
+
 	/** The port. */
 	String port;
-	
+
 	/** The clix file name. */
 	final String clixFileName = "clix_mon.out";
-	
+
 	/**
 	 * Instantiates a new clix.
 	 */
-	public clix()
-	{
+	public clix() {
 
 	}
-	
-	// not default port: "clix mdsMonitor localhost Admin: -W -C -T 1 -# <50650> >> clix_mon.out 2>&1"
+
+	// not default port:
+	// "clix mdsMonitor localhost Admin: -W -C -T 1 -# <50650> >> clix_mon.out 2>&1"
 
 	/**
 	 * Instantiates a new clix.
@@ -53,23 +53,24 @@ public class clix extends winUnixOperations
 	 * @param _password
 	 *            the _password
 	 */
-	public clix(String _interval, String _port, String _hostName, String _password) {
+	public clix(String _interval, String _port, String _hostName,
+			String _password) {
 		super();
-		
+
 		interval = _interval;
 		port = _port;
 		hostName = _hostName;
 		password = _password;
-		
-		if (port.equalsIgnoreCase("59950"))
-		{
-			clixCmd = "clix mdsMonitor localhost Admin: " + " -W -C -T " + interval + "  >> " + clixFileName  + " 2>&1";
+
+		if (port.equalsIgnoreCase("59950")) {
+			clixCmd = "clix mdsMonitor localhost Admin: " + " -W -C -T "
+					+ interval + "  >> " + clixFileName + " 2>&1";
+		} else {
+			clixCmd = "clix mdsMonitor localhost Admin: " + " -W -C -T "
+					+ interval + " -# " + port + " >> " + clixFileName
+					+ " 2>&1";
 		}
-		else
-		{
-			clixCmd = "clix mdsMonitor localhost Admin: " + " -W -C -T " + interval + " -# " + port + " >> " + clixFileName + " 2>&1";
-		}
-			
+
 	}
 
 	/**
@@ -89,77 +90,49 @@ public class clix extends winUnixOperations
 	 * @throws JSchException
 	 *             the j sch exception
 	 */
-	public void runClix() throws IOException, JSchException
-	{
-		 FileWriter writer = new FileWriter("clixMon.sh");	
-		 writer.write(clixCmd);
-		 writer.close();			 
-		 copyToUnix("clixMon.sh");
-		 this.execute("chmod 775 clixMon.sh");
-		 this.executeShell("nohup ./clixMon.sh > /dev/null 2>&1 &");
+	public void runClix() throws IOException, JSchException {
+		FileWriter writer = new FileWriter("clixMon.sh");
+		writer.write(clixCmd);
+		writer.close();
+		copyToUnix("clixMon.sh");
+		this.execute("chmod 775 clixMon.sh");
+		this.executeShell("nohup ./clixMon.sh > /dev/null 2>&1 &");
 
-		
 	}
-	
+
 	/**
 	 * Stop clix.
 	 */
-	public void stopClix()
-	{
-		try
-		{
+	public void stopClix() {
+		try {
 			copyFromUnix(clixFileName);
 			this.execute("rm clixMon.sh");
 			this.execute("rm " + clixFileName);
-		}
-		catch (JSchException e) {
+		} catch (JSchException e) {
 			MonLogger.myLogger.log(Level.WARNING, e.getMessage());
-    		MonLogger.myLogger.log(Level.WARNING, e.getStackTrace().toString());
+			MonLogger.myLogger.log(Level.WARNING, e.getStackTrace().toString());
 			e.printStackTrace();
-			
+
 		}
 	}
-	
-	
-	
 
-	 /**
+	/**
 	 * Kill processes.
 	 */
- 	public void killProcesses()
-	 {
+	public void killProcesses() {
 
-			 
-	 }
-	 
+	}
 
-	 
-	//---------------------------------------------------------------------
-		// SP06 and above - END
-
+	// ---------------------------------------------------------------------
+	// SP06 and above - END
 
 	// SP05 and below - START
-	//---------------------------------------------------------------------
+	// ---------------------------------------------------------------------
 	// default port
-	
-	
-	
+
 	// not default port
-	
-	
-	
-	//---------------------------------------------------------------------
+
+	// ---------------------------------------------------------------------
 	// SP05 and below - END
 
-
-
 }
-	
-	
-	
-	
-	
-	
-	
-	
-

@@ -18,51 +18,47 @@ import javafx.stage.Stage;
 /**
  * The Class CSettingsStage.
  */
-public class CSettingsStage 
-{
-	
+public class CSettingsStage {
+
 	/** The stage. */
 	private Stage stage;
-	
+
 	/**
 	 * Instantiates a new c settings stage.
 	 */
-	public CSettingsStage()
-	{
-		try 
-		{
+	public CSettingsStage() {
+		try {
 			stage = new Stage();
-			
-			URL location = CSettingsStage.class.getResource("Setting_Page.fxml");
-			
-	        AnchorPane settingsPage = (AnchorPane) FXMLLoader.load(location);
-	        Scene scene = new Scene(settingsPage);
-	        stage.setScene(scene);
-	        stage.sizeToScene();
-	        stage.setTitle("Servers Configuration");
-	        stage.setResizable(false);
-	        stage.setFullScreen(false);
-	        stage.setIconified(true);
-	        stage.getIcons().add(new Image(getClass().getResourceAsStream("iconSettings.jpg")));
-	        stage.show();
-	        
-	        stage.requestFocus();
-	        stage.toFront();
-	    } 
-		catch (Exception ex) 
-	    {
-	        Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
-	    }
+
+			URL location = CSettingsStage.class
+					.getResource("Setting_Page.fxml");
+
+			AnchorPane settingsPage = (AnchorPane) FXMLLoader.load(location);
+			Scene scene = new Scene(settingsPage);
+			stage.setScene(scene);
+			stage.sizeToScene();
+			stage.setTitle("Servers Configuration");
+			stage.setResizable(false);
+			stage.setFullScreen(false);
+			stage.setIconified(true);
+			stage.getIcons().add(
+					new Image(getClass()
+							.getResourceAsStream("iconSettings.jpg")));
+			stage.show();
+
+			stage.requestFocus();
+			stage.toFront();
+		} catch (Exception ex) {
+			Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+		}
 	}
-	
-	
+
 	/**
 	 * Close stage.
 	 */
-	public void closeStage()
-	{
+	public void closeStage() {
 		stage.close();
 		stage = null;
 	}
-	
+
 }
