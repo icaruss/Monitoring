@@ -10,7 +10,7 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane blendMode="SRC_OVER" prefHeight="969.0" prefWidth="842.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+<AnchorPane blendMode="SRC_OVER" prefHeight="969.0" prefWidth="842.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="monitoringView.CMonitoringViewController">
   <!-- TODO Add Nodes -->
   <children>
     <SplitPane fx:id="spltPane" disable="false" dividerPositions="0.5" focusTraversable="true" layoutX="0.0" layoutY="0.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" pickOnBounds="false" prefHeight="892.0" prefWidth="842.0">
@@ -51,7 +51,7 @@
                 <DropShadow color="$x4" />
               </effect>
             </Button>
-            <Button id="btnPrevImg" contentDisplay="CENTER" layoutX="753.0" layoutY="170.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="73.0" text="Next Table" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS" wrapText="true">
+            <Button id="btnPrevImg" fx:id="btnNextTable" contentDisplay="CENTER" layoutX="753.0" layoutY="170.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="73.0" text="Next Table" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS" wrapText="true">
               <effect>
                 <DropShadow color="$x4" />
               </effect>

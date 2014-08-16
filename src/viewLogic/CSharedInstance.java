@@ -19,7 +19,10 @@ import java.util.logging.Level;
 
 
 
+
+
 import unix.ExecuteUnixOperations;
+import viewLogic.CViewConstants.DirectoryDirection;
 import log.MonLogger;
 import FilesManagment.DateOperations;
 
@@ -703,6 +706,67 @@ public class CSharedInstance
 		
 		return vecOfDataFilesByEnding;
 	}
+	
+	public void nextORPreviousDirectoryInDataFilesMap(DirectoryDirection direction)
+	{
+		Set<String> setOfKeys = dataFiles.keySet();
+		boolean isNextKeyReady = false;
+		
+		if (direction == DirectoryDirection.DirectoryDirectionNext)
+		{
+			for (String str : setOfKeys)
+			{
+				if (isNextKeyReady)
+				{
+					currentDataFilesID = str;
+					
+					return;
+				}
+				
+				if (currentDataFilesID.equalsIgnoreCase(str))
+				{
+					isNextKeyReady = true;
+				}
+			}
+			
+			if (isNextKeyReady)
+			{
+				currentDataFilesID = (String) setOfKeys.toArray()[0];
+			}
+		}
+		else if (direction == DirectoryDirection.DirectoryDirectionPrevious)
+		{
+			String key = null;
+			
+			for (String str : setOfKeys)
+			{
+				if (currentDataFilesID.equalsIgnoreCase(str))
+				{
+					isNextKeyReady = true;
+					
+					break;
+				}
+				else
+				{
+					key = str;
+				}
+			}
+			
+			if (isNextKeyReady)
+			{
+				if (key == null)
+				{
+					currentDataFilesID = (String) setOfKeys.toArray()[0];
+				}
+				else
+				{
+					currentConfigurationID = key;
+				}
+			}
+		}
+		
+	}
+	
 	
 	
 	/**

@@ -23,7 +23,6 @@ import java.util.logging.Logger;
 
 import viewLogic.CSharedInstance;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class Main.
  */

@@ -35,7 +35,6 @@ import log.MonLogger;
 import viewLogic.CViewConstants;
 
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class CSettingsController.
  */

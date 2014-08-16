@@ -96,6 +96,16 @@ public class CViewConstants
 		FileTypeExcel
 	};
 	
+	public enum DirectoryDirection
+	{
+		
+		
+		DirectoryDirectionNext,
+		
+		
+		DirectoryDirectionPrevious
+	};
+	
 	
 	/****************************************************************************/
 	
