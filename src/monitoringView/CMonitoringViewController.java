@@ -9,9 +9,10 @@ import java.awt.Desktop;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.util.Map;
 import java.util.ResourceBundle;
+import java.util.Set;
 import java.util.Vector;
+
 import viewLogic.CSharedInstance;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -34,6 +35,7 @@ public class CMonitoringViewController implements Initializable
     private Label lblResultID; // Value injected by FXMLLoader
 	 
 	/** The tb view. */
+	@SuppressWarnings("rawtypes")
 	@FXML // fx:id="tbView"
     private TableView tbView; // Value injected by FXMLLoader
 	
@@ -89,12 +91,29 @@ public class CMonitoringViewController implements Initializable
         assert btnPrevTable != null : "fx:id=\"btnPrevTable\" was not injected: check your FXML file 'Monitoring_Page.fxml'.";
         
         
-        // Initialize your logic here: all @FXML variables will have been injected       
-        if (CSharedInstance.getInstance().currentDataFilesID != null)
+        // Initialize your logic here: all @FXML variables will have been injected      
+        
+        CSharedInstance sharedInstance = CSharedInstance.getInstance();
+        
+        if (sharedInstance.currentDataFilesID != null)
         {
-        	String[] strs = CSharedInstance.getInstance().currentDataFilesID.split("//");
+        	String[] strs = sharedInstance.currentDataFilesID.split("//");
         	
         	lblResultID.setText("Current : " + strs[strs.length - 1] );
+        }
+        else
+        {
+        	Set<String> setOfKeys = sharedInstance.getAllDataFilesKeys();
+        	if (setOfKeys != null && !setOfKeys.isEmpty())
+        	{
+        		String[] strs = ((String)(setOfKeys.toArray()[0])).split("//");
+        		lblResultID.setText("Current : " + strs[strs.length - 1] );
+        	}
+        	else
+        	{
+        		lblResultID.setText("There are NO Monitoring Tests Available");
+        	}
+        	
         }
         
         loadDataFileToView();

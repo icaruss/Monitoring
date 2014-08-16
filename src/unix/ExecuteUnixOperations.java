@@ -18,8 +18,10 @@ import java.util.List;
 import java.util.Map;
 
 import log.MonLogger;
+
 import org.jfree.ui.RefineryUtilities;
 
+import viewLogic.CSharedInstance;
 import Charts.ChartGeneration;
 import FilesManagment.Converter;
 import FilesManagment.DateOperations;
@@ -520,6 +522,17 @@ public class ExecuteUnixOperations extends CommandExecuter
     		MonLogger.myLogger.log(Level.WARNING, e.getStackTrace().toString());
 			e.printStackTrace();
 		}
+    	finally  //Adding Created test folder with its files to current
+    	{
+    		if (!TestFolderName.isEmpty())
+    		{
+    			CSharedInstance sharedInstance = CSharedInstance.getInstance();
+    			
+    			sharedInstance.currentDataFilesID = TestFolder.getAbsolutePath();;
+    			
+    			sharedInstance.addNewDataFiles(sharedInstance.currentDataFilesID, sharedInstance.getAllFilesInDirectory(sharedInstance.currentDataFilesID));
+    		}
+    	}
 		    	
     }
     

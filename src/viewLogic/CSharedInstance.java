@@ -10,7 +10,6 @@ import java.io.IOException;
 import java.sql.Time;
 import java.util.Calendar;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.Vector;
@@ -585,6 +584,9 @@ public class CSharedInstance
 	 */
 	public Set<String> getAllDataFilesKeys()
 	{
+		if (dataFiles == null)
+			return null;
+		
 		return dataFiles.keySet();
 	}
 	
