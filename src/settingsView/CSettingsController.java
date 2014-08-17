@@ -5,6 +5,9 @@
 package settingsView;
 
 import java.net.URL;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.ResourceBundle;
@@ -455,9 +458,7 @@ public class CSettingsController implements Initializable {
 
 						if (s1.length() > 0) {
 
-							if (!checkIfInputTimeFrameAcceptable(
-									txtFieldTimeFrameFrom.getText(),
-									s1.length() - 1)) {
+							if (!checkIfInputTimeFrameAcceptable(txtFieldTimeFrameFrom.getText())) {
 								ignore = true;
 								txtFieldTimeFrameFrom.setText(s);
 								ignore = false;
@@ -474,16 +475,15 @@ public class CSettingsController implements Initializable {
 					private boolean ignore;
 
 					@Override
-					public void changed(
-							ObservableValue<? extends String> observableValue,
-							String s, String s1) {
+					public void changed(ObservableValue<? extends String> observableValue,String s, String s1) 
+					{
 						if (ignore || s1 == null)
 							return;
-
-						if (s1.length() > 0) {
-							if (!checkIfInputTimeFrameAcceptable(
-									txtFieldTimeFrameTo.getText(),
-									s1.length() - 1)) {
+						
+						if (s1.length() > 0)
+						{
+							if (!checkIfInputTimeFrameAcceptable(txtFieldTimeFrameTo.getText())) 
+							{
 								ignore = true;
 								txtFieldTimeFrameTo.setText(s);
 								ignore = false;
@@ -1054,6 +1054,7 @@ public class CSettingsController implements Initializable {
 		return true;
 
 	}
+	
 
 	/**
 	 * Check if input time frame acceptable.
@@ -1064,82 +1065,114 @@ public class CSettingsController implements Initializable {
 	 *            the index
 	 * @return true, if successful
 	 */
-	private boolean checkIfInputTimeFrameAcceptable(String text, int index) {
-		char c = text.charAt(index);
+	private boolean checkIfInputTimeFrameAcceptable(String text) 
+	{
+		char c = ' ';
+		boolean isOK = true;
+		
+		for (int i = 0; i < text.length() && isOK ; ++i)
+		{
+			c = text.charAt(i);
+			
+			switch (i)
+			{
+			case 0: // day 01 - 31
+			{
+				isOK = (c >= '0' && c <= '3');
+				break;
+			}
+			case 1: {
+				isOK = (isDigit(c) && ((text.charAt(0) == '3' && (c == '0' || c == '1')) || ((text
+						.charAt(0) != '3' && c >= '0' && c <= '9')))); // day 01 -
+																		// 31
+				break;
+			}
+			case 2: {
+				isOK = (c == '-');
+				break;
+			}
+			case 3: // month 01-12
+			{
+				isOK = (c == '0' || c == '1');
+				break;
+			}
+			case 4: {
+				isOK = ((text.charAt(3) == '0' && c >= '0' && c <= '9') || (text
+						.charAt(3) == '1' && c >= '0' && c <= '2'));
+				break;
+			}
+			case 5: {
+				isOK = (c == '-');
+				break;
+			}
+			case 6: // years 2014 >
+			{
+				isOK = (c == '2');
+				break;
+			}
+			case 7: {
+				isOK = (c == '0');
+				break;
+			}
+			case 8: {
+				isOK = (c == '1' || c == '2');
+				break;
+			}
+			case 9: {
+				isOK = ((text.charAt(8) == '1' && c >= '4' && c <= '9') || (text
+						.charAt(8) == '2' && c >= '0' && c <= '9'));
+				break;
+			}
+			case 10: {
+				isOK = (c == ' ');
+				break;
+			}
+			case 11: // Hours 00 - 23
+			{
+				isOK = (c >= '0' && c <= '2');
+				break;
+			}
+			case 12: {
+				isOK = ((text.charAt(11) == '2' && c >= '0' && c <= '3') || (text
+						.charAt(11) < '2' && c >= '0' && c <= '9'));
+				break;
+			}
+			case 13: {
+				isOK = (c == ':');
+				break;
+			}
+			case 14: // Min 00 - 59
+			{
+				isOK = (c >= '0' && c <= '5');
+				break;
+			}
+			case 15: {
+				isOK = (c >= '0' && c <= '9');
+				break;
+			}
+			case 16: {
+				isOK = (c == ':');
+				break;
+			}
+			case 17: // Sec 00 - 59
+			{
+				isOK = (c >= '0' && c <= '5');
+				break;
+			}
+			case 18: 
+			{
+				isOK = (c >= '0' && c <= '9');
+				break;
+			}
+			default:
+			{
+				isOK = false;
+			}
+	
+			}
+		}
 
-		switch (index) {
-		case 0: // day 01 - 31
-		{
-			return (c >= '0' && c <= '3');
-		}
-		case 1: {
-			return (isDigit(c) && ((text.charAt(0) == '3' && (c == '0' || c == '1')) || ((text
-					.charAt(0) != '3' && c >= '0' && c <= '9')))); // day 01 -
-																	// 31
-		}
-		case 2: {
-			return (c == '-');
-		}
-		case 3: // month 01-12
-		{
-			return (c == '0' || c == '1');
-		}
-		case 4: {
-			return ((text.charAt(3) == '0' && c >= '0' && c <= '9') || (text
-					.charAt(3) == '1' && c >= '0' && c <= '2'));
-		}
-		case 5: {
-			return (c == '-');
-		}
-		case 6: // years 2014 >
-		{
-			return (c == '2');
-		}
-		case 7: {
-			return (c == '0');
-		}
-		case 8: {
-			return (c == '1' || c == '2');
-		}
-		case 9: {
-			return ((text.charAt(8) == '1' && c >= '4' && c <= '9') || (text
-					.charAt(8) == '2' && c >= '0' && c <= '9'));
-		}
-		case 10: {
-			return (c == ' ');
-		}
-		case 11: // Hours 00 - 23
-		{
-			return (c >= '0' && c <= '2');
-		}
-		case 12: {
-			return ((text.charAt(11) == '2' && c >= '0' && c <= '3') || (text
-					.charAt(11) < '2' && c >= '0' && c <= '9'));
-		}
-		case 13: {
-			return (c == ':');
-		}
-		case 14: // Min 00 - 59
-		{
-			return (c >= '0' && c <= '5');
-		}
-		case 15: {
-			return (c >= '0' && c <= '9');
-		}
-		case 16: {
-			return (c == ':');
-		}
-		case 17: // Sec 00 - 59
-		{
-			return (c >= '0' && c <= '5');
-		}
-		case 18: {
-			return (c >= '0' && c <= '9');
-		}
-
-		}
-
-		return false;
+		return isOK;
 
 	}
 

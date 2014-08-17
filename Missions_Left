@@ -1,10 +1,5 @@
 missions to complete :
 
-@VMSTAT VIEW
-1.add callee to view as monitoring without Previous or next.
-2. same load files system
-
-
 @MONITORING VIEW
 1. Load data to graph and table from Buffer or File (Preferably with dictionary with date of creation as key)
 1.a currentDataFile to set when files are written to disk!!!
@@ -14,24 +9,16 @@ missions to complete :
 5. save on file running configuration of files
 
 
-@Settings View
-1. change Time frame to accomodate Date = DONE
-
-@Main View
-1. On Close - close all windows - kill process = DONE
-
 
 @ALL
-1. Remove all warnings
 2. Generate JavaDoc - and document all functions 
-2.1 added auto comments = DONE
-2.1.1 needs to be completed = DONE
+3. Make Windows Appear In Front
 
 3.1 Alina - Directories of monitoring test , written in exe directory : For deployment project
 
 3.2 BUGS (ZOHAR):
-	1. dates input field behavior is strange, please check.
-	2. The initial settings are not changing even if the setting were changed (after the first time, in case the input is wrong).
+	1. dates input field behavior is strange, please check = DONE , Can deleted always only the last 2 chars...
+	2. The initial settings are not changing even if the setting were changed (after the first time, in case the input is wrong) = DONE (NEEDS TO BE SAVED).
 	3. The time left line is not updated.
 
 
