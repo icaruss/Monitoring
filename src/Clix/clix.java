@@ -105,6 +105,8 @@ public class clix extends winUnixOperations {
 	 */
 	public void stopClix() {
 		try {
+			this.execute("pgrep -l ./clixMon.sh");
+			this.execute("pkill ./clixMon.sh");
 			copyFromUnix(clixFileName);
 			this.execute("rm clixMon.sh");
 			this.execute("rm " + clixFileName);

@@ -1,6 +1,4 @@
 #!/usr/local/bin/bash
-
-#SCRIPT: AV_monitoring.sh
 #
 #AUTHOR: Guy Moskovich & Alina Vainshtein
 #Date: 02/12/2009

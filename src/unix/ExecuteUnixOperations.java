@@ -300,6 +300,8 @@ public class ExecuteUnixOperations extends CommandExecuter {
 
 			// The start time monitoring time is smaller then current time
 			while (comparison.equals("date1Smaller")) {
+				cal = Calendar.getInstance();
+				date = cal.getTime();
 				Thread.sleep(DateOperations.getDateDiff(
 						currentTime.format(date), startDate));
 				comparison = dateOperations.compareTwoDates(
@@ -316,6 +318,8 @@ public class ExecuteUnixOperations extends CommandExecuter {
 			comparison = dateOperations.compareTwoDates(
 					currentTime.format(date), endDate);
 			while (comparison.equals("date1Smaller")) {
+				cal = Calendar.getInstance();
+				date = cal.getTime();
 				Thread.sleep(DateOperations.getDateDiff(endDate,
 						currentTime.format(date)));
 				comparison = dateOperations.compareTwoDates(
@@ -581,6 +585,8 @@ public class ExecuteUnixOperations extends CommandExecuter {
 		String comparison = dateOperations.compareTwoDates(
 				currentTime.format(date), startDate);
 		while (comparison.equals("date1Smaller")) {
+			cal = Calendar.getInstance();
+			date = cal.getTime();
 			Thread.sleep(DateOperations.getDateDiff(startDate,
 					currentTime.format(date)));
 			comparison = dateOperations.compareTwoDates(

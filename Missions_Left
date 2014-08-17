@@ -29,4 +29,11 @@ missions to complete :
 
 3.1 Alina - Directories of monitoring test , written in exe directory : For deployment project
 
+3.2 BUGS (ZOHAR):
+	1. dates input field behavior is strange, please check.
+	2. The initial settings are not changing even if the setting were changed (after the first time, in case the input is wrong).
+	3. The time left line is not updated.
+
+
+
 

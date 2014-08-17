@@ -23,28 +23,28 @@
         <boolean>true</boolean>
       </entry>
       <entry>
-        <string>hostName</string>
-        <string>ilsun45</string>
+        <string>mdisr</string>
+        <boolean>false</boolean>
       </entry>
       <entry>
         <string>userName</string>
         <string>mqmadm</string>
       </entry>
       <entry>
-        <string>mdisr</string>
-        <boolean>false</boolean>
+        <string>hostName</string>
+        <string>ilsun45</string>
       </entry>
       <entry>
         <string>instance</string>
         <string>default</string>
       </entry>
       <entry>
-        <string>password</string>
-        <string>a2i2000!</string>
-      </entry>
-      <entry>
         <string>mdssr</string>
         <boolean>false</boolean>
+      </entry>
+      <entry>
+        <string>password</string>
+        <string>a2i2000!</string>
       </entry>
       <entry>
         <string>configurationID</string>
@@ -64,14 +64,6 @@
         <string>5</string>
       </entry>
       <entry>
-        <string>start</string>
-        <string>Immediately</string>
-      </entry>
-      <entry>
-        <string>mdsr</string>
-        <boolean>true</boolean>
-      </entry>
-      <entry>
         <string>clix</string>
         <boolean>true</boolean>
       </entry>
@@ -80,12 +72,32 @@
         <boolean>true</boolean>
       </entry>
       <entry>
-        <string>userName</string>
-        <string>hp1adm</string>
+        <string>startToTime</string>
+        <string>17-08-2014 16:36:00</string>
+      </entry>
+      <entry>
+        <string>password</string>
+        <string>a2i2000!</string>
+      </entry>
+      <entry>
+        <string>startFromTime</string>
+        <string>17-08-2014 16:33:00</string>
+      </entry>
+      <entry>
+        <string>start</string>
+        <string>FrameTime</string>
+      </entry>
+      <entry>
+        <string>mdsr</string>
+        <boolean>true</boolean>
       </entry>
       <entry>
         <string>hostName</string>
         <string>iltlvh325</string>
+      </entry>
+      <entry>
+        <string>userName</string>
+        <string>hp1adm</string>
       </entry>
       <entry>
         <string>instance</string>
@@ -94,10 +106,6 @@
       <entry>
         <string>mdssr</string>
         <boolean>true</boolean>
-      </entry>
-      <entry>
-        <string>password</string>
-        <string>a2i2000!</string>
       </entry>
       <entry>
         <string>configurationID</string>
