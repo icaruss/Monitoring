@@ -5,6 +5,7 @@
 package monitoringView;
 
 import java.awt.Desktop;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -13,11 +14,14 @@ import java.util.Set;
 import java.util.Vector;
 
 import javax.imageio.ImageIO;
+import javax.swing.JSplitPane;
+import javax.swing.plaf.SplitPaneUI;
 
 import mainView.Main;
 import viewLogic.CSharedInstance;
 import viewLogic.CViewConstants.DirectoryDirection;
 import viewLogic.CViewConstants.FileType;
+import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -25,9 +29,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.SplitPane;
+import javafx.scene.control.SplitPane.Divider;
 import javafx.scene.control.TableView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.DragEvent;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -83,7 +89,9 @@ public class CMonitoringViewController implements Initializable {
 
 	@FXML
 	// fx:id="imgBox"
-	private ImageView imgBox; // Value injected by FXMLLoader
+	private ImageView ImgBox; // Value injected by FXMLLoader
+	
+	public SplitPane spltPane;
 	
 
 	// ////// logic Variables //////
@@ -111,8 +119,7 @@ public class CMonitoringViewController implements Initializable {
 		assert btnPrevImg != null : "fx:id=\"btnPrevImg\" was not injected: check your FXML file 'Monitoring_Page.fxml'.";
 		assert btnNextTable != null : "fx:id=\"btnNextTable\" was not injected: check your FXML file 'Monitoring_Page.fxml'.";
 		assert btnPrevTable != null : "fx:id=\"btnPrevTable\" was not injected: check your FXML file 'Monitoring_Page.fxml'.";
-		assert imgBox != null : "fx:id=\"imgBox\" was not injected: check your FXML file 'Monitoring_Page.fxml'.";
-
+		assert ImgBox != null : "fx:id=\"imgBox\" was not injected: check your FXML file 'Monitoring_Page.fxml'.";
 		// Initialize your logic here: all @FXML variables will have been
 		// injected
 		
@@ -155,6 +162,7 @@ public class CMonitoringViewController implements Initializable {
 		}
 
 		setVisibilityOnComponents(isTestsExists);
+		
 
 		// opens all files associated with that current Run
 		btnShowInFile.setOnAction(new EventHandler<ActionEvent>() {
@@ -197,6 +205,8 @@ public class CMonitoringViewController implements Initializable {
 				String filename = sharedInstance.currentDataFilesID.substring(sharedInstance.currentDataFilesID.lastIndexOf("\\")+1);  
 
 				lblResultID.setText("Current : " + filename);
+				
+				loadDataFileToViewVariables();
 
 				setImageToViewByIndex();
 				setExcelFileToViewByIndex();
@@ -216,6 +226,8 @@ public class CMonitoringViewController implements Initializable {
 				String filename = sharedInstance.currentDataFilesID.substring(sharedInstance.currentDataFilesID.lastIndexOf("\\")+1);  
 
 				lblResultID.setText("Current : " + filename);
+				
+				loadDataFileToViewVariables();
 
 				setImageToViewByIndex();
 				setExcelFileToViewByIndex();
@@ -342,7 +354,7 @@ public class CMonitoringViewController implements Initializable {
 			currentIndexOfImages += vectorOfImages.size();
 		}
 
-		imgBox = new ImageView(vectorOfImages.get(currentIndexOfImages));
+		this.ImgBox.setImage(vectorOfImages.elementAt(currentIndexOfImages));
 
 	}
 
@@ -366,6 +378,13 @@ public class CMonitoringViewController implements Initializable {
 		btnPreviousResult.setVisible(isVisible);
 		btnPrevTable.setVisible(isVisible);
 		btnShowInFile.setVisible(isVisible);
+	}
+	
+	public void splitPaneOnMouse()
+	{
+		Divider divider = spltPane.getDividers().get(0);
+		
+		System.out.println(divider.getPosition());
 	}
 
 }
