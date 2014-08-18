@@ -939,12 +939,16 @@ public class CSettingsController implements Initializable {
 		GuiParameterCheck guiParamCheck = new GuiParameterCheck(
 				txtFieldInstance.getText(), txtFieldHostName.getText(),
 				txtFieldUserName.getText(), txtFieldPassword.getText());
-
-		if (guiParamCheck.mainGuiCheck(txtFieldTimeFrameFrom.getText(),
-				txtFieldTimeFrameTo.getText())) {
-			return null;
+		if(cmbStartSelection.getValue().equals(CViewConstants.START_IMMEDIATELY))
+		{
+			if(guiParamCheck.mainGuiCheck(null,null))
+				return null;
 		}
-
+		else if (cmbStartSelection.getValue().equals(CViewConstants.START_FRAME_TIME))
+		{
+				if(guiParamCheck.mainGuiCheck(txtFieldTimeFrameFrom.getText(),txtFieldTimeFrameTo.getText()))
+					return null;
+		}
 		return "Can't Connect With Current Settings";
 	}
 

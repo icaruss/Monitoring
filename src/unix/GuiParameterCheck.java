@@ -245,7 +245,10 @@ public class GuiParameterCheck {
 			}
 
 			// Times check
-
+			if (startDate.equals(null) && endDate.equals(null))
+			{
+				return TF;
+			}
 			DateOperations dateOperations = new DateOperations();
 			Calendar cal = Calendar.getInstance();
 			Date date = cal.getTime();

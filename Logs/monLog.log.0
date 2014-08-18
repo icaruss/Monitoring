@@ -2,3464 +2,3148 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2014-08-15T12:17:09</date>
-  <millis>1408094229911</millis>
-  <sequence>137</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:10</date>
-  <millis>1408094230911</millis>
-  <sequence>138</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:11</date>
-  <millis>1408094231911</millis>
-  <sequence>139</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:12</date>
-  <millis>1408094232911</millis>
-  <sequence>140</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:13</date>
-  <millis>1408094233911</millis>
-  <sequence>141</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:14</date>
-  <millis>1408094234911</millis>
-  <sequence>142</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:15</date>
-  <millis>1408094235911</millis>
-  <sequence>143</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:16</date>
-  <millis>1408094236911</millis>
-  <sequence>144</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:17</date>
-  <millis>1408094237911</millis>
-  <sequence>145</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:18</date>
-  <millis>1408094238911</millis>
-  <sequence>146</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:19</date>
-  <millis>1408094239911</millis>
-  <sequence>147</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:20</date>
-  <millis>1408094240911</millis>
-  <sequence>148</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:21</date>
-  <millis>1408094241911</millis>
-  <sequence>149</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:22</date>
-  <millis>1408094242911</millis>
-  <sequence>150</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:23</date>
-  <millis>1408094243911</millis>
-  <sequence>151</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:24</date>
-  <millis>1408094244911</millis>
-  <sequence>152</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:25</date>
-  <millis>1408094245911</millis>
-  <sequence>153</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:26</date>
-  <millis>1408094246911</millis>
-  <sequence>154</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:27</date>
-  <millis>1408094247911</millis>
-  <sequence>155</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:28</date>
-  <millis>1408094248911</millis>
-  <sequence>156</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:29</date>
-  <millis>1408094249911</millis>
-  <sequence>157</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:30</date>
-  <millis>1408094250911</millis>
-  <sequence>158</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:31</date>
-  <millis>1408094251911</millis>
-  <sequence>159</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:32</date>
-  <millis>1408094252911</millis>
-  <sequence>160</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:33</date>
-  <millis>1408094253911</millis>
-  <sequence>161</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:34</date>
-  <millis>1408094254911</millis>
-  <sequence>162</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:35</date>
-  <millis>1408094255911</millis>
-  <sequence>163</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:36</date>
-  <millis>1408094256911</millis>
-  <sequence>164</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:37</date>
-  <millis>1408094257911</millis>
-  <sequence>165</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:38</date>
-  <millis>1408094258911</millis>
-  <sequence>166</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:39</date>
-  <millis>1408094259911</millis>
-  <sequence>167</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:40</date>
-  <millis>1408094260911</millis>
-  <sequence>168</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:41</date>
-  <millis>1408094261911</millis>
-  <sequence>169</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:42</date>
-  <millis>1408094262911</millis>
-  <sequence>170</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:43</date>
-  <millis>1408094263911</millis>
-  <sequence>171</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:44</date>
-  <millis>1408094264911</millis>
-  <sequence>172</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:45</date>
-  <millis>1408094265911</millis>
-  <sequence>173</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:46</date>
-  <millis>1408094266911</millis>
-  <sequence>174</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:47</date>
-  <millis>1408094267911</millis>
-  <sequence>175</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:48</date>
-  <millis>1408094268911</millis>
-  <sequence>176</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:49</date>
-  <millis>1408094269911</millis>
-  <sequence>177</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:50</date>
-  <millis>1408094270911</millis>
-  <sequence>178</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:51</date>
-  <millis>1408094271911</millis>
-  <sequence>179</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:52</date>
-  <millis>1408094272912</millis>
-  <sequence>180</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:53</date>
-  <millis>1408094273911</millis>
-  <sequence>181</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:54</date>
-  <millis>1408094274911</millis>
-  <sequence>182</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:55</date>
-  <millis>1408094275911</millis>
-  <sequence>183</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:56</date>
-  <millis>1408094276911</millis>
-  <sequence>184</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:57</date>
-  <millis>1408094277911</millis>
-  <sequence>185</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:58</date>
-  <millis>1408094278911</millis>
-  <sequence>186</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:17:59</date>
-  <millis>1408094279911</millis>
-  <sequence>187</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:18:00</date>
-  <millis>1408094280974</millis>
-  <sequence>188</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:18:01</date>
-  <millis>1408094281911</millis>
-  <sequence>189</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:18:02</date>
-  <millis>1408094282984</millis>
-  <sequence>190</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:18:03</date>
-  <millis>1408094283912</millis>
-  <sequence>191</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:18:04</date>
-  <millis>1408094284911</millis>
-  <sequence>192</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:18:05</date>
-  <millis>1408094285911</millis>
-  <sequence>193</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:18:06</date>
-  <millis>1408094286911</millis>
-  <sequence>194</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:18:07</date>
-  <millis>1408094287911</millis>
-  <sequence>195</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:18:08</date>
-  <millis>1408094288911</millis>
-  <sequence>196</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:18:09</date>
-  <millis>1408094289911</millis>
-  <sequence>197</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:18:10</date>
-  <millis>1408094290911</millis>
-  <sequence>198</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:18:11</date>
-  <millis>1408094291911</millis>
-  <sequence>199</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:18:12</date>
-  <millis>1408094292911</millis>
-  <sequence>200</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:18:13</date>
-  <millis>1408094293911</millis>
-  <sequence>201</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:18:14</date>
-  <millis>1408094294911</millis>
-  <sequence>202</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:18:15</date>
-  <millis>1408094295911</millis>
-  <sequence>203</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:18:16</date>
-  <millis>1408094296911</millis>
-  <sequence>204</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:18:17</date>
-  <millis>1408094297911</millis>
-  <sequence>205</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:18:18</date>
-  <millis>1408094298911</millis>
-  <sequence>206</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<record>
-  <date>2014-08-15T12:18:19</date>
-  <millis>1408094299911</millis>
-  <sequence>207</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 12:16:00"</message>
-</record>
-<?xml version="1.0" encoding="windows-1252" standalone="no"?>
-<!DOCTYPE log SYSTEM "logger.dtd">
-<log>
-<record>
-  <date>2014-08-15T12:19:22</date>
-  <millis>1408094362830</millis>
-  <sequence>5</sequence>
-  <logger>Logger:</logger>
-  <level>INFO</level>
-  <class>settingsView.CSettingsController$1</class>
-  <method>handle</method>
-  <thread>12</thread>
-  <message>S T A R T</message>
-</record>
-<record>
-  <date>2014-08-15T12:19:22</date>
-  <millis>1408094362830</millis>
-  <sequence>6</sequence>
-  <logger>Logger:</logger>
-  <level>INFO</level>
-  <class>settingsView.CSettingsController$1</class>
-  <method>handle</method>
-  <thread>12</thread>
-  <message>Program started on time</message>
-</record>
-<?xml version="1.0" encoding="windows-1252" standalone="no"?>
-<!DOCTYPE log SYSTEM "logger.dtd">
-<log>
-<record>
-  <date>2014-08-17T15:14:05</date>
-  <millis>1408277645176</millis>
-  <sequence>11</sequence>
-  <logger>Logger:</logger>
-  <level>INFO</level>
-  <class>settingsView.CSettingsController$1</class>
-  <method>handle</method>
-  <thread>12</thread>
-  <message>S T A R T</message>
-</record>
-<record>
-  <date>2014-08-17T15:14:05</date>
-  <millis>1408277645177</millis>
-  <sequence>12</sequence>
-  <logger>Logger:</logger>
-  <level>INFO</level>
-  <class>settingsView.CSettingsController$1</class>
-  <method>handle</method>
-  <thread>12</thread>
-  <message>Program started on time</message>
-</record>
-<?xml version="1.0" encoding="windows-1252" standalone="no"?>
-<!DOCTYPE log SYSTEM "logger.dtd">
-<log>
-<record>
-  <date>2014-08-17T15:17:50</date>
-  <millis>1408277870087</millis>
-  <sequence>5</sequence>
-  <logger>Logger:</logger>
-  <level>INFO</level>
-  <class>settingsView.CSettingsController$1</class>
-  <method>handle</method>
-  <thread>15</thread>
-  <message>S T A R T</message>
-</record>
-<record>
-  <date>2014-08-17T15:17:50</date>
-  <millis>1408277870087</millis>
-  <sequence>6</sequence>
-  <logger>Logger:</logger>
-  <level>INFO</level>
-  <class>settingsView.CSettingsController$1</class>
-  <method>handle</method>
-  <thread>15</thread>
-  <message>Program started on time</message>
-</record>
-<record>
-  <date>2014-08-17T15:18:07</date>
-  <millis>1408277887734</millis>
-  <sequence>7</sequence>
-  <logger>Logger:</logger>
-  <level>INFO</level>
-  <class>unix.ExecuteUnixOperations</class>
-  <method>startOnTime</method>
-  <thread>15</thread>
-  <message>Program started on time</message>
-</record>
-<record>
-  <date>2014-08-17T15:18:08</date>
-  <millis>1408277888750</millis>
-  <sequence>8</sequence>
-  <logger>Logger:</logger>
-  <level>INFO</level>
-  <class>unix.ExecuteUnixOperations</class>
-  <method>start</method>
-  <thread>15</thread>
-  <message>Gui Parameter Check started:</message>
-</record>
-<record>
-  <date>2014-08-17T15:18:08</date>
-  <millis>1408277888751</millis>
-  <sequence>9</sequence>
-  <logger>Logger:</logger>
-  <level>INFO</level>
-  <class>unix.ExecuteUnixOperations</class>
-  <method>start</method>
-  <thread>15</thread>
-  <message>Kill vmstat and AV_monitoring processes if running</message>
-</record>
-<record>
-  <date>2014-08-17T15:18:13</date>
-  <millis>1408277893776</millis>
-  <sequence>10</sequence>
-  <logger>Logger:</logger>
-  <level>INFO</level>
-  <class>unix.ExecuteUnixOperations</class>
-  <method>start</method>
-  <thread>15</thread>
-  <message>Remove old monitoring files from OS</message>
-</record>
-<record>
-  <date>2014-08-17T15:18:15</date>
-  <millis>1408277895030</millis>
-  <sequence>11</sequence>
-  <logger>Logger:</logger>
-  <level>INFO</level>
-  <class>unix.ExecuteUnixOperations</class>
-  <method>start</method>
-  <thread>15</thread>
-  <message>Locate bash installation folder on OS</message>
-</record>
-<?xml version="1.0" encoding="windows-1252" standalone="no"?>
-<!DOCTYPE log SYSTEM "logger.dtd">
-<log>
-<record>
-  <date>2014-08-17T15:19:05</date>
-  <millis>1408277945842</millis>
-  <sequence>5</sequence>
-  <logger>Logger:</logger>
-  <level>INFO</level>
-  <class>settingsView.CSettingsController$1</class>
-  <method>handle</method>
-  <thread>15</thread>
-  <message>S T A R T</message>
-</record>
-<record>
-  <date>2014-08-17T15:19:05</date>
-  <millis>1408277945843</millis>
-  <sequence>6</sequence>
-  <logger>Logger:</logger>
-  <level>INFO</level>
-  <class>settingsView.CSettingsController$1</class>
-  <method>handle</method>
-  <thread>15</thread>
-  <message>Program started on time</message>
-</record>
-<record>
-  <date>2014-08-17T15:19:21</date>
-  <millis>1408277961593</millis>
-  <sequence>7</sequence>
-  <logger>Logger:</logger>
-  <level>INFO</level>
-  <class>unix.ExecuteUnixOperations</class>
-  <method>startOnTime</method>
-  <thread>15</thread>
-  <message>Program started on time</message>
-</record>
-<?xml version="1.0" encoding="windows-1252" standalone="no"?>
-<!DOCTYPE log SYSTEM "logger.dtd">
-<log>
-<record>
-  <date>2014-08-17T15:19:52</date>
-  <millis>1408277992212</millis>
-  <sequence>5</sequence>
-  <logger>Logger:</logger>
-  <level>INFO</level>
-  <class>settingsView.CSettingsController$1</class>
-  <method>handle</method>
-  <thread>15</thread>
-  <message>S T A R T</message>
-</record>
-<record>
-  <date>2014-08-17T15:19:52</date>
-  <millis>1408277992212</millis>
-  <sequence>6</sequence>
-  <logger>Logger:</logger>
-  <level>INFO</level>
-  <class>settingsView.CSettingsController$1</class>
-  <method>handle</method>
-  <thread>15</thread>
-  <message>Program started on time</message>
-</record>
-<?xml version="1.0" encoding="windows-1252" standalone="no"?>
-<!DOCTYPE log SYSTEM "logger.dtd">
-<log>
-<record>
-  <date>2014-08-17T15:21:11</date>
-  <millis>1408278071697</millis>
-  <sequence>5</sequence>
-  <logger>Logger:</logger>
-  <level>INFO</level>
-  <class>settingsView.CSettingsController$1</class>
-  <method>handle</method>
-  <thread>15</thread>
-  <message>S T A R T</message>
-</record>
-<record>
-  <date>2014-08-17T15:21:13</date>
-  <millis>1408278073162</millis>
-  <sequence>6</sequence>
-  <logger>Logger:</logger>
-  <level>INFO</level>
-  <class>settingsView.CSettingsController$1</class>
-  <method>handle</method>
-  <thread>15</thread>
-  <message>Program started on time</message>
-</record>
-<?xml version="1.0" encoding="windows-1252" standalone="no"?>
-<!DOCTYPE log SYSTEM "logger.dtd">
-<log>
-<record>
-  <date>2014-08-17T15:25:28</date>
-  <millis>1408278328843</millis>
-  <sequence>5</sequence>
-  <logger>Logger:</logger>
-  <level>INFO</level>
-  <class>settingsView.CSettingsController$1</class>
-  <method>handle</method>
-  <thread>12</thread>
-  <message>S T A R T</message>
-</record>
-<record>
-  <date>2014-08-17T15:25:28</date>
-  <millis>1408278328844</millis>
-  <sequence>6</sequence>
-  <logger>Logger:</logger>
-  <level>INFO</level>
-  <class>settingsView.CSettingsController$1</class>
-  <method>handle</method>
-  <thread>12</thread>
-  <message>Program started on time</message>
-</record>
-<?xml version="1.0" encoding="windows-1252" standalone="no"?>
-<!DOCTYPE log SYSTEM "logger.dtd">
-<log>
-<record>
-  <date>2014-08-17T16:22:02</date>
-  <millis>1408281722883</millis>
-  <sequence>5</sequence>
-  <logger>Logger:</logger>
-  <level>INFO</level>
-  <class>settingsView.CSettingsController$1</class>
-  <method>handle</method>
-  <thread>15</thread>
-  <message>S T A R T</message>
-</record>
-<record>
-  <date>2014-08-17T16:22:02</date>
-  <millis>1408281722884</millis>
-  <sequence>6</sequence>
-  <logger>Logger:</logger>
-  <level>INFO</level>
-  <class>settingsView.CSettingsController$1</class>
-  <method>handle</method>
-  <thread>15</thread>
-  <message>Program started on time</message>
-</record>
-<?xml version="1.0" encoding="windows-1252" standalone="no"?>
-<!DOCTYPE log SYSTEM "logger.dtd">
-<log>
-<record>
-  <date>2014-08-17T16:26:12</date>
-  <millis>1408281972797</millis>
-  <sequence>5</sequence>
-  <logger>Logger:</logger>
-  <level>INFO</level>
-  <class>settingsView.CSettingsController$1</class>
-  <method>handle</method>
-  <thread>15</thread>
-  <message>S T A R T</message>
-</record>
-<record>
-  <date>2014-08-17T16:26:12</date>
-  <millis>1408281972797</millis>
-  <sequence>6</sequence>
-  <logger>Logger:</logger>
-  <level>INFO</level>
-  <class>settingsView.CSettingsController$1</class>
-  <method>handle</method>
-  <thread>15</thread>
-  <message>Program started on time</message>
-</record>
-<record>
-  <date>2014-08-17T16:27:24</date>
-  <millis>1408282044076</millis>
-  <sequence>7</sequence>
-  <logger>Logger:</logger>
-  <level>INFO</level>
-  <class>unix.ExecuteUnixOperations</class>
-  <method>startOnTime</method>
-  <thread>15</thread>
-  <message>Program started on time</message>
-</record>
-<record>
-  <date>2014-08-17T16:27:25</date>
-  <millis>1408282045388</millis>
-  <sequence>8</sequence>
-  <logger>Logger:</logger>
-  <level>INFO</level>
-  <class>unix.ExecuteUnixOperations</class>
-  <method>start</method>
-  <thread>15</thread>
-  <message>Gui Parameter Check started:</message>
-</record>
-<record>
-  <date>2014-08-17T16:27:25</date>
-  <millis>1408282045389</millis>
-  <sequence>9</sequence>
-  <logger>Logger:</logger>
-  <level>INFO</level>
-  <class>unix.ExecuteUnixOperations</class>
-  <method>start</method>
-  <thread>15</thread>
-  <message>Kill vmstat and AV_monitoring processes if running</message>
-</record>
-<record>
-  <date>2014-08-17T16:27:30</date>
-  <millis>1408282050407</millis>
-  <sequence>10</sequence>
-  <logger>Logger:</logger>
-  <level>INFO</level>
-  <class>unix.ExecuteUnixOperations</class>
-  <method>start</method>
-  <thread>15</thread>
-  <message>Remove old monitoring files from OS</message>
-</record>
-<record>
-  <date>2014-08-17T16:27:31</date>
-  <millis>1408282051655</millis>
-  <sequence>11</sequence>
-  <logger>Logger:</logger>
-  <level>INFO</level>
-  <class>unix.ExecuteUnixOperations</class>
-  <method>start</method>
-  <thread>15</thread>
-  <message>Locate bash installation folder on OS</message>
-</record>
-<?xml version="1.0" encoding="windows-1252" standalone="no"?>
-<!DOCTYPE log SYSTEM "logger.dtd">
-<log>
-<record>
-  <date>2014-08-17T16:31:49</date>
-  <millis>1408282309762</millis>
-  <sequence>5</sequence>
-  <logger>Logger:</logger>
-  <level>INFO</level>
-  <class>settingsView.CSettingsController$1</class>
-  <method>handle</method>
-  <thread>12</thread>
-  <message>S T A R T</message>
-</record>
-<record>
-  <date>2014-08-17T16:31:49</date>
-  <millis>1408282309762</millis>
-  <sequence>6</sequence>
-  <logger>Logger:</logger>
-  <level>INFO</level>
-  <class>settingsView.CSettingsController$1</class>
-  <method>handle</method>
-  <thread>12</thread>
-  <message>Program started on time</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:00</date>
-  <millis>1408282380761</millis>
-  <sequence>7</sequence>
-  <logger>Logger:</logger>
-  <level>INFO</level>
-  <class>unix.ExecuteUnixOperations</class>
-  <method>startOnTime</method>
-  <thread>12</thread>
-  <message>Program started on time</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:00</date>
-  <millis>1408282380762</millis>
-  <sequence>8</sequence>
-  <logger>Logger:</logger>
-  <level>INFO</level>
-  <class>unix.ExecuteUnixOperations</class>
-  <method>start</method>
-  <thread>12</thread>
-  <message>Gui Parameter Check started:</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:00</date>
-  <millis>1408282380762</millis>
-  <sequence>9</sequence>
-  <logger>Logger:</logger>
-  <level>INFO</level>
-  <class>unix.ExecuteUnixOperations</class>
-  <method>start</method>
-  <thread>12</thread>
-  <message>Kill vmstat and AV_monitoring processes if running</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:05</date>
-  <millis>1408282385201</millis>
-  <sequence>10</sequence>
-  <logger>Logger:</logger>
-  <level>INFO</level>
-  <class>unix.ExecuteUnixOperations</class>
-  <method>start</method>
-  <thread>12</thread>
-  <message>Remove old monitoring files from OS</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:06</date>
-  <millis>1408282386307</millis>
-  <sequence>11</sequence>
-  <logger>Logger:</logger>
-  <level>INFO</level>
-  <class>unix.ExecuteUnixOperations</class>
-  <method>start</method>
-  <thread>12</thread>
-  <message>Locate bash installation folder on OS</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:14</date>
-  <millis>1408282394029</millis>
-  <sequence>12</sequence>
-  <logger>Logger:</logger>
-  <level>INFO</level>
-  <class>unix.ExecuteUnixOperations</class>
-  <method>start</method>
-  <thread>12</thread>
-  <message>Copy AV_Monitoring script to OS</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:18</date>
-  <millis>1408282398565</millis>
-  <sequence>13</sequence>
-  <logger>Logger:</logger>
-  <level>INFO</level>
-  <class>unix.ExecuteUnixOperations</class>
-  <method>start</method>
-  <thread>12</thread>
-  <message>Execute Monitoring file on OS</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:20</date>
-  <millis>1408282400792</millis>
-  <sequence>14</sequence>
-  <logger>Logger:</logger>
-  <level>INFO</level>
-  <class>unix.ExecuteUnixOperations</class>
-  <method>start</method>
-  <thread>12</thread>
-  <message>Check if clix monitoring enabled</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:20</date>
-  <millis>1408282400792</millis>
-  <sequence>15</sequence>
-  <logger>Logger:</logger>
-  <level>INFO</level>
-  <class>unix.ExecuteUnixOperations</class>
-  <method>start</method>
-  <thread>12</thread>
-  <message>clix monitoring enabled - Run clix!</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408122</millis>
-  <sequence>16</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>unix.ExecuteUnixOperations</class>
-  <method>startOnTime</method>
-  <thread>12</thread>
-  <message>timeout value is negative</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408123</millis>
-  <sequence>17</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>unix.ExecuteUnixOperations</class>
-  <method>startOnTime</method>
-  <thread>12</thread>
-  <message>[Ljava.lang.StackTraceElement;@1b8e498</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408145</millis>
-  <sequence>18</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408145</millis>
-  <sequence>19</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408146</millis>
-  <sequence>20</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408146</millis>
-  <sequence>21</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408146</millis>
-  <sequence>22</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408147</millis>
-  <sequence>23</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408147</millis>
-  <sequence>24</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408147</millis>
-  <sequence>25</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408147</millis>
-  <sequence>26</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408148</millis>
-  <sequence>27</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408148</millis>
-  <sequence>28</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408148</millis>
-  <sequence>29</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408148</millis>
-  <sequence>30</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408148</millis>
-  <sequence>31</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408149</millis>
-  <sequence>32</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408149</millis>
-  <sequence>33</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408149</millis>
-  <sequence>34</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408149</millis>
-  <sequence>35</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408149</millis>
-  <sequence>36</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408149</millis>
-  <sequence>37</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408149</millis>
-  <sequence>38</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408149</millis>
-  <sequence>39</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408149</millis>
-  <sequence>40</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408150</millis>
-  <sequence>41</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408150</millis>
-  <sequence>42</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408150</millis>
-  <sequence>43</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408150</millis>
-  <sequence>44</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408150</millis>
-  <sequence>45</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408151</millis>
-  <sequence>46</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408151</millis>
-  <sequence>47</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408151</millis>
-  <sequence>48</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408151</millis>
-  <sequence>49</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408151</millis>
-  <sequence>50</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408151</millis>
-  <sequence>51</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408151</millis>
-  <sequence>52</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408151</millis>
-  <sequence>53</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408151</millis>
-  <sequence>54</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408152</millis>
-  <sequence>55</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408152</millis>
-  <sequence>56</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408152</millis>
-  <sequence>57</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408152</millis>
-  <sequence>58</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408153</millis>
-  <sequence>59</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408153</millis>
-  <sequence>60</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408153</millis>
-  <sequence>61</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408153</millis>
-  <sequence>62</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408153</millis>
-  <sequence>63</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408153</millis>
-  <sequence>64</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408153</millis>
-  <sequence>65</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408153</millis>
-  <sequence>66</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408154</millis>
-  <sequence>67</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408154</millis>
-  <sequence>68</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408154</millis>
-  <sequence>69</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408154</millis>
-  <sequence>70</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408154</millis>
-  <sequence>71</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408154</millis>
-  <sequence>72</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408154</millis>
-  <sequence>73</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408154</millis>
-  <sequence>74</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408155</millis>
-  <sequence>75</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408155</millis>
-  <sequence>76</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408155</millis>
-  <sequence>77</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408155</millis>
-  <sequence>78</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408155</millis>
-  <sequence>79</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408155</millis>
-  <sequence>80</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408155</millis>
-  <sequence>81</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408156</millis>
-  <sequence>82</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408156</millis>
-  <sequence>83</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408156</millis>
-  <sequence>84</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408156</millis>
-  <sequence>85</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408156</millis>
-  <sequence>86</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408156</millis>
-  <sequence>87</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408156</millis>
-  <sequence>88</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408156</millis>
-  <sequence>89</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408157</millis>
-  <sequence>90</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408157</millis>
-  <sequence>91</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408157</millis>
-  <sequence>92</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408157</millis>
-  <sequence>93</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408157</millis>
-  <sequence>94</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408157</millis>
-  <sequence>95</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408158</millis>
-  <sequence>96</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408158</millis>
-  <sequence>97</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408158</millis>
-  <sequence>98</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408158</millis>
-  <sequence>99</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408158</millis>
-  <sequence>100</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408159</millis>
-  <sequence>101</sequence>
-  <logger>Logger:</logger>
-  <level>WARNING</level>
-  <class>viewLogic.CSharedInstance</class>
-  <method>isReadyToLaunch</method>
-  <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
-</record>
-<record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408159</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547753</millis>
   <sequence>102</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408159</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547753</millis>
   <sequence>103</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408159</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547754</millis>
   <sequence>104</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408159</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547754</millis>
   <sequence>105</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408159</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547754</millis>
   <sequence>106</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408159</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547754</millis>
   <sequence>107</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408160</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547755</millis>
   <sequence>108</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408160</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547755</millis>
   <sequence>109</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408160</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547756</millis>
   <sequence>110</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408160</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547756</millis>
   <sequence>111</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408160</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547757</millis>
   <sequence>112</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408160</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547757</millis>
   <sequence>113</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408160</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547757</millis>
   <sequence>114</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408160</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547757</millis>
   <sequence>115</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408160</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547758</millis>
   <sequence>116</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408161</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547758</millis>
   <sequence>117</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408161</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547758</millis>
   <sequence>118</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408161</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547758</millis>
   <sequence>119</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408161</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547758</millis>
   <sequence>120</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408161</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547759</millis>
   <sequence>121</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:28</date>
-  <millis>1408282408707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547759</millis>
   <sequence>122</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:29</date>
-  <millis>1408282409707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547759</millis>
   <sequence>123</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:30</date>
-  <millis>1408282410708</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547759</millis>
   <sequence>124</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:31</date>
-  <millis>1408282411707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547760</millis>
   <sequence>125</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:32</date>
-  <millis>1408282412707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547760</millis>
   <sequence>126</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:33</date>
-  <millis>1408282413707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547760</millis>
   <sequence>127</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:34</date>
-  <millis>1408282414707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547760</millis>
   <sequence>128</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:35</date>
-  <millis>1408282415707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547760</millis>
   <sequence>129</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:36</date>
-  <millis>1408282416707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547760</millis>
   <sequence>130</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:37</date>
-  <millis>1408282417707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547761</millis>
   <sequence>131</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:38</date>
-  <millis>1408282418707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547761</millis>
   <sequence>132</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:39</date>
-  <millis>1408282419707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547761</millis>
   <sequence>133</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:40</date>
-  <millis>1408282420707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547761</millis>
   <sequence>134</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:41</date>
-  <millis>1408282421707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547761</millis>
   <sequence>135</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:42</date>
-  <millis>1408282422707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547761</millis>
   <sequence>136</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:43</date>
-  <millis>1408282423707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547761</millis>
   <sequence>137</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:44</date>
-  <millis>1408282424707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547762</millis>
   <sequence>138</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:45</date>
-  <millis>1408282425707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547762</millis>
   <sequence>139</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:46</date>
-  <millis>1408282426707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547762</millis>
   <sequence>140</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:47</date>
-  <millis>1408282427707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547762</millis>
   <sequence>141</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:48</date>
-  <millis>1408282428707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547762</millis>
   <sequence>142</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:49</date>
-  <millis>1408282429707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547762</millis>
   <sequence>143</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:50</date>
-  <millis>1408282430707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547762</millis>
   <sequence>144</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:51</date>
-  <millis>1408282431707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547762</millis>
   <sequence>145</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:52</date>
-  <millis>1408282432707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547762</millis>
   <sequence>146</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:53</date>
-  <millis>1408282433707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547762</millis>
   <sequence>147</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:54</date>
-  <millis>1408282434707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547763</millis>
   <sequence>148</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:55</date>
-  <millis>1408282435707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547763</millis>
   <sequence>149</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:56</date>
-  <millis>1408282436707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547763</millis>
   <sequence>150</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:57</date>
-  <millis>1408282437707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547763</millis>
   <sequence>151</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:58</date>
-  <millis>1408282438707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547763</millis>
   <sequence>152</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:33:59</date>
-  <millis>1408282439707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547763</millis>
   <sequence>153</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:00</date>
-  <millis>1408282440707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547763</millis>
   <sequence>154</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:01</date>
-  <millis>1408282441707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547763</millis>
   <sequence>155</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:02</date>
-  <millis>1408282442707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547763</millis>
   <sequence>156</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:03</date>
-  <millis>1408282443707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547763</millis>
   <sequence>157</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:04</date>
-  <millis>1408282444707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547763</millis>
   <sequence>158</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:05</date>
-  <millis>1408282445707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547764</millis>
   <sequence>159</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:06</date>
-  <millis>1408282446707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547764</millis>
   <sequence>160</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:07</date>
-  <millis>1408282447707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547764</millis>
   <sequence>161</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:08</date>
-  <millis>1408282448707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547764</millis>
   <sequence>162</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:09</date>
-  <millis>1408282449707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547764</millis>
   <sequence>163</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:10</date>
-  <millis>1408282450707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547764</millis>
   <sequence>164</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:11</date>
-  <millis>1408282451707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547764</millis>
   <sequence>165</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:12</date>
-  <millis>1408282452707</millis>
+  <date>2014-08-18T14:32:27</date>
+  <millis>1408361547764</millis>
   <sequence>166</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:13</date>
-  <millis>1408282453707</millis>
+  <date>2014-08-18T14:32:28</date>
+  <millis>1408361548025</millis>
   <sequence>167</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:14</date>
-  <millis>1408282454707</millis>
+  <date>2014-08-18T14:32:29</date>
+  <millis>1408361549026</millis>
   <sequence>168</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:15</date>
-  <millis>1408282455707</millis>
+  <date>2014-08-18T14:32:30</date>
+  <millis>1408361550086</millis>
   <sequence>169</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:16</date>
-  <millis>1408282456707</millis>
+  <date>2014-08-18T14:32:31</date>
+  <millis>1408361551028</millis>
   <sequence>170</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:17</date>
-  <millis>1408282457707</millis>
+  <date>2014-08-18T14:32:32</date>
+  <millis>1408361552028</millis>
   <sequence>171</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:18</date>
-  <millis>1408282458707</millis>
+  <date>2014-08-18T14:32:33</date>
+  <millis>1408361553028</millis>
   <sequence>172</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:19</date>
-  <millis>1408282459707</millis>
+  <date>2014-08-18T14:32:34</date>
+  <millis>1408361554144</millis>
   <sequence>173</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:20</date>
-  <millis>1408282460707</millis>
+  <date>2014-08-18T14:32:35</date>
+  <millis>1408361555082</millis>
   <sequence>174</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:21</date>
-  <millis>1408282461707</millis>
+  <date>2014-08-18T14:32:36</date>
+  <millis>1408361556132</millis>
   <sequence>175</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:22</date>
-  <millis>1408282462707</millis>
+  <date>2014-08-18T14:32:37</date>
+  <millis>1408361557031</millis>
   <sequence>176</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:23</date>
-  <millis>1408282463707</millis>
+  <date>2014-08-18T14:32:38</date>
+  <millis>1408361558033</millis>
   <sequence>177</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:24</date>
-  <millis>1408282464707</millis>
+  <date>2014-08-18T14:32:39</date>
+  <millis>1408361559033</millis>
   <sequence>178</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:25</date>
-  <millis>1408282465707</millis>
+  <date>2014-08-18T14:32:40</date>
+  <millis>1408361560050</millis>
   <sequence>179</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:26</date>
-  <millis>1408282466707</millis>
+  <date>2014-08-18T14:32:41</date>
+  <millis>1408361561034</millis>
   <sequence>180</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:27</date>
-  <millis>1408282467707</millis>
+  <date>2014-08-18T14:32:42</date>
+  <millis>1408361562035</millis>
   <sequence>181</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:28</date>
-  <millis>1408282468707</millis>
+  <date>2014-08-18T14:32:43</date>
+  <millis>1408361563035</millis>
   <sequence>182</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:29</date>
-  <millis>1408282469707</millis>
+  <date>2014-08-18T14:32:44</date>
+  <millis>1408361564036</millis>
   <sequence>183</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:30</date>
-  <millis>1408282470707</millis>
+  <date>2014-08-18T14:32:45</date>
+  <millis>1408361565037</millis>
   <sequence>184</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:31</date>
-  <millis>1408282471707</millis>
+  <date>2014-08-18T14:32:46</date>
+  <millis>1408361566038</millis>
   <sequence>185</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:32</date>
-  <millis>1408282472707</millis>
+  <date>2014-08-18T14:32:47</date>
+  <millis>1408361567038</millis>
   <sequence>186</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:33</date>
-  <millis>1408282473707</millis>
+  <date>2014-08-18T14:32:48</date>
+  <millis>1408361568039</millis>
   <sequence>187</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:34</date>
-  <millis>1408282474707</millis>
+  <date>2014-08-18T14:32:49</date>
+  <millis>1408361569040</millis>
   <sequence>188</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:35</date>
-  <millis>1408282475707</millis>
+  <date>2014-08-18T14:32:50</date>
+  <millis>1408361570040</millis>
   <sequence>189</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:36</date>
-  <millis>1408282476707</millis>
+  <date>2014-08-18T14:32:51</date>
+  <millis>1408361571041</millis>
   <sequence>190</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:37</date>
-  <millis>1408282477707</millis>
+  <date>2014-08-18T14:32:52</date>
+  <millis>1408361572042</millis>
   <sequence>191</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:38</date>
-  <millis>1408282478707</millis>
+  <date>2014-08-18T14:32:53</date>
+  <millis>1408361573042</millis>
   <sequence>192</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:39</date>
-  <millis>1408282479707</millis>
+  <date>2014-08-18T14:32:54</date>
+  <millis>1408361574043</millis>
   <sequence>193</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:40</date>
-  <millis>1408282480707</millis>
+  <date>2014-08-18T14:32:55</date>
+  <millis>1408361575044</millis>
   <sequence>194</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:41</date>
-  <millis>1408282481707</millis>
+  <date>2014-08-18T14:32:56</date>
+  <millis>1408361576045</millis>
   <sequence>195</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:42</date>
-  <millis>1408282482707</millis>
+  <date>2014-08-18T14:32:57</date>
+  <millis>1408361577045</millis>
   <sequence>196</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:43</date>
-  <millis>1408282483707</millis>
+  <date>2014-08-18T14:32:58</date>
+  <millis>1408361578046</millis>
   <sequence>197</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:44</date>
-  <millis>1408282484707</millis>
+  <date>2014-08-18T14:32:59</date>
+  <millis>1408361579047</millis>
   <sequence>198</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:45</date>
-  <millis>1408282485707</millis>
+  <date>2014-08-18T14:33:00</date>
+  <millis>1408361580047</millis>
   <sequence>199</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:46</date>
-  <millis>1408282486708</millis>
+  <date>2014-08-18T14:33:01</date>
+  <millis>1408361581048</millis>
   <sequence>200</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:47</date>
-  <millis>1408282487707</millis>
+  <date>2014-08-18T14:33:02</date>
+  <millis>1408361582049</millis>
   <sequence>201</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:48</date>
-  <millis>1408282488707</millis>
+  <date>2014-08-18T14:33:03</date>
+  <millis>1408361583049</millis>
   <sequence>202</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:49</date>
-  <millis>1408282489707</millis>
+  <date>2014-08-18T14:33:04</date>
+  <millis>1408361584050</millis>
   <sequence>203</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:50</date>
-  <millis>1408282490707</millis>
+  <date>2014-08-18T14:33:05</date>
+  <millis>1408361585051</millis>
   <sequence>204</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:51</date>
-  <millis>1408282491707</millis>
+  <date>2014-08-18T14:33:06</date>
+  <millis>1408361586052</millis>
   <sequence>205</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:52</date>
-  <millis>1408282492707</millis>
+  <date>2014-08-18T14:33:07</date>
+  <millis>1408361587052</millis>
   <sequence>206</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:53</date>
-  <millis>1408282493707</millis>
+  <date>2014-08-18T14:33:08</date>
+  <millis>1408361588053</millis>
   <sequence>207</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:54</date>
-  <millis>1408282494707</millis>
+  <date>2014-08-18T14:33:09</date>
+  <millis>1408361589054</millis>
   <sequence>208</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:55</date>
-  <millis>1408282495708</millis>
+  <date>2014-08-18T14:33:10</date>
+  <millis>1408361590054</millis>
   <sequence>209</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:56</date>
-  <millis>1408282496707</millis>
+  <date>2014-08-18T14:33:11</date>
+  <millis>1408361591055</millis>
   <sequence>210</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:57</date>
-  <millis>1408282497707</millis>
+  <date>2014-08-18T14:33:12</date>
+  <millis>1408361592056</millis>
   <sequence>211</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:58</date>
-  <millis>1408282498707</millis>
+  <date>2014-08-18T14:33:13</date>
+  <millis>1408361593056</millis>
   <sequence>212</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:34:59</date>
-  <millis>1408282499707</millis>
+  <date>2014-08-18T14:33:14</date>
+  <millis>1408361594057</millis>
   <sequence>213</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:35:00</date>
-  <millis>1408282500707</millis>
+  <date>2014-08-18T14:33:15</date>
+  <millis>1408361595058</millis>
   <sequence>214</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:35:01</date>
-  <millis>1408282501707</millis>
+  <date>2014-08-18T14:33:16</date>
+  <millis>1408361596059</millis>
   <sequence>215</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
 </record>
 <record>
-  <date>2014-08-17T16:35:02</date>
-  <millis>1408282502707</millis>
+  <date>2014-08-18T14:33:17</date>
+  <millis>1408361597059</millis>
   <sequence>216</sequence>
   <logger>Logger:</logger>
   <level>WARNING</level>
   <class>viewLogic.CSharedInstance</class>
   <method>isReadyToLaunch</method>
   <thread>12</thread>
-  <message>For input string: "2014 16:33:00"</message>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:33:18</date>
+  <millis>1408361598060</millis>
+  <sequence>217</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:33:19</date>
+  <millis>1408361599061</millis>
+  <sequence>218</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:33:20</date>
+  <millis>1408361600061</millis>
+  <sequence>219</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:33:21</date>
+  <millis>1408361601062</millis>
+  <sequence>220</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:33:22</date>
+  <millis>1408361602063</millis>
+  <sequence>221</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:33:23</date>
+  <millis>1408361603063</millis>
+  <sequence>222</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:33:24</date>
+  <millis>1408361604064</millis>
+  <sequence>223</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:33:25</date>
+  <millis>1408361605065</millis>
+  <sequence>224</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:33:26</date>
+  <millis>1408361606066</millis>
+  <sequence>225</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:33:27</date>
+  <millis>1408361607066</millis>
+  <sequence>226</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:33:28</date>
+  <millis>1408361608067</millis>
+  <sequence>227</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:33:29</date>
+  <millis>1408361609068</millis>
+  <sequence>228</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:33:30</date>
+  <millis>1408361610068</millis>
+  <sequence>229</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:33:31</date>
+  <millis>1408361611069</millis>
+  <sequence>230</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:33:32</date>
+  <millis>1408361612070</millis>
+  <sequence>231</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:33:33</date>
+  <millis>1408361613070</millis>
+  <sequence>232</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:33:34</date>
+  <millis>1408361614071</millis>
+  <sequence>233</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:33:35</date>
+  <millis>1408361615072</millis>
+  <sequence>234</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:33:36</date>
+  <millis>1408361616073</millis>
+  <sequence>235</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:33:37</date>
+  <millis>1408361617073</millis>
+  <sequence>236</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:33:38</date>
+  <millis>1408361618074</millis>
+  <sequence>237</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:33:39</date>
+  <millis>1408361619076</millis>
+  <sequence>238</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:33:40</date>
+  <millis>1408361620075</millis>
+  <sequence>239</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:33:41</date>
+  <millis>1408361621076</millis>
+  <sequence>240</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:33:42</date>
+  <millis>1408361622077</millis>
+  <sequence>241</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:33:43</date>
+  <millis>1408361623077</millis>
+  <sequence>242</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:33:44</date>
+  <millis>1408361624078</millis>
+  <sequence>243</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:33:45</date>
+  <millis>1408361625079</millis>
+  <sequence>244</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:33:46</date>
+  <millis>1408361626080</millis>
+  <sequence>245</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:33:47</date>
+  <millis>1408361627080</millis>
+  <sequence>246</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:33:48</date>
+  <millis>1408361628081</millis>
+  <sequence>247</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:33:49</date>
+  <millis>1408361629082</millis>
+  <sequence>248</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:33:50</date>
+  <millis>1408361630082</millis>
+  <sequence>249</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:33:51</date>
+  <millis>1408361631084</millis>
+  <sequence>250</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:33:52</date>
+  <millis>1408361632084</millis>
+  <sequence>251</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:33:53</date>
+  <millis>1408361633084</millis>
+  <sequence>252</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:33:54</date>
+  <millis>1408361634085</millis>
+  <sequence>253</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:33:55</date>
+  <millis>1408361635086</millis>
+  <sequence>254</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:33:56</date>
+  <millis>1408361636087</millis>
+  <sequence>255</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:33:57</date>
+  <millis>1408361637087</millis>
+  <sequence>256</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:33:58</date>
+  <millis>1408361638088</millis>
+  <sequence>257</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:33:59</date>
+  <millis>1408361639089</millis>
+  <sequence>258</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:00</date>
+  <millis>1408361640089</millis>
+  <sequence>259</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:01</date>
+  <millis>1408361641090</millis>
+  <sequence>260</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:02</date>
+  <millis>1408361642091</millis>
+  <sequence>261</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:03</date>
+  <millis>1408361643091</millis>
+  <sequence>262</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:04</date>
+  <millis>1408361644092</millis>
+  <sequence>263</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:05</date>
+  <millis>1408361645093</millis>
+  <sequence>264</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:06</date>
+  <millis>1408361646145</millis>
+  <sequence>265</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:07</date>
+  <millis>1408361647095</millis>
+  <sequence>266</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:08</date>
+  <millis>1408361648336</millis>
+  <sequence>267</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:09</date>
+  <millis>1408361649126</millis>
+  <sequence>268</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:10</date>
+  <millis>1408361650096</millis>
+  <sequence>269</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:11</date>
+  <millis>1408361651330</millis>
+  <sequence>270</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:12</date>
+  <millis>1408361652098</millis>
+  <sequence>271</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:13</date>
+  <millis>1408361653098</millis>
+  <sequence>272</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:14</date>
+  <millis>1408361654099</millis>
+  <sequence>273</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:15</date>
+  <millis>1408361655161</millis>
+  <sequence>274</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:16</date>
+  <millis>1408361656155</millis>
+  <sequence>275</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:17</date>
+  <millis>1408361657155</millis>
+  <sequence>276</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:18</date>
+  <millis>1408361658100</millis>
+  <sequence>277</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:19</date>
+  <millis>1408361659100</millis>
+  <sequence>278</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:20</date>
+  <millis>1408361660101</millis>
+  <sequence>279</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:21</date>
+  <millis>1408361661101</millis>
+  <sequence>280</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:22</date>
+  <millis>1408361662101</millis>
+  <sequence>281</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:23</date>
+  <millis>1408361663102</millis>
+  <sequence>282</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:24</date>
+  <millis>1408361664102</millis>
+  <sequence>283</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:25</date>
+  <millis>1408361665102</millis>
+  <sequence>284</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:26</date>
+  <millis>1408361666103</millis>
+  <sequence>285</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:27</date>
+  <millis>1408361667462</millis>
+  <sequence>286</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:28</date>
+  <millis>1408361668103</millis>
+  <sequence>287</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:29</date>
+  <millis>1408361669103</millis>
+  <sequence>288</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:30</date>
+  <millis>1408361670128</millis>
+  <sequence>289</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:31</date>
+  <millis>1408361671105</millis>
+  <sequence>290</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:32</date>
+  <millis>1408361672104</millis>
+  <sequence>291</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:33</date>
+  <millis>1408361673105</millis>
+  <sequence>292</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:34</date>
+  <millis>1408361674552</millis>
+  <sequence>293</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:35</date>
+  <millis>1408361675105</millis>
+  <sequence>294</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:36</date>
+  <millis>1408361676401</millis>
+  <sequence>295</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:37</date>
+  <millis>1408361677309</millis>
+  <sequence>296</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:38</date>
+  <millis>1408361678106</millis>
+  <sequence>297</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:39</date>
+  <millis>1408361679106</millis>
+  <sequence>298</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:40</date>
+  <millis>1408361680576</millis>
+  <sequence>299</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:41</date>
+  <millis>1408361681107</millis>
+  <sequence>300</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:42</date>
+  <millis>1408361682107</millis>
+  <sequence>301</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:43</date>
+  <millis>1408361683108</millis>
+  <sequence>302</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:44</date>
+  <millis>1408361684150</millis>
+  <sequence>303</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:45</date>
+  <millis>1408361685108</millis>
+  <sequence>304</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:46</date>
+  <millis>1408361686109</millis>
+  <sequence>305</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:47</date>
+  <millis>1408361687109</millis>
+  <sequence>306</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:48</date>
+  <millis>1408361688109</millis>
+  <sequence>307</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:49</date>
+  <millis>1408361689109</millis>
+  <sequence>308</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:50</date>
+  <millis>1408361690110</millis>
+  <sequence>309</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:51</date>
+  <millis>1408361691191</millis>
+  <sequence>310</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:52</date>
+  <millis>1408361692110</millis>
+  <sequence>311</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:53</date>
+  <millis>1408361693111</millis>
+  <sequence>312</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:54</date>
+  <millis>1408361694112</millis>
+  <sequence>313</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:55</date>
+  <millis>1408361695111</millis>
+  <sequence>314</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:56</date>
+  <millis>1408361696242</millis>
+  <sequence>315</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:57</date>
+  <millis>1408361697112</millis>
+  <sequence>316</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:58</date>
+  <millis>1408361698112</millis>
+  <sequence>317</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:34:59</date>
+  <millis>1408361699199</millis>
+  <sequence>318</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:00</date>
+  <millis>1408361700113</millis>
+  <sequence>319</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:01</date>
+  <millis>1408361701113</millis>
+  <sequence>320</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:02</date>
+  <millis>1408361702113</millis>
+  <sequence>321</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:03</date>
+  <millis>1408361703183</millis>
+  <sequence>322</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:04</date>
+  <millis>1408361704114</millis>
+  <sequence>323</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:05</date>
+  <millis>1408361705173</millis>
+  <sequence>324</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:06</date>
+  <millis>1408361706115</millis>
+  <sequence>325</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:07</date>
+  <millis>1408361707143</millis>
+  <sequence>326</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:08</date>
+  <millis>1408361708133</millis>
+  <sequence>327</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:09</date>
+  <millis>1408361709115</millis>
+  <sequence>328</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:10</date>
+  <millis>1408361710116</millis>
+  <sequence>329</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:11</date>
+  <millis>1408361711116</millis>
+  <sequence>330</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:12</date>
+  <millis>1408361712116</millis>
+  <sequence>331</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:13</date>
+  <millis>1408361713117</millis>
+  <sequence>332</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:14</date>
+  <millis>1408361714117</millis>
+  <sequence>333</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:15</date>
+  <millis>1408361715117</millis>
+  <sequence>334</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:16</date>
+  <millis>1408361716204</millis>
+  <sequence>335</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:17</date>
+  <millis>1408361717125</millis>
+  <sequence>336</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:18</date>
+  <millis>1408361718118</millis>
+  <sequence>337</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:19</date>
+  <millis>1408361719118</millis>
+  <sequence>338</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:20</date>
+  <millis>1408361720119</millis>
+  <sequence>339</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:21</date>
+  <millis>1408361721119</millis>
+  <sequence>340</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:22</date>
+  <millis>1408361722119</millis>
+  <sequence>341</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:23</date>
+  <millis>1408361723120</millis>
+  <sequence>342</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:24</date>
+  <millis>1408361724120</millis>
+  <sequence>343</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:25</date>
+  <millis>1408361725120</millis>
+  <sequence>344</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:26</date>
+  <millis>1408361726121</millis>
+  <sequence>345</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:27</date>
+  <millis>1408361727121</millis>
+  <sequence>346</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:27</date>
+  <millis>1408361727935</millis>
+  <sequence>347</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Check tests folder's size</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:36</date>
+  <millis>1408361736144</millis>
+  <sequence>348</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Stop clix monitoring</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:42</date>
+  <millis>1408361742696</millis>
+  <sequence>349</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Add clix monitoring output to test folder2014_08_18 14_30_03_HP-UXHP-UX</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:44</date>
+  <millis>1408361744196</millis>
+  <sequence>350</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Charts generation and analysis</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:45</date>
+  <millis>1408361745100</millis>
+  <sequence>351</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Add CPU chart image to test folder2014_08_18 14_30_03_HP-UX</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:45</date>
+  <millis>1408361745245</millis>
+  <sequence>352</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Add memory chart image to test folder2014_08_18 14_30_03_HP-UX</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:45</date>
+  <millis>1408361745257</millis>
+  <sequence>353</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Add mds/mdis/mdss monitoring output to test folder2014_08_18 14_30_03_HP-UX</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:46</date>
+  <millis>1408361746739</millis>
+  <sequence>354</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Charts generation and analysis</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:46</date>
+  <millis>1408361746885</millis>
+  <sequence>355</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Add CPU chart image to test folder2014_08_18 14_30_03_HP-UX</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:47</date>
+  <millis>1408361747122</millis>
+  <sequence>356</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Add memory chart image to test folder2014_08_18 14_30_03_HP-UX</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:47</date>
+  <millis>1408361747133</millis>
+  <sequence>357</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Add mds/mdis/mdss monitoring output to test folder2014_08_18 14_30_03_HP-UX</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:49</date>
+  <millis>1408361749353</millis>
+  <sequence>358</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Charts generation and analysis</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:49</date>
+  <millis>1408361749529</millis>
+  <sequence>359</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Add CPU chart image to test folder2014_08_18 14_30_03_HP-UX</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:49</date>
+  <millis>1408361749638</millis>
+  <sequence>360</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Add memory chart image to test folder2014_08_18 14_30_03_HP-UX</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:49</date>
+  <millis>1408361749649</millis>
+  <sequence>361</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Add mds/mdis/mdss monitoring output to test folder2014_08_18 14_30_03_HP-UX</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:50</date>
+  <millis>1408361750158</millis>
+  <sequence>362</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Add vmstat monitoring output to test folder2014_08_18 14_30_03_HP-UX</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:51</date>
+  <millis>1408361751252</millis>
+  <sequence>363</sequence>
+  <logger>Logger:</logger>
+  <level>INFO</level>
+  <class>unix.ExecuteUnixOperations</class>
+  <method>finish</method>
+  <thread>12</thread>
+  <message>Charts generation and analysis</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:51</date>
+  <millis>1408361751266</millis>
+  <sequence>364</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:51</date>
+  <millis>1408361751266</millis>
+  <sequence>365</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:51</date>
+  <millis>1408361751267</millis>
+  <sequence>366</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:51</date>
+  <millis>1408361751267</millis>
+  <sequence>367</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:51</date>
+  <millis>1408361751267</millis>
+  <sequence>368</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:51</date>
+  <millis>1408361751268</millis>
+  <sequence>369</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:51</date>
+  <millis>1408361751268</millis>
+  <sequence>370</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:51</date>
+  <millis>1408361751268</millis>
+  <sequence>371</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:51</date>
+  <millis>1408361751268</millis>
+  <sequence>372</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:51</date>
+  <millis>1408361751269</millis>
+  <sequence>373</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:51</date>
+  <millis>1408361751269</millis>
+  <sequence>374</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:51</date>
+  <millis>1408361751269</millis>
+  <sequence>375</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:51</date>
+  <millis>1408361751269</millis>
+  <sequence>376</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:51</date>
+  <millis>1408361751269</millis>
+  <sequence>377</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:51</date>
+  <millis>1408361751269</millis>
+  <sequence>378</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:51</date>
+  <millis>1408361751270</millis>
+  <sequence>379</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:51</date>
+  <millis>1408361751270</millis>
+  <sequence>380</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:51</date>
+  <millis>1408361751270</millis>
+  <sequence>381</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:51</date>
+  <millis>1408361751270</millis>
+  <sequence>382</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:51</date>
+  <millis>1408361751270</millis>
+  <sequence>383</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:51</date>
+  <millis>1408361751270</millis>
+  <sequence>384</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:51</date>
+  <millis>1408361751271</millis>
+  <sequence>385</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:51</date>
+  <millis>1408361751271</millis>
+  <sequence>386</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
+</record>
+<record>
+  <date>2014-08-18T14:35:51</date>
+  <millis>1408361751271</millis>
+  <sequence>387</sequence>
+  <logger>Logger:</logger>
+  <level>WARNING</level>
+  <class>viewLogic.CSharedInstance</class>
+  <method>isReadyToLaunch</method>
+  <thread>12</thread>
+  <message>For input string: "2014 14:32:00"</message>
 </record>

@@ -53,7 +53,7 @@ public class CViewConstants {
 	public static final String START_IMMEDIATELY = "Immediately";
 
 	/** The Constant START_FRAME_TIME. */
-	public static final String START_FRAME_TIME = "FrameTime";
+	public static final String START_FRAME_TIME = "Time Frame";
 
 	/** The Constant START_FROM_TIME. */
 	public static final String START_FROM_TIME = "startFromTime";

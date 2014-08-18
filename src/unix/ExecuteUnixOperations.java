@@ -467,8 +467,8 @@ public class ExecuteUnixOperations extends CommandExecuter {
 							"Add CPU chart image to test folder"
 									+ TestFolderName);
 					CPUchartGeneration.pack();
-					RefineryUtilities.centerFrameOnScreen(CPUchartGeneration);
-					CPUchartGeneration.setVisible(true);
+					//RefineryUtilities.centerFrameOnScreen(CPUchartGeneration);
+					//CPUchartGeneration.setVisible(true);
 
 					// Create VSZ Chart
 					Double[] VSZ = excelManagement.getMemory("VSZ", fileName,
@@ -482,8 +482,8 @@ public class ExecuteUnixOperations extends CommandExecuter {
 							"Add memory chart image to test folder"
 									+ TestFolderName);
 					VSZchartGeneration.pack();
-					RefineryUtilities.centerFrameOnScreen(VSZchartGeneration);
-					VSZchartGeneration.setVisible(true);
+					//RefineryUtilities.centerFrameOnScreen(VSZchartGeneration);
+					//VSZchartGeneration.setVisible(true);
 					TestFolder.addFileToFolder(fileName);
 					MonLogger.myLogger.log(Level.INFO,
 							"Add mds/mdis/mdss monitoring output to test folder"
