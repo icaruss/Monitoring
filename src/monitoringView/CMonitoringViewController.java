@@ -10,6 +10,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -21,14 +22,12 @@ import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.ss.formula.ptg.TblPtg;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.xssf.usermodel.*;
 
 import viewLogic.CSharedInstance;
 import viewLogic.CViewConstants.DirectoryDirection;
 import viewLogic.CViewConstants.FileType;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -37,10 +36,16 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.SplitPane;
 import javafx.scene.control.SplitPane.Divider;
+import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TableView.ResizeFeatures;
+import javafx.scene.control.cell.MapValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.util.Callback;
+import javafx.util.StringConverter;
 
 
 // TODO: Auto-generated Javadoc
@@ -58,7 +63,7 @@ public class CMonitoringViewController implements Initializable {
 	@SuppressWarnings("rawtypes")
 	@FXML
 	// fx:id="tbView"
-	private TableView tbView; // Value injected by FXMLLoader
+	private TableView<Map> tbView; // Value injected by FXMLLoader
 
 	/** The btn previous result. */
 	@FXML
@@ -101,13 +106,18 @@ public class CMonitoringViewController implements Initializable {
 	
 	public SplitPane spltPane;
 	
+	@FXML
+	// fx:id="lblTbl"
+	private Label lblTbl;
+	
 
 	// ////// logic Variables //////
-	Vector<Image> vectorOfImages;
+	private Vector<Image> vectorOfImages;
 	private int currentIndexOfImages;
 
 	private int currentIndexOfTables;
-	Vector<File> vectorOfExcelFiles;
+	private Vector<File> vectorOfExcelFiles;
+	
 
 	// ////// end logic Variables ///
 
@@ -117,6 +127,7 @@ public class CMonitoringViewController implements Initializable {
 	 * @see javafx.fxml.Initializable#initialize(java.net.URL,
 	 * java.util.ResourceBundle)
 	 */
+	@SuppressWarnings("rawtypes")
 	public void initialize(URL fxmlFileLocation, ResourceBundle resources) {
 		assert lblResultID != null : "fx:id=\"lblResultID\" was not injected: check your FXML file 'Monitoring_Page.fxml'.";
 		assert tbView != null : "fx:id=\"tbView\" was not injected: check your FXML file 'Monitoring_Page.fxml'.";
@@ -128,6 +139,8 @@ public class CMonitoringViewController implements Initializable {
 		assert btnNextTable != null : "fx:id=\"btnNextTable\" was not injected: check your FXML file 'Monitoring_Page.fxml'.";
 		assert btnPrevTable != null : "fx:id=\"btnPrevTable\" was not injected: check your FXML file 'Monitoring_Page.fxml'.";
 		assert ImgBox != null : "fx:id=\"imgBox\" was not injected: check your FXML file 'Monitoring_Page.fxml'.";
+		assert lblTbl != null : "fx:id=\"lblTbl\" was not injected: check your FXML file 'Monitoring_Page.fxml'.";
+		
 		// Initialize your logic here: all @FXML variables will have been
 		// injected
 		
@@ -164,6 +177,19 @@ public class CMonitoringViewController implements Initializable {
 			}
 
 		}
+		
+		
+		tbView.setColumnResizePolicy(new Callback<TableView.ResizeFeatures, Boolean>() 
+		{
+			  @Override
+			  public Boolean call(ResizeFeatures p) 
+			  {
+			     return true;
+			  }
+
+			
+			});
+		
 
 		if (isTestsExists) {
 			loadDataFileToViewVariables();
@@ -225,8 +251,6 @@ public class CMonitoringViewController implements Initializable {
 				
 				loadDataFileToViewVariables();
 
-				setImageToViewByIndex();
-				setExcelFileToViewByIndex();
 			}
 
 		});
@@ -246,8 +270,6 @@ public class CMonitoringViewController implements Initializable {
 				
 				loadDataFileToViewVariables();
 
-				setImageToViewByIndex();
-				setExcelFileToViewByIndex();
 			}
 
 		});
@@ -324,10 +346,9 @@ public class CMonitoringViewController implements Initializable {
 			Image img = new Image(file.toURI().toString());
 			vectorOfImages.add(img);
 		}
-
-		if (vectorOfImages.size() > 0) {
+		
+		if (vectorOfImages.size() > 0)
 			setImageToViewByIndex();
-		}
 
 		// Load Files to vector
 		Vector<String> vecOfExcelFileNames = sharedInstance
@@ -408,12 +429,12 @@ public class CMonitoringViewController implements Initializable {
 	}
 	
 	
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings({ "rawtypes" })
 	public void loadTableData(File file)
 	{
+		ObservableList<Map> allData = FXCollections.observableArrayList();
 		
-		Map <Integer,Vector<String>> map = new HashMap<Integer, Vector<String>>();
-		
+		Vector<String> columnHeaders = new Vector<String>();
 		
 		// retrieving all columns from current file
 		try
@@ -423,29 +444,51 @@ public class CMonitoringViewController implements Initializable {
 			HSSFWorkbook workbook = new HSSFWorkbook(fileInput);
 			HSSFSheet sheet = workbook.getSheetAt(0);
 			
-			for (int i = sheet.getFirstRowNum() ; i <= sheet.getLastRowNum() ; ++i)
+			for (int i = sheet.getFirstRowNum() ; i < sheet.getLastRowNum() ; ++i)
 			{
 				HSSFRow row_ = sheet.getRow(i);
+				
+				Map<String, String> dataRow = new HashMap<String, String>();
 
 				for (int j = row_.getFirstCellNum() ; j < row_.getLastCellNum() ; ++j)
 				{
 					HSSFCell cell_ = row_.getCell(j);
 					
-					if (i == 0)
+					if (i == 0) // Adding all column headers
 					{
-						Vector<String> vec = new Vector<String>();
-	            		
-	            		vec.add(cell_.getStringCellValue());
-	            		
-	            		map.put(j, vec);
+						if (cell_.getCellType() == HSSFCell.CELL_TYPE_NUMERIC)
+	            		{
+							columnHeaders.add(String.valueOf(cell_.getColumnIndex()));
+	            		}
+	            		else if (cell_.getCellType() == HSSFCell.CELL_TYPE_STRING)
+	            		{
+	            			columnHeaders.add(cell_.getStringCellValue());
+	            		}
+	            		else
+	            		{
+	            			columnHeaders.add("N/A");
+	            		}
 					}
-					else
+					else // adding the rest of the data
 	            	{
-	            		Vector<String> vec = map.get(j);
-	            		vec.add(cell_.getStringCellValue());
+	            		if (cell_.getCellType() == HSSFCell.CELL_TYPE_NUMERIC)
+	            		{
+	            			dataRow.put(columnHeaders.elementAt(j), String.valueOf(cell_.getColumnIndex()));
+	            		}
+	            		else if (cell_.getCellType() == HSSFCell.CELL_TYPE_STRING)
+	            		{
+	            			dataRow.put(columnHeaders.elementAt(j), String.valueOf(cell_.getStringCellValue()));
+	            		}
+	            		else
+	            		{
+	            			dataRow.put(columnHeaders.elementAt(j),"N/A");
+	            		}
+	            		
 	            	}
 					
 				}
+				
+				allData.add(dataRow);
 			}
 		}
 		catch (FileNotFoundException e) 
@@ -456,31 +499,54 @@ public class CMonitoringViewController implements Initializable {
 		{
 			e.printStackTrace();
 		}
-	
 		
-		// STILL IN PROGRESS
+		this.tbView.getColumns().clear();
 		
-		/*// Updating table view with columns
-		for (Integer i : map.keySet())
+		this.tbView.setItems(allData);
+		
+		
+		Callback<TableColumn<Map, String>, TableCell<Map, String>>  cellFactoryForMap = new Callback<TableColumn<Map, String>, TableCell<Map, String>>() 
 		{
-			Vector<String> vec = map.get(i);
+                @SuppressWarnings("unchecked")
+				@Override
+                public TableCell call(TableColumn p) 
+                {
+                    return new TextFieldTableCell(new StringConverter() 
+                    {
+                        @Override
+                        public String toString(Object t)
+                        {
+                            return t.toString();
+                        }
+                        @Override
+                        public Object fromString(String string) 
+                        {
+                            return string;
+                        }                                    
+                    });
+                }
+		};
+		
+		
+		tbView.setEditable(false);
+		tbView.getSelectionModel().setCellSelectionEnabled(false);
+		
+		for (String str : columnHeaders)
+		{
+			TableColumn<Map, String> column = new TableColumn<Map, String>(str);
+			column.setCellValueFactory(new MapValueFactory<String>(str));
 			
-			TableColumn tblColumn = new TableColumn();
-			tblColumn.
+			column.setCellFactory(cellFactoryForMap);
 			
-			//tbView.getColumns().add(new Table);
-		}*/
+			this.tbView.getColumns().add(column);
+		}
+		
+		this.tbView.setColumnResizePolicy(TableView.UNCONSTRAINED_RESIZE_POLICY);
+		
+		// data added to table - label change
+		this.lblTbl.setText("Current Table : " + file.getName());
+		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 

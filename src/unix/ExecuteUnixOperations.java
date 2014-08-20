@@ -19,8 +19,6 @@ import java.util.Map;
 
 import log.MonLogger;
 
-import org.jfree.ui.RefineryUtilities;
-
 import viewLogic.CSharedInstance;
 import Charts.ChartGeneration;
 import FilesManagment.Converter;
