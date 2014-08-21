@@ -76,11 +76,14 @@ public abstract class FilesManagment {
 
 	/**
 	 * Gets the total lines num.
+	 * @param inputFile 
+	 * @param lineToRemove 
 	 * 
 	 * @param inputFileName
 	 *            the input file name
 	 * @return the total lines num
 	 */
+	
 	public int getTotalLinesNum(String inputFileName) {
 		File inputFile = new File(inputFileName);
 		int linesNum = 0;
@@ -105,6 +108,25 @@ public abstract class FilesManagment {
 
 		return linesNum;
 	}
+	
+	public boolean checkIfLineExist(String inputFile, String lineToRemove) throws IOException
+	{
+		@SuppressWarnings("resource")
+		BufferedReader reader = new BufferedReader(new FileReader(inputFile));
+
+		String currentLine;
+
+		while ((currentLine = reader.readLine()) != null) {
+			// trim newline when comparing with lineToRemove
+			String trimmedLine = currentLine.trim();
+			if (trimmedLine.equals(lineToRemove))
+				return true;
+		}
+				
+		return false;
+		
+	}
+	
 
 	/**
 	 * Rename file.
@@ -269,12 +291,13 @@ public abstract class FilesManagment {
 		}
 		writer.close();
 		reader.close();
+		tempFile.renameTo(inputFile);
 		inputFile.delete();
-		boolean successful = tempFile.renameTo(inputFile);
-		if (successful)
+		
+/*		if (successful)
 			System.out.println(lineToRemove + " has been removed");
 		else
-			System.out.println(lineToRemove + " has NOT been removed");
+			System.out.println(lineToRemove + " has NOT been removed");*/
 	}
 
 	/**

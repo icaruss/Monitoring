@@ -110,6 +110,9 @@ public class clix extends winUnixOperations {
 			copyFromUnix(clixFileName);
 			this.execute("rm clixMon.sh");
 			this.execute("rm " + clixFileName);
+			MonLogger.myLogger.log(Level.INFO,
+					"clix process has been stoped, and output files has been removed");
+						
 		} catch (JSchException e) {
 			MonLogger.myLogger.log(Level.WARNING, e.getMessage());
 			MonLogger.myLogger.log(Level.WARNING, e.getStackTrace().toString());

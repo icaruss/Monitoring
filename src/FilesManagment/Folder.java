@@ -109,12 +109,15 @@ public class Folder extends File {
 	 *             Signals that an I/O exception has occurred.
 	 */
 	public void addFileToFolder(String fileName) throws IOException {
-		File tmpFile = new File(folder.getAbsolutePath() + "\\" + fileName);
-		fileNames.add(fileName);
-		fullFileNames.add(folder.getAbsolutePath() + "\\" + fileName);
-		files.add(tmpFile);
-		FilesManagment fm = new FileManagmentOperations();
-		fm.renameFile(fileName, folder.getAbsolutePath() + "\\" + fileName);
+		if (fileName != null)
+		{
+			File tmpFile = new File(folder.getAbsolutePath() + "\\" + fileName);
+			fileNames.add(fileName);
+			fullFileNames.add(folder.getAbsolutePath() + "\\" + fileName);
+			files.add(tmpFile);
+			FilesManagment fm = new FileManagmentOperations();
+			fm.renameFile(fileName, folder.getAbsolutePath() + "\\" + fileName);
+		}
 	}
 
 	/**

@@ -14,8 +14,8 @@ missions to complete :
 3.1 Directories of monitoring test , written in exe directory : For deployment project
 3.2 excel files - make all columns to have Headlines , if none exists - Write NA / any other format - Needed for table view
 
-3.2 BUGS (ZOHAR):
-	3. The time left line is not updated.
+3.2 BUGS:
+	1. The time left line is not updated.
 
 
 

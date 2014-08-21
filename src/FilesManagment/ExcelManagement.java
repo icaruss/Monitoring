@@ -8,7 +8,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-
+import java.text.ParseException;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Date;
@@ -277,7 +277,7 @@ public class ExcelManagement extends FilesManagment {
 	 *            the test folder
 	 */
 	public void mainExcelFlow(int RSSVSZColNum, int maxDiff, int interval,
-			Folder testFolder) {
+			Folder testFolder)  {
 		try {
 			if (getDiff2Cells(filePath, RSSVSZColNum) == null) {
 				return;
@@ -353,11 +353,13 @@ public class ExcelManagement extends FilesManagment {
 
 			}
 
-		} catch (FileNotFoundException e) {
+		} 
+		catch (FileNotFoundException e) {
 			MonLogger.myLogger.log(Level.WARNING, e.getMessage());
 			MonLogger.myLogger.log(Level.WARNING, e.getStackTrace().toString());
 			e.printStackTrace();
-		} catch (IOException e) {
+		} 
+		catch (IOException e) {
 			MonLogger.myLogger.log(Level.WARNING, e.getMessage());
 			MonLogger.myLogger.log(Level.WARNING, e.getStackTrace().toString());
 			e.printStackTrace();

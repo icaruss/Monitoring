@@ -308,7 +308,7 @@ public class DateOperations extends FilesManagment {
 		} catch (ParseException e) {
 			MonLogger.myLogger.log(Level.WARNING, e.getMessage());
 			MonLogger.myLogger.log(Level.WARNING, e.getStackTrace().toString());
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		return date;
 

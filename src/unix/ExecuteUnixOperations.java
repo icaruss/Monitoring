@@ -235,7 +235,6 @@ public class ExecuteUnixOperations extends CommandExecuter {
 					"Kill vmstat and AV_monitoring processes if running");
 
 			runkillSH.killProcesses(mon_file);
-
 			MonLogger.myLogger.log(Level.INFO,
 					"Remove old monitoring files from OS");
 
@@ -367,6 +366,8 @@ public class ExecuteUnixOperations extends CommandExecuter {
 
 			runkillSH.copyFilesToWin();
 			runkillSH.removeFilesFromUnix();
+			
+			Boolean clixFileNotExist = false;
 			if (clixOn) {
 				MonLogger.myLogger.log(Level.INFO, "Stop clix monitoring");
 				clixCommand = new clix(String.valueOf(interval), port,
@@ -374,11 +375,19 @@ public class ExecuteUnixOperations extends CommandExecuter {
 				clixCommand.stopClix();
 				clixCommand.killProcesses();
 				ParseClix parseClix = new ParseClix();
-				TestFolder.addFileToFolder(parseClix
-						.parseClixOut("clix_mon.out"));
-				MonLogger.myLogger.log(Level.INFO,
-						"Add clix monitoring output to test folder"
-								+ TestFolderName + getOS());
+				
+				if (parseClix.parseClixOut("clix_mon.out") == null)
+				{
+					clixFileNotExist = true;
+				}
+				else
+				{
+					TestFolder.addFileToFolder(parseClix
+							.parseClixOut("clix_mon.out"));
+					MonLogger.myLogger.log(Level.INFO,
+							"Add clix monitoring output to test folder"
+									+ TestFolderName + getOS());
+				}
 
 			}
 
@@ -486,7 +495,7 @@ public class ExecuteUnixOperations extends CommandExecuter {
 					MonLogger.myLogger.log(Level.INFO,
 							"Add mds/mdis/mdss monitoring output to test folder"
 									+ TestFolderName);
-					if (fileName.startsWith("mds_")) {
+					if (fileName.startsWith("mds_") && clixFileNotExist == false ) {
 						excelManagement.mainExcelFlow(4, 0, interval,
 								TestFolder);
 					}
