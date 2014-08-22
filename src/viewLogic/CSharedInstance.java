@@ -60,6 +60,10 @@ public class CSharedInstance {
 
 	/** The execute unix operations. */
 	public ExecuteUnixOperations executeUnixOperations;
+	
+	public int settingsOpenedInstances;
+	
+	public int monitoringOpenedInstances;
 
 	/** The shared instance. */
 	private static CSharedInstance sharedInstance = new CSharedInstance();
@@ -79,6 +83,9 @@ public class CSharedInstance {
 		isMonitoringDone = true;
 		monitoringStartTime = null;
 		executeUnixOperations = null;
+		
+		settingsOpenedInstances = 0;
+		monitoringOpenedInstances = 0;
 
 		currentMonitoring = CViewConstants.MonitorType.MonitorTypeElse;
 

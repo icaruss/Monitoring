@@ -538,10 +538,13 @@ public class CMonitoringViewController implements Initializable {
 			
 			column.setCellFactory(cellFactoryForMap);
 			
+			column.setMaxWidth(150);
+			column.setMinWidth(150);
+			
 			this.tbView.getColumns().add(column);
 		}
 		
-		this.tbView.setColumnResizePolicy(TableView.UNCONSTRAINED_RESIZE_POLICY);
+		this.tbView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
 		
 		// data added to table - label change
 		this.lblTbl.setText("Current Table : " + file.getName());

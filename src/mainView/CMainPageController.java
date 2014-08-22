@@ -62,6 +62,8 @@ public class CMainPageController implements Initializable {
 
 	/** Label showing current information. */
 	public Label lblInfo;
+	
+	
 
 	/*
 	 * (non-Javadoc)
@@ -81,12 +83,20 @@ public class CMainPageController implements Initializable {
 
 		// Initialize your logic here: all @FXML variables will have been
 		// injected
+		
+
+		
 		btnStopMonitoring.setDisable(true);
 
 		btnSettings.setOnAction(new EventHandler<ActionEvent>() {
 
 			@Override
-			public void handle(ActionEvent event) {
+			public void handle(ActionEvent event) 
+			{
+				if (CSharedInstance.getInstance().settingsOpenedInstances >= 1)
+					return;
+				
+				CSharedInstance.getInstance().settingsOpenedInstances++;
 				new settingsView.CSettingsStage();
 			}
 		});
@@ -94,9 +104,8 @@ public class CMainPageController implements Initializable {
 		btnStopMonitoring.setOnAction(new EventHandler<ActionEvent>() {
 
 			@Override
-			public void handle(ActionEvent event) {
-				System.out.println("btnStopMonitoring Event On Occured");
-
+			public void handle(ActionEvent event) 
+			{
 				StopMonitoring(CSharedInstance.getInstance().currentMonitoring);
 			}
 		});
@@ -104,7 +113,12 @@ public class CMainPageController implements Initializable {
 		btnShowMonitoringResults.setOnAction(new EventHandler<ActionEvent>() {
 
 			@Override
-			public void handle(ActionEvent event) {
+			public void handle(ActionEvent event) 
+			{
+				if (CSharedInstance.getInstance().monitoringOpenedInstances >= 2)
+					return;
+				
+				CSharedInstance.getInstance().monitoringOpenedInstances++;
 				new monitoringView.CMonitoringStage();
 			}
 		});
@@ -115,9 +129,11 @@ public class CMainPageController implements Initializable {
 			public void run() {
 				Platform.runLater(new Runnable() {
 					public void run() {
-						if (CSharedInstance.getInstance().isReadyToLaunch()) {
+						
+						if (CSharedInstance.getInstance().isReadyToLaunch())
+						{
 							setButtonsDisableState(true);
-
+							
 							int cnt = 0;
 
 							if (CSharedInstance.getInstance().totalSecondsCountdown > 0) {
@@ -166,6 +182,11 @@ public class CMainPageController implements Initializable {
 							}
 
 						}
+						else
+						{
+							setButtonsDisableState(false);
+						}
+						
 					}
 				});
 			}
@@ -181,7 +202,8 @@ public class CMainPageController implements Initializable {
 	 */
 	public void StopMonitoring(MonitorType monitorType) {
 
-		if (CSharedInstance.getInstance().executeUnixOperations != null) {
+		if (CSharedInstance.getInstance().executeUnixOperations != null)
+		{
 			// toolTipPbar.setText("Monitoring Finished");
 			lblInfo.setText("Monitoring Finished");
 
@@ -211,14 +233,34 @@ public class CMainPageController implements Initializable {
 	 * @param isRunning
 	 *            the new buttons disable state
 	 */
-	public void setButtonsDisableState(Boolean isRunning) {
-		if (isRunning) {
+	public void setButtonsDisableState(Boolean isRunning) 
+	{
+		if (isRunning)
+		{
 			btnSettings.setDisable(true);
 			btnStopMonitoring.setDisable(false);
-		} else {
-			btnSettings.setDisable(false);
+		} 
+		else 
+		{
 			btnStopMonitoring.setDisable(true);
-
+			
+			if (CSharedInstance.getInstance().settingsOpenedInstances >= 1)
+			{
+				btnSettings.setDisable(true);
+			}
+			else
+			{
+				btnSettings.setDisable(false);
+			}
+			
+			if (CSharedInstance.getInstance().monitoringOpenedInstances >= 2)
+			{
+				btnShowMonitoringResults.setDisable(true);
+			}
+			else 
+			{
+				btnShowMonitoringResults.setDisable(false);
+			}
 		}
 	}
 

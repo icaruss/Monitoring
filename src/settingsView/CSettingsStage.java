@@ -7,12 +7,15 @@ import java.net.URL;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import viewLogic.CSharedInstance;
 import mainView.Main;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -44,6 +47,16 @@ public class CSettingsStage {
 			stage.getIcons().add(
 					new Image(getClass()
 							.getResourceAsStream("iconSettings.jpg")));
+			
+			stage.setOnCloseRequest(new EventHandler<WindowEvent>()
+			{
+				public void handle(WindowEvent we)
+				{
+					if (CSharedInstance.getInstance().settingsOpenedInstances > 0)
+						CSharedInstance.getInstance().settingsOpenedInstances--;
+				}
+			});
+			
 			stage.show();
 
 			stage.requestFocus();
@@ -56,7 +69,8 @@ public class CSettingsStage {
 	/**
 	 * Close stage.
 	 */
-	public void closeStage() {
+	public void closeStage() 
+	{
 		stage.close();
 		stage = null;
 	}
