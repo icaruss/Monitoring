@@ -20,6 +20,7 @@ import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellStyle;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -74,6 +75,7 @@ public class Converter extends FilesManagment {
 					 * .substring(endIndex, line.length()); //
 					 * System.out.println(Second); line = first + " " + Second;
 					 */// Not needed, since the ps command output was changed
+					
 					out.write(line.replaceAll("\\s+", ","));
 					out.newLine();
 					out.flush();
@@ -136,6 +138,7 @@ public class Converter extends FilesManagment {
 			HSSFSheet sheet = hwb.createSheet("new sheet");
 			HSSFCellStyle style = hwb.createCellStyle();
 			style.setWrapText(true);
+			style.setAlignment(CellStyle.ALIGN_CENTER);
 
 			for (int k = 0; k < arList.size(); k++) {
 				ArrayList<?> ardata = (ArrayList<?>) arList.get(k);

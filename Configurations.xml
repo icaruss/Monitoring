@@ -72,6 +72,14 @@
         <string>5</string>
       </entry>
       <entry>
+        <string>start</string>
+        <string>Immediately</string>
+      </entry>
+      <entry>
+        <string>mdsr</string>
+        <boolean>true</boolean>
+      </entry>
+      <entry>
         <string>clix</string>
         <boolean>true</boolean>
       </entry>
@@ -80,32 +88,12 @@
         <boolean>true</boolean>
       </entry>
       <entry>
-        <string>startToTime</string>
-        <string>18-08-2014 14:36:00</string>
-      </entry>
-      <entry>
-        <string>password</string>
-        <string>a2i2000!</string>
-      </entry>
-      <entry>
-        <string>startFromTime</string>
-        <string>18-08-2014 14:32:00</string>
-      </entry>
-      <entry>
-        <string>start</string>
-        <string>Time Frame</string>
-      </entry>
-      <entry>
-        <string>mdsr</string>
-        <boolean>true</boolean>
+        <string>userName</string>
+        <string>hp1adm</string>
       </entry>
       <entry>
         <string>hostName</string>
         <string>iltlvh325</string>
-      </entry>
-      <entry>
-        <string>userName</string>
-        <string>hp1adm</string>
       </entry>
       <entry>
         <string>instance</string>
@@ -114,6 +102,10 @@
       <entry>
         <string>mdssr</string>
         <boolean>true</boolean>
+      </entry>
+      <entry>
+        <string>password</string>
+        <string>a2i2000!</string>
       </entry>
       <entry>
         <string>configurationID</string>

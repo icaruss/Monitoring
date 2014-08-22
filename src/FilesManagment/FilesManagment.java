@@ -182,12 +182,12 @@ public abstract class FilesManagment {
 				String tmp2 = null;
 				if (i == 0) {
 					if (fileName.startsWith("vmstat")) {
-						tmp2 = list.get(i);
+						tmp2 = "Date, " + list.get(i);
 						list.remove(i);
 						list.add(i, tmp2);
 
 					} else {
-						tmp2 = "," + list.get(i);
+						tmp2 = "Date, " + list.get(i);
 						list.remove(i);
 						list.add(i, tmp2);
 					}

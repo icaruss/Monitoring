@@ -1,6 +1,4 @@
 #!/usr/local/bin/bash
-#
-#AUTHOR: Guy Moskovich & Alina Vainshtein
 #Date: 02/12/2009
 #PLATFORM:AIX, HP-UX, Linux, Solaris
 #
@@ -587,7 +585,7 @@ if ( [ $# -ge 0 ] ) ; then
 		
 case $os in
 AIX)
-		params="user,pid,pcpu,pmem,vsz,rssize,start,time,args"
+		params="user,pid,pcpu,pmem,vsz,rssize,args"
 		PS="ps -eo$params"
 		
 		createHeader "$numOfParam"
@@ -595,7 +593,7 @@ AIX)
 		;;
 
 Linux)
-		params="user,pid,pcpu,pmem,vsz,rssize,start,time,args"
+		params="user,pid,pcpu,pmem,vsz,rssize,args"
 		PS="ps -eo$params"
 		
 		createHeader "$numOfParam"
@@ -603,7 +601,7 @@ Linux)
 		;;
 
 SunOS)		
-		params="user,pid,pcpu,pmem,vsz,rss,stime,time,args"
+		params="user,pid,pcpu,pmem,vsz,rss,args"
 		PS="ps -eo $params" 
 
 		createHeader "$numOfParam"
@@ -611,7 +609,7 @@ SunOS)
 		;;
 
 HP-UX)
-		params="user,pid,pcpu,vsz,stime,time,args"
+		params="user,pid,pcpu,vsz,args"
 		PS="ps -ae -o $params"
 		
 		createHeader "$numOfParam"
