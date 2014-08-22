@@ -10,10 +10,15 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane blendMode="SRC_OVER" minWidth="828.0" prefHeight="969.0" prefWidth="828.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="monitoringView.CMonitoringViewController">
+<AnchorPane blendMode="SRC_OVER" minHeight="961.53271484375" minWidth="828.0" prefHeight="961.53271484375" prefWidth="828.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="monitoringView.CMonitoringViewController">
   <!-- TODO Add Nodes -->
   <children>
-    <SplitPane fx:id="spltPane" disable="false" dividerPositions="0.5460674157303371" focusTraversable="true" layoutX="0.0" layoutY="0.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" pickOnBounds="true" prefHeight="892.0" prefWidth="842.0">
+    <ImageView disable="false" fitHeight="1010.53271484375" fitWidth="872.3040771484375" layoutX="-18.0" layoutY="-17.0" pickOnBounds="true" preserveRatio="false">
+      <image>
+        <Image url="@../../images/background.jpg" />
+      </image>
+    </ImageView>
+    <SplitPane fx:id="spltPane" disable="false" dividerPositions="0.5460674157303371" focusTraversable="true" layoutX="0.0" layoutY="0.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" pickOnBounds="true" prefHeight="892.0" prefWidth="842.0" style="-fx-background-color: #FFFACD">
       <items>
         <AnchorPane disable="false" minHeight="0.0" minWidth="0.0" prefHeight="554.0" prefWidth="607.0" visible="true">
           <children>

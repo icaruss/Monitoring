@@ -4,6 +4,7 @@
 
 package monitoringView;
 
+import java.awt.Color;
 import java.awt.Desktop;
 import java.io.File;
 import java.io.FileInputStream;
@@ -19,9 +20,11 @@ import java.util.Set;
 import java.util.Vector;
 
 import org.apache.poi.hssf.usermodel.HSSFCell;
+import org.apache.poi.hssf.usermodel.HSSFPalette;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.hssf.util.HSSFColor;
 
 import viewLogic.CSharedInstance;
 import viewLogic.CViewConstants.DirectoryDirection;
@@ -38,6 +41,7 @@ import javafx.scene.control.SplitPane;
 import javafx.scene.control.SplitPane.Divider;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TableView.ResizeFeatures;
 import javafx.scene.control.cell.MapValueFactory;
@@ -436,6 +440,9 @@ public class CMonitoringViewController implements Initializable {
 		
 		Vector<String> columnHeaders = new Vector<String>();
 		
+		
+		final Map <Integer, String> cellToColor = new HashMap<Integer, String>();
+		
 		// retrieving all columns from current file
 		try
 		{
@@ -444,7 +451,7 @@ public class CMonitoringViewController implements Initializable {
 			HSSFWorkbook workbook = new HSSFWorkbook(fileInput);
 			HSSFSheet sheet = workbook.getSheetAt(0);
 			
-			for (int i = sheet.getFirstRowNum() ; i < sheet.getLastRowNum() ; ++i)
+			for (int i = sheet.getFirstRowNum() ; i <= sheet.getLastRowNum() ; ++i)
 			{
 				HSSFRow row_ = sheet.getRow(i);
 				
@@ -488,7 +495,14 @@ public class CMonitoringViewController implements Initializable {
 					
 				}
 				
-				allData.add(dataRow);
+				int indexFirstCell = row_.getFirstCellNum();
+				
+				String hexOfColor = CMonitoringViewController.extractBackgroundColor(row_.getCell(indexFirstCell), workbook);
+				
+				cellToColor.put(i, hexOfColor);
+				
+				if (i != 0)
+					allData.add(dataRow);
 			}
 		}
 		catch (FileNotFoundException e) 
@@ -507,25 +521,34 @@ public class CMonitoringViewController implements Initializable {
 		
 		Callback<TableColumn<Map, String>, TableCell<Map, String>>  cellFactoryForMap = new Callback<TableColumn<Map, String>, TableCell<Map, String>>() 
 		{
-                @SuppressWarnings("unchecked")
-				@Override
-                public TableCell call(TableColumn p) 
+                @Override
+                public TableCell call(TableColumn param)
                 {
-                    return new TextFieldTableCell(new StringConverter() 
+                    return new TableCell<Map, String>()
                     {
+                        
                         @Override
-                        public String toString(Object t)
+                        public void updateItem(String item, boolean empty)
                         {
-                            return t.toString();
+                            super.updateItem(item, empty);
+                            if(!isEmpty())
+                            {
+                            	this.setTextFill(javafx.scene.paint.Color.DARKBLUE);
+                            	
+                                setText(item);
+                                
+                                TableRow currentRow = getTableRow();
+                                if(currentRow != null)
+                                { 
+                                	
+                                }
+                                
+                            }
                         }
-                        @Override
-                        public Object fromString(String string) 
-                        {
-                            return string;
-                        }                                    
-                    });
+                    };
                 }
-		};
+                
+        };
 		
 		
 		tbView.setEditable(false);
@@ -538,19 +561,44 @@ public class CMonitoringViewController implements Initializable {
 			
 			column.setCellFactory(cellFactoryForMap);
 			
-			column.setMaxWidth(150);
-			column.setMinWidth(150);
+			int length = str.length();
+			
+			column.setMaxWidth(Math.max(length*15, 300));
+			column.setMinWidth(Math.min(length * 10, 120));
 			
 			this.tbView.getColumns().add(column);
 		}
 		
-		this.tbView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+		this.tbView.setColumnResizePolicy(TableView.UNCONSTRAINED_RESIZE_POLICY);
 		
 		// data added to table - label change
 		this.lblTbl.setText("Current Table : " + file.getName());
 		
+		columnHeaders.clear();
+		
+		
 	}
 	
+	
+
+
+	public static String extractBackgroundColor(HSSFCell p_cell, HSSFWorkbook Workbook) 
+	{
+        // get custom pallet of colors from excel file
+       HSSFPalette hsfPallet = Workbook.getCustomPalette();
+        // get key of that custom pallet        
+        short key =  p_cell.getCellStyle().getFillForegroundColor(); 
+      // creating object HSSFColor  from key
+        HSSFColor color = hsfPallet.getColor(key);
+      // getting rgb values
+        short[] rgb = color.getTriplet();
+      // creating java.awt.Color object, you need that object for method Integer.toHexString()
+         Color c = new Color(rgb[0], rgb[1], rgb[2]);
+      // and finnaly
+        String hex = Integer.toHexString(c.getRGB());
+        
+        return  hex.substring(2,hex.length());
+    }
 	
 
 }
