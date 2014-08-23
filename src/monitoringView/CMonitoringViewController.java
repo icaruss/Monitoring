@@ -11,9 +11,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
-import java.util.Collection;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.ResourceBundle;
 import java.util.Set;
@@ -45,11 +43,9 @@ import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TableView.ResizeFeatures;
 import javafx.scene.control.cell.MapValueFactory;
-import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.util.Callback;
-import javafx.util.StringConverter;
 
 
 // TODO: Auto-generated Javadoc
@@ -381,6 +377,12 @@ public class CMonitoringViewController implements Initializable {
 
 		if (vectorOfImages != null)
 			vectorOfImages.clear();
+		
+		tbView.getColumns().clear();
+		tbView.getItems().clear();
+		
+		ImgBox.setImage(null);
+		
 	}
 
 	private void setImageToViewByIndex() {
@@ -432,7 +434,6 @@ public class CMonitoringViewController implements Initializable {
 		System.out.println(divider.getPosition());
 	}
 	
-	
 	@SuppressWarnings({ "rawtypes" })
 	public void loadTableData(File file)
 	{
@@ -440,8 +441,7 @@ public class CMonitoringViewController implements Initializable {
 		
 		Vector<String> columnHeaders = new Vector<String>();
 		
-		
-		final Map <Integer, String> cellToColor = new HashMap<Integer, String>();
+		final Vector<Integer> indeces = new Vector<Integer>();
 		
 		// retrieving all columns from current file
 		try
@@ -499,11 +499,20 @@ public class CMonitoringViewController implements Initializable {
 				
 				String hexOfColor = CMonitoringViewController.extractBackgroundColor(row_.getCell(indexFirstCell), workbook);
 				
-				cellToColor.put(i, hexOfColor);
+				if (!hexOfColor.equalsIgnoreCase("000000")) // uncolored row
+				{
+					int index = (i != 0) ? i - 1 : i;
+					
+					indeces.add(index);
+				}
+				
 				
 				if (i != 0)
 					allData.add(dataRow);
 			}
+			
+			fileInput.close();
+			
 		}
 		catch (FileNotFoundException e) 
 		{
@@ -533,14 +542,21 @@ public class CMonitoringViewController implements Initializable {
                             super.updateItem(item, empty);
                             if(!isEmpty())
                             {
-                            	this.setTextFill(javafx.scene.paint.Color.DARKBLUE);
-                            	
                                 setText(item);
                                 
                                 TableRow currentRow = getTableRow();
                                 if(currentRow != null)
                                 { 
+                                	int rowIndex = currentRow.getIndex();
                                 	
+                                	if (indeces.contains(rowIndex))
+                                	{
+                                    	this.setTextFill(javafx.scene.paint.Color.RED);
+                                	}
+                                	else
+                                	{
+                                    	this.setTextFill(javafx.scene.paint.Color.DARKBLUE);
+                                	}
                                 }
                                 
                             }
