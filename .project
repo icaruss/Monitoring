@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>Monitoring tool</name>
+	<name>Monitoring_tool</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -20,4 +20,10 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.xtext.ui.shared.xtextNature</nature>
 	</natures>
+	<variableList>
+		<variable>
+			<name>JAVA_HOME</name>
+			<value>file:/C:/Program%20Files/Java/jdk1.7.0_45/bin</value>
+		</variable>
+	</variableList>
 </projectDescription>

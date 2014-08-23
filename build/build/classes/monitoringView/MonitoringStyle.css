@@ -1,0 +1,11 @@
+.paintedRow
+{
+    -fx-background-color: #ffcb00;
+    -fx-text-fill: black;
+}
+
+.notPaintedRow
+{
+    -fx-background-color: #ebebeb;
+    -fx-text-fill: blue;
+}

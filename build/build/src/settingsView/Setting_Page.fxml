@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-background-color 0xdfdfdfff?>
+
+<AnchorPane id="AnchorPane" fx:id="pnlSettings" blendMode="SRC_OVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="812.9999000000025" prefWidth="531.0" scaleX="1.0" scaleY="1.0" scaleZ="1.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="settingsView.CSettingsController">
+  <children>
+    <VBox alignment="CENTER" disable="true" layoutX="0.0" layoutY="0.0" prefHeight="830.9999000000025" prefWidth="550.0">
+      <children>
+        <ImageView id="background.jpg" fx:id="imgView" fitHeight="830.9998474121094" fitWidth="550.0">
+          <image>
+            <Image url="@../../images/background.jpg" preserveRatio="true" smooth="true" />
+          </image>
+        </ImageView>
+      </children>
+    </VBox>
+    <Text fontSmoothingType="LCD" layoutX="218.0" layoutY="23.0" scaleX="4.678950040093055" scaleY="2.5901492983703043" strokeType="OUTSIDE" strokeWidth="0.0" text="CONFIGURATION" textAlignment="CENTER" underline="true" wrappingWidth="0.0">
+      <font>
+        <Font name="Arial Rounded MT Bold" size="12.0" />
+      </font>
+    </Text>
+    <Text fontSmoothingType="LCD" layoutX="84.0" layoutY="152.0" scaleX="2.446508725684463" scaleY="2.057615907667514" strokeType="OUTSIDE" strokeWidth="0.0" text="Host Name :" textAlignment="CENTER">
+      <font>
+        <Font name="Arial" size="10.0" fx:id="x1" />
+      </font>
+    </Text>
+    <TextField fx:id="txtFieldHostName" layoutX="227.0" layoutY="136.0" prefHeight="24.133514404296875" prefWidth="265.0" />
+    <Text font="$x1" fontSmoothingType="LCD" layoutX="83.0" layoutY="193.0" scaleX="2.446508725684463" scaleY="2.057615907667514" strokeType="OUTSIDE" strokeWidth="0.0" text="User Name :" textAlignment="CENTER" />
+    <TextField fx:id="txtFieldUserName" layoutX="227.0" layoutY="177.0" prefHeight="24.133514404296875" prefWidth="265.0" />
+    <Text font="$x1" fontSmoothingType="LCD" layoutX="84.0" layoutY="231.0" scaleX="2.446508725684463" scaleY="2.057615907667514" strokeType="OUTSIDE" strokeWidth="0.0" text="Password   :" textAlignment="CENTER" />
+    <Line endX="227.0" endY="-1.0" layoutX="268.0" layoutY="266.0" startX="-222.0" startY="0.0" />
+    <Text font="$x1" fontSmoothingType="LCD" layoutX="74.0" layoutY="313.0" scaleX="2.446508725684463" scaleY="2.057615907667514" strokeType="OUTSIDE" strokeWidth="0.0" text="Instance :" textAlignment="CENTER" />
+    <TextField fx:id="txtFieldInstance" layoutX="227.0" layoutY="297.0" prefHeight="24.133514404296875" prefWidth="265.0" />
+    <Text font="$x1" fontSmoothingType="LCD" layoutX="89.0" layoutY="357.0" scaleX="2.446508725684463" scaleY="2.057615907667514" strokeType="OUTSIDE" strokeWidth="0.0" text="Interval (Sec) :" textAlignment="CENTER" />
+    <TextField fx:id="txtFieldInstanceTime" layoutX="227.0" layoutY="341.0" prefHeight="24.133514404296875" prefWidth="265.0" />
+    <Text font="$x1" fontSmoothingType="LCD" layoutX="90.0" layoutY="399.0" scaleX="2.446508725684463" scaleY="2.057615907667514" strokeType="OUTSIDE" strokeWidth="0.0" text="Monitor Process" textAlignment="CENTER" />
+    <Line endX="77.0" endY="-1.0" layoutX="138.0" layoutY="408.0" startX="-100.0" />
+    <FlowPane blendMode="SRC_OVER" hgap="0.0" layoutX="42.0" layoutY="422.0" minWidth="92.0" orientation="VERTICAL" prefHeight="98.0" prefWidth="106.0791015625">
+      <children>
+        <RadioButton fx:id="chkboxMdsr" alignment="CENTER_LEFT" contentDisplay="LEFT" mnemonicParsing="false" onMouseClicked="#chkboxMdsrOnMouseClicked" prefHeight="25.0" prefWidth="85.0" selected="false" text="mds-r" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true">
+          <font>
+            <Font name="Arial" size="14.0" fx:id="x2" />
+          </font>
+          <FlowPane.margin>
+            <Insets top="5.0" fx:id="x3" />
+          </FlowPane.margin>
+        </RadioButton>
+        <RadioButton fx:id="chkboxMdisr" alignment="CENTER_LEFT" contentDisplay="CENTER" font="$x2" mnemonicParsing="false" onMouseClicked="#chkboxMdisrOnMouseClicked" prefHeight="25.0" prefWidth="85.0" selected="false" text="mdis-r" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true" FlowPane.margin="$x3" />
+        <RadioButton fx:id="chkboxMdssr" alignment="CENTER_LEFT" contentDisplay="CENTER" font="$x2" mnemonicParsing="false" onMouseClicked="#chkboxMdssrOnMouseClicked" prefHeight="25.0" prefWidth="84.07391357421875" selected="false" text="mdss-r" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true" FlowPane.margin="$x3" />
+      </children>
+      <padding>
+        <Insets />
+      </padding>
+    </FlowPane>
+    <Text font="$x1" fontSmoothingType="LCD" layoutX="346.0" layoutY="401.0" scaleX="2.550941435628833" scaleY="2.0575831430829967" strokeType="OUTSIDE" strokeWidth="0.0" text="Additional Outputs" textAlignment="CENTER" />
+    <Line endX="86.0" endY="0.0" layoutX="406.0" layoutY="408.0" startX="-127.0" startY="-1.0" />
+    <FlowPane blendMode="SRC_OVER" hgap="0.0" layoutX="283.0" layoutY="422.0" minWidth="92.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="107.0">
+      <children>
+        <RadioButton fx:id="chkboxClix" alignment="CENTER_LEFT" contentDisplay="LEFT" font="$x2" mnemonicParsing="false" onMouseClicked="#chkBoxClixOnMousePressed" prefHeight="25.0" prefWidth="85.0" selected="false" text="clix" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true">
+          <FlowPane.margin>
+            <Insets top="5.0" fx:id="x3" />
+          </FlowPane.margin>
+        </RadioButton>
+      </children>
+      <padding>
+        <Insets />
+      </padding>
+    </FlowPane>
+    <Line endX="227.0" endY="-1.0" layoutX="260.0" layoutY="564.0" startX="-222.0" startY="0.0" />
+    <PasswordField fx:id="txtFieldPassword" layoutX="227.0" layoutY="215.0" prefHeight="25.0" prefWidth="265.0" />
+    <ComboBox fx:id="cmbStartSelection" editable="false" layoutX="43.0" layoutY="617.0" onAction="#cmbSelectionOnAction" prefHeight="26.5" prefWidth="144.9998779296875" promptText="Select" visibleRowCount="2">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Immediately" />
+          <String fx:value="Time Frame" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <AnchorPane fx:id="paneTimeFrame" focusTraversable="true" layoutX="252.0" layoutY="565.0" minWidth="214.4141845703125" prefHeight="121.0" prefWidth="215.0" visible="false">
+      <children>
+        <Text font="$x1" fontSmoothingType="LCD" layoutX="73.0" layoutY="29.0" scaleX="2.446508725684463" scaleY="2.057615907667514" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Frame" textAlignment="CENTER" visible="true" />
+        <Line endX="100.0" layoutX="108.0" layoutY="38.0" startX="-76.0" startY="1.0" />
+        <Text font="$x1" fontSmoothingType="LCD" layoutX="15.0" layoutY="70.0" scaleX="1.5358835538563118" scaleY="2.057615907667514" strokeType="OUTSIDE" strokeWidth="0.0" text="From :" textAlignment="CENTER" />
+        <Text font="$x1" fontSmoothingType="LCD" layoutX="11.0" layoutY="103.0" scaleX="1.254841351752584" scaleY="2.057615907667514" strokeType="OUTSIDE" strokeWidth="0.0" text="To :" textAlignment="CENTER" />
+        <TextField fx:id="txtFieldTimeFrameFrom" layoutX="59.0" layoutY="54.0" prefHeight="25.0" prefWidth="145.0" promptText="dd-mm-yyyy HH:mm:ss" />
+        <TextField fx:id="txtFieldTimeFrameTo" layoutX="59.0" layoutY="87.0" prefHeight="25.0" prefWidth="145.0" promptText="dd-mm-yyyy HH:mm:ss" />
+      </children>
+    </AnchorPane>
+    <Button fx:id="btnConnect" alignment="CENTER" contentDisplay="CENTER" defaultButton="true" layoutX="116.0" layoutY="737.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="118.0" text="Connect" textAlignment="CENTER" textFill="BLACK" textOverrun="WORD_ELLIPSIS">
+      <effect>
+        <DropShadow />
+      </effect>
+      <font>
+        <Font name="Arial Black" size="12.0" fx:id="x4" />
+      </font>
+    </Button>
+    <Button fx:id="btnSaveConfiguration" contentDisplay="CENTER" font="$x4" layoutX="301.0" layoutY="737.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="118.0" text="Save Configuration" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS" wrapText="true">
+      <effect>
+        <DropShadow />
+      </effect>
+    </Button>
+    <Text fx:id="portLbl" font="$x1" fontSmoothingType="LCD" layoutX="291.0" layoutY="475.0" scaleX="1.4666861170686858" scaleY="1.2749407175162204" strokeType="OUTSIDE" strokeWidth="0.0" text="Port :" textAlignment="CENTER" visible="true" />
+    <TextField fx:id="txtFieldPort" editable="true" layoutX="332.0" layoutY="464.0" prefHeight="14.633514404296875" prefWidth="94.0" promptText="59950" />
+    <Text font="$x1" fontSmoothingType="LCD" layoutX="79.0" layoutY="594.0" scaleX="2.446508725684463" scaleY="2.057615907667514" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Select" textAlignment="CENTER" />
+    <Line endX="58.0" endY="0.0" layoutX="138.0" layoutY="604.0" startX="-100.0" />
+    <Text id="memoryPopLbl" font="$x1" fontSmoothingType="LCD" layoutX="50.0" layoutY="541.0" scaleX="1.4666861170686858" scaleY="1.2749407175162204" strokeType="OUTSIDE" strokeWidth="0.0" text="Memory Pop (kb) :" textAlignment="CENTER" visible="true" />
+    <TextField fx:id="txtFieldMemoryPop" alignment="CENTER" editable="true" layoutX="158.0" layoutY="530.0" prefHeight="14.633514404296875" prefWidth="94.0" promptText="100000" />
+    <Text fx:id="txtConfigurationID" font="$x1" fontSmoothingType="LCD" layoutX="166.0" layoutY="108.0" scaleX="2.0219679896375573" scaleY="2.0300669920374053" strokeType="OUTSIDE" strokeWidth="0.0" text="Configuration ID :" textAlignment="CENTER" visible="false" />
+    <TextField fx:id="txtFieldConfigurationID" layoutX="296.0" layoutY="94.0" minHeight="2.4141845703125" prefHeight="21.649993896484375" prefWidth="126.56683349609375" promptText="Enter Unique Name" visible="false" />
+    <Label fx:id="lblResponseToUser" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="1.0" layoutX="12.0" layoutY="702.0" prefWidth="514.0" text="" textAlignment="CENTER" textFill="RED">
+      <effect>
+        <Lighting>
+          <bumpInput>
+            <Shadow />
+          </bumpInput>
+          <light>
+            <javafx.scene.effect.Light.Distant />
+          </light>
+        </Lighting>
+      </effect>
+      <font>
+        <Font name="System Bold" size="16.0" />
+      </font>
+    </Label>
+    <ComboBox fx:id="cmbID" editable="false" layoutX="179.0" layoutY="59.0" minHeight="15.0" onAction="#cmbSelectIDOnAction" prefHeight="22.0" prefWidth="187.95001220703125" promptText="Choose Configuration" visibleRowCount="4">
+      <effect>
+        <Bloom threshold="0.8777777777777778" />
+      </effect>
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="New" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+  </children>
+  <effect>
+    <Lighting>
+      <bumpInput>
+        <Shadow />
+      </bumpInput>
+      <light>
+        <javafx.scene.effect.Light.Distant color="#fff1cc" />
+      </light>
+    </Lighting>
+  </effect>
+</AnchorPane>
