@@ -3,7 +3,6 @@
  */
 package viewLogic;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class CViewConstants.
  */

@@ -25,7 +25,6 @@ import javafx.scene.control.ProgressBar;
 import javafx.scene.control.ProgressIndicator;
 import javafx.scene.control.Tooltip;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class CMainPageController.
  */
@@ -195,7 +194,7 @@ public class CMainPageController implements Initializable {
 	}
 
 	/**
-	 * Stop monitoring.
+	 * Stop monitoring. View and logic
 	 * 
 	 * @param monitorType
 	 *            the monitor type
@@ -228,7 +227,7 @@ public class CMainPageController implements Initializable {
 	}
 
 	/**
-	 * Sets the buttons disable state.
+	 * Sets the buttons disable/enable state.
 	 * 
 	 * @param isRunning
 	 *            the new buttons disable state

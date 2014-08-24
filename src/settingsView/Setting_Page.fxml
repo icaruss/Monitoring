@@ -19,7 +19,7 @@
       <children>
         <ImageView id="background.jpg" fx:id="imgView" fitHeight="830.9998474121094" fitWidth="550.0">
           <image>
-            <Image url="@../../images/background.jpg" preserveRatio="true" smooth="true" />
+            <Image url="@background.jpg" preserveRatio="true" smooth="true" />
           </image>
         </ImageView>
       </children>

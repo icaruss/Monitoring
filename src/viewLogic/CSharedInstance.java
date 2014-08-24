@@ -65,6 +65,8 @@ public class CSharedInstance {
 	
 	/** The monitoring opened instances. */
 	public int monitoringOpenedInstances;
+	
+	public String projectPath;
 
 	/** The shared instance. */
 	private static CSharedInstance sharedInstance = new CSharedInstance();
@@ -85,6 +87,7 @@ public class CSharedInstance {
 		isMonitoringDone = true;
 		monitoringStartTime = null;
 		executeUnixOperations = null;
+		projectPath = System.getProperty("user.dir") + "\\resources\\";
 		
 		settingsOpenedInstances = 0;
 		monitoringOpenedInstances = 0;

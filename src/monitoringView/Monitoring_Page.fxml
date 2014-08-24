@@ -15,7 +15,7 @@
   <children>
     <ImageView disable="false" fitHeight="1010.53271484375" fitWidth="872.3040771484375" layoutX="-18.0" layoutY="-17.0" pickOnBounds="true" preserveRatio="false">
       <image>
-        <Image url="@../../images/background.jpg" />
+        <Image url="@background.jpg" />
       </image>
     </ImageView>
     <SplitPane fx:id="spltPane" disable="false" dividerPositions="0.5460674157303371" focusTraversable="true" layoutX="0.0" layoutY="0.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" pickOnBounds="true" prefHeight="892.0" prefWidth="842.0" style="-fx-background-color: #FFFACD">

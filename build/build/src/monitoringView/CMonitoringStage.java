@@ -17,7 +17,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class CMonitoringStage.
  */
@@ -27,7 +26,7 @@ public class CMonitoringStage {
 	private Stage stage;
 
 	/**
-	 * Instantiates a new c monitoring stage.
+	 * Instantiates a new monitoring stage.
 	 */
 	public CMonitoringStage() {
 		try {
@@ -64,7 +63,7 @@ public class CMonitoringStage {
 	}
 
 	/**
-	 * Close stage.
+	 * Close stage method.
 	 */
 	public void closeStage() 
 	{

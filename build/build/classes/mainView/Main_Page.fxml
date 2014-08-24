@@ -16,7 +16,7 @@
       <children>
         <ImageView id="background.jpg" fx:id="imgView" fitHeight="350.0" fitWidth="500.0">
           <image>
-            <Image url="@../../images/background.jpg" preserveRatio="true" smooth="true" />
+            <Image url="@background.jpg" preserveRatio="true" smooth="true" />
           </image>
         </ImageView>
       </children>
@@ -32,7 +32,7 @@
     <Text focusTraversable="true" fontSmoothingType="LCD" layoutX="47.0" layoutY="292.0" scaleX="1.9800607972865212" scaleY="1.4404764928387228" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Left :" textAlignment="LEFT" textOrigin="CENTER" wrappingWidth="0.0" />
     <Separator blendMode="EXCLUSION" layoutX="5.0" layoutY="263.0" opacity="1.0" prefHeight="12.0" prefWidth="447.0">
       <effect>
-        <Shadow blurType="TWO_PASS_BOX" color="#5539b2ae" height="41.237755548386346" radius="20.118962696620393" width="41.238095238095234" />
+        <Shadow blurType="TWO_PASS_BOX" color="#5539b2ae" height="41.23801031566801" radius="20.11902638844081" width="41.238095238095234" />
       </effect>
     </Separator>
     <Button fx:id="btnSettings" contentDisplay="TEXT_ONLY" graphicTextGap="6.0" layoutX="294.0" layoutY="106.0" mnemonicParsing="false" prefHeight="63.9609375" prefWidth="118.58966064453125" text="Server Settings" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" visible="true" wrapText="true">

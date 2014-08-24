@@ -20,7 +20,6 @@ import java.util.logging.Logger;
 
 import viewLogic.CSharedInstance;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class Main.
  */
@@ -45,6 +44,7 @@ public class Main extends Application {
 			primaryStage.setIconified(true);
 			primaryStage.getIcons().add(
 					new Image(getClass().getResourceAsStream("iconMain.jpg")));
+			
 
 			primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
 				public void handle(WindowEvent we) {
@@ -76,7 +76,7 @@ public class Main extends Application {
 	}
 
 	/**
-	 * The main method.
+	 * The main Project method.
 	 * 
 	 * @param args
 	 *            the arguments

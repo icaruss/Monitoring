@@ -44,6 +44,7 @@ public class Main extends Application {
 			primaryStage.setIconified(true);
 			primaryStage.getIcons().add(
 					new Image(getClass().getResourceAsStream("iconMain.jpg")));
+			
 
 			primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
 				public void handle(WindowEvent we) {

@@ -17,7 +17,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class CSettingsStage.
  */
@@ -27,7 +26,7 @@ public class CSettingsStage {
 	private Stage stage;
 
 	/**
-	 * Instantiates a new c settings stage.
+	 * Instantiates a new settings stage.
 	 */
 	public CSettingsStage() {
 		try {
