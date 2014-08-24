@@ -48,7 +48,6 @@ import javafx.scene.image.ImageView;
 import javafx.util.Callback;
 
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class CMonitoringViewController.
  */
@@ -115,6 +114,7 @@ public class CMonitoringViewController implements Initializable {
 	
 
 	// ////// logic Variables //////
+	
 	/** The vector of images. */
 	private Vector<Image> vectorOfImages;
 	
@@ -187,7 +187,7 @@ public class CMonitoringViewController implements Initializable {
 
 		}
 		
-		
+		// Table view Resize policy
 		tbView.setColumnResizePolicy(new Callback<TableView.ResizeFeatures, Boolean>() 
 		{
 			  @Override
@@ -334,9 +334,11 @@ public class CMonitoringViewController implements Initializable {
 	}
 
 	/**
-	 * Load data file to view.
+	 * Clearing view and
+	 * Load next applicable data to view.
 	 */
-	private void loadDataFileToViewVariables() {
+	private void loadDataFileToViewVariables() 
+	{
 		ClearViewAndLogic();
 
 		CSharedInstance sharedInstance = CSharedInstance.getInstance();
@@ -382,7 +384,8 @@ public class CMonitoringViewController implements Initializable {
 	/**
 	 * Clear view and logic.
 	 */
-	private void ClearViewAndLogic() {
+	private void ClearViewAndLogic()
+	{
 		// Logic
 		if (vectorOfExcelFiles != null)
 			vectorOfExcelFiles.clear();
@@ -400,7 +403,8 @@ public class CMonitoringViewController implements Initializable {
 	/**
 	 * Sets the image to view by index.
 	 */
-	private void setImageToViewByIndex() {
+	private void setImageToViewByIndex() 
+	{
 		if (vectorOfImages.size() == 0)
 		{
 			currentIndexOfImages = 0;
@@ -441,7 +445,8 @@ public class CMonitoringViewController implements Initializable {
 	 * @param isVisible
 	 *            the new visibility on components
 	 */
-	private void setVisibilityOnComponents(boolean isVisible) {
+	private void setVisibilityOnComponents(boolean isVisible)
+	{
 		btnNextImg.setVisible(isVisible);
 		btnNextResult.setVisible(isVisible);
 		btnNextTable.setVisible(isVisible);
@@ -452,17 +457,8 @@ public class CMonitoringViewController implements Initializable {
 	}
 	
 	/**
-	 * Split pane on mouse.
-	 */
-	public void splitPaneOnMouse()
-	{
-		Divider divider = spltPane.getDividers().get(0);
-		
-		System.out.println(divider.getPosition());
-	}
-	
-	/**
-	 * Load table data.
+	 * Load table data from given file.
+	 * suppresssing rawtype of TableView
 	 * 
 	 * @param file
 	 *            the file
@@ -560,7 +556,7 @@ public class CMonitoringViewController implements Initializable {
 		
 		this.tbView.setItems(allData);
 		
-		
+		// Cell Callback
 		Callback<TableColumn<Map, String>, TableCell<Map, String>>  cellFactoryForMap = new Callback<TableColumn<Map, String>, TableCell<Map, String>>() 
 		{
                 @Override
@@ -628,8 +624,6 @@ public class CMonitoringViewController implements Initializable {
 		
 	}
 	
-	
-
 
 	/**
 	 * Extract background color.
@@ -651,8 +645,7 @@ public class CMonitoringViewController implements Initializable {
       // getting rgb values
         short[] rgb = color.getTriplet();
       // creating java.awt.Color object, you need that object for method Integer.toHexString()
-         Color c = new Color(rgb[0], rgb[1], rgb[2]);
-      // and finnaly
+        Color c = new Color(rgb[0], rgb[1], rgb[2]);
         String hex = Integer.toHexString(c.getRGB());
         
         return  hex.substring(2,hex.length());

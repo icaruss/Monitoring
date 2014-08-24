@@ -32,7 +32,6 @@ import javafx.stage.Stage;
 import log.MonLogger;
 import viewLogic.CViewConstants;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class CSettingsController.
  */
@@ -153,9 +152,6 @@ public class CSettingsController implements Initializable {
 	// fx:id="portLbl"
 	private Text portLbl;
 
-	// ////// logic Variables //////
-
-	// ////// end logic Variables ///
 
 	/*
 	 * (non-Javadoc)
@@ -198,7 +194,9 @@ public class CSettingsController implements Initializable {
 			cmbID.getItems().addAll(configurationsKeySet);
 		}
 
-		btnConnect.setOnAction(new EventHandler<ActionEvent>() {
+		// btn Connect to server ACTION
+		btnConnect.setOnAction(new EventHandler<ActionEvent>() 
+		{
 
 			@Override
 			public void handle(ActionEvent event) {
@@ -266,6 +264,7 @@ public class CSettingsController implements Initializable {
 
 		});
 
+		// Btn To save Chosen configuration for current or later use
 		btnSaveConfiguration.setOnAction(new EventHandler<ActionEvent>() {
 
 			@Override
@@ -291,6 +290,7 @@ public class CSettingsController implements Initializable {
 
 		});
 
+		// Listener for text change on Hostname
 		txtFieldHostName.textProperty().addListener(
 				new ChangeListener<String>() {
 
@@ -322,6 +322,7 @@ public class CSettingsController implements Initializable {
 
 				});
 
+		// Listener for text change on Instance
 		txtFieldInstance.textProperty().addListener(
 				new ChangeListener<String>() {
 
@@ -353,6 +354,7 @@ public class CSettingsController implements Initializable {
 
 				});
 
+		// Listener for text change on Instance Time
 		txtFieldInstanceTime.textProperty().addListener(
 				new ChangeListener<String>() {
 
@@ -386,6 +388,7 @@ public class CSettingsController implements Initializable {
 
 				});
 
+		// Listener for text change on Memory Limit
 		txtFieldMemoryPop.textProperty().addListener(
 				new ChangeListener<String>() {
 
@@ -416,6 +419,7 @@ public class CSettingsController implements Initializable {
 
 				});
 
+		// Listener for text change on Port
 		txtFieldPort.textProperty().addListener(new ChangeListener<String>() {
 
 			private boolean ignore;
@@ -441,6 +445,7 @@ public class CSettingsController implements Initializable {
 
 		});
 
+		// Listener for text change on Time Frame From 
 		txtFieldTimeFrameFrom.textProperty().addListener(
 				new ChangeListener<String>() {
 
@@ -466,6 +471,7 @@ public class CSettingsController implements Initializable {
 
 				});
 
+		// Listener for text change on Time Frame To
 		txtFieldTimeFrameTo.textProperty().addListener(
 				new ChangeListener<String>() {
 
@@ -491,6 +497,7 @@ public class CSettingsController implements Initializable {
 
 				});
 
+		// Listener for text change on ConfigurationID
 		txtFieldConfigurationID.textProperty().addListener(
 				new ChangeListener<String>() {
 
@@ -639,7 +646,8 @@ public class CSettingsController implements Initializable {
 	/**
 	 * Clear setting page.
 	 */
-	private void clearSettingPage() {
+	private void clearSettingPage()
+	{
 		txtFieldHostName.clear();
 		txtFieldUserName.clear();
 		txtFieldPassword.clear();
@@ -663,7 +671,8 @@ public class CSettingsController implements Initializable {
 	 * @param isEditable
 	 *            the new components editable
 	 */
-	private void setComponentsEditable(boolean isEditable) {
+	private void setComponentsEditable(boolean isEditable) 
+	{
 		txtFieldHostName.setEditable(isEditable);
 		txtFieldUserName.setEditable(isEditable);
 		txtFieldPassword.setEditable(isEditable);
@@ -689,7 +698,8 @@ public class CSettingsController implements Initializable {
 	 * @param selectedItem
 	 *            the new fields on view by configuration id
 	 */
-	private void setFieldsOnViewByConfigurationID(String selectedItem) {
+	private void setFieldsOnViewByConfigurationID(String selectedItem)
+	{
 		Map<String, Object> map = CSharedInstance.getInstance()
 				.getChosenConfiguration(selectedItem);
 
@@ -800,7 +810,8 @@ public class CSettingsController implements Initializable {
 	 *            the c
 	 * @return true, if is latin letter
 	 */
-	public static boolean isLatinLetter(char c) {
+	public static boolean isLatinLetter(char c)
+	{
 		return (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z');
 	}
 
@@ -811,7 +822,8 @@ public class CSettingsController implements Initializable {
 	 *            the c
 	 * @return true, if is digit
 	 */
-	public static boolean isDigit(char c) {
+	public static boolean isDigit(char c)
+	{
 		return (c >= '0' && c <= '9');
 	}
 
@@ -820,7 +832,8 @@ public class CSettingsController implements Initializable {
 	 * 
 	 * @return the int
 	 */
-	public static int maxLengthInText() {
+	public static int maxLengthInText() 
+	{
 		return 30;
 	}
 
@@ -829,14 +842,16 @@ public class CSettingsController implements Initializable {
 	 * 
 	 * @return the int
 	 */
-	public static int maxAllowedInstanceInterval() {
+	public static int maxAllowedInstanceInterval()
+	{
 		return 1000000;
 	}
 
 	/**
 	 * Update memory pop.
 	 */
-	private void updateMemoryPop() {
+	private void updateMemoryPop()
+	{
 		boolean isSelected = chkboxMdssr.isSelected()
 				|| chkboxMdisr.isSelected() || chkboxMdsr.isSelected();
 
@@ -849,7 +864,8 @@ public class CSettingsController implements Initializable {
 	/**
 	 * Update port.
 	 */
-	private void updatePort() {
+	private void updatePort() 
+	{
 		boolean isSelected = chkboxClix.isSelected();
 
 		if (!isSelected) {
@@ -863,7 +879,8 @@ public class CSettingsController implements Initializable {
 	 * 
 	 * @return true, if successful
 	 */
-	private boolean updateLblIfInputNotOK() {
+	private boolean updateLblIfInputNotOK() 
+	{
 		if (txtFieldHostName.getText().isEmpty()) {
 			lblResponseToUser.setText("Host Name Is Mandatory Field");
 
@@ -931,7 +948,8 @@ public class CSettingsController implements Initializable {
 	 * 
 	 * @return the string
 	 */
-	private String checkIfCanBeConnectedWithCurrentSettings() {
+	private String checkIfCanBeConnectedWithCurrentSettings() 
+	{
 
 		GuiParameterCheck guiParamCheck = new GuiParameterCheck(
 				txtFieldInstance.getText(), txtFieldHostName.getText(),
@@ -954,7 +972,8 @@ public class CSettingsController implements Initializable {
 	 * 
 	 * @return the current settings on view
 	 */
-	private Map<String, Object> getCurrentSettingsOnView() {
+	private Map<String, Object> getCurrentSettingsOnView()
+	{
 		Map<String, Object> map = new HashMap<String, Object>();
 
 		if (!txtFieldConfigurationID.getText().isEmpty()) {
@@ -1032,7 +1051,8 @@ public class CSettingsController implements Initializable {
 	 *            the text
 	 * @return true, if successful
 	 */
-	private boolean checkIfInputTimeFrameAcceptableAsWhole(String text) {
+	private boolean checkIfInputTimeFrameAcceptableAsWhole(String text) 
+	{
 		if (text.isEmpty() || text.length() != 19)
 			return false;
 

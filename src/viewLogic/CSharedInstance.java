@@ -22,7 +22,6 @@ import FilesManagment.DateOperations;
 
 import com.thoughtworks.xstream.XStream;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class CSharedInstance.
  */
@@ -76,7 +75,8 @@ public class CSharedInstance {
 	/**
 	 * Instantiates a new c shared instance.
 	 */
-	private CSharedInstance() {
+	private CSharedInstance()
+	{
 		configurations = new HashMap<String, Map<String, Object>>();
 		currentConfigurationID = null;
 		totalSecondsCountdown = -1;
@@ -125,7 +125,8 @@ public class CSharedInstance {
 	 * @param values
 	 *            the values
 	 */
-	public void addNewConfiguration(String key, Map<String, Object> values) {
+	public void addNewConfiguration(String key, Map<String, Object> values)
+	{
 		if (configurations.containsKey(key)) {
 			if (!values.isEmpty()) {
 				configurations.put(key, values);
@@ -152,8 +153,10 @@ public class CSharedInstance {
 	 *            the key
 	 * @return the chosen configuration
 	 */
-	public Map<String, Object> getChosenConfiguration(String key) {
-		if (configurations.containsKey(key)) {
+	public Map<String, Object> getChosenConfiguration(String key)
+	{
+		if (configurations.containsKey(key)) 
+		{
 			return configurations.get(key);
 		}
 
@@ -165,7 +168,8 @@ public class CSharedInstance {
 	 * 
 	 * @return the all configuration keys
 	 */
-	public Set<String> getAllConfigurationKeys() {
+	public Set<String> getAllConfigurationKeys()
+	{
 		return configurations.keySet();
 	}
 
@@ -174,7 +178,8 @@ public class CSharedInstance {
 	 * 
 	 * @return the current configuration
 	 */
-	public Map<String, Object> getCurrentConfiguration() {
+	public Map<String, Object> getCurrentConfiguration()
+	{
 		if (currentConfigurationID != null) {
 			return getChosenConfiguration(currentConfigurationID);
 		}
@@ -185,7 +190,8 @@ public class CSharedInstance {
 	/**
 	 * Sets the default configuration.
 	 */
-	private void setDefaultConfiguration() {
+	private void setDefaultConfiguration()
+	{
 		if (!configurations.isEmpty()) {
 			return;
 		}
@@ -195,7 +201,7 @@ public class CSharedInstance {
 		Boolean clixOn = true;
 		String hostName = "ilsun45";
 		String userName = "mqmadm";
-		String password = "a2i2000!"; // Alina - ! is legal character
+		String password = "a2i2000!";
 		String instance = "default";
 		String interval = "5";
 
@@ -220,16 +226,21 @@ public class CSharedInstance {
 	/**
 	 * Save configurations.
 	 */
-	public void saveConfigurations() {
+	public void saveConfigurations() 
+	{
 
-		if (!configurations.isEmpty()) {
-			try {
+		if (!configurations.isEmpty()) 
+		{
+			try 
+			{
 				String xmlString = seriallizeData();
 
 				stringToDom(xmlString);
 
-			} catch (Exception e) {
-
+			}
+			catch (Exception e)
+			{
+				e.printStackTrace();
 			}
 
 		}
@@ -241,7 +252,8 @@ public class CSharedInstance {
 	 * 
 	 * @return the string
 	 */
-	private String seriallizeData() {
+	private String seriallizeData() 
+	{
 		XStream xStream = new XStream();
 
 		return xStream.toXML(configurations);
@@ -255,7 +267,8 @@ public class CSharedInstance {
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
 	 */
-	private static void stringToDom(String xmlSource) throws IOException {
+	private static void stringToDom(String xmlSource) throws IOException
+	{
 		java.io.FileWriter fw = new java.io.FileWriter("Configurations.xml");
 		fw.write(xmlSource);
 		fw.close();
@@ -263,27 +276,31 @@ public class CSharedInstance {
 
 	/**
 	 * De seriallize.
+	 * suppressing unchecked
 	 */
 	@SuppressWarnings("unchecked")
-	private void deSeriallize() {
+	private void deSeriallize() 
+	{
 		XStream xStream = new XStream();
 
-		try {
+		try 
+		{
 			@SuppressWarnings("resource")
-			BufferedReader br = new BufferedReader(new FileReader(
-					"Configurations.xml"));
+			BufferedReader br = new BufferedReader(new FileReader("Configurations.xml"));
 			StringBuffer buff = new StringBuffer();
 			String line;
-			while ((line = br.readLine()) != null) {
+			while ((line = br.readLine()) != null)
+			{
 				buff.append(line);
 			}
 
 			configurations = new HashMap<String, Map<String, Object>>(
 					(Map<String, Map<String, Object>>) xStream.fromXML(buff
 							.toString()));
-		} catch (Exception e) {
-			@SuppressWarnings("unused")
-			String str = e.getMessage();
+		} 
+		catch (Exception e) 
+		{
+			e.printStackTrace();
 		}
 
 	}
@@ -294,7 +311,8 @@ public class CSharedInstance {
 	 * @param currentSettings
 	 *            the current settings
 	 */
-	public void saveConfigurations(Map<String, Object> currentSettings) {
+	public void saveConfigurations(Map<String, Object> currentSettings) 
+	{
 		String key = (String) currentSettings
 				.get(CViewConstants.CONFIGURATION_ID);
 		configurations.put(key, currentSettings);
@@ -313,45 +331,14 @@ public class CSharedInstance {
 	 * @param toTime
 	 *            the to time
 	 */
-	public void updateWaitingTimeForResults(String fromTime, String toTime) {
-		// int seconds = 0;
-
-		try {
-			/*
-			 * String strFrom = fromTime.substring(17); String strTo =
-			 * toTime.substring(17);
-			 * 
-			 * int secondsFrom = Integer.parseInt(strFrom); int secondsTo =
-			 * Integer.parseInt(strTo);
-			 * 
-			 * if (secondsFrom != secondsTo) seconds += (60 - secondsFrom +
-			 * secondsTo);
-			 * 
-			 * strFrom = fromTime.substring(14, 16); strTo =
-			 * toTime.substring(14, 16);
-			 * 
-			 * int minutesFrom = Integer.parseInt(strFrom); // because of
-			 * seconds addition int minutesTo = Integer.parseInt(strTo);
-			 * 
-			 * if (minutesFrom != minutesTo) seconds += (60 - minutesFrom +
-			 * minutesTo - 1) * 60;
-			 * 
-			 * strFrom = fromTime.substring(11, 132); strTo =
-			 * toTime.substring(11, 13);
-			 * 
-			 * int hoursFrom = Integer.parseInt(strFrom); // because of minutes
-			 * addition int hoursTo = Integer.parseInt(strTo);
-			 * 
-			 * if (hoursFrom > hoursTo) { seconds += (24 - hoursFrom + hoursTo -
-			 * 1) * 60 * 60; } else if (hoursFrom < hoursTo) { seconds +=
-			 * (hoursTo - hoursFrom - 1) * 60 * 60; }
-			 * 
-			 * totalSecondsCountdown = seconds;
-			 */
-
-			totalSecondsCountdown = DateOperations
-					.getDateDiff(fromTime, toTime) / 1000;
-		} catch (Exception e) {
+	public void updateWaitingTimeForResults(String fromTime, String toTime) 
+	{
+		try 
+		{
+			totalSecondsCountdown = DateOperations.getDateDiff(fromTime, toTime) / 1000;
+		} 
+		catch (Exception e)
+		{
 			MonLogger.myLogger.log(Level.WARNING, e.getMessage());
 
 			totalSecondsCountdown = 0;
@@ -363,7 +350,8 @@ public class CSharedInstance {
 	 * 
 	 * @return the string
 	 */
-	public String timeLeft() {
+	public String timeLeft()
+	{
 		long secs = totalSecondsCountdown - secondsElapsed;
 		long days = secs / 86400;
 
@@ -393,7 +381,8 @@ public class CSharedInstance {
 	 * 
 	 * @return true, if is ready to launch
 	 */
-	public boolean isReadyToLaunch() {
+	public boolean isReadyToLaunch()
+	{
 		if (isMonitoringDone) {
 			return false;
 		}
@@ -429,7 +418,8 @@ public class CSharedInstance {
 	/**
 	 * Monitoring start.
 	 */
-	public void monitoringStart() {
+	public void monitoringStart() 
+	{
 		if (monitoringStartTime == null) {
 			Map<String, Object> map = getCurrentConfiguration();
 
@@ -465,7 +455,8 @@ public class CSharedInstance {
 	 * @param values
 	 *            the values
 	 */
-	public void addNewDataFiles(String key, Vector<String> values) {
+	public void addNewDataFiles(String key, Vector<String> values) 
+	{
 		if (dataFiles != null) {
 			if (dataFiles.containsKey(key)) {
 				if (!values.isEmpty()) {
@@ -498,7 +489,8 @@ public class CSharedInstance {
 	 *            the key
 	 * @return the chosen data files
 	 */
-	public Vector<String> getChosenDataFiles(String key) {
+	public Vector<String> getChosenDataFiles(String key) 
+	{
 		if (dataFiles.containsKey(key)) {
 			return dataFiles.get(key);
 		}
@@ -511,7 +503,8 @@ public class CSharedInstance {
 	 * 
 	 * @return the all data files keys
 	 */
-	public Set<String> getAllDataFilesKeys() {
+	public Set<String> getAllDataFilesKeys()
+	{
 		if (dataFiles == null)
 			return null;
 
@@ -523,7 +516,8 @@ public class CSharedInstance {
 	 * 
 	 * @return the current data files set
 	 */
-	public Vector<String> getCurrentDataFilesSet() {
+	public Vector<String> getCurrentDataFilesSet()
+	{
 		if (currentDataFilesID != null) {
 			return getChosenDataFiles(currentDataFilesID);
 		}
@@ -534,7 +528,8 @@ public class CSharedInstance {
 	/**
 	 * Load data files to local cache.
 	 */
-	public void loadDataFilesToLocalCache() {
+	public void loadDataFilesToLocalCache()
+	{
 		String dirName = System.getProperty("user.dir") + "//"
 				+ CViewConstants.MONITORING_TESTS;
 
@@ -561,7 +556,8 @@ public class CSharedInstance {
 	 *            the directory name
 	 * @return the all files in directory
 	 */
-	public Vector<String> getAllFilesInDirectory(String directoryName) {
+	public Vector<String> getAllFilesInDirectory(String directoryName)
+	{
 		Vector<String> vecOfFilesInDirectory = new Vector<String>();
 
 		File directory = new File(directoryName);
@@ -586,8 +582,8 @@ public class CSharedInstance {
 	 *            the directory name
 	 * @return the all files in map with current file type ending in directory
 	 */
-	public Vector<String> getAllFilesInMapWithCurrentFileTypeEndingInDirectory(
-			CViewConstants.FileType fileType, String directoryName) {
+	public Vector<String> getAllFilesInMapWithCurrentFileTypeEndingInDirectory(CViewConstants.FileType fileType, String directoryName) 
+	{
 
 		Vector<String> vec = dataFiles.get(directoryName);
 
@@ -621,8 +617,8 @@ public class CSharedInstance {
 	 * @param direction
 	 *            the direction
 	 */
-	public void nextORPreviousDirectoryInDataFilesMap(
-			DirectoryDirection direction) {
+	public void nextORPreviousDirectoryInDataFilesMap(DirectoryDirection direction)
+	{
 		Set<String> setOfKeys = dataFiles.keySet();
 		boolean isNextKeyReady = false;
 
@@ -683,7 +679,8 @@ public class CSharedInstance {
 	 * @param currentSettings
 	 *            the current settings
 	 */
-	public void setNewExecuteUnixOp(Map<String, Object> currentSettings) {
+	public void setNewExecuteUnixOp(Map<String, Object> currentSettings)
+	{
 		if (executeUnixOperations != null) {
 			this.executeUnixOperations = null; // new Instance To be Run
 		}
