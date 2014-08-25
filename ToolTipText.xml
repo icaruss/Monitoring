@@ -1,0 +1,25 @@
+<map>
+	<entry>
+		<string>toolTipChooseConfiguration</string>
+		<string>Choose Configuration or make a NEW</string></entry>
+	<entry>
+		<string>toolTipHostName</string>
+		<string>Enter Host Name</string></entry>
+	<entry>
+		<string>toolTipUserName</string>
+		<string>Enter User Name</string></entry>
+	<entry>
+		<string>toolTipInstance</string>
+		<string>Enter Instance ID</string></entry>
+	<entry>
+		<string>toolTipInterval</string>
+		<string>Enter Time Interval in seconds</string></entry>
+	<entry>
+		<string>toolTipPassword</string>
+		<string>Enter Password For Connection</string></entry>
+	<entry>
+		<string>toolTipStartSelection</string>
+		<string>Choose Start Selection, Immediate Or Based on Time</string></entry>
+	<entry>
+		<string>toolTipMonitorProcess</string>
+		<string>Choose Which Monitor Process With Max Memory To monitor and Port in case Of Clix</string></entry></map>

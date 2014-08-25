@@ -17,6 +17,7 @@ import java.util.logging.Level;
 
 import unix.ExecuteUnixOperations;
 import viewLogic.CViewConstants.DirectoryDirection;
+import viewLogic.CViewConstants.XmlFileType;
 import log.MonLogger;
 import FilesManagment.DateOperations;
 
@@ -48,6 +49,9 @@ public class CSharedInstance {
 	/** The current configuration id. */
 	private String currentConfigurationID;
 
+	/** The ToolTips Texts. */
+	private Map<String, String> toolTipTexts;
+	
 	/** The configurations. */
 	private Map<String, Map<String, Object>> configurations;
 
@@ -79,7 +83,8 @@ public class CSharedInstance {
 	 */
 	private CSharedInstance()
 	{
-		configurations = new HashMap<String, Map<String, Object>>();
+		configurations = null;
+		toolTipTexts = null;
 		currentConfigurationID = null;
 		totalSecondsCountdown = -1;
 		secondsElapsed = 0;
@@ -96,7 +101,8 @@ public class CSharedInstance {
 
 		dataFiles = new HashMap<String, Vector<String>>();
 
-		deSeriallize();
+		deSeriallize(XmlFileType.XmlFileTypeConfiguration);
+		deSeriallize(XmlFileType.XmlFileTypeToolTips);
 
 		setDefaultConfiguration();
 
@@ -281,25 +287,47 @@ public class CSharedInstance {
 	 * De seriallize.
 	 * suppressing unchecked
 	 */
-	@SuppressWarnings("unchecked")
-	private void deSeriallize() 
+	@SuppressWarnings({ "unchecked", "resource" })
+	private void deSeriallize(XmlFileType xmlFileType) 
 	{
 		XStream xStream = new XStream();
 
 		try 
 		{
-			@SuppressWarnings("resource")
-			BufferedReader br = new BufferedReader(new FileReader("Configurations.xml"));
-			StringBuffer buff = new StringBuffer();
-			String line;
-			while ((line = br.readLine()) != null)
+			switch (xmlFileType)
 			{
-				buff.append(line);
-			}
+				case XmlFileTypeConfiguration :
+				{
+					BufferedReader br = new BufferedReader(new FileReader(CViewConstants.CONFIGURATION_FILE));
+					StringBuffer buff = new StringBuffer();
+					String line;
+					while ((line = br.readLine()) != null)
+					{
+						buff.append(line);
+					}
 
-			configurations = new HashMap<String, Map<String, Object>>(
-					(Map<String, Map<String, Object>>) xStream.fromXML(buff
-							.toString()));
+					configurations = new HashMap<String, Map<String, Object>>((Map<String, Map<String, Object>>) xStream.fromXML(buff.toString()));
+					
+					break;
+				}
+				case XmlFileTypeToolTips :
+				{
+					BufferedReader br = new BufferedReader(new FileReader(CViewConstants.TOOLTIPS_FILE));
+					StringBuffer buff = new StringBuffer();
+					String line;
+					while ((line = br.readLine()) != null)
+					{
+						buff.append(line);
+					}
+
+					toolTipTexts = new HashMap<String, String>( (Map<String, String>) xStream.fromXML(buff.toString()));
+					
+					break;
+				}
+			}
+			
+			
+			
 		} 
 		catch (Exception e) 
 		{
@@ -689,6 +717,11 @@ public class CSharedInstance {
 		}
 
 		this.executeUnixOperations = new ExecuteUnixOperations(currentSettings);
+	}
+
+	public Map<String, String> getMapOfToolTips()
+	{
+		return toolTipTexts;
 	}
 
 }

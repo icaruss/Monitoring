@@ -10,6 +10,7 @@ import java.util.Map;
 import java.util.ResourceBundle;
 import java.util.Set;
 import java.util.logging.Level;
+
 import unix.ExecuteUnixOperations;
 import unix.GuiParameterCheck;
 import viewLogic.CSharedInstance;
@@ -26,6 +27,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Tooltip;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -151,6 +153,40 @@ public class CSettingsController implements Initializable {
 	@FXML
 	// fx:id="portLbl"
 	private Text portLbl;
+	
+	
+	@FXML
+	// fx:id="toolTipChooseConfiguration"
+	private Tooltip toolTipChooseConfiguration;
+	
+	@FXML
+	// fx:id="toolTipUserName"
+	private Tooltip toolTipUserName;
+	
+	@FXML
+	// fx:id="toolTipHostName"
+	private Tooltip toolTipHostName;
+	
+	@FXML
+	// fx:id="toolTipInstance"
+	private Tooltip toolTipInstance;
+	
+	@FXML
+	// fx:id="toolTipInterval"
+	private Tooltip toolTipInterval;
+	
+	@FXML
+	// fx:id="toolTipPassword"
+	private Tooltip toolTipPassword;
+	
+	@FXML
+	// fx:id="toolTipStartSelection"
+	private Tooltip toolTipStartSelection;
+	
+	@FXML
+	// fx:id="toolTipMonitorProcess"
+	private Tooltip toolTipMonitorProcess;
+	
 
 
 	/*
@@ -160,32 +196,42 @@ public class CSettingsController implements Initializable {
 	 * java.util.ResourceBundle)
 	 */
 	public void initialize(URL fxmlFileLocation, ResourceBundle resources) {
-		assert btnConnect != null : "fx:id=\"btnConnect\" was not injected: check your FXML file 'Setting_Page.fxml'.";
-		assert btnSaveConfiguration != null : "fx:id=\"btnSaveConfiguration\" was not injected: check your FXML file 'Setting_Page.fxml'.";
-		assert chkboxClix != null : "fx:id=\"chkboxClix\" was not injected: check your FXML file 'Setting_Page.fxml'.";
-		assert chkboxMdisr != null : "fx:id=\"chkboxMdisr\" was not injected: check your FXML file 'Setting_Page.fxml'.";
-		assert chkboxMdsr != null : "fx:id=\"chkboxMdsr\" was not injected: check your FXML file 'Setting_Page.fxml'.";
-		assert chkboxMdssr != null : "fx:id=\"chkboxMdssr\" was not injected: check your FXML file 'Setting_Page.fxml'.";
-		assert cmbStartSelection != null : "fx:id=\"cmbStartSelection\" was not injected: check your FXML file 'Setting_Page.fxml'.";
-		assert paneTimeFrame != null : "fx:id=\"paneTimeFrame\" was not injected: check your FXML file 'Setting_Page.fxml'.";
-		assert txtFieldHostName != null : "fx:id=\"txtFieldHostName\" was not injected: check your FXML file 'Setting_Page.fxml'.";
-		assert txtFieldInstance != null : "fx:id=\"txtFieldInstance\" was not injected: check your FXML file 'Setting_Page.fxml'.";
-		assert txtFieldInstanceTime != null : "fx:id=\"txtFieldInstanceTime\" was not injected: check your FXML file 'Setting_Page.fxml'.";
-		assert txtFieldPassword != null : "fx:id=\"txtFieldPassword\" was not injected: check your FXML file 'Setting_Page.fxml'.";
-		assert txtFieldTimeFrameFrom != null : "fx:id=\"txtFieldTimeFrameFrom\" was not injected: check your FXML file 'Setting_Page.fxml'.";
-		assert txtFieldTimeFrameTo != null : "fx:id=\"txtFieldTimeFrameTo\" was not injected: check your FXML file 'Setting_Page.fxml'.";
-		assert txtFieldUserName != null : "fx:id=\"txtFieldUserName\" was not injected: check your FXML file 'Setting_Page.fxml'.";
-		assert txtFieldMemoryPop != null : "fx:id=\"txtFieldMemoryPop\" was not injected: check your FXML file 'Setting_Page.fxml'.";
-		assert txtFieldPort != null : "fx:id=\"txtFieldPort\" was not injected: check your FXML file 'Setting_Page.fxml'.";
-		assert txtFieldConfigurationID != null : "fx:id=\"txtFieldConfigurationID \" was not injected: check your FXML file 'Setting_Page.fxml'.";
-		assert lblResponseToUser != null : "fx:id=\"lblResponseToUser \" was not injected: check your FXML file 'Setting_Page.fxml'.";
-		assert pnlSettings != null : "fx:id=\"pnlSettings \" was not injected: check your FXML file 'Setting_Page.fxml'.";
-		assert portLbl != null : "fx:id=\"portLbl \" was not injected: check your FXML file 'Setting_Page.fxml'.";
+		assert btnConnect 					!= null : "fx:id=\"btnConnect\" was not injected: check your FXML file 'Setting_Page.fxml'.";
+		assert btnSaveConfiguration 		!= null : "fx:id=\"btnSaveConfiguration\" was not injected: check your FXML file 'Setting_Page.fxml'.";
+		assert chkboxClix 					!= null : "fx:id=\"chkboxClix\" was not injected: check your FXML file 'Setting_Page.fxml'.";
+		assert chkboxMdisr 					!= null : "fx:id=\"chkboxMdisr\" was not injected: check your FXML file 'Setting_Page.fxml'.";
+		assert chkboxMdsr 					!= null : "fx:id=\"chkboxMdsr\" was not injected: check your FXML file 'Setting_Page.fxml'.";
+		assert chkboxMdssr					!= null : "fx:id=\"chkboxMdssr\" was not injected: check your FXML file 'Setting_Page.fxml'.";
+		assert cmbStartSelection 			!= null : "fx:id=\"cmbStartSelection\" was not injected: check your FXML file 'Setting_Page.fxml'.";
+		assert paneTimeFrame 				!= null : "fx:id=\"paneTimeFrame\" was not injected: check your FXML file 'Setting_Page.fxml'.";
+		assert txtFieldHostName 			!= null : "fx:id=\"txtFieldHostName\" was not injected: check your FXML file 'Setting_Page.fxml'.";
+		assert txtFieldInstance 			!= null : "fx:id=\"txtFieldInstance\" was not injected: check your FXML file 'Setting_Page.fxml'.";
+		assert txtFieldInstanceTime 		!= null : "fx:id=\"txtFieldInstanceTime\" was not injected: check your FXML file 'Setting_Page.fxml'.";
+		assert txtFieldPassword 			!= null : "fx:id=\"txtFieldPassword\" was not injected: check your FXML file 'Setting_Page.fxml'.";
+		assert txtFieldTimeFrameFrom 		!= null : "fx:id=\"txtFieldTimeFrameFrom\" was not injected: check your FXML file 'Setting_Page.fxml'.";
+		assert txtFieldTimeFrameTo 			!= null : "fx:id=\"txtFieldTimeFrameTo\" was not injected: check your FXML file 'Setting_Page.fxml'.";
+		assert txtFieldUserName 			!= null : "fx:id=\"txtFieldUserName\" was not injected: check your FXML file 'Setting_Page.fxml'.";
+		assert txtFieldMemoryPop 			!= null : "fx:id=\"txtFieldMemoryPop\" was not injected: check your FXML file 'Setting_Page.fxml'.";
+		assert txtFieldPort 				!= null : "fx:id=\"txtFieldPort\" was not injected: check your FXML file 'Setting_Page.fxml'.";
+		assert txtFieldConfigurationID 		!= null : "fx:id=\"txtFieldConfigurationID \" was not injected: check your FXML file 'Setting_Page.fxml'.";
+		assert lblResponseToUser 			!= null : "fx:id=\"lblResponseToUser \" was not injected: check your FXML file 'Setting_Page.fxml'.";
+		assert pnlSettings 					!= null : "fx:id=\"pnlSettings \" was not injected: check your FXML file 'Setting_Page.fxml'.";
+		assert portLbl 						!= null : "fx:id=\"portLbl \" was not injected: check your FXML file 'Setting_Page.fxml'.";
+		assert toolTipChooseConfiguration 	!= null : "fx:id=\"toolTipChooseConfiguration \" was not injected: check your FXML file 'Setting_Page.fxml'.";
+		assert toolTipUserName 				!= null : "fx:id=\"toolTipUserName \" was not injected: check your FXML file 'Setting_Page.fxml'.";
+		assert toolTipHostName 				!= null : "fx:id=\"toolTipHostName \" was not injected: check your FXML file 'Setting_Page.fxml'.";
+		assert toolTipInstance 				!= null : "fx:id=\"toolTipInstance \" was not injected: check your FXML file 'Setting_Page.fxml'.";
+		assert toolTipInterval 				!= null : "fx:id=\"toolTipInterval \" was not injected: check your FXML file 'Setting_Page.fxml'.";
+		assert toolTipPassword 				!= null : "fx:id=\"toolTipPassword \" was not injected: check your FXML file 'Setting_Page.fxml'.";
+		assert toolTipStartSelection 		!= null : "fx:id=\"toolTipStartSelection \" was not injected: check your FXML file 'Setting_Page.fxml'.";
+		assert toolTipMonitorProcess 		!= null : "fx:id=\"toolTipMonitorProcess \" was not injected: check your FXML file 'Setting_Page.fxml'.";
 
 		// Initialize your logic here: all @FXML variables will have been
 		// injected
 
 		setComponentsEditable(true);
+		
+		setAllTooltips();
 
 		// configuration ids added here
 		Set<String> configurationsKeySet = CSharedInstance.getInstance()
@@ -531,6 +577,7 @@ public class CSettingsController implements Initializable {
 
 	}
 
+
 	// ///////////////////// Events Sections ///////////////////////////
 
 	/**
@@ -642,6 +689,29 @@ public class CSettingsController implements Initializable {
 		}
 
 	}
+	
+	/**
+	 * Setting All The ToolTips
+	 */
+	private void setAllTooltips() 
+	{
+		CSharedInstance sharedInstance = CSharedInstance.getInstance();
+		
+		Map<String,String> mapOfToolTips = sharedInstance.getMapOfToolTips();
+		
+		if (mapOfToolTips != null)
+		{
+			toolTipChooseConfiguration.setText(mapOfToolTips.get("toolTipChooseConfiguration"));
+			toolTipHostName.setText(mapOfToolTips.get("toolTipHostName"));
+			toolTipInstance.setText(mapOfToolTips.get("toolTipInstance"));
+			toolTipInterval.setText(mapOfToolTips.get("toolTipInterval"));
+			toolTipMonitorProcess.setText(mapOfToolTips.get("toolTipMonitorProcess"));
+			toolTipPassword.setText(mapOfToolTips.get("toolTipPassword"));
+			toolTipStartSelection.setText(mapOfToolTips.get("toolTipStartSelection"));
+			toolTipUserName.setText(mapOfToolTips.get("toolTipUserName"));
+		}
+	}
+
 
 	/**
 	 * Clear setting page.

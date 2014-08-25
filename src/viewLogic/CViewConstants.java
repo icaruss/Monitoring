@@ -62,6 +62,13 @@ public class CViewConstants {
 
 	/** The Constant MONITORING_TESTS. */
 	public static final String MONITORING_TESTS = "Monitoring Tests";
+	
+	
+	/** The Constant CONFIGURATION FILE. */
+	public static final String CONFIGURATION_FILE = "Configurations.xml";
+	
+	/** The Constant TOOLTIPS_FILE. */
+	public static final String TOOLTIPS_FILE = "ToolTipText.xml";
 
 	/**
 	 * *************************************************************************
@@ -99,6 +106,19 @@ public class CViewConstants {
 
 		/** The Directory direction previous. */
 		DirectoryDirectionPrevious
+	};
+	
+	
+	/**
+	 * The Enum Xml Type.
+	 */
+	public enum XmlFileType {
+
+		/** The File type of Configuration. */
+		XmlFileTypeConfiguration,
+
+		/** The File type of Tooltips. */
+		XmlFileTypeToolTips
 	};
 
 	/****************************************************************************/

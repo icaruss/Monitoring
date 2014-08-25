@@ -34,15 +34,31 @@
         <Font name="Arial" size="10.0" fx:id="x1" />
       </font>
     </Text>
-    <TextField fx:id="txtFieldHostName" layoutX="227.0" layoutY="136.0" prefHeight="24.133514404296875" prefWidth="265.0" />
+    <TextField fx:id="txtFieldHostName" layoutX="227.0" layoutY="136.0" prefHeight="24.133514404296875" prefWidth="265.0">
+      <tooltip>
+        <Tooltip autoHide="true" contentDisplay="CENTER" text="" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" wrapText="false" fx:id="toolTipHostName" />
+      </tooltip>
+    </TextField>
     <Text font="$x1" fontSmoothingType="LCD" layoutX="83.0" layoutY="193.0" scaleX="2.446508725684463" scaleY="2.057615907667514" strokeType="OUTSIDE" strokeWidth="0.0" text="User Name :" textAlignment="CENTER" />
-    <TextField fx:id="txtFieldUserName" layoutX="227.0" layoutY="177.0" prefHeight="24.133514404296875" prefWidth="265.0" />
+    <TextField fx:id="txtFieldUserName" layoutX="227.0" layoutY="177.0" prefHeight="24.133514404296875" prefWidth="265.0">
+      <tooltip>
+        <Tooltip autoHide="true" contentDisplay="CENTER" text="" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" wrapText="false" fx:id="toolTipUserName" />
+      </tooltip>
+    </TextField>
     <Text font="$x1" fontSmoothingType="LCD" layoutX="84.0" layoutY="231.0" scaleX="2.446508725684463" scaleY="2.057615907667514" strokeType="OUTSIDE" strokeWidth="0.0" text="Password   :" textAlignment="CENTER" />
     <Line endX="227.0" endY="-1.0" layoutX="268.0" layoutY="266.0" startX="-222.0" startY="0.0" />
     <Text font="$x1" fontSmoothingType="LCD" layoutX="74.0" layoutY="313.0" scaleX="2.446508725684463" scaleY="2.057615907667514" strokeType="OUTSIDE" strokeWidth="0.0" text="Instance :" textAlignment="CENTER" />
-    <TextField fx:id="txtFieldInstance" layoutX="227.0" layoutY="297.0" prefHeight="24.133514404296875" prefWidth="265.0" />
+    <TextField fx:id="txtFieldInstance" layoutX="227.0" layoutY="297.0" prefHeight="24.133514404296875" prefWidth="265.0">
+      <tooltip>
+        <Tooltip autoHide="true" contentDisplay="CENTER" text="" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" wrapText="false" fx:id="toolTipInstance" />
+      </tooltip>
+    </TextField>
     <Text font="$x1" fontSmoothingType="LCD" layoutX="89.0" layoutY="357.0" scaleX="2.446508725684463" scaleY="2.057615907667514" strokeType="OUTSIDE" strokeWidth="0.0" text="Interval (Sec) :" textAlignment="CENTER" />
-    <TextField fx:id="txtFieldInstanceTime" layoutX="227.0" layoutY="341.0" prefHeight="24.133514404296875" prefWidth="265.0" />
+    <TextField fx:id="txtFieldInstanceTime" layoutX="227.0" layoutY="341.0" prefHeight="24.133514404296875" prefWidth="265.0">
+      <tooltip>
+        <Tooltip autoHide="true" contentDisplay="CENTER" text="" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" wrapText="false" fx:id="toolTipInterval" />
+      </tooltip>
+    </TextField>
     <Text font="$x1" fontSmoothingType="LCD" layoutX="90.0" layoutY="399.0" scaleX="2.446508725684463" scaleY="2.057615907667514" strokeType="OUTSIDE" strokeWidth="0.0" text="Monitor Process" textAlignment="CENTER" />
     <Line endX="77.0" endY="-1.0" layoutX="138.0" layoutY="408.0" startX="-100.0" />
     <FlowPane blendMode="SRC_OVER" hgap="0.0" layoutX="42.0" layoutY="422.0" minWidth="92.0" orientation="VERTICAL" prefHeight="98.0" prefWidth="106.0791015625">
@@ -77,7 +93,11 @@
       </padding>
     </FlowPane>
     <Line endX="227.0" endY="-1.0" layoutX="260.0" layoutY="564.0" startX="-222.0" startY="0.0" />
-    <PasswordField fx:id="txtFieldPassword" layoutX="227.0" layoutY="215.0" prefHeight="25.0" prefWidth="265.0" />
+    <PasswordField fx:id="txtFieldPassword" layoutX="227.0" layoutY="215.0" prefHeight="25.0" prefWidth="265.0">
+      <tooltip>
+        <Tooltip autoHide="true" contentDisplay="CENTER" text="" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" wrapText="false" fx:id="toolTipPassword" />
+      </tooltip>
+    </PasswordField>
     <ComboBox fx:id="cmbStartSelection" editable="false" layoutX="43.0" layoutY="617.0" onAction="#cmbSelectionOnAction" prefHeight="26.5" prefWidth="144.9998779296875" promptText="Select" visibleRowCount="2">
       <items>
         <FXCollections fx:factory="observableArrayList">
@@ -85,6 +105,9 @@
           <String fx:value="Time Frame" />
         </FXCollections>
       </items>
+      <tooltip>
+        <Tooltip autoHide="true" contentDisplay="CENTER" text="" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" wrapText="false" fx:id="toolTipStartSelection" />
+      </tooltip>
     </ComboBox>
     <AnchorPane fx:id="paneTimeFrame" focusTraversable="true" layoutX="252.0" layoutY="565.0" minWidth="214.4141845703125" prefHeight="121.0" prefWidth="215.0" visible="false">
       <children>
@@ -141,7 +164,15 @@
           <String fx:value="New" />
         </FXCollections>
       </items>
+      <tooltip>
+        <Tooltip autoHide="true" contentDisplay="CENTER" text="" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" wrapText="false" fx:id="toolTipChooseConfiguration" />
+      </tooltip>
     </ComboBox>
+    <Label layoutX="122.0" layoutY="430.0" prefHeight="82.0" prefWidth="159.0" text="">
+      <tooltip>
+        <Tooltip autoHide="true" contentDisplay="CENTER" text="" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" wrapText="false" fx:id="toolTipMonitorProcess" />
+      </tooltip>
+    </Label>
   </children>
   <effect>
     <Lighting>
