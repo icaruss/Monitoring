@@ -466,6 +466,8 @@ public class CMonitoringViewController implements Initializable {
 	@SuppressWarnings({ "rawtypes" })
 	public void loadTableData(File file)
 	{
+		tbView.getItems().clear();
+		
 		ObservableList<Map> allData = FXCollections.observableArrayList();
 		
 		Vector<String> columnHeaders = new Vector<String>();
@@ -509,7 +511,7 @@ public class CMonitoringViewController implements Initializable {
 	            	{
 	            		if (cell_.getCellType() == HSSFCell.CELL_TYPE_NUMERIC)
 	            		{
-	            			dataRow.put(columnHeaders.elementAt(j), String.valueOf(cell_.getColumnIndex()));
+	            			dataRow.put(columnHeaders.elementAt(j), String.valueOf(cell_.getNumericCellValue()));
 	            		}
 	            		else if (cell_.getCellType() == HSSFCell.CELL_TYPE_STRING)
 	            		{
@@ -569,7 +571,8 @@ public class CMonitoringViewController implements Initializable {
                         public void updateItem(String item, boolean empty)
                         {
                             super.updateItem(item, empty);
-                            if(!isEmpty())
+                            
+                            if(!isEmpty() && !item.isEmpty() && !item.equals(""))
                             {
                                 setText(item);
                                 
@@ -588,6 +591,10 @@ public class CMonitoringViewController implements Initializable {
                                 	}
                                 }
                                 
+                            }
+                            else
+                            {
+                            	setText("");
                             }
                         }
                     };
