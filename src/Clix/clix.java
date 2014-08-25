@@ -63,10 +63,10 @@ public class clix extends winUnixOperations {
 		password = _password;
 
 		if (port.equalsIgnoreCase("59950")) {
-			clixCmd = "clix mdsMonitor localhost Admin: " + " -W -C -T "
+			clixCmd = "clix mdsMonitor " + hostName + " -W -C -T "
 					+ interval + "  >> " + clixFileName + " 2>&1";
 		} else {
-			clixCmd = "clix mdsMonitor localhost Admin: " + " -W -C -T "
+			clixCmd = "clix mdsMonitor " + hostName + " -W -C -T "
 					+ interval + " -# " + port + " >> " + clixFileName
 					+ " 2>&1";
 		}

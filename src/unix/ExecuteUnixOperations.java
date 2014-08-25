@@ -375,15 +375,14 @@ public class ExecuteUnixOperations extends CommandExecuter {
 				clixCommand.stopClix();
 				clixCommand.killProcesses();
 				ParseClix parseClix = new ParseClix();
-				
-				if (parseClix.parseClixOut("clix_mon.out") == null)
+				String parseClixOut = parseClix.parseClixOut("clix_mon.out");
+				if (parseClixOut == null)
 				{
 					clixFileNotExist = true;
 				}
 				else
 				{
-					TestFolder.addFileToFolder(parseClix
-							.parseClixOut("clix_mon.out"));
+					TestFolder.addFileToFolder(parseClixOut);
 					MonLogger.myLogger.log(Level.INFO,
 							"Add clix monitoring output to test folder"
 									+ TestFolderName + getOS());
@@ -497,7 +496,7 @@ public class ExecuteUnixOperations extends CommandExecuter {
 									+ TestFolderName);
 					if (fileName.startsWith("mds_") && clixFileNotExist == false ) {
 						excelManagement.mainExcelFlow(4, 0, interval,
-								TestFolder);
+								TestFolder, "VSZ_Diff");
 					}
 
 				}
@@ -539,9 +538,10 @@ public class ExecuteUnixOperations extends CommandExecuter {
 							"Add mds/mdis/mdss monitoring output to test folder"
 									+ TestFolderName);
 					TestFolder.addFileToFolder(fileName);
-					if (fileName.startsWith("mds_")) {
+					if (fileName.startsWith("mds_") && TestFolder.getFileNames().contains("clix_mon.xls") ) {
+						String newColName = "";			//TODO: DECIDE ON COLNAME
 						excelManagement.mainExcelFlow(6, 0, interval,
-								TestFolder);
+								TestFolder, newColName );
 
 					}
 

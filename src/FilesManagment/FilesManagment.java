@@ -120,18 +120,21 @@ public abstract class FilesManagment {
 	 */
 	public boolean checkIfLineExist(String inputFile, String lineToRemove) throws IOException
 	{
-		@SuppressWarnings("resource")
 		BufferedReader reader = new BufferedReader(new FileReader(inputFile));
 
 		String currentLine;
 
-		while ((currentLine = reader.readLine()) != null) {
+		while ((currentLine = reader.readLine()) != null) 
+		{
 			// trim newline when comparing with lineToRemove
 			String trimmedLine = currentLine.trim();
 			if (trimmedLine.equals(lineToRemove))
+			{
+				reader.close();		
 				return true;
+			}
 		}
-				
+		reader.close();		
 		return false;
 		
 	}
@@ -300,9 +303,10 @@ public abstract class FilesManagment {
 		}
 		writer.close();
 		reader.close();
-		tempFile.renameTo(inputFile);
 		inputFile.delete();
+		tempFile.renameTo(inputFile);
 		
+			
 /*		if (successful)
 			System.out.println(lineToRemove + " has been removed");
 		else
@@ -404,7 +408,8 @@ public abstract class FilesManagment {
 	 *            the file path
 	 */
 	public void deleteFile(String FileName, String FilePath) {
-		File file = new File(FilePath + "\\\\" + FilePath);
+		File file = new File(FilePath + "\\" + FileName);
+		file.getAbsolutePath();
 		file.delete();
 
 	}

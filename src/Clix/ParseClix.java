@@ -7,7 +7,6 @@ import java.io.IOException;
 import java.util.logging.Level;
 
 import log.MonLogger;
-
 import FilesManagment.Converter;
 
 // TODO: Auto-generated Javadoc
@@ -32,6 +31,7 @@ public class ParseClix extends Converter {
 			if (checkIfLineExist(fileName, lineToRemove) == false)
 			{
 				MonLogger.myLogger.log(Level.WARNING, "Clix output is not valid");
+				deleteFile(fileName, System.getProperty("user.dir"));
 				return null;
 			}
 			else

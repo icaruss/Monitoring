@@ -12,6 +12,9 @@ missions to complete :
 
 3.2 BUGS:
 	1. The time left line is not updated.
+	2. The "unix.GuiParameterCheck mainGuiCheck" doesn't know if radio buttons are checked or not.
+	3. Save configuration is not working on changing existent configuration after failure - for example: in case current setting 
+	throws and error and I would like to change them, the configuration is not saved.
 
 
 
