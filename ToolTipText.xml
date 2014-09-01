@@ -7,10 +7,10 @@
 		<string>Enter Host Name</string></entry>
 	<entry>
 		<string>toolTipUserName</string>
-		<string>Enter User Name</string></entry>
+		<string>Enter User Name - relevant [SID]adm user</string></entry>
 	<entry>
 		<string>toolTipInstance</string>
-		<string>Enter Instance ID</string></entry>
+		<string>Enter Instance SID </string></entry>
 	<entry>
 		<string>toolTipInterval</string>
 		<string>Enter Time Interval in seconds</string></entry>
