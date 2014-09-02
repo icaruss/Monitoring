@@ -71,8 +71,7 @@ public class UnixConnection extends UnixContext {
 			sesConnection.setPassword(password);
 			// UNCOMMENT THIS FOR TESTING PURPOSES, BUT DO NOT USE IN PRODUCTION
 		    sesConnection.setConfig("StrictHostKeyChecking", "no");
-		    //sesConnection.setConfig("PreferredAuthentications","password");
-			sesConnection.setConfig("PreferredAuthentications", "publickey,keyboard-interactive,password");
+			sesConnection.setConfig("PreferredAuthentications", "publickey,keyboard-interactive,password");		
 			sesConnection.connect(intTimeOut);
 
 		} catch (JSchException jschX) {
