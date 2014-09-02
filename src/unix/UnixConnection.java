@@ -70,13 +70,8 @@ public class UnixConnection extends UnixContext {
 			sesConnection = jschSSHChannel.getSession(userName, hostName, 22);
 			sesConnection.setPassword(password);
 			// UNCOMMENT THIS FOR TESTING PURPOSES, BUT DO NOT USE IN PRODUCTION
-			//sesConnection.setConfig("StrictHostKeyChecking", "no");
-			
-			/*sesConnection.setConfig("PreferredAuthentications",
-					                    "publickey,keyboard-interactive,password");*/
-			
-			sesConnection.setConfig("StrictHostKeyChecking", "publickey,keyboard-interactive," + password);
-			
+			sesConnection.setConfig("StrictHostKeyChecking", "no");
+			sesConnection.setConfig("PreferredAuthentications", "publickey,keyboard-interactive,password");		
 			sesConnection.connect(intTimeOut);
 
 		} catch (JSchException jschX) {
