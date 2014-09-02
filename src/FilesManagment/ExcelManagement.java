@@ -26,6 +26,7 @@ import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.hssf.util.HSSFColor;
 import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.Row;
 
 // TODO: Auto-generated Javadoc
@@ -459,6 +460,8 @@ public class ExcelManagement extends FilesManagment {
 
 			HSSFCellStyle style = workbook.createCellStyle();
 			style.setFillPattern(HSSFCellStyle.SOLID_FOREGROUND);
+			style.setWrapText(true);
+			style.setAlignment(CellStyle.ALIGN_CENTER);
 			style.setFillForegroundColor(color);
 			// style.setWrapText(true);
 
@@ -467,6 +470,7 @@ public class ExcelManagement extends FilesManagment {
 			while (row.getCell(i) != null) {
 				cell = (HSSFCell) row.getCell(i);
 				cell.setCellStyle(style);
+
 				i++;
 			}
 
