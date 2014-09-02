@@ -284,6 +284,10 @@ public class ExcelManagement extends FilesManagment {
 			}
 			int[][] fullDiffArr = getDiff2Cells(filePath, RSSVSZColNum);
 			int[][] diffArr = findDiffGreater(fullDiffArr, maxDiff);
+			if(diffArr == null)					// No differences found
+			{
+				return;
+			}
 			String[] dateStrArr = new String[diffArr.length];
 			Hashtable<String, List<Integer>> rowNumsforDate = new Hashtable<String, List<Integer>>(); // dateString
 																										// +

@@ -110,6 +110,8 @@ public class ExecuteUnixOperations extends CommandExecuter {
 
 	/** The end date. */
 	String endDate;
+	
+	int memDiff;
 
 	// ///////////////////////////////////////
 	// PARAMETERS TO GET FROM GUI - END
@@ -136,7 +138,7 @@ public class ExecuteUnixOperations extends CommandExecuter {
 		paramsForSH = createParamsForSH(currentConfiguration);
 		startDate = (String) currentConfiguration.get("startFromTime");
 		endDate = (String) currentConfiguration.get("startToTime");
-
+		memDiff = Integer.parseInt((String)currentConfiguration.get("memoryPop"));
 	}
 
 	/** The runkill sh. */
@@ -495,7 +497,7 @@ public class ExecuteUnixOperations extends CommandExecuter {
 							"Add mds/mdis/mdss monitoring output to test folder"
 									+ TestFolderName);
 					if (fileName.startsWith("mds_") && clixFileNotExist == false ) {
-						excelManagement.mainExcelFlow(4, 0, interval,
+						excelManagement.mainExcelFlow(5, memDiff, interval,
 								TestFolder, "VSZ_Diff");
 					}
 
@@ -539,9 +541,9 @@ public class ExecuteUnixOperations extends CommandExecuter {
 									+ TestFolderName);
 					TestFolder.addFileToFolder(fileName);
 					if (fileName.startsWith("mds_") && TestFolder.getFileNames().contains("clix_mon.xls") ) {
-						excelManagement.mainExcelFlow(6, 0, interval,
+						excelManagement.mainExcelFlow(6, memDiff, interval,
 								TestFolder, "VSZ_Diff" );
-						excelManagement.mainExcelFlow(6, 0, interval,
+						excelManagement.mainExcelFlow(7, memDiff, interval,
 								TestFolder, "RSS_Diff" );
 
 					}
