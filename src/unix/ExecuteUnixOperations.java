@@ -539,9 +539,10 @@ public class ExecuteUnixOperations extends CommandExecuter {
 									+ TestFolderName);
 					TestFolder.addFileToFolder(fileName);
 					if (fileName.startsWith("mds_") && TestFolder.getFileNames().contains("clix_mon.xls") ) {
-						String newColName = "";			//TODO: DECIDE ON COLNAME
 						excelManagement.mainExcelFlow(6, 0, interval,
-								TestFolder, newColName );
+								TestFolder, "VSZ_Diff" );
+						excelManagement.mainExcelFlow(6, 0, interval,
+								TestFolder, "RSS_Diff" );
 
 					}
 

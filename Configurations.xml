@@ -61,11 +61,11 @@
     </map>
   </entry>
   <entry>
-    <string>iltlvh325</string>
+    <string>ILSUN56</string>
     <map>
       <entry>
         <string>port</string>
-        <string>50350</string>
+        <string>59950</string>
       </entry>
       <entry>
         <string>interval</string>
@@ -89,15 +89,15 @@
       </entry>
       <entry>
         <string>userName</string>
-        <string>hp1adm</string>
+        <string>q56adm</string>
       </entry>
       <entry>
         <string>hostName</string>
-        <string>iltlvh325</string>
+        <string>ILSUN56</string>
       </entry>
       <entry>
         <string>instance</string>
-        <string>HP1</string>
+        <string>Q56</string>
       </entry>
       <entry>
         <string>mdssr</string>
@@ -106,6 +106,59 @@
       <entry>
         <string>password</string>
         <string>a2i2000!</string>
+      </entry>
+      <entry>
+        <string>configurationID</string>
+        <string>ILSUN56</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>iltlvh325</string>
+    <map>
+      <entry>
+        <string>port</string>
+        <string>50350</string>
+      </entry>
+      <entry>
+        <string>interval</string>
+        <string>5</string>
+      </entry>
+      <entry>
+        <string>start</string>
+        <string>Immediately</string>
+      </entry>
+      <entry>
+        <string>mdsr</string>
+        <boolean>true</boolean>
+      </entry>
+      <entry>
+        <string>clix</string>
+        <boolean>true</boolean>
+      </entry>
+      <entry>
+        <string>hostName</string>
+        <string>iltlvh325</string>
+      </entry>
+      <entry>
+        <string>userName</string>
+        <string>hp1adm</string>
+      </entry>
+      <entry>
+        <string>mdisr</string>
+        <boolean>true</boolean>
+      </entry>
+      <entry>
+        <string>instance</string>
+        <string>HP1</string>
+      </entry>
+      <entry>
+        <string>password</string>
+        <string>a2i2000!</string>
+      </entry>
+      <entry>
+        <string>mdssr</string>
+        <boolean>true</boolean>
       </entry>
       <entry>
         <string>configurationID</string>

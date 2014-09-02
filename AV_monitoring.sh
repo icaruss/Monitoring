@@ -1,4 +1,4 @@
-#!/usr/local/bin/bash
+#!/usr/bin/bash
 #Date: 02/12/2009
 #PLATFORM:AIX, HP-UX, Linux, Solaris
 #
