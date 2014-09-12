@@ -540,7 +540,8 @@ public class ExecuteUnixOperations extends CommandExecuter {
 							"Add mds/mdis/mdss monitoring output to test folder"
 									+ TestFolderName);
 					TestFolder.addFileToFolder(fileName);
-					if (fileName.startsWith("mds_") && TestFolder.getFileNames().contains("clix_mon.xls") ) {
+					if (fileName.startsWith("mds_") && TestFolder.getFileNames().contains("clix_mon.xls") ) 
+					{
 						excelManagement.mainExcelFlow(6, memDiff, interval,
 								TestFolder, "VSZ_Diff" );
 						excelManagement.mainExcelFlow(7, memDiff, interval,

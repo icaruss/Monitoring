@@ -252,7 +252,7 @@ public class ExcelManagement extends FilesManagment {
 	 *            the excel file path
 	 */
 	public void setDiffToFile(int[][] diffArr, String ExcelFilePath, String colName) {
-		int lastCol = getLastCol(1, filePath); // the row num could be any row
+		int lastCol = getLastCol(0, filePath); // the row num could be any row
 		InsertCell(0, lastCol, colName, ExcelFilePath);
 		for (int i = 0; i < diffArr.length; i++) {
 			setDiffToRow(diffArr[i][1], lastCol, diffArr[i][0], ExcelFilePath);
@@ -279,11 +279,13 @@ public class ExcelManagement extends FilesManagment {
 	 */
 	public void mainExcelFlow(int RSSVSZColNum, int maxDiff, int interval,
 			Folder testFolder, String colName)  {
-		try {
-			if (getDiff2Cells(filePath, RSSVSZColNum) == null) {
+	try
+	{
+			int[][] fullDiffArr = getDiff2Cells(filePath, RSSVSZColNum);
+			if (fullDiffArr == null) 
+			{
 				return;
 			}
-			int[][] fullDiffArr = getDiff2Cells(filePath, RSSVSZColNum);
 			int[][] diffArr = findDiffGreater(fullDiffArr, maxDiff);
 			if(diffArr == null)					// No differences found
 			{
@@ -470,8 +472,13 @@ public class ExcelManagement extends FilesManagment {
 			while (row.getCell(i) != null) {
 				cell = (HSSFCell) row.getCell(i);
 				cell.setCellStyle(style);
-
 				i++;
+				if (row.getCell(i) == null && row.getCell(i+1) != null)
+				{
+					cell = (HSSFCell) row.getCell(i+1);
+					cell.setCellStyle(style);
+				}
+					
 			}
 
 			FileOutputStream out = new FileOutputStream(ExcelFilePath);
@@ -527,7 +534,7 @@ public class ExcelManagement extends FilesManagment {
 		if (OS.contains("HP-UX")) // Only VSZ in Column number 4
 		{
 			for (int i = 0; i < doubleArr.length; i++) {
-				rowIndex = sheet.getRow(firstIndex);
+				rowIndex = sheet.getRow(firstIndex++);
 				HSSFCell cell = (HSSFCell) rowIndex.getCell(4);
 				doubleArr[i] = Double.parseDouble(cell.toString());
 			}
@@ -539,17 +546,19 @@ public class ExcelManagement extends FilesManagment {
 		// column number 6 = %VSZ
 		// column number 7 = %RSS
 		{
+			
 			if (VSZ_OR_RSS == "VSZ") {
 				for (int i = 0; i < doubleArr.length; i++) {
-					rowIndex = sheet.getRow(firstIndex);
+					rowIndex = sheet.getRow(firstIndex++);
 					HSSFCell cell = (HSSFCell) rowIndex.getCell(6);
 					doubleArr[i] = Double.parseDouble(cell.toString());
+					
 				}
 
 			} else // (VSZ_OR_RSS equals to "RSS")
 			{
 				for (int i = 0; i < doubleArr.length; i++) {
-					rowIndex = sheet.getRow(firstIndex);
+					rowIndex = sheet.getRow(firstIndex++);
 					HSSFCell cell = (HSSFCell) rowIndex.getCell(7);
 					doubleArr[i] = Double.parseDouble(cell.toString());
 				}
@@ -635,7 +644,7 @@ public class ExcelManagement extends FilesManagment {
 
 		for (int i = 0; i < doubleArr.length; i++) {
 			rowIndex = sheet.getRow(i + 1);
-			HSSFCell cell = (HSSFCell) rowIndex.getCell(3);
+			HSSFCell cell = (HSSFCell) rowIndex.getCell(4);
 			doubleArr[i] = Double.parseDouble(cell.toString());
 		}
 

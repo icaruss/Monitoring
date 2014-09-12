@@ -8,12 +8,17 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.TimeZone;
 
 import javax.imageio.ImageIO;
+
 import org.jfree.chart.*;
+import org.jfree.chart.axis.NumberAxis;
 import org.jfree.chart.axis.PeriodAxis;
 import org.jfree.chart.axis.PeriodAxisLabelInfo;
+import org.jfree.chart.plot.CategoryPlot;
 import org.jfree.chart.plot.XYPlot;
 import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
 import org.jfree.data.time.*;
@@ -113,7 +118,6 @@ public class ChartGeneration extends ApplicationFrame {
 		chartpanel.setPreferredSize(new Dimension(1000, 1000));
 		chartpanel.setMouseZoomable(true, false);
 		setContentPane(chartpanel);
-
 		createImageFromChart(jfreechart, chartName + "CPU");
 	}
 
@@ -129,7 +133,7 @@ public class ChartGeneration extends ApplicationFrame {
 	 */
 	private void createImageFromChart(JFreeChart jfreechart, String imageName)
 			throws IOException {
-		Image image = jfreechart.createBufferedImage(500, 500);
+		Image image = jfreechart.createBufferedImage(700, 700);
 		BufferedImage bi = (BufferedImage) image;
 		File f = new File(imageName + ".png");
 		ImageIO.write(bi, "png", f);
@@ -177,8 +181,8 @@ public class ChartGeneration extends ApplicationFrame {
 		XYDataset xydataset = createDatasetMem();
 		JFreeChart jfreechart = createChart(xydataset, "Memory");
 		ChartPanel chartpanel = new ChartPanel(jfreechart, false);
+		chartpanel.setRangeZoomable(isEnabled());
 		chartpanel.setPreferredSize(new Dimension(1000, 1000));
-		chartpanel.setMouseZoomable(true, false);
 
 		setContentPane(chartpanel);
 
@@ -259,6 +263,7 @@ public class ChartGeneration extends ApplicationFrame {
 			timeseriescollection.addSeries(timeseries);
 			// timeseriescollection.addSeries(timeseries1);
 			timeseriescollection.setXPosition(TimePeriodAnchor.MIDDLE);
+
 		} else {
 			TimeSeries timeseries = new TimeSeries("RSS");
 			TimeSeries timeseries1 = new TimeSeries("VSZ");
