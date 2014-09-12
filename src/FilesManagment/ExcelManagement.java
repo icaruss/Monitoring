@@ -542,7 +542,7 @@ public class ExcelManagement extends FilesManagment {
 			if (VSZ_OR_RSS == "VSZ") {
 				for (int i = 0; i < doubleArr.length; i++) {
 					rowIndex = sheet.getRow(firstIndex);
-					HSSFCell cell = (HSSFCell) rowIndex.getCell(5);
+					HSSFCell cell = (HSSFCell) rowIndex.getCell(6);
 					doubleArr[i] = Double.parseDouble(cell.toString());
 				}
 
@@ -550,7 +550,7 @@ public class ExcelManagement extends FilesManagment {
 			{
 				for (int i = 0; i < doubleArr.length; i++) {
 					rowIndex = sheet.getRow(firstIndex);
-					HSSFCell cell = (HSSFCell) rowIndex.getCell(5);
+					HSSFCell cell = (HSSFCell) rowIndex.getCell(7);
 					doubleArr[i] = Double.parseDouble(cell.toString());
 				}
 			}
