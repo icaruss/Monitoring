@@ -18,6 +18,8 @@ import java.text.ParseException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import org.apache.poi.hssf.record.ScenarioProtectRecord;
+
 import viewLogic.CSharedInstance;
 
 /**
@@ -41,10 +43,10 @@ public class Main extends Application {
 			primaryStage.setTitle("MDM Unix monitoring Tool");
 			primaryStage.setResizable(false);
 			primaryStage.setFullScreen(false);
-			primaryStage.setIconified(true);
+			primaryStage.sizeToScene();
 			primaryStage.getIcons().add(
 					new Image(getClass().getResourceAsStream("iconMain.jpg")));
-			
+			primaryStage.show();
 
 			primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
 				public void handle(WindowEvent we) {
@@ -66,8 +68,8 @@ public class Main extends Application {
 					}
 				}
 			});
-
-			primaryStage.show();
+			
+			
 
 		} catch (Exception ex) {
 			Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);

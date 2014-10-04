@@ -42,7 +42,6 @@ public class CMonitoringStage {
 			stage.setTitle("Monitoring Results");
 			stage.setResizable(false);
 			stage.setFullScreen(false);
-			stage.setIconified(true);
 			stage.getIcons()
 					.add(new Image(getClass().getResourceAsStream(
 							"monitorIcon.jpg")));

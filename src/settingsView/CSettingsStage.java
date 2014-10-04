@@ -38,11 +38,9 @@ public class CSettingsStage {
 			AnchorPane settingsPage = (AnchorPane) FXMLLoader.load(location);
 			Scene scene = new Scene(settingsPage);
 			stage.setScene(scene);
-			stage.sizeToScene();
 			stage.setTitle("Servers Configuration");
 			stage.setResizable(false);
 			stage.setFullScreen(false);
-			stage.setIconified(true);
 			stage.getIcons().add(
 					new Image(getClass()
 							.getResourceAsStream("iconSettings.jpg")));

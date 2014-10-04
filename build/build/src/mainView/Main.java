@@ -41,7 +41,6 @@ public class Main extends Application {
 			primaryStage.setTitle("MDM Unix monitoring Tool");
 			primaryStage.setResizable(false);
 			primaryStage.setFullScreen(false);
-			primaryStage.setIconified(true);
 			primaryStage.getIcons().add(
 					new Image(getClass().getResourceAsStream("iconMain.jpg")));
 			

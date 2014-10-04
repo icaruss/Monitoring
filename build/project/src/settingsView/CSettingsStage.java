@@ -42,7 +42,6 @@ public class CSettingsStage {
 			stage.setTitle("Servers Configuration");
 			stage.setResizable(false);
 			stage.setFullScreen(false);
-			stage.setIconified(true);
 			stage.getIcons().add(
 					new Image(getClass()
 							.getResourceAsStream("iconSettings.jpg")));
