@@ -8,6 +8,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.logging.Level;
 
+import settingsView.CSettingsController;
 import log.MonLogger;
 import FilesManagment.DateOperations;
 
@@ -187,11 +188,11 @@ public class GuiParameterCheck {
 	 *            the start date
 	 * @param endDate
 	 *            the end date
+	 * @param cSettingsController 
 	 * @return the boolean
 	 */
 	@SuppressWarnings("finally")
-	public Boolean mainGuiCheck(String startDate, String endDate) {
-
+	public Boolean mainGuiCheck(String startDate, String endDate, CSettingsController cSettingsController) {
 		Boolean TF = true;
 		try {
 			if (connectionTestSuccess() == true) {
@@ -205,43 +206,53 @@ public class GuiParameterCheck {
 				return TF;
 			}
 
-			if (instaceExist() == true) {
+			if (instaceExist() == true ) {
 				MonLogger.myLogger.log(Level.INFO, "Instance exist");
 			} else {
 				MonLogger.myLogger.log(Level.INFO, "Instance does NOT exist!");
 				TF = false;
 				return TF;
 			}
-			if (mdsStarted() == true) {
-				MonLogger.myLogger.log(Level.INFO, "MDS is started!");
-
-			} else {
-				MonLogger.myLogger.log(Level.INFO, "MDS is NOT started!");
-				MonLogger.myLogger
-						.log(Level.INFO,
-								"Start before proceeding or uncheck the 'mds-r' radiobutton!");
-				TF = false;
-				return TF;
+			
+			if(cSettingsController.getChkboxMdsr().isSelected() == true)
+			{
+				if (mdsStarted() == true) {
+					MonLogger.myLogger.log(Level.INFO, "MDS is started!");
+	
+				} else {
+					MonLogger.myLogger.log(Level.INFO, "MDS is NOT started!");
+					MonLogger.myLogger
+							.log(Level.INFO,
+									"Start before proceeding or uncheck the 'mds-r' radiobutton!");
+					TF = false;
+					return TF;
+				}
 			}
-			if (mdisStarted() == true) {
-				MonLogger.myLogger.log(Level.INFO, "MDIS is started!");
-			} else {
-				MonLogger.myLogger.log(Level.INFO, "MDIS is NOT started!");
-				MonLogger.myLogger
-						.log(Level.INFO,
-								"Start before proceeding or uncheck the 'mdis-r' radiobutton!");
-				TF = false;
-				return TF;
+			if (cSettingsController.getChkboxMdisr().isSelected() == true)
+			{
+				if (mdisStarted() == true) {
+					MonLogger.myLogger.log(Level.INFO, "MDIS is started!");
+				} else {
+					MonLogger.myLogger.log(Level.INFO, "MDIS is NOT started!");
+					MonLogger.myLogger
+							.log(Level.INFO,
+									"Start before proceeding or uncheck the 'mdis-r' radiobutton!");
+					TF = false;
+					return TF;
+				}
 			}
-			if (mdssStarted() == true)
-				MonLogger.myLogger.log(Level.INFO, "MDSS is started!");
-			else {
-				MonLogger.myLogger.log(Level.INFO, "MDSS is NOT started!");
-				MonLogger.myLogger
-						.log(Level.INFO,
-								"Start before proceeding or uncheck the 'mdss-r' radiobutton!");
-				TF = false;
-				return TF;
+			if(cSettingsController.getChkboxMdssr().isSelected() == true)
+			{
+				if (mdssStarted() == true)
+					MonLogger.myLogger.log(Level.INFO, "MDSS is started!");
+				else {
+					MonLogger.myLogger.log(Level.INFO, "MDSS is NOT started!");
+					MonLogger.myLogger
+							.log(Level.INFO,
+									"Start before proceeding or uncheck the 'mdss-r' radiobutton!");
+					TF = false;
+					return TF;
+				}
 			}
 
 			// Times check

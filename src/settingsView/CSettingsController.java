@@ -59,6 +59,21 @@ public class CSettingsController implements Initializable {
 	// fx:id="chkboxMdisr"
 	private RadioButton chkboxMdisr; // Value injected by FXMLLoader
 
+	public RadioButton getChkboxMdisr() {
+		return chkboxMdisr;
+	}
+
+
+	public RadioButton getChkboxMdsr() {
+		return chkboxMdsr;
+	}
+
+
+	public RadioButton getChkboxMdssr() {
+		return chkboxMdssr;
+	}
+
+
 	/** The chkbox mdsr. */
 	@FXML
 	// fx:id="chkboxMdsr"
@@ -605,9 +620,10 @@ public class CSettingsController implements Initializable {
 
 			updateMemoryPop();
 		}
-
 	}
 
+	
+	
 	/**
 	 * Chkbox mdssr on mouse clicked.
 	 */
@@ -1026,12 +1042,12 @@ public class CSettingsController implements Initializable {
 				txtFieldUserName.getText(), txtFieldPassword.getText());
 		if(cmbStartSelection.getValue().equals(CViewConstants.START_IMMEDIATELY))
 		{
-			if(guiParamCheck.mainGuiCheck(null,null))
+			if(guiParamCheck.mainGuiCheck(null,null,this))
 				return null;
 		}
 		else if (cmbStartSelection.getValue().equals(CViewConstants.START_FRAME_TIME))
 		{
-				if(guiParamCheck.mainGuiCheck(txtFieldTimeFrameFrom.getText(),txtFieldTimeFrameTo.getText()))
+				if(guiParamCheck.mainGuiCheck(txtFieldTimeFrameFrom.getText(),txtFieldTimeFrameTo.getText(),this))
 					return null;
 		}
 		return "Can't Connect With Current Settings";
