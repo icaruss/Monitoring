@@ -75,7 +75,7 @@ public class Converter extends FilesManagment {
 					 * .substring(endIndex, line.length()); //
 					 * System.out.println(Second); line = first + " " + Second;
 					 */// Not needed, since the ps command output was changed
-					
+					line = line.replaceFirst("\\s+", "");
 					out.write(line.replaceAll("\\s+", ","));
 					out.newLine();
 					out.flush();

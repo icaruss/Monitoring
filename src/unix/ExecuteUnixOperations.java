@@ -497,7 +497,7 @@ public class ExecuteUnixOperations extends CommandExecuter {
 							"Add mds/mdis/mdss monitoring output to test folder"
 									+ TestFolderName);
 					if (fileName.startsWith("mds_") && clixFileNotExist == false ) {
-						excelManagement.mainExcelFlow(5, memDiff, interval,
+						excelManagement.mainExcelFlow(4, memDiff, interval,
 								TestFolder, "VSZ_Diff");
 					}
 
@@ -542,9 +542,9 @@ public class ExecuteUnixOperations extends CommandExecuter {
 					TestFolder.addFileToFolder(fileName);
 					if (fileName.startsWith("mds_") && TestFolder.getFileNames().contains("clix_mon.xls") ) 
 					{
-						excelManagement.mainExcelFlow(6, memDiff, interval,
+						excelManagement.mainExcelFlow(5, memDiff, interval,
 								TestFolder, "VSZ_Diff" );
-						excelManagement.mainExcelFlow(7, memDiff, interval,
+						excelManagement.mainExcelFlow(6, memDiff, interval,
 								TestFolder, "RSS_Diff" );
 
 					}

@@ -550,7 +550,7 @@ public class ExcelManagement extends FilesManagment {
 			if (VSZ_OR_RSS == "VSZ") {
 				for (int i = 0; i < doubleArr.length; i++) {
 					rowIndex = sheet.getRow(firstIndex++);
-					HSSFCell cell = (HSSFCell) rowIndex.getCell(6);
+					HSSFCell cell = (HSSFCell) rowIndex.getCell(5);
 					doubleArr[i] = Double.parseDouble(cell.toString());
 					
 				}
@@ -558,9 +558,17 @@ public class ExcelManagement extends FilesManagment {
 			} else // (VSZ_OR_RSS equals to "RSS")
 			{
 				for (int i = 0; i < doubleArr.length; i++) {
-					rowIndex = sheet.getRow(firstIndex++);
-					HSSFCell cell = (HSSFCell) rowIndex.getCell(7);
-					doubleArr[i] = Double.parseDouble(cell.toString());
+					try
+					{
+						rowIndex = sheet.getRow(firstIndex++);
+						HSSFCell cell = (HSSFCell) rowIndex.getCell(6);
+						doubleArr[i] = Double.parseDouble(cell.toString());
+					}
+					catch(NumberFormatException e)
+					{
+						MonLogger.myLogger.log(Level.WARNING,e.getLocalizedMessage());
+						e.printStackTrace();
+					}
 				}
 			}
 
@@ -644,7 +652,7 @@ public class ExcelManagement extends FilesManagment {
 
 		for (int i = 0; i < doubleArr.length; i++) {
 			rowIndex = sheet.getRow(i + 1);
-			HSSFCell cell = (HSSFCell) rowIndex.getCell(4);
+			HSSFCell cell = (HSSFCell) rowIndex.getCell(3);
 			doubleArr[i] = Double.parseDouble(cell.toString());
 		}
 

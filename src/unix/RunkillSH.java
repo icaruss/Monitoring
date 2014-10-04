@@ -201,9 +201,11 @@ public class RunkillSH extends CommandExecuter {
 		if (OS.startsWith("Linux")) {
 			bash = new String("/bin/bash");
 		}
-		if (OS.startsWith("SunOS")) {
+		else if (OS.startsWith("SunOS")) {
 			bash = new String("/usr/bin/bash");
-		} else {
+		} 
+		else 
+		{
 			this.execute("rm pathfile.sh");
 			// this.executeCommand("echo umask 000 > pathfile.sh\echo export
 			// PATH=/usr/sbin:/usr/local/bin:/usr/bin:/usr/ccs/bin:/usr/contrib/bin:/usr/contrib/Q4/bin:/opt/perl/bin:/opt/gvsd/bin:/opt/ipf/bin:/opt/nettladm/bin:/opt/fcms/bin:/opt/wbem/bin:/opt/wbem/sbin:/opt/sas/bin:/opt/graphics/common/bin:/opt/atok/bin:/usr/bin/X11:/usr/contrib/bin/X11:/opt/sec_mgmt/bastille/bin:/opt/caliper/bin:/opt/drd/bin:/opt/dsau/bin:/opt/dsau/sbin:/opt/resmon/bin:/opt/firefox:/opt/gnome/bin:/opt/propplus/bin:/usr/contrib/kwdb/bin:/opt/perl_32/bin:/opt/perl_64/bin:/opt/prm/bin:/opt/sfm/bin:/opt/swm/bin:/opt/sec_mgmt/spc/bin:/opt/ssh/bin:/opt/swa/bin:/opt/hpsmh/bin:/opt/thunderbird:/opt/sentinel/bin:/opt/langtools/bin:/opt/gwlm/bin
