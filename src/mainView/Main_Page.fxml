@@ -47,7 +47,7 @@
         <Font name="Arial Black" size="12.0" fx:id="x1" />
       </font>
     </Button>
-    <Button id="btnVMStat" fx:id="btnShowMonitoringResults" contentDisplay="TEXT_ONLY" disable="false" font="$x1" graphicTextGap="6.0" layoutX="28.0" layoutY="106.0" mnemonicParsing="false" prefHeight="63.9609375" prefWidth="118.58966064453125" text="Server Monitoring Resilts" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true">
+    <Button id="btnVMStat" fx:id="btnShowMonitoringResults" contentDisplay="TEXT_ONLY" disable="false" font="$x1" graphicTextGap="6.0" layoutX="28.0" layoutY="106.0" mnemonicParsing="false" prefHeight="63.9609375" prefWidth="118.58966064453125" text="Server Monitoring Results" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true">
       <effect>
         <DropShadow color="$x3" />
       </effect>
