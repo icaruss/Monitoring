@@ -1,1 +1,1 @@
-clix mdsMonitor ILSUN56 -W -C -T 5  >> clix_mon.out 2>&1
+clix mdsMonitor iltlvh325 -W -C -T 5 -# 50050 >> clix_mon.out 2>&1

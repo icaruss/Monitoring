@@ -1,6 +1,4 @@
-#!/usr/bin/bash
-#Date: 02/12/2009
-#PLATFORM:AIX, HP-UX, Linux, Solaris
+#!/usr/local/bin/bash
 #
 #PURPOSE: Monitoring tool for all Unix flavors
 #		  using "vmstat" and "ps".

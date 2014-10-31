@@ -8,7 +8,10 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.sql.Time;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -421,22 +424,14 @@ public class CSharedInstance {
 		if (isMonitoringStarted)
 			return true;
 
-		Calendar calendar = Calendar.getInstance();
-
-		try {
-			monitoringStart();
-
-			if (monitoringStartTime != null) {
-				if (monitoringStartTime.compareTo(calendar.getTime()) <= 0) {
-					isMonitoringStarted = true;
-
-					isMonitoringDone = false;
-
-					return true;
-				}
-
-				return false;
+		try
+		{
+			
+			if (monitoringStart())
+			{
+				return true;
 			}
+			return false;
 
 		} catch (Exception e) {
 			MonLogger.myLogger.log(Level.WARNING, e.getMessage());
@@ -446,37 +441,59 @@ public class CSharedInstance {
 
 	}
 
+
 	/**
 	 * Monitoring start.
 	 */
-	public void monitoringStart() 
+	public boolean monitoringStart() 
 	{
-		if (monitoringStartTime == null) {
-			Map<String, Object> map = getCurrentConfiguration();
+		
+		Map<String, Object> map = getCurrentConfiguration();
 
-			if (map != null) {
-				String fromTime = (String) map
-						.get(CViewConstants.START_FROM_TIME);
+		if (map != null)
+		{
+			String fromTime = (String) map
+					.get(CViewConstants.START_FROM_TIME);
 
-				if (fromTime != null) {
-					// int hours = Integer.parseInt(fromTime.substring(0, 2));
-					// int minutes = Integer.parseInt(fromTime.substring(3, 5));
-					// int seconds = Integer.parseInt(fromTime.substring(6));
-
-					monitoringStartTime = Time.valueOf(fromTime.replace('-',
-							':'));
-				} else // start immediately
+			if (fromTime != null)
+			{
+				
+				SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+				Date currentDate = new Date();
+				Date startDate = null;
+				try
 				{
-					monitoringStartTime = Time.valueOf(Calendar.getInstance()
-							.get(Calendar.HOUR_OF_DAY)
-							+ ":"
-							+ Calendar.getInstance().get(Calendar.MINUTE)
-							+ ":00");
+					startDate = format.parse(fromTime);
+					
+				}
+				catch (ParseException e) 
+				{
+				   e.printStackTrace();
+				}  
+				
+				if (startDate.before(currentDate))
+				{
+					return true;
+				}
+				else
+				{
+					return false;
 				}
 			}
-
+			else // start immediately
+			{
+				return true;
+			}
+			
+			
 		}
+		
+		return false;
+
+		
 	}
+
+
 
 	/**
 	 * Adds the new data files.

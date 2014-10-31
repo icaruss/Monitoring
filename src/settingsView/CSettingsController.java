@@ -5,6 +5,9 @@
 package settingsView;
 
 import java.net.URL;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.ResourceBundle;
@@ -256,74 +259,68 @@ public class CSettingsController implements Initializable {
 		}
 
 		// btn Connect to server ACTION
-		btnConnect.setOnAction(new EventHandler<ActionEvent>() 
-		{
+		// btn Connect to server ACTION
+				btnConnect.setOnAction(new EventHandler<ActionEvent>() 
+				{
 
-			@Override
-			public void handle(ActionEvent event) {
-				if (updateLblIfInputNotOK()) {
-					// start connection
+					@Override
+					public void handle(ActionEvent event) {
+						if (true/*updateLblIfInputNotOK()*/) {
+							// start connection
 
-					Map<String, Object> currentSettings = getCurrentSettingsOnView();
+							Map<String, Object> currentSettings = getCurrentSettingsOnView();
 
-					// save configuration
-					CSharedInstance.getInstance().saveConfigurations(
-							currentSettings);
+							// save configuration
+							CSharedInstance.getInstance().saveConfigurations(
+									currentSettings);
 
-					if (cmbStartSelection.getSelectionModel()
-							.getSelectedIndex() == 1) // TimeFrame
-					{
-						CSharedInstance
-								.getInstance()
-								.updateWaitingTimeForResults(
-										(String) currentSettings
-												.get(CViewConstants.START_FROM_TIME),
-										(String) currentSettings
-												.get(CViewConstants.START_TO_TIME));
+							if (cmbStartSelection.getSelectionModel()
+									.getSelectedIndex() == 0) // TimeFrame
+							{
+								CSharedInstance.getInstance().totalSecondsCountdown = -1;
+							}
 
-					} else {
-						CSharedInstance.getInstance().totalSecondsCountdown = -1;
-					}
+							CSharedInstance.getInstance().currentMonitoring = MonitorType.MonitorTypeElse;
 
-					CSharedInstance.getInstance().currentMonitoring = MonitorType.MonitorTypeElse;
+							try {
+								// TODO: Test the functionality
 
-					try {
-						// TODO: Test the functionality
+								CSharedInstance.getInstance().setNewExecuteUnixOp(
+										currentSettings);
 
-						CSharedInstance.getInstance().setNewExecuteUnixOp(
-								currentSettings);
+								ExecuteUnixOperations exUnixOp = CSharedInstance
+										.getInstance().executeUnixOperations;
 
-						ExecuteUnixOperations exUnixOp = CSharedInstance
-								.getInstance().executeUnixOperations;
+								if ((String) currentSettings.get(CViewConstants.START) == CViewConstants.START_IMMEDIATELY) {
+									MonLogger.myLogger.log(Level.INFO, "S T A R T");
+									MonLogger.myLogger.log(Level.INFO,
+											"Program started immediately");
+									//exUnixOp.start();
+								} else if ((String) currentSettings
+										.get(CViewConstants.START) == CViewConstants.START_FRAME_TIME) {
+									MonLogger.myLogger.log(Level.INFO, "S T A R T");
+									MonLogger.myLogger.log(Level.INFO,
+											"Program started on time");
+									//exUnixOp.startOnTime();
 
-						if ((String) currentSettings.get(CViewConstants.START) == CViewConstants.START_IMMEDIATELY) {
-							MonLogger.myLogger.log(Level.INFO, "S T A R T");
-							MonLogger.myLogger.log(Level.INFO,
-									"Program started immediately");
-							exUnixOp.start();
-						} else if ((String) currentSettings
-								.get(CViewConstants.START) == CViewConstants.START_FRAME_TIME) {
-							MonLogger.myLogger.log(Level.INFO, "S T A R T");
-							MonLogger.myLogger.log(Level.INFO,
-									"Program started on time");
-							exUnixOp.startOnTime();
+								}
+
+								CSharedInstance.getInstance().isMonitoringDone = false;
+
+							} catch (Exception e) {
+								e.printStackTrace();
+							} finally {
+								Stage stage = (Stage) btnConnect.getScene().getWindow();
+								stage.close();
+							}
 
 						}
 
-						CSharedInstance.getInstance().isMonitoringDone = false;
-
-					} catch (Exception e) {
-						e.printStackTrace();
-					} finally {
-						Stage stage = (Stage) btnConnect.getScene().getWindow();
-						stage.close();
 					}
+				});
+				
+				
 
-				}
-
-			}
-
-		});
 
 		// Btn To save Chosen configuration for current or later use
 		btnSaveConfiguration.setOnAction(new EventHandler<ActionEvent>() {
@@ -959,6 +956,41 @@ public class CSettingsController implements Initializable {
 		}
 
 	}
+	
+	
+	/**
+	* Check if time is correct, appears after NOW.
+	* 
+	* @param text
+	*            the text
+	* @return true, if successful
+	*/
+	private boolean checkTimeToCorrect(String Text)
+	{
+		
+		SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+		Date date = null;
+		try
+		{
+			date = format.parse(Text);
+		}
+		catch (ParseException e) 
+		{
+		   e.printStackTrace();
+		}  
+		
+		Date currentDate = new Date();
+		
+		if (currentDate.after(date))
+		{
+			return false;
+		}
+		
+		return true;
+		
+	}
+
+
 
 	/**
 	 * Update lbl if input not ok.

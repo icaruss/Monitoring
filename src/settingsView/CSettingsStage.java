@@ -39,7 +39,8 @@ public class CSettingsStage {
 			Scene scene = new Scene(settingsPage);
 			stage.setScene(scene);
 			stage.setTitle("Servers Configuration");
-			stage.setResizable(false);
+			stage.setResizable(true);
+
 			stage.setFullScreen(false);
 			stage.getIcons().add(
 					new Image(getClass()

@@ -88,28 +88,28 @@
         <boolean>true</boolean>
       </entry>
       <entry>
-        <string>mdisr</string>
-        <boolean>true</boolean>
+        <string>hostName</string>
+        <string>ILSUN56</string>
       </entry>
       <entry>
         <string>userName</string>
         <string>q56adm</string>
       </entry>
       <entry>
-        <string>hostName</string>
-        <string>ILSUN56</string>
+        <string>mdisr</string>
+        <boolean>true</boolean>
       </entry>
       <entry>
         <string>instance</string>
         <string>Q56</string>
       </entry>
       <entry>
-        <string>mdssr</string>
-        <boolean>true</boolean>
-      </entry>
-      <entry>
         <string>password</string>
         <string>a2i2000!</string>
+      </entry>
+      <entry>
+        <string>mdssr</string>
+        <boolean>true</boolean>
       </entry>
       <entry>
         <string>configurationID</string>
@@ -121,6 +121,10 @@
     <string>iltlvlssc275</string>
     <map>
       <entry>
+        <string>port</string>
+        <string>59950</string>
+      </entry>
+      <entry>
         <string>interval</string>
         <string>10</string>
       </entry>
@@ -130,7 +134,7 @@
       </entry>
       <entry>
         <string>mdsr</string>
-        <boolean>true</boolean>
+        <boolean>false</boolean>
       </entry>
       <entry>
         <string>memoryPop</string>
@@ -182,14 +186,6 @@
         <string>5</string>
       </entry>
       <entry>
-        <string>start</string>
-        <string>Immediately</string>
-      </entry>
-      <entry>
-        <string>mdsr</string>
-        <boolean>true</boolean>
-      </entry>
-      <entry>
         <string>memoryPop</string>
         <string>200</string>
       </entry>
@@ -199,15 +195,35 @@
       </entry>
       <entry>
         <string>mdisr</string>
-        <boolean>true</boolean>
+        <boolean>false</boolean>
       </entry>
       <entry>
-        <string>userName</string>
-        <string>h25adm</string>
+        <string>startToTime</string>
+        <string>26-10-2014 18:50:00</string>
+      </entry>
+      <entry>
+        <string>password</string>
+        <string>a2i2000!</string>
+      </entry>
+      <entry>
+        <string>startFromTime</string>
+        <string>26-10-2014 18:46:00</string>
+      </entry>
+      <entry>
+        <string>start</string>
+        <string>Time Frame</string>
+      </entry>
+      <entry>
+        <string>mdsr</string>
+        <boolean>true</boolean>
       </entry>
       <entry>
         <string>hostName</string>
         <string>iltlvh325</string>
+      </entry>
+      <entry>
+        <string>userName</string>
+        <string>h25adm</string>
       </entry>
       <entry>
         <string>instance</string>
@@ -215,11 +231,7 @@
       </entry>
       <entry>
         <string>mdssr</string>
-        <boolean>true</boolean>
-      </entry>
-      <entry>
-        <string>password</string>
-        <string>a2i2000!</string>
+        <boolean>false</boolean>
       </entry>
       <entry>
         <string>configurationID</string>

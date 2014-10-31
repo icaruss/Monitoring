@@ -7,12 +7,14 @@ package mainView;
 import java.io.IOException;
 import java.net.URL;
 import java.text.ParseException;
+import java.util.Map;
 import java.util.ResourceBundle;
 import java.util.Timer;
 import java.util.TimerTask;
 
 import unix.ExecuteUnixOperations;
 import viewLogic.CSharedInstance;
+import viewLogic.CViewConstants;
 import viewLogic.CViewConstants.MonitorType;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -127,15 +129,31 @@ public class CMainPageController implements Initializable {
 		timer.schedule(new TimerTask() {
 			public void run() {
 				Platform.runLater(new Runnable() {
-					public void run() {
+					public void run() 
+					{
+						Map<String, Object> currentSettings = CSharedInstance.getInstance().getCurrentConfiguration();
 						
 						if (CSharedInstance.getInstance().isReadyToLaunch())
 						{
 							setButtonsDisableState(true);
 							
+							String objStart = (String) currentSettings.get(CViewConstants.START);
+							
+							if (objStart == CViewConstants.START_FRAME_TIME && CSharedInstance.getInstance().totalSecondsCountdown == -1)
+							{
+								CSharedInstance.getInstance().updateWaitingTimeForResults(
+										(String) currentSettings
+												.get(CViewConstants.START_FROM_TIME),
+										(String) currentSettings
+												.get(CViewConstants.START_TO_TIME));
+							}
+							
+							
+							
 							int cnt = 0;
 
-							if (CSharedInstance.getInstance().totalSecondsCountdown > 0) {
+							if (CSharedInstance.getInstance().totalSecondsCountdown > 0) 
+							{
 								double progress = (double) (1.0 / (double) CSharedInstance
 										.getInstance().totalSecondsCountdown);
 
@@ -150,14 +168,13 @@ public class CMainPageController implements Initializable {
 										.timeLeft());
 							}
 
-							if (CSharedInstance.getInstance().secondsElapsed == 0
-									&& CSharedInstance.getInstance().totalSecondsCountdown != -1) {
-								timer.cancel();
-
+							if (objStart == CViewConstants.START_FRAME_TIME && CSharedInstance.getInstance().secondsElapsed >= CSharedInstance.getInstance().totalSecondsCountdown)
+							{
 								StopMonitoring(CSharedInstance.getInstance().currentMonitoring);
 							}
 
-							else if (CSharedInstance.getInstance().totalSecondsCountdown == -1) {
+							else if (CSharedInstance.getInstance().totalSecondsCountdown == -1)
+							{
 								cnt++;
 								cnt %= 3;
 
@@ -184,6 +201,20 @@ public class CMainPageController implements Initializable {
 						else
 						{
 							setButtonsDisableState(false);
+							
+							if (currentSettings != null)
+							{
+								if (currentSettings.get(CViewConstants.START).equals(CViewConstants.START_FRAME_TIME))
+								{
+									String fromTime = (String) currentSettings.get(CViewConstants.START_FROM_TIME);
+									
+									lblInfo.setText("Session Will Start In : " + fromTime);
+								}
+							}
+							else
+							{
+								lblInfo.setText("Select Server Settings For Connection");
+							}
 						}
 						
 					}
@@ -192,6 +223,8 @@ public class CMainPageController implements Initializable {
 		}, 0, 1000);
 
 	}
+
+
 
 	/**
 	 * Stop monitoring. View and logic
